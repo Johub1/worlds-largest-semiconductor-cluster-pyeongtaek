@@ -1,5 +1,11 @@
 # Changelog
 
+## v7.21 — 2026-11-13
+- Storage tanks exported as cylinders in every format (13 elements); cold boxes and process blocks deliberately kept as boxes.
+- Linde north-east building height set from the building register (22.55 m); register heights of the public wastewater plant recorded.
+- Eighth consultation (Codex, GPT-6 Astra) recorded in CONSULTATION.md; its checks on area figures, rooftop naming and height assumptions found no conflicting use in the model.
+- New preview 28. STEP read-back: 1,103 solids, 6,579 faces; DXF audit 0 errors.
+
 ## v7.20 — 2026-11-13
 - Logistics warehouse renamed "relocation planned" in the model, viewer label and CSV; note cites an unofficial layout graphic as a reference only.
 - STEP and DXF read-back repeated on this build: 1,103 solids, 6,618 faces, no invalid solid in the first 400 checked; both DXF files audit with 0 errors.

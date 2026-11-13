@@ -1,3 +1,4 @@
+import re
 # -*- coding: utf-8 -*-
 """
 Samsung Pyeongtaek Campus P1~P4 — open massing + floor-by-floor concept-interior model generator (v4).
@@ -784,6 +785,16 @@ META["products"] = dict(
 
 if __name__ == "__main__":
     r = lambda e: [round(v, 2) if isinstance(v, float) else v for v in e]
+    # v7.21: storage tanks are exported as cylinders (diameter = shorter plan side of the box)
+    CYL_OLD = ("원통형 탱크도 상자로 단순화", "원통형 탱크·공정 설비는 상자로 단순화")
+    for e in ELEMS:
+        if e["id"] == "LINDE-NE":
+            e["box"][5] = 22.55; e["conf"] = "M"; e["note"] += " 높이 갱신(v7.21): 건축물대장(고덕동 1722) 주건축물 제38동이 건축면적 2,796.08㎡·높이 22.55 m로, 이 박스 평면(약 2,756㎡)과 1.4% 차이여서 같은 건물로 보고 높이를 22.55 m로 적용. 대응은 면적 비교에 따른 추정"
+            if "BLDG_REG" not in e["src"]: e["src"].append("BLDG_REG")
+        if e["id"] == "PUB-WWTP": e["note"] += " 대장(고덕동 1721)의 주건축물 높이: 1단계 관리 및 설비동 30.2 m(지상 7층, 건축면적 1,865.66㎡), 2단계 설비동 13.2 m(1,368.31㎡), 3단계 관리 및 설비동 18.1 m(5,195.29㎡). 어느 박스가 어느 동인지 정하지 못해 모델 높이는 임의값을 유지"
+        if re.search(r"-TK\d+$", e["id"]):
+            e["shape"] = "cyl"
+            for o in CYL_OLD: e["note"] = e["note"].replace(o, "저장탱크는 원통으로 표현(지름은 위성 판독, 돔 지붕은 평평하게 단순화)")
     data = dict(meta=META, fabs=FABS, levels=LEVELS, types=TYPES, phase={k: {f"{a}|{b}": v for (a, b), v in d.items()} for k, d in PHASE.items()},
                 elems=ELEMS, equip=[r(e) for e in EQUIP], rails=[r(e) for e in RAILS], struct=STRUCT, safety=SAFETY, pipes=[r(e) for e in PIPES], dets=[r(e) for e in DETS], egress=EGRESS,
                 usys=USYS, ugroups=UGROUPS, util=UTIL,

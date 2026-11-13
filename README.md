@@ -1,4 +1,4 @@
-# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.20 (English edition)
+# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.21 (English edition)
 
 An educational, open-source 3D model of the world's largest semiconductor manufacturing cluster, built **only from public material**.
 
@@ -203,12 +203,23 @@ Every statement below comes from the cited public source; nothing was measured o
 | Samsung logistics warehouse (map label) | A Pyeongtaek integrated logistics centre (CDC) was completed in 2018 and handles most Samsung home appliances; two outlets reported in 2025-12 that the CDC on the planned P6 site would be demolished; a replacement appliance CDC is being built at Poseung; in 2026 the next fab was reported as a P5 twin (P5-2) with excavation under way | Labelled "relocation planned" from v7.20. That the map-labelled building is that CDC remains an inference (an unofficial YouTube layout graphic places P5 Fab 2 over this corner), and whether it still stands is unknown (imagery is dated 2025-12-22) |
 | Wonik IPS, Hanyang ENG sites | CVD/ALD tool maker; piping and central chemical supply system specialist | What is done at these two sites |
 
+## What v7.21 adds (detail pass after the eighth consultation)
+
+| Change | Basis | Limit |
+|---|---|---|
+| 13 storage tanks are now cylinders in the viewer, GLB/OBJ/STL, STEP, 3D DXF and the 2D plans (9 at the three gas plants read from imagery, 4 concept tanks) | Round plan shape visible in imagery; diameter is the shorter plan side | Dome roofs are flattened; heights stay arbitrary. Cold boxes and process blocks stay as boxes because an enclosure can be rectangular even when the column inside is round |
+| Linde north-east building height 20 m → 22.55 m, grade M | Building register (Godeok-dong 1722, main building No. 38: 2,796.08 m², 22.55 m) against a 2,756 m² plan, 1.4% apart | The match rests on area comparison |
+| Public wastewater plant: register heights recorded in the note (30.2 m, 13.2 m, 18.1 m) | Building register (Godeok-dong 1721) | Which box is which building is unsettled, so model heights are unchanged |
+| New preview 28 (Linde plant) | — | — |
+
+Fab heights: P1 uses the 83 m reported by the press; P2–P4 carry the same value as an assumption (grade C in the viewer table). The register query for the campus lot returned only two records (a gate building and Technical Building 2, 67.9 m, 11 storeys), not the fabs.
+
 ## Verification done for this release
 
 | Check | Result |
 |---|---|
 | Fab bodies and all annexes overlaid on the zoom-18 satellite mosaic (about 0.48 m/px) | All four fab outlines and the east, west and north annexes fall on the imagery; three technology-cluster buildings were re-oriented in v7.13 after this check |
-| STEP read back with the OpenCascade kernel (v7.20 build) | 1,103 solids, 6,618 faces; the first 400 solids pass the shape validity check |
+| STEP read back with the OpenCascade kernel (v7.21 build) | 1,103 solids, 6,579 faces; the first 400 solids pass the shape validity check |
 | DXF read back and audited with ezdxf | 2D: 119,397 entities on 178 layers, 0 audit errors; 3D: 1,514 meshes on 166 layers, 0 audit errors; units metres |
 | Registered areas vs. plans read from imagery | Parking building 1%, Linde site 2.5%, wastewater plant 7%, KEPCO lot 0.4% |
 | Viewer | Loads without page errors, with no network requests; all 23 previews regenerated from this version |

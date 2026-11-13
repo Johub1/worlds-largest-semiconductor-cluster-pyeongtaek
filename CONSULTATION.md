@@ -117,6 +117,18 @@ Astra's cross-review: all three are best recorded as **review hypotheses**; whet
 - Dimensions and standards cited for move-in openings (a SEMI S8 clause, SEMI E72, a 4–6 m × 5–6 m opening) could not be verified → held; the opening size in the model stays an arbitrary value.
 - "Use MIT or Apache 2.0 to prevent unauthorized commercial use" → not adopted, because those licences permit commercial use. CC BY 4.0 is kept.
 
+## Round 8 — how to add detail (2026-11-13)
+
+**Codex (GPT-6 Astra)** was given a text description of v7.20 (it did not open the model or the source list) and asked for a priority list, usable public sources, a procedure for heights, and likely errors. Its main points:
+
+- Priorities: fix large shapes, heights, materials and the scope of each source before adding more boxes. Top five: fab and utility-building outlines and roof steps; façade panels and colour bands; separating tanks, cold boxes and exposed columns at the gas plants; roads, parking and green areas; the large rooftop silhouettes.
+- Do not turn every gas-plant tower into a cylinder: a cold box is a rectangular insulated enclosure around the columns.
+- Heights: fix which height is meant (register height, roof surface, parapet, rooftop plant, highest stack); check the building register per building; shadow measurement only with a known acquisition time, with the error stated; never derive storey heights by dividing total height by storeys.
+- Likely errors to check: using "25 football pitches" (a cleanroom figure) as a P3 footprint; using a utility-building project area as a whole-fab area; naming every rooftop outlet a scrubber; copying one interior to all four fabs without marking it as concept; treating a supply contract as proof of a pipe route.
+- It could not find the environmental impact assessment for the campus, official elevations of P1–P4, or dimensioned material for the Air Products and Air First plants.
+
+**What was done with it (v7.21):** tanks with a round plan in imagery became cylinders and everything else stayed a box; one Linde building height was taken from the register; the listed error candidates were checked against the generator — neither area figure is used, the repeated interior is already graded as concept, and P2–P4 heights are already marked as an assumption. Outlines with roof steps, façade panels, roads and rooftop silhouettes are not done yet.
+
 ## Submission of an advance notice (2026-11-13)
 
 An advance notice describing the project, its public-source basis and how to request a correction was emailed to the contact address that Samsung Electronics lists on its semiconductor website and to the compliance and press addresses of its US semiconductor subsidiary. Codex independently confirmed that no public contact form is offered on the checked pages of that website. No reply had been received when this release was packaged; silence is not treated as approval. The notice was sent on 2026-11-13 (KST). Any reply received will be added to this section in a later release.
