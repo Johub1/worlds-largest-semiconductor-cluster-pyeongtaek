@@ -2,6 +2,10 @@
 
 > **Status: living project, updated continuously.** This model is revised whenever new public material is found or an error is reported; the current version and every change are listed in `CHANGELOG.md`. Corrections backed by a public source are welcome through GitHub Issues. Latest version: https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek
 
+**DOI:** [10.5281/zenodo.24209049](https://doi.org/10.5281/zenodo.24209049) (v7.23; later GitHub releases are archived on Zenodo automatically)
+
+**Mirrors (v7.23):** [Zenodo](https://zenodo.org/records/24209049) · [Hugging Face](https://huggingface.co/datasets/Johojun/pyeongtaek-semiconductor-campus-open-model) · [Kaggle](https://www.kaggle.com/datasets/hojunjoooo/pyeongtaek-campus-open-3d-model-v7-23) · [Internet Archive](https://archive.org/details/pyeongtaek_p1-p4_open_model_v7.23_en) · [Printables](https://www.printables.com/model/1913576-pyeongtaek-semiconductor-campus-p1-p4-open-model-v). The GitHub repository is always the newest version; mirrors may lag behind.
+
 An educational, open-source 3D model of the world's largest semiconductor manufacturing cluster, built **only from public material**.
 
 > **Unofficial.** This project is not affiliated with, endorsed by, or reviewed by Samsung Electronics or any other company named here. No non-public drawings, internal documents or information obtained through site access were used. Building outlines are measured from public satellite imagery. Heights and floor arrangement are partly estimated. **The interior equipment layout, utility routes and EHS layers are a generic reference design (concept), not the actual facility layout.** Positions of security equipment (cameras, access control, guard routes) are deliberately not modelled. No company logos are used.

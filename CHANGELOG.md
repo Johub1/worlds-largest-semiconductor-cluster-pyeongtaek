@@ -1,6 +1,7 @@
 # Changelog
 
 ## v7.23 — 2026-11-14
+- Published: GitHub release, Zenodo DOI 10.5281/zenodo.24209049, and mirrors on Hugging Face, Kaggle, Internet Archive and Printables (links in README).
 - 16 more supplier locations from Kakao Map added as markers (Applied Materials, KLA, Lam Research, Tokyo Electron, KCTech, Unisem, PSK, PSK Holdings, STI, Hansung Cleantech, Merck, Versum Materials, FST, a second Wonik IPS location, KC ENC, Samsung C&T camp); 1,352 elements.
 - README cleanroom-area column: the figures come from a brokerage report, not from Samsung.
 
