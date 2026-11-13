@@ -1,5 +1,9 @@
 # Changelog
 
+## v7.23 — 2026-11-14
+- 16 more supplier locations from Kakao Map added as markers (Applied Materials, KLA, Lam Research, Tokyo Electron, KCTech, Unisem, PSK, PSK Holdings, STI, Hansung Cleantech, Merck, Versum Materials, FST, a second Wonik IPS location, KC ENC, Samsung C&T camp); 1,352 elements.
+- README cleanroom-area column: the figures come from a brokerage report, not from Samsung.
+
 ## v7.22 — 2026-11-13
 - README now states that this is a living project that is updated continuously (added 2026-11-14).
 - Nine rooftop equipment zones read from imagery (west/east bands of P1–P4, centre of P3); 1,336 elements.

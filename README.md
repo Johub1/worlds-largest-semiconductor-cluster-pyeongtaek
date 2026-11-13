@@ -1,4 +1,4 @@
-# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.22 (English edition)
+# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.23 (English edition)
 
 > **Status: living project, updated continuously.** This model is revised whenever new public material is found or an error is reported; the current version and every change are listed in `CHANGELOG.md`. Corrections backed by a public source are welcome through GitHub Issues. Latest version: https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek
 
@@ -231,6 +231,31 @@ Fab heights: P1 uses the 83 m reported by the press; P2–P4 carry the same valu
 | P4 | utility buildings start 50 m north and rise out of the shadow | not determined |
 
 Limits: readings are ±3 m; the ground is assumed level; which edge casts each shadow is an interpretation. The P2–P4 height grade stays C.
+
+## What v7.23 adds (16 more supplier locations)
+
+Sixteen further supplier locations registered on Kakao Map inside the model area were added as map-label markers (queried 2026-11-14; grade M for position). The role column is a general description of each company's published main business; it was not checked against individual documents here, and what each site does or delivers to the campus is not confirmed.
+
+| Marker | Role (general) | X, Y (m) |
+|---|---|---|
+| Applied Materials Korea (Kakao Map label) | US semiconductor equipment maker (deposition, etch, CMP, ion implantation, metrology). Named as a P1 tool supplier in tour coverage | 1018, 2234 |
+| KLA Pyeongtaek (Kakao Map label) | US maker of semiconductor inspection and metrology equipment. Named as a P1 tool supplier in tour coverage | -447, 2628 |
+| Lam Research Korea Pyeongtaek office (Kakao Map label) | US semiconductor equipment maker (etch and deposition) | -494, 327 |
+| Tokyo Electron Korea Pyeongtaek office (Kakao Map label) | Japanese semiconductor equipment maker (coater/developer tracks, etch, deposition, cleaning) | -561, 2739 |
+| KCTech Pyeongtaek office (Kakao Map label) | Korean semiconductor equipment and materials company (CMP tools, cleaning tools, slurry) | -622, 2858 |
+| Unisem Pyeongtaek CS centre (Kakao Map label) | Korean maker of semiconductor support equipment (gas scrubbers, chillers) | -635, 123 |
+| PSK Pyeongtaek manufacturing plant (Kakao Map label) | Korean semiconductor equipment maker (dry strip tools for photoresist removal) | 937, 2052 |
+| PSK Holdings Pyeongtaek manufacturing plant (Kakao Map label) | Korean maker of back-end semiconductor equipment (descum, reflow) | 946, 2302 |
+| STI Pyeongtaek office (Kakao Map label) | Korean maker of central chemical supply systems (CCSS) and cleaning equipment | 451, 231 |
+| Hansung Cleantech (Kakao Map label) | Korean contractor for ultrapure water and water treatment facilities | 464, -123 |
+| Merck (Kakao Map label) | Site of the electronics materials business of Merck of Germany (semiconductor materials and specialty gases) | 1871, 1652 |
+| Versum Materials SPC Korea (Kakao Map label) | Semiconductor specialty gas and materials company (Versum Materials was acquired by Merck in 2019) | 1800, 1680 |
+| FST Pyeongtaek site (Kakao Map label) | Korean semiconductor parts and equipment company (pellicles, chillers) | -891, 2161 |
+| Wonik IPS (Mogok-dong) (Kakao Map label) | Another registered location of the deposition equipment maker Wonik IPS | 1001, 1200 |
+| KC ENC (Kakao Map label) | Korean contractor for gas and chemical supply systems | -811, 151 |
+| Samsung C&T Pyeongtaek camp (construction site office) (Kakao Map label) | Samsung C&T Engineering and Construction Group is, per its filings, in charge of the structure and the fit-out of the fab and complex buildings at Pyeongtaek | -1246, 1641 |
+
+Found on the map but outside the modelled ground, so listed here only: Lam Research Pyeongtaek site (Godeok-dong 1977-1), Global Standard Technology Pyeongtaek (Gajae-dong 345-27), Samsung Electronics DS Division supplier EHS academy (Godeok-myeon, Jiwon 1-gil 16). Many small engineering and construction firms also appear in the same search and were left out because their role could not be identified.
 
 ## Verification done for this release
 
