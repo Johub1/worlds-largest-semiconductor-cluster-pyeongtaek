@@ -1,5 +1,10 @@
 # Changelog
 
+## v7.22 — 2026-11-13
+- Nine rooftop equipment zones read from imagery (west/east bands of P1–P4, centre of P3); 1,336 elements.
+- Shadow-ratio height check documented: P1 roof step not contradicted; P2 ≈ 86 m ± 4 m against the 83 m assumed; P3 and P4 not determined.
+- STEP read-back: 1,112 solids, 6,633 faces; DXF audit 0 errors.
+
 ## v7.21 — 2026-11-13
 - Storage tanks exported as cylinders in every format (13 elements); cold boxes and process blocks deliberately kept as boxes.
 - Linde north-east building height set from the building register (22.55 m); register heights of the public wastewater plant recorded.

@@ -277,6 +277,12 @@ def fab(pid, x0, x1, y0, y1, endx, H, roofs, official, src):
     add(f"{pid}-rack-S", f"{name} 옥상 대기방지시설·배관 랙(남)", "옥상 랙", [x0 + 30, y0 + 6, H, endx - 10, ry0 - 6, H + 6], RACK, "C", ["ESRI", "YT", "YT_DAL2", "EA_P4", "EA_P3"],
         "위성·드론 영상에 보이는 옥상 철골 랙을 단순 박스로 표현. 삼성E&A 공시의 공사명에 P4는 '대기방지', P3는 '옥상배기'가 들어 있음(공사 범위 명칭 — 랙 전체의 기능을 뜻하지는 않음). 현장 관찰 유튜브 채널의 P4 주석 사진은 옥상 구조물을 '대기방지 시설'로 표기(비공식 주석)", opacity=0.3, fl="RF", **S)
     add(f"{pid}-rack-N", f"{name} 옥상 대기방지시설·배관 랙(북)", "옥상 랙", [x0 + 30, ry1 + 6, H, endx - 10, y1 - 6, H + 6], RACK, "C", ["ESRI", "YT"], "", opacity=0.3, fl="RF", **S)
+    # v7.22: rooftop equipment zones on the west/east ring (and between two central roofs), read from imagery
+    RKN = "위성영상(2025-12-22 촬영분)에서 옥상 외곽대 위에 철골 격자와 배관이 밀집해 보이는 구역을 단순 박스로 표현. 평면 범위는 팹 가장자리와 중앙 지붕 사이를 판독한 것이고 높이 6 m는 임의. 개별 설비의 종류·기능은 확인하지 못함"
+    add(f"{pid}-rack-W", f"{name} 옥상 설비 구역(서) — 철골 격자·배관(위성 판독)", "옥상 랙", [x0 + 6, ry0 + 3, H, rx0 - 3, ry1 - 3, H + 6], RACK, "B", ["ESRI"], RKN, opacity=0.3, fl="RF", **S)
+    add(f"{pid}-rack-E", f"{name} 옥상 설비 구역(동) — 철골 격자·배관(위성 판독)", "옥상 랙", [rx1 + 3, ry0 + 3, H, (rx1 + 48 if pid == "P4" else endx - 6), ry1 - 3, H + 6], RACK, "B", ["ESRI"], RKN, opacity=0.3, fl="RF", **S)
+    if len(roofs) == 2 and roofs[1][0] - roofs[0][1] > 12:
+        add(f"{pid}-rack-M", f"{name} 옥상 설비 구역(중앙) — 철골 격자·배관(위성 판독)", "옥상 랙", [roofs[0][1] + 3, ry0 + 3, H - 3, roofs[1][0] - 3, ry1 - 3, H + 3], RACK, "B", ["ESRI"], RKN, opacity=0.3, fl="RF", **S)
     # rooftop exhaust scrubbers + stacks along the ring (concept spacing)
     rL, rD, rH = TYPES[TI["RSC"]]["size"]; sL, sD, sH = TYPES[TI["STACK"]]["size"]
     for yy in (y0 + (ry0 - y0) / 2 - rD / 2, ry1 + (y1 - ry1) / 2 - rD / 2):

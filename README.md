@@ -1,4 +1,4 @@
-# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.21 (English edition)
+# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.22 (English edition)
 
 An educational, open-source 3D model of the world's largest semiconductor manufacturing cluster, built **only from public material**.
 
@@ -214,12 +214,28 @@ Every statement below comes from the cited public source; nothing was measured o
 
 Fab heights: P1 uses the 83 m reported by the press; P2–P4 carry the same value as an assumption (grade C in the viewer table). The register query for the campus lot returned only two records (a gate building and Technical Building 2, 67.9 m, 11 storeys), not the fabs.
 
+## What v7.22 adds (rooftop zones and a shadow-ratio height check)
+
+**Rooftop equipment zones.** Nine semi-transparent zones were added on the west and east perimeter bands of each fab and between the two central roofs of P3, where the 2025-12-22 imagery shows dense steel lattice and piping. Plan extents are read from imagery (grade B); the 6 m height is arbitrary and the equipment type is not identified, so the name stays neutral.
+
+**Shadow-ratio check.** No acquisition time is published for the imagery, so sun angles were not used. Instead, shadows in the same image were compared with the one height that has a published figure (P1, 83 m).
+
+| Measurement in the imagery | Value | Result |
+|---|---|---|
+| P1 north wall shadow on the ground | about 163 m (lines at X −130…−70) | calibration: 83 m ÷ 163 m ≈ 0.51 m of height per metre of shadow |
+| Shadow of the P1 south roof band on the central roof | about 29 m (26–32 m) | the casting edge is about 15 m (13–17 m) above the central roof; the model has 16 m (rack top 89 m, central roof 73 m), so the 10 m roof step is not contradicted |
+| P2 shadow tip on the roof of the building between P2 and P1 (that roof is about 19 m high from its own 37 m shadow) | tip about 131 m from the P2 north wall | P2 ≈ 86 m ± 4 m, consistent with the 83 m assumed |
+| P3 | gap to P2 is only 55 m | not measurable |
+| P4 | utility buildings start 50 m north and rise out of the shadow | not determined |
+
+Limits: readings are ±3 m; the ground is assumed level; which edge casts each shadow is an interpretation. The P2–P4 height grade stays C.
+
 ## Verification done for this release
 
 | Check | Result |
 |---|---|
 | Fab bodies and all annexes overlaid on the zoom-18 satellite mosaic (about 0.48 m/px) | All four fab outlines and the east, west and north annexes fall on the imagery; three technology-cluster buildings were re-oriented in v7.13 after this check |
-| STEP read back with the OpenCascade kernel (v7.21 build) | 1,103 solids, 6,579 faces; the first 400 solids pass the shape validity check |
+| STEP read back with the OpenCascade kernel (v7.22 build) | 1,112 solids, 6,633 faces; the first 400 solids pass the shape validity check |
 | DXF read back and audited with ezdxf | 2D: 119,397 entities on 178 layers, 0 audit errors; 3D: 1,514 meshes on 166 layers, 0 audit errors; units metres |
 | Registered areas vs. plans read from imagery | Parking building 1%, Linde site 2.5%, wastewater plant 7%, KEPCO lot 0.4% |
 | Viewer | Loads without page errors, with no network requests; all 23 previews regenerated from this version |
