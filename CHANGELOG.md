@@ -1,6 +1,7 @@
 # Changelog
 
 ## v7.22 — 2026-11-13
+- README now states that this is a living project that is updated continuously (added 2026-11-14).
 - Nine rooftop equipment zones read from imagery (west/east bands of P1–P4, centre of P3); 1,336 elements.
 - Shadow-ratio height check documented: P1 roof step not contradicted; P2 ≈ 86 m ± 4 m against the 83 m assumed; P3 and P4 not determined.
 - STEP read-back: 1,112 solids, 6,633 faces; DXF audit 0 errors.

@@ -1,6 +1,6 @@
 # Publishing notes and post texts
 
-Draft texts for each site. Nothing here has been posted.
+Texts for each site. Every listing carries the same status line: **living project, updated continuously — the latest version is always at https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek**.
 
 ## Repository description (GitHub, Hugging Face, Zenodo) — one line
 Unofficial open 3D model of the Samsung Electronics Pyeongtaek campus (fabs P1–P4), built only from public sources, with a concept interior, utility systems and EHS layers for education.
@@ -25,13 +25,15 @@ What is in it:
 - Concept utility systems: chilled water, process cooling water, gases, exhaust, wastewater, chemicals, ultrapure water, power
 - EHS layers: gas detection points, emergency equipment, and an egress travel-distance screening
 - Products by line, from official announcements and press
-- 150+ sources, each claim graded A to D by how well it is supported
+- 170+ sources, each claim graded A to D by how well it is supported
 
 What it is not: it is not the real equipment layout. Interior, utility routes and EHS layers are a generic reference design, and security equipment is deliberately left out. The project is unofficial and not affiliated with Samsung Electronics.
 
 Why: as a safety engineering student I wanted a model that shows how a modern fab is put together, from the substation to the scrubber stack, that anyone can open in a browser.
 
-Files: glTF, OBJ, STL, STEP, DXF, CSV and a single-file viewer. Licence CC BY 4.0.
+Files: glTF, OBJ, STL, STEP, DXF, CSV and a single-file viewer. Licence: CC BY 4.0 for the model and documents, MIT for the code.
+
+This is a living project and I keep updating it as new public material appears. Latest version and change log: https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek
 
 ## Zenodo / Hugging Face — abstract
 This dataset is an unofficial, education-oriented 3D model of the Samsung Electronics Pyeongtaek campus (fabs P1–P4) compiled exclusively from public material: official newsrooms and sustainability reports, regulatory filings, the public building register, public maps, public satellite imagery, international and Korean press, peer-reviewed papers and patents. Building outlines are measured from imagery; the interior, utility systems and EHS layers are a generic reference design. Each element carries a confidence grade (A official, B imagery, M map or register, C estimate, D concept) and source keys. Formats: glTF, OBJ, STL, STEP, DXF, CSV, JSON and an offline HTML viewer.
