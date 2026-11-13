@@ -1,0 +1,10 @@
+﻿floor,z_bottom_m(assumed),z_top_m(assumed),role,name,contents
+1F,0.0,9.0,FSF,FSF · utility subfab (lower),"Dry pumps, scrubbers, chillers, chemical supply, transformers and distribution. The level that keeps contamination and heat sources away from the cleanroom"
+2F,9.0,16.5,CSF,CSF · clean subfab (lower),"Directly below the tools. RF generators and power racks, gas boxes and VMBs, pipe laterals. Return space through which air from the cleanroom passes"
+3F,16.5,24.0,FAB,Lower cleanroom (FAB),"Process tools, stockers, OHT. Tools on a raised access floor, FFUs in the ceiling. P1 has a visitor window corridor on 3F (press)"
+4F,24.0,33.0,PLN,FFU plenum and truss (lower),"Supply space that feeds air down to the FFUs. Make-up air units (MAU), DCC, structural trusses"
+5F,33.0,41.0,FSF,FSF · utility subfab (upper),"Pumps, scrubbers and chillers for the upper cleanroom; chemical and power distribution"
+6F,41.0,48.5,CSF,CSF · clean subfab (upper),Power racks and gas boxes directly below the upper cleanroom
+7F,48.5,56.0,FAB,Upper cleanroom (FAB),"Process tools, stockers, OHT"
+8F,56.0,66.0,PLN,FFU plenum and roof truss (upper),Supply space for the upper cleanroom; MAU and DCC
+RF,66.0,95.0,ROOF,Roof,"Exhaust scrubbers, fans and stacks; pipe racks. The perimeter band is higher than the central roof (drone video)"

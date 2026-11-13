@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>평택캠퍼스 P1–P4 오픈 3D 모델</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* layout: full-bleed 3D canvas, control rail on the left, inspector on the right; drawing-sheet feel */
+  --ink:#0e1620; --sheet:#152131; --line:#2a3b50; --text:#e7edf4; --muted:#93a4b8;
+  --accent:#f2cc3a; --red:#d0232b; --blue:#3c7be0;
+  --font-body:"IBM Plex Sans KR",system-ui,"Malgun Gothic",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--ink);color:var(--text);font-family:var(--font-body);font-size:13px;line-height:1.5;overflow:hidden}
+#c{position:fixed;inset:0;width:100%;height:100%;display:block}
+.panel{position:fixed;top:12px;bottom:12px;width:300px;background:color-mix(in srgb,var(--sheet) 94%,transparent);border:1px solid var(--line);border-radius:6px;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:14px}
+#left{left:12px} #right{right:12px;width:340px}
+h1{font-size:16px;font-weight:600;margin:0;text-wrap:balance;word-break:keep-all}
+p,td,small,span,li{word-break:keep-all}
+h2{font-size:11px;font-weight:600;letter-spacing:.08em;color:var(--muted);margin:0 0 6px;text-transform:uppercase}
+.sub{color:var(--muted);font-size:12px;margin:4px 0 0}
+.warn{border-left:3px solid var(--accent);padding:6px 8px;background:#1b2a3d;font-size:12px}
+.row{display:flex;gap:6px;flex-wrap:wrap}
+button{font:inherit;color:var(--text);background:#1d2c40;border:1px solid var(--line);border-radius:4px;padding:5px 9px;cursor:pointer}
+button:hover{border-color:var(--accent)} button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button.on{background:var(--accent);color:#141a22;border-color:var(--accent);font-weight:600}
+label.chk{display:flex;align-items:center;gap:7px;padding:2px 0;cursor:pointer}
+label.chk input{accent-color:var(--accent)}
+.sl{display:grid;grid-template-columns:1fr auto;gap:2px 8px;align-items:center}
+.sl input[type=range]{grid-column:1/3;width:100%;accent-color:var(--accent)}
+.num{font-family:var(--font-mono);font-variant-numeric:tabular-nums;color:var(--accent)}
+.pill{display:inline-block;font-family:var(--font-mono);font-size:11px;padding:1px 7px;border-radius:10px;border:1px solid var(--line)}
+.gA{background:#1f5f3a;border-color:#2f8a55} .gB{background:#1d4f86;border-color:#3c7be0} .gC{background:#6b5312;border-color:#b48a1a} .gD{background:#4a2a52;border-color:#8a4c99} .gM{background:#0f5a5a;border-color:#2aa7a7}
+table{border-collapse:collapse;width:100%} td,th{padding:3px 4px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left;font-size:12px}
+th{color:var(--muted);font-weight:500}
+td.n{font-family:var(--font-mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.chip{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.eq{padding:6px 0;border-bottom:1px solid var(--line)} .eq b{font-weight:600}
+.eq small{display:block;color:var(--muted)} .eq .site,.site{color:var(--accent)}
+.role{margin-top:10px;font-size:12px;font-weight:600;color:var(--text)}
+a{color:#8fb8ff} ol.src{margin:0;padding-left:18px} ol.src li{margin-bottom:5px;font-size:12px;overflow-wrap:anywhere}
+#sel .name,#floorSheet .name{font-size:14px;font-weight:600}
+#floorSheet{border:1px solid var(--accent);border-radius:5px;padding:10px;display:none}
+#toggles{position:fixed;top:12px;left:50%;transform:translateX(-50%);display:none;gap:6px;z-index:5}
+#hint{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);color:var(--muted);font-size:12px;background:#0e1620cc;padding:4px 10px;border-radius:4px;pointer-events:none;white-space:nowrap}
+@media (max-width:900px){
+  .panel{width:auto;left:8px;right:8px;top:auto;bottom:8px;max-height:46%;display:none}
+  .panel.open{display:flex} #toggles{display:flex} #hint{display:none}
+}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="toggles"><button id="tL">조작</button><button id="tR">정보·출처</button></div>
+
+<aside class="panel" id="left">
+  <div>
+    <h1>삼성전자 평택캠퍼스 P1–P4 오픈 3D 모델</h1>
+    <p class="sub">공개 자료 기반 매스 모델 + 층별 내부 개념도 + 유틸리티 계통 개념도 · 단위 m · 위성영상 2025-12-22</p>
+  </div>
+  <div class="warn">공개된 자료만으로 만들었습니다. 외곽 평면은 위성영상 실측, 높이·층 구성은 일부 추정, <b>내부 장비 배치는 일반적 300mm 팹 구조를 따른 개념도</b>이며 실제 배치가 아닙니다.<br><span class="sub">Unofficial concept model built only from public sources. Interior layout is generic, not the actual facility layout.</span></div>
+  <div>
+    <h2>층별 보기</h2>
+    <div class="row" id="fabSel"></div>
+    <div class="row" id="floorSel" style="margin-top:6px"></div>
+    <div class="row" style="margin-top:6px"><button id="ehsBtn">EHS(안전) 레이어 켜기</button></div>
+    <p class="sub">팹과 층을 고르면 그 층만 잘라서 위에서 보여 주고, 오른쪽에 그 층의 설비·공급사·근거가 나옵니다.</p>
+  </div>
+  <div>
+    <h2>유틸리티 계통(개념)</h2>
+    <div class="row"><button id="utilBtn">유틸리티 계통 보기</button></div>
+    <div class="row" id="utilSel" style="margin-top:6px"></div>
+    <p class="sub">열관리·PCW·가스 공급과 충전·배기·폐수·케미컬·초순수·전력의 공급 → 사용 → 환수·처리 흐름입니다. 건물을 반투명으로 바꿔 보여 줍니다. 경로는 일반 참조 설계이며 실제 배관·전력 경로가 아닙니다.</p>
+  </div>
+  <div>
+    <h2>보기 프리셋</h2>
+    <div class="row" id="presets"></div>
+  </div>
+  <div>
+    <h2>이동</h2>
+    <div class="row" id="focus"></div>
+  </div>
+  <div>
+    <h2>단면 절단</h2>
+    <div class="sl"><span>남쪽부터 잘라내기</span><span class="num" id="vY"></span><input id="cutY" type="range" min="-650" max="2500" step="1" value="-650"></div>
+    <div class="sl"><span>높이 절단 (이 높이 위를 숨김)</span><span class="num" id="vZ"></span><input id="cutZ" type="range" min="1" max="95" step="0.5" value="95"></div>
+    <div class="row" style="margin-top:6px"><button id="uncut">절단 해제</button></div>
+  </div>
+  <div>
+    <h2>레이어</h2>
+    <div id="layers"></div>
+  </div>
+</aside>
+
+<aside class="panel" id="right">
+  <div id="floorSheet"></div>
+  <div id="sel">
+    <h2>선택한 요소</h2>
+    <div id="selBody"><span class="sub">건물이나 장비를 클릭하면 치수·근거·출처가 나옵니다.</span></div>
+  </div>
+  <div>
+    <h2>팹 치수 요약</h2>
+    <table id="dims"></table>
+    <p class="sub">본체 = 동측 단부 블록 제외. 보도 수치와 실측이 다른 경우 실측을 모델에 썼습니다.</p>
+  </div>
+  <div>
+    <h2>페이즈(Ph) 위치</h2>
+    <table id="phase"></table>
+    <p class="sub">삼성물산·삼성중공업 수주 공시의 공사명과 보도에서 확인한 위치입니다. P1·P2는 확인하지 못했습니다.</p>
+  </div>
+  <div>
+    <h2>라인별 생산 제품</h2>
+    <table id="prod"></table>
+    <p class="sub" id="prodNote"></p>
+  </div>
+  <div>
+    <h2>신뢰 등급</h2>
+    <div class="row"><span class="pill gA">A 공식·보도·공시</span><span class="pill gB">B 위성영상 기반 추정</span><span class="pill gM">M 공개 지도 표기</span><span class="pill gC">C 추정·가정</span><span class="pill gD">D 일반 개념</span></div>
+  </div>
+  <div>
+    <h2>층 구성(추정)</h2>
+    <table id="lv"></table>
+  </div>
+  <div>
+    <h2>설비 종류와 공급사</h2>
+    <p class="sub"><span class="site">노란 글씨</span>는 이 현장 관련 보도·공시에서 확인된 회사, 회색은 해당 설비의 업계 대표 공급사(이 현장 납품 여부는 확인되지 않음)입니다.</p>
+    <div id="legend"></div>
+  </div>
+  <div>
+    <h2>출처</h2>
+    <ol class="src" id="src"></ol>
+  </div>
+</aside>
+<div id="hint">드래그 회전 · 휠 확대 · 우클릭 드래그 이동 · 클릭 선택</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+const D = /*__DATA__*/;
+const CY = 1500;
+const P = (x,y,z)=>new THREE.Vector3(x, z, -(y-CY));
+const canvas = document.getElementById('c');
+const renderer = new THREE.WebGLRenderer({canvas, antialias:true, logarithmicDepthBuffer:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+const scene = new THREE.Scene(); scene.background = new THREE.Color(0x0e1620);
+scene.fog = new THREE.Fog(0x0e1620, 3500, 9000);
+const camera = new THREE.PerspectiveCamera(40, 1, 2, 20000);
+const controls = new THREE.OrbitControls(camera, canvas);
+controls.enableDamping = true; controls.dampingFactor = .08; controls.maxPolarAngle = Math.PI/2 - 0.01;
+scene.add(new THREE.HemisphereLight(0xdfe9f5, 0x2a323c, 0.62));
+const sun = new THREE.DirectionalLight(0xffffff, 0.5); sun.position.set(-800, 1400, 900); scene.add(sun);
+
+const planeY = new THREE.Plane(new THREE.Vector3(0,0,-1), 0);   // keeps y_north >= cutY
+const planeZ = new THREE.Plane(new THREE.Vector3(0,-1,0), 95);  // keeps height <= top
+const planeZ0 = new THREE.Plane(new THREE.Vector3(0,1,0), 5);   // keeps height >= bottom
+renderer.clippingPlanes = [planeY, planeZ, planeZ0];
+
+const layers = {};
+function L(name){ if(!layers[name]){ layers[name]=new THREE.Group(); layers[name].name=name; scene.add(layers[name]); } return layers[name]; }
+const pickables = [];
+const unit = new THREE.BoxGeometry(1,1,1);
+const edgeGeo = new THREE.EdgesGeometry(unit);
+const edgeMat = new THREE.LineBasicMaterial({color:0x0e1620, transparent:true, opacity:.55});
+const matCache = {};
+function mat(color, op){ const k=color+'|'+op; if(!matCache[k]) matCache[k]=new THREE.MeshLambertMaterial({color, transparent:op<1, opacity:op, depthWrite:op>=1}); return matCache[k]; }
+
+for(const e of D.elems){
+  const [x0,y0,z0,x1,y1,z1] = e.box;
+  const m = new THREE.Mesh(unit, mat(e.color, e.opacity||1));
+  m.scale.set(x1-x0, z1-z0, y1-y0);
+  m.position.copy(P((x0+x1)/2,(y0+y1)/2,(z0+z1)/2));
+  if(e.rot) m.rotation.y = e.rot*Math.PI/180;
+  m.userData = {kind:'elem', e};
+  L(e.layer).add(m);
+  if(e.layer!=='지반') pickables.push(m);
+  if(['외피','부속동','연결 브리지','서포트 시설','유틸리티 설비','충전·교체 지점'].includes(e.layer)) m.add(new THREE.LineSegments(edgeGeo, edgeMat));
+}
+const ROLE_LAYER = {FAB:'클린룸 장비', CSF:'CSF 설비', FSF:'FSF 설비', PLN:'플레넘 설비', ROOF:'옥상 설비'};
+const buckets = {};
+for(const q of D.equip){ (buckets[q[6]]=buckets[q[6]]||[]).push(q); }
+const dummy = new THREE.Object3D();
+for(const ti in buckets){
+  const t = D.types[+ti]; const arr = buckets[ti];
+  const im = new THREE.InstancedMesh(unit, new THREE.MeshLambertMaterial({color:t.color}), arr.length);
+  arr.forEach((q,i)=>{ const [x,y,z,dx,dy,dz]=q; dummy.position.copy(P(x+dx/2,y+dy/2,z+dz/2)); dummy.scale.set(dx,dz,dy); dummy.updateMatrix(); im.setMatrixAt(i,dummy.matrix); });
+  im.userData = {kind:'equip', t, arr}; L(ROLE_LAYER[t.role]).add(im); pickables.push(im);
+}
+{ const arr=D.rails; const im=new THREE.InstancedMesh(unit,new THREE.MeshLambertMaterial({color:0xf4f6f8}),arr.length);
+  arr.forEach((q,i)=>{ const [x,y,z,dx,dy,dz]=q; dummy.position.copy(P(x+dx/2,y+dy/2,z+dz/2)); dummy.scale.set(dx,dz,dy); dummy.updateMatrix(); im.setMatrixAt(i,dummy.matrix); });
+  im.userData={kind:'rail'}; L('OHT 레일').add(im); pickables.push(im); }
+
+function makeLabel(text, x,y,z, size, color){
+  const c=document.createElement('canvas'); const g=c.getContext('2d'); const fs=64;
+  g.font=`600 ${fs}px "IBM Plex Sans KR","Malgun Gothic",sans-serif`; const w=Math.ceil(g.measureText(text).width)+36;
+  c.width=w; c.height=fs+30; g.font=`600 ${fs}px "IBM Plex Sans KR","Malgun Gothic",sans-serif`;
+  g.fillStyle='rgba(14,22,32,.82)'; g.fillRect(0,0,w,c.height); g.fillStyle=color||'#f2cc3a'; g.fillRect(0,0,8,c.height);
+  g.fillStyle='#e7edf4'; g.textBaseline='middle'; g.fillText(text,22,c.height/2+2);
+  const tx=new THREE.CanvasTexture(c); tx.minFilter=THREE.LinearFilter;
+  const s=new THREE.Sprite(new THREE.SpriteMaterial({map:tx, depthTest:false, transparent:true})); s.renderOrder=10;
+  s.scale.set(size*w/c.height, size, 1); s.position.copy(P(x,y,z)); return s;
+}
+for(const f of D.fabs) L('라벨').add(makeLabel(`${f.id}  ${f.Lmain}×${f.W} m`, (f.x0+f.x1)/2,(f.y0+f.y1)/2, f.H+34, 34));
+const LBL = {'V2':'EUV동(V2)','UT-12':'UT동 추정','UT-34':'UT동 추정','GATE-W':'사무1동','WA':'사무2동','W1':'사무복합동','WD':'사무3동','OFF-2':'기술동 주차타워','OFF-3':'자재1동','S1':'그린동 추정','CUB-N':'유틸리티·냉각탑','CT-1':'냉각탑','SS-A':'한전 고덕변전소(보도·OSM)','PAD-P5':'P5 건설 부지','PARK-2':'2단지 주차동','PARK-NW':'임직원 주차장','BR-W':'오버브리지(도로 횡단)','BR-12a':'오버브리지','BR-23a':'오버브리지','BR-34a':'오버브리지','LOG-WH':'삼성전자 물류창고(이전 예정)','AP-PROC':'에어프로덕츠 평택공장','AF-PROC':'에어퍼스트 평택공장','LINDE-BLD':'린데코리아 평택공장','PUB-WWTP':'고덕 공공폐수처리시설'};
+for(const e of D.elems){ if(e.layer==='지도 표기 지점'){ const b=e.box; L('라벨').add(makeLabel(e.name.replace(' (카카오맵 표기)',''), (b[0]+b[3])/2,(b[1]+b[4])/2, 16, 11, '#f2cc3a')); }
+  if(LBL[e.id]){ const b=e.box; L('라벨').add(makeLabel(LBL[e.id], (b[0]+b[3])/2,(b[1]+b[4])/2, b[5]+22, 20, '#3c7be0')); } }
+{ const g=new THREE.Group(); const lm=new THREE.LineBasicMaterial({color:0xf2cc3a});
+  g.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([P(820,820,1),P(820,960,1),P(800,925,1),P(820,960,1),P(840,925,1)]),lm));
+  g.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([P(760,760,1),P(960,760,1)]),lm)); L('라벨').add(g);
+  L('라벨').add(makeLabel('N', 820, 985, 6, 22)); L('라벨').add(makeLabel('200 m', 860, 735, 6, 18)); }
+// ---- EHS concept layers
+const PIPE_COL=['#3fd17a','#ff4d4d','#ff9f2e']; const PIPE_NAME=['가스 공급(CSF 가스 박스 → 장비)','공정 배기(장비 → FSF 펌프·스크러버)','처리 후 배기(FSF 헤더 → 옥상 스크러버·스택)'];
+[0,1,2].forEach(k=>{ const arr=D.pipes.filter(p=>p[6]===k); const im=new THREE.InstancedMesh(unit,new THREE.MeshBasicMaterial({color:PIPE_COL[k]}),arr.length);
+  arr.forEach((q,i)=>{ const [x,y,z,dx,dy,dz]=q; dummy.position.copy(P(x+dx/2,y+dy/2,z+dz/2)); dummy.scale.set(dx,dz,dy); dummy.updateMatrix(); im.setMatrixAt(i,dummy.matrix); });
+  im.userData={kind:'pipe',k}; L('EHS 가스·배기 흐름').add(im); pickables.push(im); });
+{ const arr=D.dets; const im=new THREE.InstancedMesh(new THREE.SphereGeometry(0.9,10,8),new THREE.MeshBasicMaterial({color:0xff3df0}),arr.length);
+  arr.forEach((q,i)=>{ dummy.position.copy(P(q[0],q[1],q[2])); dummy.scale.set(1,1,1); dummy.updateMatrix(); im.setMatrixAt(i,dummy.matrix); });
+  im.userData={kind:'det'}; L('EHS 가스 감지기').add(im); pickables.push(im); }
+const egCol=d=>d<=30?'#2e9e5b':d<=50?'#8fc93a':d<=61?'#e8d21a':d<=75?'#f0a020':d<=100?'#e8632a':'#c8202a';
+{ const arr=D.egress; const im=new THREE.InstancedMesh(unit,new THREE.MeshBasicMaterial({transparent:true,opacity:.78}),arr.length); const c=new THREE.Color();
+  arr.forEach((q,i)=>{ const [x,y,z,dx,dy,dist]=q; dummy.position.copy(P(x+dx/2,y+dy/2,z)); dummy.scale.set(dx-0.3,0.06,dy-0.3); dummy.updateMatrix(); im.setMatrixAt(i,dummy.matrix); im.setColorAt(i,c.set(egCol(dist))); });
+  im.userData={kind:'egress',arr}; L('EHS 피난 보행거리').add(im); pickables.push(im); }
+// ---- utility-system concept layers (v4)
+const UG = D.ugroups.map(g=>g.key); const UL = k=>'계통 · '+k;
+D.usys.forEach((sy,si)=>{ const arr=D.util.filter(u=>u[6]===si); if(!arr.length) return;
+  const im=new THREE.InstancedMesh(unit,new THREE.MeshBasicMaterial({color:sy[2]}),arr.length);
+  arr.forEach((q,i)=>{ const [x,y,z,dx,dy,dz]=q; dummy.position.copy(P(x+dx/2,y+dy/2,z+dz/2)); dummy.scale.set(dx,dz,dy); dummy.updateMatrix(); im.setMatrixAt(i,dummy.matrix); });
+  im.userData={kind:'util',si,arr}; L(UL(sy[3])).add(im); pickables.push(im); });
+const utilLabels = new THREE.Group(); utilLabels.visible=false; scene.add(utilLabels);
+const ULBL={'GAS-YARD':'벌크가스 야드(개념)','GAS-FILL':'탱크로리 이송 접속점','GAS-EDGE':'에어퍼스트 방향(남)','GAS-EDGE-AP':'에어프로덕츠 방향(북동)','GAS-EDGE-LD':'린데 방향(남서)','PWR-EDGE-E':'345 kV 고덕–서안성(동)','PWR-EDGE-W':'500 kV HVDC 북당진(서)','PWR-RCV':'캠퍼스 수전 설비(개념)','PV-CANOPY':'주차장 태양광(위치 추정)','WTR-EDGE':'공업용수 인입(팔당 계통)','WTR-REUSE-EDGE':'하수 재이용수(계획)','WW-EDGE':'처리수 방류(보도)','UT-34-CT':'냉각탑(추정)',
+  'UT-12-CH1':'냉동기(개념)','UT-34-CH1':'냉동기(개념)','UT-12-UPW':'초순수 설비(개념)','UT-34-UPW':'초순수 설비(개념)','UT-12-CHEM-DOCK':'케미컬 하역 베이','UT-34-CHEM-DOCK':'케미컬 하역 베이','S1-WW-AA':'폐수 처리 단계(개념)','S2-WW-AA':'폐수 처리 단계(개념)'};
+for(const e of D.elems){ const b=e.box; let t=ULBL[e.id]; if(!t&&/CYL-DOCK$/.test(e.id)) t='실린더 교체 구역'; if(!t&&/GASROOM$/.test(e.id)) t='특수가스 공급실'; if(!t&&/-GEN$/.test(e.id)) t='비상발전기'; if(!t&&/1F-PCW-HX$/.test(e.id)) t='PCW 열교환기';
+  if(t) utilLabels.add(makeLabel(t,(b[0]+b[3])/2,(b[1]+b[4])/2,b[5]+14,13,e.color)); }
+// ---- v6 interior detail: structure and emergency equipment
+const ST_COL=['#8c949e','#69727c','#b7a36a','#c9d3dc']; const ST_NAME=['구조 기둥(개념)','플레넘 트러스(개념)','CSF 래터럴 랙(배관·케이블 트레이, 개념)','클린룸 천장 배관·덕트 다발(영상 확인 · 위치 개념)'];
+[0,1,2,3].forEach(k=>{ const arr=D.struct.filter(p=>p[6]===k); if(!arr.length) return; const im=new THREE.InstancedMesh(unit,new THREE.MeshLambertMaterial({color:ST_COL[k]}),arr.length);
+  arr.forEach((q,i)=>{ const [x,y,z,dx,dy,dz]=q; dummy.position.copy(P(x+dx/2,y+dy/2,z+dz/2)); dummy.scale.set(dx,dz,dy); dummy.updateMatrix(); im.setMatrixAt(i,dummy.matrix); });
+  im.userData={kind:'struct',k,arr}; L('구조 기둥·트러스').add(im); pickables.push(im); });
+const SF_COL=['#19c37d','#e02424','#00e676']; const SF_NAME=['비상 샤워·세안 설비(개념)','소화기·소화전함(개념)','비상구(개념)']; const SF_DIM=[[0.9,0.9,2.3],[0.8,0.35,1.3],[1.8,0.25,2.2]];
+[0,1,2].forEach(k=>{ const arr=D.safety.filter(p=>p[3]===k); if(!arr.length) return; const im=new THREE.InstancedMesh(unit,new THREE.MeshBasicMaterial({color:SF_COL[k]}),arr.length); const d=SF_DIM[k];
+  arr.forEach((q,i)=>{ dummy.position.copy(P(q[0],q[1],q[2]+d[2]/2)); dummy.scale.set(d[0],d[2],d[1]); dummy.updateMatrix(); im.setMatrixAt(i,dummy.matrix); });
+  im.userData={kind:'safety',k,arr}; L('EHS 비상 설비').add(im); pickables.push(im); });
+const floorLabels = new THREE.Group(); scene.add(floorLabels);
+
+// ---------- UI
+const $=id=>document.getElementById(id);
+const layerOrder=['외피','지붕','옥상 랙','옥상 설비','외장 그래픽','부속동','지도 표기 지점','연결 브리지','층 슬래브','클린룸 구역','공정 구역','옐로 룸','서브팹 구역','플레넘 구역','서포트 구역','서포트 시설','참조 설계(반입구)','공조','코어','FFU 천장','구조 기둥·트러스','클린룸 장비','OHT 레일','CSF 설비','FSF 설비','플레넘 설비','유틸리티 설비','충전·교체 지점',...D.ugroups.map(g=>'계통 · '+g.key),'EHS 가스·배기 흐름','EHS 가스 감지기','EHS 비상 설비','EHS 피난 보행거리','라벨','지반'];
+const layerNote={'참조 설계(반입구)':'근거 약함 · 기본 숨김','클린룸 장비':'개념 배치','CSF 설비':'개념','FSF 설비':'개념','플레넘 설비':'개념','옥상 설비':'개념 간격','OHT 레일':'개념 배치','FFU 천장':'개념','층 슬래브':'층고 가정','서포트 구역':'추정','서포트 시설':'추정','공조':'개념','공정 구역':'개념','옐로 룸':'영상 확인·위치 개념','EHS 가스·배기 흐름':'개념','EHS 가스 감지기':'개념','EHS 피난 보행거리':'모델 가정 기준','EHS 비상 설비':'개념','구조 기둥·트러스':'개념','유틸리티 설비':'개념','충전·교체 지점':'개념'}; D.ugroups.forEach(g=>layerNote['계통 · '+g.key]='개념 경로');
+for(const n of layerOrder){ if(!layers[n]) continue;
+  const lb=document.createElement('label'); lb.className='chk'; const id='ly_'+layerOrder.indexOf(n);
+  lb.innerHTML=`<input type="checkbox" id="${id}" checked><span>${n}${layerNote[n]?` <span class="sub">· ${layerNote[n]}</span>`:''}</span>`;
+  $('layers').appendChild(lb); lb.firstChild.addEventListener('change',ev=>{layers[n].visible=ev.target.checked;});
+}
+function setLayers(on){ layerOrder.forEach((n,i)=>{ if(!layers[n])return; const v=on.includes(n); layers[n].visible=v; const cb=$('ly_'+i); if(cb) cb.checked=v; }); }
+const EHS_L=['EHS 가스·배기 흐름','EHS 가스 감지기','EHS 비상 설비','EHS 피난 보행거리']; let ehsOn=false;
+const UTIL_L=['유틸리티 설비','충전·교체 지점',...UG.map(UL)]; let utilOn=false, utilSel=null;
+const utilVis=()=>utilOn?['유틸리티 설비','충전·교체 지점',...(utilSel?[UL(utilSel)]:UG.map(UL))]:[];
+const ALL=layerOrder.filter(n=>!EHS_L.includes(n)&&!UTIL_L.includes(n)); const EXT=['외피','지붕','옥상 랙','옥상 설비','외장 그래픽','부속동','지도 표기 지점','연결 브리지','라벨','지반'];
+const INT=ALL.filter(n=>!['지붕','옥상 랙','옥상 설비','외장 그래픽','FFU 천장'].includes(n));
+let zBottom=-5;
+function setCut(y,z,z0){ $('cutY').value=y; $('cutZ').value=z; zBottom=(z0===undefined?-5:z0); applyCut(); }
+function applyCut(){ const y=+$('cutY').value, z=+$('cutZ').value; planeY.constant=(CY-y); planeZ.constant=z; planeZ0.constant=-zBottom;
+  $('vY').textContent = y<=-650?'전체':('Y '+y+' m'); $('vZ').textContent = z>=95?'전체':(z.toFixed(1)+' m'); }
+$('cutY').addEventListener('input',applyCut); $('cutZ').addEventListener('input',()=>{zBottom=-5;applyCut();});
+function view(tx,ty,tz, dx,dy,dz){ controls.target.copy(P(tx,ty,tz)); camera.position.copy(P(tx+dx,ty+dy,tz+dz)); controls.update(); }
+const fabBy=id=>D.fabs.find(f=>f.id===id);
+function clearFloor(){ floorLabels.clear(); $('floorSheet').style.display='none'; [...$('floorSel').children].forEach(c=>c.classList.remove('on')); curFloor=null; }
+const presets=[
+ ['외관 전경', ()=>{clearFloor(); setLayers(EXT); setCut(-650,95); view(0,1500,20, -1500,-1700,1200);}],
+ ['P1 횡단면', ()=>{clearFloor(); setLayers(ALL.filter(n=>n!=='FFU 천장')); setCut(2040,95); view(-230,2040,38, -260,-430,150);}],
+ ['P3 횡단면', ()=>{clearFloor(); setLayers(ALL.filter(n=>n!=='FFU 천장')); setCut(1385,95); view(20,1385,38, -300,-470,160);}],
+ ['클린룸 통로 눈높이', ()=>{ clearFloor(); const f=fabBy('P1'); setLayers(INT.filter(n=>n!=='라벨'&&n!=='FFU 천장')); setCut(-650,22.9,16.4); const r=D.rails.filter(q=>q[6]==='P1'&&q[7]==='3F'&&q[4]>q[3])[9]; const x=r[0]+0.15; view(x, r[1]+r[4]*0.8, 18.7, 0.02, -r[4]*0.62, 0.45); }],
+ ['서브팹(FSF) 내부', ()=>{ clearFloor(); const f=fabBy('P1'); setLayers(INT.filter(n=>n!=='라벨')); setCut(-650,8.1,-0.05); view(f.cr[0]+84.5,(f.cr[2]+f.cr[3])/2+20,2, -26,-36,20); }],
+ ['캠퍼스 내부 투시', ()=>{clearFloor(); setLayers(INT.filter(n=>n!=='외피')); setCut(-650,95); view(0,1500,20, -1300,-1500,900);}],
+];
+presets.forEach(([n,fn])=>{ const b=document.createElement('button'); b.textContent=n; b.onclick=()=>{setUtil(false,true); fn(); [...$('presets').children].forEach(c=>c.classList.remove('on')); b.classList.add('on');}; $('presets').appendChild(b); });
+['P1','P2','P3','P4'].forEach(id=>{ const b=document.createElement('button'); b.textContent=id; b.onclick=()=>{const f=fabBy(id); view((f.x0+f.x1)/2,(f.y0+f.y1)/2,30, -420,-560,380);}; $('focus').appendChild(b); });
+{ const b=document.createElement('button'); b.textContent='EUV동'; b.onclick=()=>view(-436,1676,30,-260,-330,240); $('focus').appendChild(b); }
+$('uncut').onclick=()=>{ clearFloor(); setCut(-650,95); };
+// ---------- utility mode
+const GHOST_L=['외피','지붕','부속동','연결 브리지','외장 그래픽','옥상 랙'];
+function ghost(on){ GHOST_L.forEach(n=>{ if(!layers[n]) return; layers[n].children.forEach(m=>{ if(!m.isMesh) return; if(!m.userData.orig) m.userData.orig=m.material; m.material = on ? mat(m.userData.e.color, 0.08) : m.userData.orig; }); }); }
+function utilSheet(){ const gs=utilSel?D.ugroups.filter(g=>g.key===utilSel):D.ugroups;
+  const li=a=>'<ul style="margin:4px 0 8px;padding-left:18px">'+a.map(t=>`<li>${t}</li>`).join('')+'</ul>';
+  $('floorSheet').style.display='block';
+  $('floorSheet').innerHTML=`<h2>유틸리티 계통 설명</h2><div class="row" style="margin:4px 0"><span class="pill gD">경로 D · 일반 참조 설계</span><span class="pill gA">현장 사실은 보도·공식 자료만</span></div>`+
+   (utilSel?'':`<p class="sub">아래 단추로 계통 하나만 골라 볼 수 있습니다. 색 선을 클릭하면 그 계통의 흐름이 나옵니다.</p>`)+
+   gs.map(g=>`<div class="role">${g.title}</div><p>${D.usys.filter(s=>s[3]===g.key).map(s=>`<span style="white-space:nowrap"><span class="chip" style="background:${s[2]}"></span>${s[0]}</span>`).join(' · ')}</p>`+
+     (utilSel?`<b>흐름 순서</b>${li(g.flow)}<b>문헌의 대표 수치</b>${li(g.values)}<b class="site">평택캠퍼스에 대해 공개된 사실</b>${li(g.site)}<p class="sub">한계: ${g.limit}</p><p class="sub">근거 ${srcLinks(g.src)}</p>`
+             :`<p class="sub">${g.flow[0]}</p>`)).join('');
+  if(innerWidth<=900){ $('right').classList.add('open'); $('left').classList.remove('open'); } }
+function setUtil(on, quiet){ utilOn=on; if(!on) utilSel=null; ghost(on); utilLabels.visible=on;
+  $('utilBtn').classList.toggle('on',on); $('utilBtn').textContent=on?'유틸리티 계통 끄기':'유틸리티 계통 보기';
+  [...$('utilSel').children].forEach(c=>c.classList.toggle('on',on&&c.dataset.k===utilSel));
+  if(quiet) return;
+  if(on){ clearFloor(); [...$('presets').children].forEach(c=>c.classList.remove('on')); setLayers(['외피','부속동','연결 브리지','옥상 설비','라벨','지반',...utilVis()]); setCut(-650,95); utilSheet(); }
+  else { $('presets').children[0].click(); } }
+$('utilBtn').onclick=()=>{ const on=!utilOn; setUtil(on); if(on) view(60,1500,10,-1250,-1500,1150); };
+D.ugroups.forEach(g=>{ const b=document.createElement('button'); b.textContent=g.key; b.dataset.k=g.key; b.onclick=()=>{ const same=utilOn&&utilSel===g.key; utilOn=true; utilSel=same?null:g.key; const keepFloor=curFloor; setUtil(true,true);
+  if(keepFloor){ showFloor(curFab,keepFloor); } else { utilLabels.visible=true; setLayers(['외피','부속동','연결 브리지','옥상 설비','라벨','지반',...utilVis()]); setCut(-650,95); }
+  utilSheet(); }; $('utilSel').appendChild(b); });
+
+// ---------- per-floor mode
+let curFab='P1', curFloor=null;
+const srcKeys=Object.keys(D.sources);
+const srcLinks=keys=>[...new Set(keys)].map(k=>`<a href="${D.sources[k]?D.sources[k][1]:'#'}" target="_blank" rel="noopener" title="${D.sources[k]?D.sources[k][0].replace(/"/g,''):''}">[${srcKeys.indexOf(k)+1}]</a>`).join(' ');
+const ROLE_SRC={FSF:['CSF_FSF','SMOCK','STI','NFPA318','GEN'],CSF:['CSF_FSF','SMOCK','NFPA318','GEN'],FAB:['TOUR_3F','TOOLS','CR4','CR_AREA','LAYOUT','AMHS_H','YT'],PLN:['SKECO','DCC','FFU_SRC','GEN'],ROOF:['P3_UT','YT','ESRI']};
+function showFloor(fabId, fl){
+  utilLabels.visible=false;
+  curFab=fabId; curFloor=fl; const f=fabBy(fabId); const lv=D.levels.find(l=>l[0]===fl); const [ , z0, z1, role, nm, what]=lv;
+  [...$('fabSel').children].forEach(c=>c.classList.toggle('on',c.textContent===fabId));
+  [...$('floorSel').children].forEach(c=>c.classList.toggle('on',c.textContent===fl));
+  [...$('presets').children].forEach(c=>c.classList.remove('on'));
+  if(role==='ROOF'){ setLayers(['외피','지붕','옥상 랙','옥상 설비','부속동','연결 브리지','지반',...utilVis()]); setCut(-650,95,z0-11); }
+  else { setLayers(INT.filter(n=>n!=='라벨').concat(ehsOn?(role==='FAB'?EHS_L:EHS_L.slice(0,3)):[]).concat(utilVis())); const top = role==='FAB'? z0+6.4 : z1-1.35; setCut(-650, top, role==='PLN'? z0-0.7 : z0-0.05); }
+  view((f.x0+f.x1)/2,(f.y0+f.y1)/2,z0+2, -40,-230,430);
+  // labels for this floor
+  floorLabels.clear();
+  for(const e of D.elems){ if(e.fab!==fabId||e.fl!==fl) continue; const b=e.box;
+    if(e.layer==='공정 구역'&&!e.id.includes('spine')) floorLabels.add(makeLabel(e.name.replace('(개념)',''), (b[0]+b[3])/2, b[4]-14, z0+5.5, 7, e.color));
+    if(e.layer==='클린룸 구역'&&!e.id.endsWith('ffu')){ const ph=(e.name.match(/Ph\d/)||[''])[0]; floorLabels.add(makeLabel((e.id.endsWith('-W')?'서편':'동편')+(ph?' · '+ph:''), (b[0]+b[3])/2, b[1]+10, z0+5.5, 9, '#f2cc3a')); }
+    if(e.id.endsWith('smock')||e.id==='P1-3F-window'||(e.id.endsWith('movein'))) floorLabels.add(makeLabel(e.name.replace(/^P\d FAB \w+ /,'').replace('(추정)',''), (b[0]+b[3])/2,(b[1]+b[4])/2, z0+5.5, 6, '#3c7be0'));
+  }
+  // floor sheet
+  const cnt={}; for(const q of D.equip){ if(q[7]===fabId&&q[8]===fl) cnt[q[6]]=(cnt[q[6]]||0)+1; }
+  const rows=Object.keys(cnt).map(ti=>{const t=D.types[+ti]; return `<div class="eq"><b><span class="chip" style="background:${t.color}"></span>${t.ko}</b> <span class="sub">상자 ${cnt[ti].toLocaleString()}개 · ${t.shape}</span>${t.vendors_site?`<small class="site">현장 관련 보도·공시: ${t.vendors_site}</small>`:''}<small>업계 대표 공급사: ${t.vendors}</small></div>`;}).join('');
+  const ph=D.phase[fabId]; let phTxt='';
+  if(role==='FAB'){ phTxt = ph ? ['W','E'].map(h=>{const v=ph[h+'|'+fl]; return v?`<tr><td>${h==='W'?'서편':'동편'}</td><td><b>${v[0]}</b></td><td>${v[1]}</td></tr>`:'';}).join('') : ''; phTxt = phTxt?`<table>${phTxt}</table>`:`<p class="sub">이 팹의 페이즈 명칭·위치는 공개 자료에서 확인하지 못했습니다.</p>`; }
+  const extra = role==='FAB' ? `<p>클린룸 범위 ${Math.round(f.cr[1]-f.cr[0])} × ${Math.round(f.cr[3]-f.cr[2])} m, 서·동 2개 구역. 모델의 클린룸 면적(2개 층 합) ${f.cr_area.toLocaleString()}㎡ · 증권사 리포트 수치 약 ${D.cr_report[fabId].toLocaleString()}㎡. OHT는 SEMES(공식 영상·보도), P1 기준 약 1,850대·설비 2,000여 대(보도).</p>`:'';
+  let ehs='';
+  if(ehsOn){ ehs=`<div class="role">EHS 레이어(개념)</div><p><span class="chip" style="background:#3fd17a"></span>가스 공급 · <span class="chip" style="background:#ff4d4d"></span>공정 배기 · <span class="chip" style="background:#ff9f2e"></span>처리 후 배기 · <span class="chip" style="background:#ff3df0"></span>가스 감지기 위치 · <span class="chip" style="background:#19c37d"></span>비상 샤워·세안 · <span class="chip" style="background:#e02424"></span>소화기·소화전함 · <span class="chip" style="background:#00e676"></span>비상구(모두 개념). 독성·가연성 가스를 쓰는 식각·증착·확산·이온주입 베이에만 표시했습니다. 실제 배관 경로가 아닙니다.</p>`;
+    if(role==='FAB'){ const d=D.egress.filter(q=>q[6]===fabId&&q[7]===fl).map(q=>q[5]); const pc=t=>Math.round(100*d.filter(v=>v<=t).length/d.length);
+      ehs+=`<p><b>피난 보행거리(이 모델의 가정 계단 기준)</b>: 최대 ${Math.max(...d)} m · 61 m 이내 ${pc(61)}% · 75 m 이내 ${pc(75)}% · 100 m 이내 ${pc(100)}%</p>
+      <div class="row">${[[30,'≤30'],[50,'≤50'],[61,'≤61'],[75,'≤75'],[100,'≤100'],[999,'>100']].map(([t,l])=>`<span class="pill" style="background:${egCol(t)};color:#111">${l} m</span>`).join('')}</div>
+      <p class="sub">기준선: 건축법 시행령 제34조(30 m, 내화구조 50 m, 자동화 생산시설 공장 75 m, 무인화 공장 100 m), IBC H-5 200 ft(61 m). 계단 위치는 가정이므로 실제 건물의 적합 여부를 뜻하지 않습니다. 75 m를 넘는 구역이 나온다는 것은 모델의 계단 가정이 실제보다 부족하다는 뜻입니다. ${srcLinks(['LAW34','IBC_H5','NFPA318'])}</p>`; } }
+  $('floorSheet').style.display='block';
+  $('floorSheet').innerHTML=`<h2>층 설명</h2><div class="name">${fabId} ${fl} · ${nm}</div><div class="row" style="margin:4px 0"><span class="pill gC">층 구성 C · 추정</span><span class="pill gD">배치 D · 개념</span><span class="pill">높이 ${z0}–${z1} m(가정)</span></div><p>${what}</p>${extra}${phTxt}${rows||'<p class="sub">이 층에는 개념 설비를 두지 않았습니다.</p>'}${ehs}${utilOn?`<div class="role">유틸리티 계통(개념)</div><p class="sub">이 층을 지나는 ${utilSel||'전체'} 계통의 개념 경로를 함께 표시했습니다. 색 선을 클릭하면 흐름 순서와 근거가 나옵니다.</p>`:''}<p class="sub">근거 ${srcLinks(ROLE_SRC[role]||['GEN'])}</p>`;
+  if(innerWidth<=900){ $('right').classList.add('open'); $('left').classList.remove('open'); }
+}
+['P1','P2','P3','P4'].forEach(id=>{ const b=document.createElement('button'); b.textContent=id; b.onclick=()=>showFloor(id, curFloor||'3F'); $('fabSel').appendChild(b); });
+D.levels.forEach(l=>{ const b=document.createElement('button'); b.textContent=l[0]; b.title=l[4]; b.onclick=()=>showFloor(curFab,l[0]); $('floorSel').appendChild(b); });
+$('ehsBtn').onclick=()=>{ ehsOn=!ehsOn; $('ehsBtn').classList.toggle('on',ehsOn); $('ehsBtn').textContent=ehsOn?'EHS(안전) 레이어 끄기':'EHS(안전) 레이어 켜기'; showFloor(curFab, curFloor||'3F'); };
+
+// ---------- tables
+$('dims').innerHTML='<tr><th>팹</th><th>본체 길이</th><th>단부 포함</th><th>폭</th><th>높이</th></tr>'+D.fabs.map(f=>`<tr><td>${f.id}</td><td class="n">${f.Lmain}</td><td class="n">${f.L}</td><td class="n">${f.W}</td><td class="n">${f.H}${f.id==='P1'?' <span class="pill gA">A</span>':' <span class="pill gC">C</span>'}</td></tr>`).join('');
+$('phase').innerHTML='<tr><th>팹</th><th>하층 서</th><th>하층 동</th><th>상층 서</th><th>상층 동</th></tr>'+Object.keys(D.phase).map(k=>{const p=D.phase[k]; const c=key=>p[key]?p[key][0]+(p[key][1].includes('추정')?' <span class="pill gC">C</span>':''):'-'; return `<tr><td>${k}</td><td>${c('W|3F')}</td><td>${c('E|3F')}</td><td>${c('W|7F')}</td><td>${c('E|7F')}</td></tr>`;}).join('');
+if(D.meta.products){ $('prod').innerHTML='<tr><th>팹</th><th>구역</th><th>제품</th></tr>'+D.meta.products.rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td><b>${r[2]}</b><br><span class="sub">${r[3]}</span></td></tr>`).join(''); $('prodNote').textContent=D.meta.products.rule; }
+$('lv').innerHTML='<tr><th>층</th><th>높이(m, 가정)</th><th>용도</th></tr>'+D.levels.slice().reverse().map(l=>`<tr><td>${l[0]}</td><td class="n">${l[1]}–${l[0]==='RF'?'':l[2]}</td><td>${l[4]}</td></tr>`).join('');
+const roleName={FAB:'클린룸(3F·7F)',CSF:'CSF(2F·6F)',FSF:'FSF(1F·5F)',PLN:'플레넘(4F·8F)',ROOF:'옥상'};
+$('legend').innerHTML=Object.keys(roleName).map(r=>`<div class="role">${roleName[r]}</div>`+D.types.filter(t=>t.role===r).map(t=>`<div class="eq"><b><span class="chip" style="background:${t.color}"></span>${t.ko}</b> <span class="sub">${t.size[0]}×${t.size[1]}×${t.size[2]} m 대표 외형</span>${t.vendors_site?`<small class="site">현장 관련 보도·공시: ${t.vendors_site}</small>`:''}<small>업계 대표 공급사: ${t.vendors}</small></div>`).join('')
+ +(r==='FAB'?`<div class="eq"><b><span class="chip" style="background:#f4f6f8"></span>OHT(천장 이송)</b><small class="site">현장 관련 보도·공식 영상: SEMES · P1에 약 1,850대(보도)</small><small>업계 대표 공급사: SEMES, Daifuku, Murata Machinery</small></div>`:'')).join('');
+$('src').innerHTML=srcKeys.map(k=>`<li id="s_${k}">${D.sources[k][0]}<br><a href="${D.sources[k][1]}" target="_blank" rel="noopener">${new URL(D.sources[k][1]).hostname}</a></li>`).join('');
+
+// ---------- picking
+const ray=new THREE.Raycaster(); let down=null;
+canvas.addEventListener('pointerdown',e=>{down=[e.clientX,e.clientY];});
+canvas.addEventListener('pointerup',e=>{ if(!down||Math.hypot(e.clientX-down[0],e.clientY-down[1])>4) return;
+  const r=canvas.getBoundingClientRect(); const m=new THREE.Vector2((e.clientX-r.left)/r.width*2-1, -(e.clientY-r.top)/r.height*2+1);
+  ray.setFromCamera(m,camera);
+  const hits=ray.intersectObjects(pickables.filter(o=>o.parent.visible&&!(utilOn&&GHOST_L.includes(o.parent.name))),false).filter(h=>renderer.clippingPlanes.every(p=>p.distanceToPoint(h.point)>=-0.01));
+  if(!hits.length) return; const h=hits[0], u=h.object.userData; let html='';
+  if(u.kind==='elem'){ const e=u.e,b=e.box; html=`<div class="name">${e.name}</div><div class="row" style="margin:4px 0"><span class="pill g${e.conf}">${e.conf} · ${D.meta.grades[e.conf]}</span><span class="pill">${e.layer}</span></div>
+   <table><tr><th>동서 × 남북 × 높이</th><td class="n">${(b[3]-b[0]).toFixed(0)} × ${(b[4]-b[1]).toFixed(0)} × ${(b[5]-b[2]).toFixed(1)} m</td></tr><tr><th>바닥 높이</th><td class="n">${b[2].toFixed(1)} m</td></tr><tr><th>ID</th><td class="n">${e.id}</td></tr></table>
+   ${e.note?`<p>${e.note}</p>`:''}<p class="sub">출처 ${srcLinks(e.src)}</p>`; }
+  else if(u.kind==='equip'){ const t=u.t,q=u.arr[h.instanceId]; html=`<div class="name"><span class="chip" style="background:${t.color}"></span>${t.ko}</div><div class="row" style="margin:4px 0"><span class="pill gD">D · 일반 개념</span><span class="pill">${q[7]} ${q[8]}</span></div>
+   <p>형상: ${t.shape}. 대표 외형 ${t.size[0]}×${t.size[1]}×${t.size[2]} m. 위치는 개념 배치입니다.</p>${t.vendors_site?`<p class="site">현장 관련 보도·공시: ${t.vendors_site}</p>`:''}<p>업계 대표 공급사(이 현장 납품 여부 미확인): ${t.vendors}</p>`; }
+  else if(u.kind==='pipe'){ html=`<div class="name"><span class="chip" style="background:${PIPE_COL[u.k]}"></span>${PIPE_NAME[u.k]}</div><div class="row" style="margin:4px 0"><span class="pill gD">D · 일반 개념</span><span class="pill">EHS</span></div><p>독성·가연성 공정 가스의 일반적 흐름을 보여 주는 개념선입니다: CSF의 가스 박스·VMB → 클린룸 장비 → FSF의 드라이 펌프·스크러버 → 옥상 스크러버·스택. 실제 배관 경로·구경이 아닙니다.</p><p>관련 시공: 한양이엔지(P5 배관 계약 공시), 세보엠이씨(삼성물산과 평택 설비공사 계약 공시). ${srcLinks(['CSF_FSF','NFPA318','P5','SEBO'])}</p>`; }
+  else if(u.kind==='util'){ const sy=D.usys[u.si], g=D.ugroups.find(x=>x.key===sy[3]), q=u.arr[h.instanceId]; html=`<div class="name"><span class="chip" style="background:${sy[2]}"></span>${sy[0]} · ${sy[1]}</div><div class="row" style="margin:4px 0"><span class="pill gD">D · 일반 참조 설계</span><span class="pill">${g.key}</span>${q[7]?`<span class="pill">${q[7]}</span>`:''}</div><p><b>흐름 순서</b></p><ul style="margin:4px 0;padding-left:18px">${g.flow.map(t=>`<li>${t}</li>`).join('')}</ul><p class="site">평택 공개 사실: ${g.site[0]}</p><p class="sub">한계: ${g.limit}</p><p class="sub">근거 ${srcLinks(g.src)}</p>`; }
+  else if(u.kind==='struct'){ html=`<div class="name"><span class="chip" style="background:${ST_COL[u.k]}"></span>${ST_NAME[u.k]}</div><div class="row" style="margin:4px 0"><span class="pill gD">D · 일반 개념</span></div><p>${['서브팹은 촘촘한 기둥, 클린룸은 넓은 간격의 기둥을 가정했습니다. 간격·단면은 가정값이며 실제 구조 설계가 아닙니다.','클린룸 위 플레넘 층의 장스팬 트러스를 개념적으로 표시했습니다. 춤·간격은 가정값입니다.','CSF 천장 아래에서 장비로 올라가는 배관·케이블을 받치는 래터럴 랙을 개념적으로 표시했습니다.','공식 영상(2026-06)의 클린룸 장면에서 OHT 레일 위로 은색 배관·덕트가 여러 단으로 빽빽하게 지나가는 모습을 확인했습니다. 단 수·위치는 개념입니다.'][u.k]}</p><p class="sub">${srcLinks(['GEN','SKECO','CSF_FSF'])}</p>`; }
+  else if(u.kind==='safety'){ const q=u.arr[h.instanceId]; html=`<div class="name"><span class="chip" style="background:${SF_COL[u.k]}"></span>${SF_NAME[u.k]}</div><div class="row" style="margin:4px 0"><span class="pill gD">D · 일반 개념</span><span class="pill">${q[4]} ${q[5]}</span></div><p>${['ANSI/ISEA Z358.1은 비상 샤워·세안 설비를 위험원에서 10초 이내(통상 약 55 ft ≈ 16.8 m), 같은 층의 장애물 없는 경로에 두도록 권고합니다. 이 모델은 세정·CMP 베이 통로와 FSF 케미컬 공급 구역에 약 30 m 간격으로 둔 초기 배치안입니다. 설치 간격과 위험원에서 설비까지의 실제 접근 시간은 다른 문제이므로, 각 노출 지점의 접근 경로를 검증한 것이 아니며 실제 설치 위치·수량도 아닙니다.','중앙 통로와 계단 코어 주변에 소화기·소화전함을 두는 일반 원칙을 표시했습니다. 간격은 임의이며 화재안전기준 적합 검토가 아닙니다.','피난 보행거리 계산에 쓴 가정 계단 코어로 나가는 문입니다. 위치는 모델의 가정입니다.'][u.k]}</p><p class="sub">${srcLinks(u.k===0?['Z358','CSF_FSF']:u.k===2?['LAW34','IBC_H5']:['NFPA318'])}</p>`; }
+  else if(u.kind==='det'){ html=`<div class="name"><span class="chip" style="background:#ff3df0"></span>가스 감지기 위치(개념)</div><div class="row" style="margin:4px 0"><span class="pill gD">D · 일반 개념</span><span class="pill">EHS</span></div><p>가스 박스·VMB, 장비 주변, 스크러버 주변처럼 누출 가능 지점에 감지기를 두는 일반 원칙을 표시한 것입니다. 실제 감지기 수·위치가 아닙니다.</p>`; }
+  else if(u.kind==='egress'){ const q=u.arr[h.instanceId]; html=`<div class="name">피난 보행거리 ${q[5]} m</div><div class="row" style="margin:4px 0"><span class="pill gD">D · 모델 가정</span><span class="pill">${q[6]} ${q[7]}</span></div><p>이 지점에서 모델에 가정한 가장 가까운 계단 코어 또는 중앙 코어까지의 보행거리(베이 통로를 따라 이동)입니다. 실제 건물의 피난 성능 평가가 아닙니다.</p><p class="sub">${srcLinks(['LAW34','IBC_H5','NFPA318'])}</p>`; }
+  else { html=`<div class="name">OHT 레일</div><div class="row" style="margin:4px 0"><span class="pill gD">D · 일반 개념</span></div><p>중앙 스파인(인터베이)과 베이별(인트라베이) 레일을 개념적으로 표시. 공식 영상·투어 보도에서 SEMES OHT 확인, P1에 약 1,850대(보도).</p>`; }
+  $('selBody').innerHTML=html; if(innerWidth<=900){ $('right').classList.add('open'); $('left').classList.remove('open'); }
+});
+$('tL').onclick=()=>{ $('left').classList.toggle('open'); $('right').classList.remove('open'); };
+$('tR').onclick=()=>{ $('right').classList.toggle('open'); $('left').classList.remove('open'); };
+
+function resize(){ const w=innerWidth,h=innerHeight; renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix(); }
+addEventListener('resize',resize); resize();
+EHS_L.concat(UTIL_L).concat(['참조 설계(반입구)']).forEach(n=>{ if(!layers[n]) return; layers[n].visible=false; const cb=$('ly_'+layerOrder.indexOf(n)); if(cb) cb.checked=false;});
+applyCut(); $('presets').children[0].click();
+(function loop(){ controls.update(); renderer.render(scene,camera); requestAnimationFrame(loop); })();
+</script>
+</body>
+</html>

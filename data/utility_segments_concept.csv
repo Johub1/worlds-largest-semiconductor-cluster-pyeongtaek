@@ -1,0 +1,1522 @@
+﻿system,system_ko,group,x0,y0,z0,dx,dy,dz,fab_or_plant,grade
+CW.S,Condenser water supply (cooling tower → chiller condenser),Thermal management,-150.6,1833.4,5.4,1.2,1.2,41.2,UT-12,D
+CW.S,Condenser water supply (cooling tower → chiller condenser),Thermal management,-150.6,1799.4,45.4,1.2,35.2,1.2,UT-12,D
+CW.S,Condenser water supply (cooling tower → chiller condenser),Thermal management,-150.6,1799.4,45.4,401.2,1.2,1.2,UT-12,D
+CW.S,Condenser water supply (cooling tower → chiller condenser),Thermal management,249.4,1799.4,45.4,1.2,77.2,1.2,UT-12,D
+CW.S,Condenser water supply (cooling tower → chiller condenser),Thermal management,249.4,1875.4,18.4,1.2,1.2,28.2,UT-12,D
+CW.R,Condenser water return (condenser → cooling tower),Thermal management,-148.8,1835.2,6.8,1.2,1.2,41.2,UT-12,D
+CW.R,Condenser water return (condenser → cooling tower),Thermal management,-148.8,1801.2,46.8,1.2,35.2,1.2,UT-12,D
+CW.R,Condenser water return (condenser → cooling tower),Thermal management,-148.8,1801.2,46.8,401.2,1.2,1.2,UT-12,D
+CW.R,Condenser water return (condenser → cooling tower),Thermal management,251.2,1801.2,46.8,1.2,77.2,1.2,UT-12,D
+CW.R,Condenser water return (condenser → cooling tower),Thermal management,251.2,1877.2,19.8,1.2,1.2,28.2,UT-12,D
+CW.S,Condenser water supply (cooling tower → chiller condenser),Thermal management,249.4,1817.4,18.4,1.2,1.2,28.2,UT-12,D
+CW.R,Condenser water return (condenser → cooling tower),Thermal management,251.2,1817.4,18.4,1.2,1.2,28.2,UT-12,D
+CW.S,Condenser water supply (cooling tower → chiller condenser),Thermal management,399.4,1799.4,45.4,1.2,77.2,1.2,UT-12,D
+CW.S,Condenser water supply (cooling tower → chiller condenser),Thermal management,399.4,1875.4,18.4,1.2,1.2,28.2,UT-12,D
+CW.R,Condenser water return (condenser → cooling tower),Thermal management,401.2,1801.2,46.8,1.2,77.2,1.2,UT-12,D
+CW.R,Condenser water return (condenser → cooling tower),Thermal management,401.2,1877.2,19.8,1.2,1.2,28.2,UT-12,D
+CW.S,Condenser water supply (cooling tower → chiller condenser),Thermal management,249.4,1799.4,45.4,151.2,1.2,1.2,UT-12,D
+CW.S,Condenser water supply (cooling tower → chiller condenser),Thermal management,399.4,1799.4,45.4,1.2,19.2,1.2,UT-12,D
+CW.S,Condenser water supply (cooling tower → chiller condenser),Thermal management,399.4,1817.4,18.4,1.2,1.2,28.2,UT-12,D
+CW.R,Condenser water return (condenser → cooling tower),Thermal management,251.2,1801.2,46.8,151.2,1.2,1.2,UT-12,D
+CW.R,Condenser water return (condenser → cooling tower),Thermal management,401.2,1801.2,46.8,1.2,19.2,1.2,UT-12,D
+CW.R,Condenser water return (condenser → cooling tower),Thermal management,401.2,1819.2,19.8,1.2,1.2,28.2,UT-12,D
+CW.S,Condenser water supply (cooling tower → chiller condenser),Thermal management,-150.6,1160.4,5.4,1.2,1.2,44.2,UT-34,D
+CW.S,Condenser water supply (cooling tower → chiller condenser),Thermal management,-150.6,1160.4,48.4,401.2,1.2,1.2,UT-34,D
+CW.S,Condenser water supply (cooling tower → chiller condenser),Thermal management,249.4,1160.4,48.4,1.2,15.2,1.2,UT-34,D
+CW.R,Condenser water return (condenser → cooling tower),Thermal management,-148.8,1162.2,6.8,1.2,1.2,44.2,UT-34,D
+CW.R,Condenser water return (condenser → cooling tower),Thermal management,-148.8,1162.2,49.8,401.2,1.2,1.2,UT-34,D
+CW.R,Condenser water return (condenser → cooling tower),Thermal management,251.2,1162.2,49.8,1.2,15.2,1.2,UT-34,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,504.5,2211.5,0.5,136.0,1.0,1.0,,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,504.5,1997.5,0.5,1.0,215.0,1.0,,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-670.5,797.5,0.5,355.0,1.0,1.0,,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-316.5,797.5,0.5,1.0,48.0,1.0,,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-316.5,844.5,0.5,1.0,1.0,12.0,,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,199.5,705.5,0.5,1.0,140.0,1.0,,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,199.5,844.5,0.5,1.0,1.0,12.0,,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-316.5,844.5,11.5,517.0,1.0,1.0,,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-316.5,844.5,11.5,1.0,36.0,1.0,,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,429.5,1963.5,2.5,47.0,1.0,1.0,,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,429.5,1924.5,2.5,1.0,40.0,1.0,,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,429.5,1924.5,2.5,1.0,1.0,10.0,,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-316.5,1924.5,11.5,747.0,1.0,1.0,,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-316.5,879.5,11.5,1.0,1046.0,1.0,,D
+ELEC.HV,"Extra-high-voltage receiving (345 kV and 154 kV, press)",Power,33.3,667.3,1.3,47.4,1.4,1.4,,D
+ELEC.HV,"Extra-high-voltage receiving (345 kV and 154 kV, press)",Power,33.3,667.3,1.3,1.4,33.4,1.4,,D
+ELEC.HV,"Extra-high-voltage receiving (345 kV and 154 kV, press)",Power,-490.7,667.3,1.3,225.4,1.4,1.4,,D
+ELEC.HV,"Extra-high-voltage receiving (345 kV and 154 kV, press)",Power,-266.7,667.3,1.3,1.4,33.4,1.4,,D
+ELEC.HV,"Extra-high-voltage receiving (345 kV and 154 kV, press)",Power,-266.7,767.3,1.3,1.4,45.4,1.4,,D
+ELEC.HV,"Extra-high-voltage receiving (345 kV and 154 kV, press)",Power,-266.7,811.3,1.3,301.4,1.4,1.4,,D
+ELEC.HV,"Extra-high-voltage receiving (345 kV and 154 kV, press)",Power,33.3,761.3,1.3,1.4,51.4,1.4,,D
+ELEC.HV,"Extra-high-voltage receiving (345 kV and 154 kV, press)",Power,33.3,811.3,1.3,373.4,1.4,1.4,,D
+ELEC.HV,"Extra-high-voltage receiving (345 kV and 154 kV, press)",Power,405.3,811.3,1.3,1.4,69.4,1.4,,D
+ELEC.PV,"Parking-lot solar (used on site, not for production lines — press)",Power,-727.3,2079.7,0.5,0.6,0.6,4.0,,D
+ELEC.PV,"Parking-lot solar (used on site, not for production lines — press)",Power,-727.3,2079.7,0.5,0.6,70.6,0.6,,D
+WTR.RAW,"Industrial water intake (regional waterworks, Paldang system, press)",UPW and reclaim,61.6,1932.6,1.0,0.8,367.8,0.8,,D
+WTR.RAW,"Industrial water intake (regional waterworks, Paldang system, press)",UPW and reclaim,-209.4,1932.6,1.0,271.8,0.8,0.8,,D
+WTR.RAW,"Industrial water intake (regional waterworks, Paldang system, press)",UPW and reclaim,-209.4,1865.6,1.0,0.8,67.8,0.8,,D
+WTR.RAW,"Industrial water intake (regional waterworks, Paldang system, press)",UPW and reclaim,-325.4,1932.6,1.0,116.8,0.8,0.8,,D
+WTR.RAW,"Industrial water intake (regional waterworks, Paldang system, press)",UPW and reclaim,-325.4,1191.6,1.0,0.8,741.8,0.8,,D
+WTR.RAW,"Industrial water intake (regional waterworks, Paldang system, press)",UPW and reclaim,-325.4,1191.6,1.0,123.8,0.8,0.8,,D
+WTR.REUSE,"Sewage-reclaimed water intake (Suwon, Hwaseong, Osan; planned around 2030, press)",UPW and reclaim,63.0,1934.0,1.0,0.8,366.4,0.8,,D
+WTR.REUSE,"Sewage-reclaimed water intake (Suwon, Hwaseong, Osan; planned around 2030, press)",UPW and reclaim,-208.0,1934.0,1.0,271.8,0.8,0.8,,D
+WTR.REUSE,"Sewage-reclaimed water intake (Suwon, Hwaseong, Osan; planned around 2030, press)",UPW and reclaim,-208.0,1865.6,1.0,0.8,69.2,0.8,,D
+WTR.REUSE,"Sewage-reclaimed water intake (Suwon, Hwaseong, Osan; planned around 2030, press)",UPW and reclaim,-326.8,1934.0,1.0,119.6,0.8,0.8,,D
+WTR.REUSE,"Sewage-reclaimed water intake (Suwon, Hwaseong, Osan; planned around 2030, press)",UPW and reclaim,-326.8,1193.0,1.0,0.8,741.8,0.8,,D
+WTR.REUSE,"Sewage-reclaimed water intake (Suwon, Hwaseong, Osan; planned around 2030, press)",UPW and reclaim,-326.8,1193.0,1.0,125.2,0.8,0.8,,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,361.55,885.55,8.55,32.9,0.9,0.9,,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,361.55,851.55,8.55,0.9,34.9,0.9,,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-318.25,851.55,8.55,680.7,0.9,0.9,,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-318.25,851.55,8.55,0.9,1077.9,0.9,,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-506.45,1928.55,8.55,189.1,0.9,0.9,,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-506.45,1928.55,8.55,0.9,199.9,0.9,,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,361.55,887.35,8.55,32.9,0.9,0.9,,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,361.55,853.35,8.55,0.9,34.9,0.9,,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-320.05,853.35,8.55,682.5,0.9,0.9,,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-320.05,853.35,8.55,0.9,1077.9,0.9,,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-508.25,1930.35,8.55,189.1,0.9,0.9,,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-508.25,1930.35,8.55,0.9,198.1,0.9,,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-236.1,1836.9,5.4,1.2,1.2,15.2,P1,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-236.1,1836.9,19.4,1.2,112.2,1.2,P1,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-236.1,1947.9,2.4,1.2,1.2,18.2,P1,D
+CHW.R,Chilled water return,Thermal management,-234.8,1838.2,6.4,1.2,1.2,15.2,P1,D
+CHW.R,Chilled water return,Thermal management,-234.8,1838.2,20.4,1.2,112.2,1.2,P1,D
+CHW.R,Chilled water return,Thermal management,-234.8,1949.2,3.4,1.2,1.2,18.2,P1,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-236.1,1947.9,19.4,1.2,1.2,42.2,P1,D
+CHW.R,Chilled water return,Thermal management,-234.8,1949.2,20.4,1.2,1.2,42.2,P1,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-236.0,1948.0,28.1,1.0,16.0,1.0,P1,D
+CHW.R,Chilled water return,Thermal management,-234.7,1949.3,29.1,1.0,16.0,1.0,P1,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-468.5,1963.0,28.1,466.0,1.0,1.0,P1,D
+CHW.R,Chilled water return,Thermal management,-467.2,1964.3,29.1,466.0,1.0,1.0,P1,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-236.0,1963.0,28.1,1.0,157.0,1.0,P1,D
+CHW.R,Chilled water return,Thermal management,-234.7,1964.3,29.1,1.0,157.0,1.0,P1,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-468.5,2119.0,28.1,466.0,1.0,1.0,P1,D
+CHW.R,Chilled water return,Thermal management,-467.2,2120.3,29.1,466.0,1.0,1.0,P1,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-462.35,1951.15,30.45,232.2,0.7,0.7,P1,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-230.85,1951.15,30.45,222.2,0.7,0.7,P1,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-236.0,1948.0,60.1,1.0,16.0,1.0,P1,D
+CHW.R,Chilled water return,Thermal management,-234.7,1949.3,61.1,1.0,16.0,1.0,P1,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-468.5,1963.0,60.1,466.0,1.0,1.0,P1,D
+CHW.R,Chilled water return,Thermal management,-467.2,1964.3,61.1,466.0,1.0,1.0,P1,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-236.0,1963.0,60.1,1.0,157.0,1.0,P1,D
+CHW.R,Chilled water return,Thermal management,-234.7,1964.3,61.1,1.0,157.0,1.0,P1,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-468.5,2119.0,60.1,466.0,1.0,1.0,P1,D
+CHW.R,Chilled water return,Thermal management,-467.2,2120.3,61.1,466.0,1.0,1.0,P1,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-462.35,1951.15,62.45,232.2,0.7,0.7,P1,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-230.85,1951.15,62.45,222.2,0.7,0.7,P1,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-230.85,1836.15,5.65,125.2,0.7,0.7,P1,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-230.85,1836.15,5.65,0.7,0.7,16.7,P1,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-230.85,1836.15,21.65,0.7,115.7,0.7,P1,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-230.85,1951.15,21.65,0.7,0.7,41.5,P1,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-235.9,1948.1,2.6,14.8,0.8,0.8,P1,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-221.9,1948.1,2.6,0.8,4.8,0.8,P1,D
+CHW.R,Chilled water return,Thermal management,-235.9,1949.3,3.5,14.8,0.8,0.8,P1,D
+CHW.R,Chilled water return,Thermal management,-221.9,1949.3,3.5,0.8,4.8,0.8,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-213.9,1953.1,3.2,0.8,0.8,2.5,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-213.9,1953.1,4.9,0.8,85.8,0.8,P1,D
+PCW.R,Process cooling water return,PCW,-212.7,1953.1,4.1,0.8,0.8,2.5,P1,D
+PCW.R,Process cooling water return,PCW,-212.7,1953.1,5.8,0.8,85.8,0.8,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-468.4,2038.1,4.9,465.8,0.8,0.8,P1,D
+PCW.R,Process cooling water return,PCW,-468.4,2039.5,5.8,465.8,0.8,0.8,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-455.03,1971.78,5.08,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-454.23,1971.78,5.98,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-455.03,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-454.23,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-429.03,1971.78,5.08,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-428.23,1971.78,5.98,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-429.03,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-428.23,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-403.03,1971.78,5.08,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-402.23,1971.78,5.98,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-403.03,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-402.23,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-377.03,1971.78,5.08,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-376.23,1971.78,5.98,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-377.03,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-376.23,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-351.03,1971.78,5.08,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-350.23,1971.78,5.98,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-351.03,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-350.23,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-325.03,1971.78,5.08,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-324.23,1971.78,5.98,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-325.03,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-324.23,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-299.03,1971.78,5.08,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-298.23,1971.78,5.98,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-299.03,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-298.23,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-273.03,1971.78,5.08,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-272.23,1971.78,5.98,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-273.03,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-272.23,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-247.03,1971.78,5.08,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-246.22,1971.78,5.98,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-247.03,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-246.22,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-221.03,1971.78,5.08,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-220.22,1971.78,5.98,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-221.03,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-220.22,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-195.03,1971.78,5.08,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-194.22,1971.78,5.98,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-195.03,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-194.22,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-169.03,1971.78,5.08,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-168.22,1971.78,5.98,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-169.03,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-168.22,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-143.03,1971.78,5.08,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-142.22,1971.78,5.98,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-143.03,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-142.22,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-117.02,1971.78,5.08,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-116.22,1971.78,5.98,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-117.02,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-116.22,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-91.02,1971.78,5.08,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-90.22,1971.78,5.98,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-91.02,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-90.22,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-65.02,1971.78,5.08,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-64.22,1971.78,5.98,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-65.02,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-64.22,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-39.02,1971.78,5.08,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-38.23,1971.78,5.98,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-39.02,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-38.23,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-13.03,1971.78,5.08,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-12.22,1971.78,5.98,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-13.03,1997.78,5.08,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-12.22,1997.78,5.08,0.45,0.45,12.75,P1,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-235.9,1948.1,35.6,14.8,0.8,0.8,P1,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-221.9,1948.1,35.6,0.8,4.8,0.8,P1,D
+CHW.R,Chilled water return,Thermal management,-235.9,1949.3,36.5,14.8,0.8,0.8,P1,D
+CHW.R,Chilled water return,Thermal management,-221.9,1949.3,36.5,0.8,4.8,0.8,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-213.9,1953.1,36.2,0.8,0.8,2.5,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-213.9,1953.1,37.9,0.8,85.8,0.8,P1,D
+PCW.R,Process cooling water return,PCW,-212.7,1953.1,37.1,0.8,0.8,2.5,P1,D
+PCW.R,Process cooling water return,PCW,-212.7,1953.1,38.8,0.8,85.8,0.8,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-468.4,2038.1,37.9,465.8,0.8,0.8,P1,D
+PCW.R,Process cooling water return,PCW,-468.4,2039.5,38.8,465.8,0.8,0.8,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-455.03,1971.78,38.07,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-454.23,1971.78,38.97,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-455.03,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-454.23,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-429.03,1971.78,38.07,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-428.23,1971.78,38.97,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-429.03,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-428.23,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-403.03,1971.78,38.07,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-402.23,1971.78,38.97,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-403.03,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-402.23,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-377.03,1971.78,38.07,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-376.23,1971.78,38.97,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-377.03,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-376.23,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-351.03,1971.78,38.07,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-350.23,1971.78,38.97,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-351.03,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-350.23,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-325.03,1971.78,38.07,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-324.23,1971.78,38.97,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-325.03,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-324.23,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-299.03,1971.78,38.07,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-298.23,1971.78,38.97,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-299.03,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-298.23,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-273.03,1971.78,38.07,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-272.23,1971.78,38.97,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-273.03,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-272.23,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-247.03,1971.78,38.07,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-246.22,1971.78,38.97,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-247.03,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-246.22,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-221.03,1971.78,38.07,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-220.22,1971.78,38.97,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-221.03,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-220.22,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-195.03,1971.78,38.07,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-194.22,1971.78,38.97,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-195.03,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-194.22,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-169.03,1971.78,38.07,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-168.22,1971.78,38.97,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-169.03,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-168.22,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-143.03,1971.78,38.07,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-142.22,1971.78,38.97,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-143.03,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-142.22,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-117.02,1971.78,38.07,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-116.22,1971.78,38.97,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-117.02,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-116.22,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-91.02,1971.78,38.07,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-90.22,1971.78,38.97,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-91.02,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-90.22,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-65.02,1971.78,38.07,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-64.22,1971.78,38.97,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-65.02,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-64.22,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-39.02,1971.78,38.07,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-38.23,1971.78,38.97,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-39.02,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-38.23,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-13.03,1971.78,38.07,0.45,139.45,0.45,P1,D
+PCW.R,Process cooling water return,PCW,-12.22,1971.78,38.97,0.45,139.45,0.45,P1,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-13.03,1997.78,38.07,0.45,0.45,12.75,P1,D
+PCW.R,Process cooling water return,PCW,-12.22,1997.78,38.07,0.45,0.45,12.75,P1,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-244.9,1924.6,11.6,0.8,30.3,0.8,P1,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-244.9,1954.1,11.6,0.8,0.8,35.2,P1,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-244.85,1954.15,14.05,0.7,87.7,0.7,P1,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-468.35,2041.15,14.05,465.7,0.7,0.7,P1,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-466.3,1954.2,4.7,0.6,0.6,6.8,P1,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-466.3,1954.2,10.9,0.6,32.1,0.6,P1,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-466.3,1985.7,10.9,0.6,111.6,0.6,P1,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-466.3,1985.7,10.9,463.6,0.6,0.6,P1,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-466.3,2096.7,10.9,463.6,0.6,0.6,P1,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-244.85,1954.15,46.05,0.7,87.7,0.7,P1,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-468.35,2041.15,46.05,465.7,0.7,0.7,P1,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-466.3,1954.2,4.7,0.6,0.6,38.8,P1,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-466.3,1954.2,42.9,0.6,32.1,0.6,P1,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-466.3,1985.7,42.9,0.6,111.6,0.6,P1,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-466.3,1985.7,42.9,463.6,0.6,0.6,P1,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-466.3,2096.7,42.9,463.6,0.6,0.6,P1,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-470.4,1964.4,6.6,469.8,0.8,0.8,P1,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-403.4,1948.6,6.6,0.8,16.6,0.8,P1,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-263.4,1948.6,6.6,0.8,16.6,0.8,P1,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-123.4,1948.6,6.6,0.8,16.6,0.8,P1,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-470.4,1964.4,39.6,469.8,0.8,0.8,P1,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-403.4,1948.6,39.6,0.8,16.6,0.8,P1,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-263.4,1948.6,39.6,0.8,16.6,0.8,P1,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-123.4,1948.6,39.6,0.8,16.6,0.8,P1,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-403.45,1948.55,6.55,0.9,0.9,78.3,P1,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-263.45,1948.55,6.55,0.9,0.9,78.3,P1,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-123.45,1948.55,6.55,0.9,0.9,78.3,P1,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-458.55,1948.45,83.85,465.1,1.1,1.1,P1,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-470.4,1963.0,7.05,469.8,0.8,0.8,P1,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-401.6,1950.76,7.05,0.8,13.04,0.8,P1,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-261.6,1950.76,7.05,0.8,13.04,0.8,P1,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-121.6,1950.76,7.05,0.8,13.04,0.8,P1,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-470.4,1963.0,40.05,469.8,0.8,0.8,P1,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-401.6,1950.76,40.05,0.8,13.04,0.8,P1,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-261.6,1950.76,40.05,0.8,13.04,0.8,P1,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-121.6,1950.76,40.05,0.8,13.04,0.8,P1,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-401.65,1950.71,6.55,0.9,0.9,79.2,P1,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-261.65,1950.71,6.55,0.9,0.9,79.2,P1,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-121.65,1950.71,6.55,0.9,0.9,79.2,P1,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-458.55,1950.61,84.75,465.1,1.1,1.1,P1,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-470.4,2117.8,6.6,469.8,0.8,0.8,P1,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-403.4,2117.8,6.6,0.8,16.6,0.8,P1,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-263.4,2117.8,6.6,0.8,16.6,0.8,P1,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-123.4,2117.8,6.6,0.8,16.6,0.8,P1,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-470.4,2117.8,39.6,469.8,0.8,0.8,P1,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-403.4,2117.8,39.6,0.8,16.6,0.8,P1,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-263.4,2117.8,39.6,0.8,16.6,0.8,P1,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-123.4,2117.8,39.6,0.8,16.6,0.8,P1,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-403.45,2133.55,6.55,0.9,0.9,78.3,P1,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-263.45,2133.55,6.55,0.9,0.9,78.3,P1,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-123.45,2133.55,6.55,0.9,0.9,78.3,P1,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-458.55,2133.45,83.85,465.1,1.1,1.1,P1,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-470.4,2119.2,7.05,469.8,0.8,0.8,P1,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-401.6,2119.2,7.05,0.8,13.04,0.8,P1,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-261.6,2119.2,7.05,0.8,13.04,0.8,P1,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-121.6,2119.2,7.05,0.8,13.04,0.8,P1,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-470.4,2119.2,40.05,469.8,0.8,0.8,P1,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-401.6,2119.2,40.05,0.8,13.04,0.8,P1,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-261.6,2119.2,40.05,0.8,13.04,0.8,P1,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-121.6,2119.2,40.05,0.8,13.04,0.8,P1,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-401.65,2131.39,6.55,0.9,0.9,79.2,P1,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-261.65,2131.39,6.55,0.9,0.9,79.2,P1,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-121.65,2131.39,6.55,0.9,0.9,79.2,P1,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-458.55,2131.29,84.75,465.1,1.1,1.1,P1,D
+WW.F,Fluoride wastewater,Wastewater,-468.3,1969.7,0.6,465.6,0.6,0.6,P1,D
+WW.F,Fluoride wastewater,Wastewater,-231.8,1929.7,0.6,0.6,40.6,0.6,P1,D
+WW.F,Fluoride wastewater,Wastewater,-231.8,1929.7,0.6,710.1,0.6,0.6,P1,D
+WW.F,Fluoride wastewater,Wastewater,477.7,1149.7,0.6,0.6,780.6,0.6,P1,D
+WW.F,Fluoride wastewater,Wastewater,477.7,1149.7,0.6,22.6,0.6,0.6,P1,D
+WW.AA,Acid/alkali wastewater,Wastewater,-468.3,1970.8,0.6,465.6,0.6,0.6,P1,D
+WW.AA,Acid/alkali wastewater,Wastewater,-230.7,1930.8,0.6,0.6,40.6,0.6,P1,D
+WW.AA,Acid/alkali wastewater,Wastewater,-230.7,1930.8,0.6,710.1,0.6,0.6,P1,D
+WW.AA,Acid/alkali wastewater,Wastewater,478.8,1150.8,0.6,0.6,780.6,0.6,P1,D
+WW.AA,Acid/alkali wastewater,Wastewater,478.8,1150.8,0.6,21.5,0.6,0.6,P1,D
+WW.ORG,Organic wastewater,Wastewater,-468.3,1971.9,0.6,465.6,0.6,0.6,P1,D
+WW.ORG,Organic wastewater,Wastewater,-229.6,1931.9,0.6,0.6,40.6,0.6,P1,D
+WW.ORG,Organic wastewater,Wastewater,-229.6,1931.9,0.6,710.1,0.6,0.6,P1,D
+WW.ORG,Organic wastewater,Wastewater,479.9,1151.9,0.6,0.6,780.6,0.6,P1,D
+WW.ORG,Organic wastewater,Wastewater,479.9,1151.9,0.6,20.4,0.6,0.6,P1,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-297.3,1847.2,7.7,0.6,0.6,10.6,P1,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-297.3,1847.2,17.7,46.1,0.6,0.6,P1,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-251.8,1847.2,17.7,0.6,109.6,0.6,P1,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-251.8,1956.2,17.7,0.6,0.6,20.2,P1,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-251.8,1956.2,4.3,0.6,0.6,14.0,P1,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-251.8,1948.2,4.3,0.6,8.6,0.6,P1,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-464.3,1948.2,4.3,461.6,0.6,0.6,P1,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-251.8,1948.2,37.3,0.6,8.6,0.6,P1,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-464.3,1948.2,37.3,461.6,0.6,0.6,P1,D
+UPW.S,UPW supply loop,UPW and reclaim,-209.35,1865.15,8.65,0.7,0.7,15.7,P1,D
+UPW.S,UPW supply loop,UPW and reclaim,-227.85,1865.15,23.65,19.2,0.7,0.7,P1,D
+UPW.S,UPW supply loop,UPW and reclaim,-227.85,1865.15,23.65,0.7,94.7,0.7,P1,D
+UPW.S,UPW supply loop,UPW and reclaim,-227.85,1959.15,11.65,0.7,0.7,12.7,P1,D
+UPW.R,UPW return loop,UPW and reclaim,-208.25,1866.25,9.45,0.7,0.7,15.7,P1,D
+UPW.R,UPW return loop,UPW and reclaim,-226.75,1866.25,24.45,19.2,0.7,0.7,P1,D
+UPW.R,UPW return loop,UPW and reclaim,-226.75,1866.25,24.45,0.7,94.7,0.7,P1,D
+UPW.R,UPW return loop,UPW and reclaim,-226.75,1960.25,12.45,0.7,0.7,12.7,P1,D
+UPW.S,UPW supply loop,UPW and reclaim,-227.85,1959.15,23.65,0.7,0.7,23.3,P1,D
+UPW.R,UPW return loop,UPW and reclaim,-226.75,1960.25,23.65,0.7,0.7,23.3,P1,D
+UPW.S,UPW supply loop,UPW and reclaim,-227.8,1959.2,12.3,0.6,150.1,0.6,P1,D
+UPW.R,UPW return loop,UPW and reclaim,-226.7,1959.2,13.1,0.6,150.1,0.6,P1,D
+UPW.S,UPW supply loop,UPW and reclaim,-468.3,2108.7,12.3,465.6,0.6,0.6,P1,D
+UPW.R,UPW return loop,UPW and reclaim,-468.3,2109.8,13.1,465.6,0.6,0.6,P1,D
+UPW.S,UPW supply loop,UPW and reclaim,-227.8,1959.2,44.3,0.6,150.1,0.6,P1,D
+UPW.R,UPW return loop,UPW and reclaim,-226.7,1959.2,45.1,0.6,150.1,0.6,P1,D
+UPW.S,UPW supply loop,UPW and reclaim,-468.3,2108.7,44.3,465.6,0.6,0.6,P1,D
+UPW.R,UPW return loop,UPW and reclaim,-468.3,2109.8,45.1,465.6,0.6,0.6,P1,D
+RCL,Reclaimed-water recovery (low-concentration rinse drain → recovery plant),UPW and reclaim,-223.8,1962.2,1.5,0.6,13.1,0.6,P1,D
+RCL,Reclaimed-water recovery (low-concentration rinse drain → recovery plant),UPW and reclaim,-223.8,1865.2,1.5,0.6,97.6,0.6,P1,D
+RCL,Reclaimed-water recovery (low-concentration rinse drain → recovery plant),UPW and reclaim,-223.8,1865.2,1.5,86.1,0.6,0.6,P1,D
+RCL,Reclaimed-water recovery (low-concentration rinse drain → recovery plant),UPW and reclaim,-138.3,1865.2,1.5,0.6,0.6,5.8,P1,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-506.45,2124.55,8.55,32.9,0.9,0.9,P1,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-474.45,2124.55,7.15,0.9,0.9,33.9,P1,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-474.4,2124.6,7.2,469.8,0.8,0.8,P1,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-474.4,2124.6,40.2,469.8,0.8,0.8,P1,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-508.25,2126.15,8.55,34.7,0.9,0.9,P1,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-474.45,2126.15,7.15,0.9,0.9,33.9,P1,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-474.4,2126.2,7.2,469.8,0.8,0.8,P1,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-474.4,2126.2,40.2,469.8,0.8,0.8,P1,D
+ELEC.UPS,UPS and voltage-sag compensation power (selected critical loads),Power,-446.3,2130.7,5.9,441.6,0.6,0.6,P1,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-442.3,2124.7,7.3,0.6,0.6,7.6,P1,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-442.3,1971.7,14.3,0.6,153.6,0.6,P1,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-312.3,2124.7,7.3,0.6,0.6,7.6,P1,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-312.3,1971.7,14.3,0.6,153.6,0.6,P1,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-182.3,2124.7,7.3,0.6,0.6,7.6,P1,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-182.3,1971.7,14.3,0.6,153.6,0.6,P1,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-52.3,2124.7,7.3,0.6,0.6,7.6,P1,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-52.3,1971.7,14.3,0.6,153.6,0.6,P1,D
+ELEC.UPS,UPS and voltage-sag compensation power (selected critical loads),Power,-446.3,2130.7,38.9,441.6,0.6,0.6,P1,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-442.3,2124.7,40.3,0.6,0.6,7.6,P1,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-442.3,1971.7,47.3,0.6,153.6,0.6,P1,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-312.3,2124.7,40.3,0.6,0.6,7.6,P1,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-312.3,1971.7,47.3,0.6,153.6,0.6,P1,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-182.3,2124.7,40.3,0.6,0.6,7.6,P1,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-182.3,1971.7,47.3,0.6,153.6,0.6,P1,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-52.3,2124.7,40.3,0.6,0.6,7.6,P1,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-52.3,1971.7,47.3,0.6,153.6,0.6,P1,D
+ELEC.EMERG,Emergency power (emergency generators → selected emergency loads),Power,-476.3,2133.7,5.1,471.6,0.6,0.6,P1,D
+ELEC.EMERG,Emergency power (emergency generators → selected emergency loads),Power,-472.3,2133.7,5.1,0.6,0.6,33.6,P1,D
+ELEC.EMERG,Emergency power (emergency generators → selected emergency loads),Power,-472.3,2133.7,38.1,467.6,0.6,0.6,P1,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-46.1,1836.9,5.4,1.2,1.2,15.2,P2,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-46.1,1739.9,19.4,1.2,98.2,1.2,P2,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-46.1,1739.9,2.4,1.2,1.2,18.2,P2,D
+CHW.R,Chilled water return,Thermal management,-44.8,1838.2,6.4,1.2,1.2,15.2,P2,D
+CHW.R,Chilled water return,Thermal management,-44.8,1741.2,20.4,1.2,98.2,1.2,P2,D
+CHW.R,Chilled water return,Thermal management,-44.8,1741.2,3.4,1.2,1.2,18.2,P2,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-46.1,1739.9,19.4,1.2,1.2,42.2,P2,D
+CHW.R,Chilled water return,Thermal management,-44.8,1741.2,20.4,1.2,1.2,42.2,P2,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-46.0,1725.0,28.1,1.0,16.0,1.0,P2,D
+CHW.R,Chilled water return,Thermal management,-44.7,1726.3,29.1,1.0,16.0,1.0,P2,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-279.5,1725.0,28.1,468.0,1.0,1.0,P2,D
+CHW.R,Chilled water return,Thermal management,-278.2,1726.3,29.1,468.0,1.0,1.0,P2,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-46.0,1566.0,28.1,1.0,160.0,1.0,P2,D
+CHW.R,Chilled water return,Thermal management,-44.7,1567.3,29.1,1.0,160.0,1.0,P2,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-279.5,1566.0,28.1,468.0,1.0,1.0,P2,D
+CHW.R,Chilled water return,Thermal management,-278.2,1567.3,29.1,468.0,1.0,1.0,P2,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-273.35,1737.15,30.45,233.2,0.7,0.7,P2,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-40.85,1737.15,30.45,223.2,0.7,0.7,P2,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-46.0,1725.0,60.1,1.0,16.0,1.0,P2,D
+CHW.R,Chilled water return,Thermal management,-44.7,1726.3,61.1,1.0,16.0,1.0,P2,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-279.5,1725.0,60.1,468.0,1.0,1.0,P2,D
+CHW.R,Chilled water return,Thermal management,-278.2,1726.3,61.1,468.0,1.0,1.0,P2,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-46.0,1566.0,60.1,1.0,160.0,1.0,P2,D
+CHW.R,Chilled water return,Thermal management,-44.7,1567.3,61.1,1.0,160.0,1.0,P2,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-279.5,1566.0,60.1,468.0,1.0,1.0,P2,D
+CHW.R,Chilled water return,Thermal management,-278.2,1567.3,61.1,468.0,1.0,1.0,P2,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-273.35,1737.15,62.45,233.2,0.7,0.7,P2,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-40.85,1737.15,62.45,223.2,0.7,0.7,P2,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-106.35,1836.15,5.65,66.2,0.7,0.7,P2,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-40.85,1836.15,5.65,0.7,0.7,16.7,P2,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-40.85,1737.15,21.65,0.7,99.7,0.7,P2,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-40.85,1737.15,21.65,0.7,0.7,41.5,P2,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-45.9,1740.1,2.6,14.8,0.8,0.8,P2,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-31.9,1736.1,2.6,0.8,4.8,0.8,P2,D
+CHW.R,Chilled water return,Thermal management,-45.9,1741.3,3.5,14.8,0.8,0.8,P2,D
+CHW.R,Chilled water return,Thermal management,-31.9,1737.3,3.5,0.8,4.8,0.8,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-23.9,1735.1,3.2,0.8,0.8,2.5,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-23.9,1642.6,4.9,0.8,93.3,0.8,P2,D
+PCW.R,Process cooling water return,PCW,-22.7,1735.1,4.1,0.8,0.8,2.5,P2,D
+PCW.R,Process cooling water return,PCW,-22.7,1642.6,5.8,0.8,93.3,0.8,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-279.4,1642.6,4.9,467.8,0.8,0.8,P2,D
+PCW.R,Process cooling water return,PCW,-279.4,1644.0,5.8,467.8,0.8,0.8,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-271.53,1574.78,5.08,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-270.73,1574.78,5.98,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-271.53,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-270.73,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-245.53,1574.78,5.08,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-244.72,1574.78,5.98,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-245.53,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-244.72,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-219.53,1574.78,5.08,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-218.72,1574.78,5.98,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-219.53,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-218.72,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-193.53,1574.78,5.08,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-192.72,1574.78,5.98,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-193.53,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-192.72,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-167.53,1574.78,5.08,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-166.72,1574.78,5.98,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-167.53,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-166.72,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-141.53,1574.78,5.08,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-140.72,1574.78,5.98,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-141.53,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-140.72,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-115.52,1574.78,5.08,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-114.72,1574.78,5.98,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-115.52,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-114.72,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-89.52,1574.78,5.08,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-88.72,1574.78,5.98,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-89.52,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-88.72,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-63.52,1574.78,5.08,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-62.73,1574.78,5.98,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-63.52,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-62.73,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-37.52,1574.78,5.08,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-36.73,1574.78,5.98,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-37.52,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-36.73,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-11.53,1574.78,5.08,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-10.72,1574.78,5.98,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-11.53,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-10.72,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,14.47,1574.78,5.08,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,15.28,1574.78,5.98,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,14.47,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,15.28,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,40.48,1574.78,5.08,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,41.27,1574.78,5.98,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,40.48,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,41.27,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,66.48,1574.78,5.08,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,67.28,1574.78,5.98,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,66.48,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,67.28,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,92.48,1574.78,5.08,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,93.28,1574.78,5.98,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,92.48,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,93.28,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,118.48,1574.78,5.08,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,119.28,1574.78,5.98,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,118.48,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,119.28,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,144.47,1574.78,5.08,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,145.28,1574.78,5.98,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,144.47,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,145.28,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,170.47,1574.78,5.08,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,171.28,1574.78,5.98,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,170.47,1600.78,5.08,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,171.28,1600.78,5.08,0.45,0.45,12.75,P2,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-45.9,1740.1,35.6,14.8,0.8,0.8,P2,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-31.9,1736.1,35.6,0.8,4.8,0.8,P2,D
+CHW.R,Chilled water return,Thermal management,-45.9,1741.3,36.5,14.8,0.8,0.8,P2,D
+CHW.R,Chilled water return,Thermal management,-31.9,1737.3,36.5,0.8,4.8,0.8,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-23.9,1735.1,36.2,0.8,0.8,2.5,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-23.9,1642.6,37.9,0.8,93.3,0.8,P2,D
+PCW.R,Process cooling water return,PCW,-22.7,1735.1,37.1,0.8,0.8,2.5,P2,D
+PCW.R,Process cooling water return,PCW,-22.7,1642.6,38.8,0.8,93.3,0.8,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-279.4,1642.6,37.9,467.8,0.8,0.8,P2,D
+PCW.R,Process cooling water return,PCW,-279.4,1644.0,38.8,467.8,0.8,0.8,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-271.53,1574.78,38.07,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-270.73,1574.78,38.97,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-271.53,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-270.73,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-245.53,1574.78,38.07,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-244.72,1574.78,38.97,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-245.53,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-244.72,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-219.53,1574.78,38.07,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-218.72,1574.78,38.97,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-219.53,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-218.72,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-193.53,1574.78,38.07,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-192.72,1574.78,38.97,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-193.53,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-192.72,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-167.53,1574.78,38.07,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-166.72,1574.78,38.97,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-167.53,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-166.72,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-141.53,1574.78,38.07,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-140.72,1574.78,38.97,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-141.53,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-140.72,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-115.52,1574.78,38.07,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-114.72,1574.78,38.97,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-115.52,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-114.72,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-89.52,1574.78,38.07,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-88.72,1574.78,38.97,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-89.52,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-88.72,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-63.52,1574.78,38.07,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-62.73,1574.78,38.97,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-63.52,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-62.73,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-37.52,1574.78,38.07,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-36.73,1574.78,38.97,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-37.52,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-36.73,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-11.53,1574.78,38.07,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,-10.72,1574.78,38.97,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-11.53,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,-10.72,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,14.47,1574.78,38.07,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,15.28,1574.78,38.97,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,14.47,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,15.28,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,40.48,1574.78,38.07,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,41.27,1574.78,38.97,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,40.48,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,41.27,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,66.48,1574.78,38.07,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,67.28,1574.78,38.97,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,66.48,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,67.28,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,92.48,1574.78,38.07,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,93.28,1574.78,38.97,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,92.48,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,93.28,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,118.48,1574.78,38.07,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,119.28,1574.78,38.97,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,118.48,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,119.28,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,144.47,1574.78,38.07,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,145.28,1574.78,38.97,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,144.47,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,145.28,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,170.47,1574.78,38.07,0.45,142.45,0.45,P2,D
+PCW.R,Process cooling water return,PCW,171.28,1574.78,38.97,0.45,142.45,0.45,P2,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,170.47,1600.78,38.07,0.45,0.45,12.75,P2,D
+PCW.R,Process cooling water return,PCW,171.28,1600.78,38.07,0.45,0.45,12.75,P2,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-316.4,1734.1,11.6,262.3,0.8,0.8,P2,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-54.9,1734.1,11.6,0.8,0.8,35.2,P2,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-54.85,1645.65,14.05,0.7,89.2,0.7,P2,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-279.35,1645.65,14.05,467.7,0.7,0.7,P2,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-277.3,1734.2,4.7,0.6,0.6,6.8,P2,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-277.3,1588.7,10.9,0.6,146.1,0.6,P2,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-277.3,1588.7,10.9,0.6,114.6,0.6,P2,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-277.3,1588.7,10.9,465.6,0.6,0.6,P2,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-277.3,1702.7,10.9,465.6,0.6,0.6,P2,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-54.85,1645.65,46.05,0.7,89.2,0.7,P2,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-279.35,1645.65,46.05,467.7,0.7,0.7,P2,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-277.3,1734.2,4.7,0.6,0.6,38.8,P2,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-277.3,1588.7,42.9,0.6,146.1,0.6,P2,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-277.3,1588.7,42.9,0.6,114.6,0.6,P2,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-277.3,1588.7,42.9,465.6,0.6,0.6,P2,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-277.3,1702.7,42.9,465.6,0.6,0.6,P2,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-281.4,1567.4,6.6,471.8,0.8,0.8,P2,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-214.4,1551.6,6.6,0.8,16.6,0.8,P2,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-74.4,1551.6,6.6,0.8,16.6,0.8,P2,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,65.6,1551.6,6.6,0.8,16.6,0.8,P2,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-281.4,1567.4,39.6,471.8,0.8,0.8,P2,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-214.4,1551.6,39.6,0.8,16.6,0.8,P2,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-74.4,1551.6,39.6,0.8,16.6,0.8,P2,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,65.6,1551.6,39.6,0.8,16.6,0.8,P2,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-214.45,1551.55,6.55,0.9,0.9,78.3,P2,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-74.45,1551.55,6.55,0.9,0.9,78.3,P2,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,65.55,1551.55,6.55,0.9,0.9,78.3,P2,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-269.55,1551.45,83.85,467.1,1.1,1.1,P2,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-281.4,1566.0,7.05,471.8,0.8,0.8,P2,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-212.6,1553.76,7.05,0.8,13.04,0.8,P2,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-72.6,1553.76,7.05,0.8,13.04,0.8,P2,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,67.4,1553.76,7.05,0.8,13.04,0.8,P2,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-281.4,1566.0,40.05,471.8,0.8,0.8,P2,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-212.6,1553.76,40.05,0.8,13.04,0.8,P2,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-72.6,1553.76,40.05,0.8,13.04,0.8,P2,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,67.4,1553.76,40.05,0.8,13.04,0.8,P2,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-212.65,1553.71,6.55,0.9,0.9,79.2,P2,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-72.65,1553.71,6.55,0.9,0.9,79.2,P2,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,67.35,1553.71,6.55,0.9,0.9,79.2,P2,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-269.55,1553.61,84.75,467.1,1.1,1.1,P2,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-281.4,1723.8,6.6,471.8,0.8,0.8,P2,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-214.4,1723.8,6.6,0.8,16.6,0.8,P2,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-74.4,1723.8,6.6,0.8,16.6,0.8,P2,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,65.6,1723.8,6.6,0.8,16.6,0.8,P2,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-281.4,1723.8,39.6,471.8,0.8,0.8,P2,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-214.4,1723.8,39.6,0.8,16.6,0.8,P2,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-74.4,1723.8,39.6,0.8,16.6,0.8,P2,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,65.6,1723.8,39.6,0.8,16.6,0.8,P2,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-214.45,1739.55,6.55,0.9,0.9,78.3,P2,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-74.45,1739.55,6.55,0.9,0.9,78.3,P2,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,65.55,1739.55,6.55,0.9,0.9,78.3,P2,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-269.55,1739.45,83.85,467.1,1.1,1.1,P2,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-281.4,1725.2,7.05,471.8,0.8,0.8,P2,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-212.6,1725.2,7.05,0.8,13.04,0.8,P2,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-72.6,1725.2,7.05,0.8,13.04,0.8,P2,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,67.4,1725.2,7.05,0.8,13.04,0.8,P2,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-281.4,1725.2,40.05,471.8,0.8,0.8,P2,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-212.6,1725.2,40.05,0.8,13.04,0.8,P2,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-72.6,1725.2,40.05,0.8,13.04,0.8,P2,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,67.4,1725.2,40.05,0.8,13.04,0.8,P2,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-212.65,1737.39,6.55,0.9,0.9,79.2,P2,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-72.65,1737.39,6.55,0.9,0.9,79.2,P2,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,67.35,1737.39,6.55,0.9,0.9,79.2,P2,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-269.55,1737.29,84.75,467.1,1.1,1.1,P2,D
+WW.F,Fluoride wastewater,Wastewater,-279.3,1572.7,0.6,467.6,0.6,0.6,P2,D
+WW.F,Fluoride wastewater,Wastewater,-41.8,1515.7,0.6,0.6,57.6,0.6,P2,D
+WW.F,Fluoride wastewater,Wastewater,-41.8,1515.7,0.6,520.1,0.6,0.6,P2,D
+WW.F,Fluoride wastewater,Wastewater,477.7,1149.7,0.6,0.6,366.6,0.6,P2,D
+WW.F,Fluoride wastewater,Wastewater,477.7,1149.7,0.6,22.6,0.6,0.6,P2,D
+WW.AA,Acid/alkali wastewater,Wastewater,-279.3,1573.8,0.6,467.6,0.6,0.6,P2,D
+WW.AA,Acid/alkali wastewater,Wastewater,-40.7,1516.8,0.6,0.6,57.6,0.6,P2,D
+WW.AA,Acid/alkali wastewater,Wastewater,-40.7,1516.8,0.6,520.1,0.6,0.6,P2,D
+WW.AA,Acid/alkali wastewater,Wastewater,478.8,1150.8,0.6,0.6,366.6,0.6,P2,D
+WW.AA,Acid/alkali wastewater,Wastewater,478.8,1150.8,0.6,21.5,0.6,0.6,P2,D
+WW.ORG,Organic wastewater,Wastewater,-279.3,1574.9,0.6,467.6,0.6,0.6,P2,D
+WW.ORG,Organic wastewater,Wastewater,-39.6,1517.9,0.6,0.6,57.6,0.6,P2,D
+WW.ORG,Organic wastewater,Wastewater,-39.6,1517.9,0.6,520.1,0.6,0.6,P2,D
+WW.ORG,Organic wastewater,Wastewater,479.9,1151.9,0.6,0.6,366.6,0.6,P2,D
+WW.ORG,Organic wastewater,Wastewater,479.9,1151.9,0.6,20.4,0.6,0.6,P2,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-297.3,1847.2,7.7,0.6,0.6,10.6,P2,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-297.3,1847.2,17.7,236.1,0.6,0.6,P2,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-61.8,1732.2,17.7,0.6,115.6,0.6,P2,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-61.8,1732.2,17.7,0.6,0.6,20.2,P2,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-61.8,1732.2,4.3,0.6,0.6,14.0,P2,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-61.8,1551.2,4.3,0.6,181.6,0.6,P2,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-275.3,1551.2,4.3,463.6,0.6,0.6,P2,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-61.8,1551.2,37.3,0.6,181.6,0.6,P2,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-275.3,1551.2,37.3,463.6,0.6,0.6,P2,D
+UPW.S,UPW supply loop,UPW and reclaim,-209.35,1865.15,8.65,0.7,0.7,15.7,P2,D
+UPW.S,UPW supply loop,UPW and reclaim,-209.35,1865.15,23.65,172.2,0.7,0.7,P2,D
+UPW.S,UPW supply loop,UPW and reclaim,-37.85,1729.15,23.65,0.7,136.7,0.7,P2,D
+UPW.S,UPW supply loop,UPW and reclaim,-37.85,1729.15,11.65,0.7,0.7,12.7,P2,D
+UPW.R,UPW return loop,UPW and reclaim,-208.25,1866.25,9.45,0.7,0.7,15.7,P2,D
+UPW.R,UPW return loop,UPW and reclaim,-208.25,1866.25,24.45,172.2,0.7,0.7,P2,D
+UPW.R,UPW return loop,UPW and reclaim,-36.75,1730.25,24.45,0.7,136.7,0.7,P2,D
+UPW.R,UPW return loop,UPW and reclaim,-36.75,1730.25,12.45,0.7,0.7,12.7,P2,D
+UPW.S,UPW supply loop,UPW and reclaim,-37.85,1729.15,23.65,0.7,0.7,23.3,P2,D
+UPW.R,UPW return loop,UPW and reclaim,-36.75,1730.25,23.65,0.7,0.7,23.3,P2,D
+UPW.S,UPW supply loop,UPW and reclaim,-37.8,1576.7,12.3,0.6,153.1,0.6,P2,D
+UPW.R,UPW return loop,UPW and reclaim,-36.7,1576.7,13.1,0.6,153.1,0.6,P2,D
+UPW.S,UPW supply loop,UPW and reclaim,-279.3,1576.7,12.3,467.6,0.6,0.6,P2,D
+UPW.R,UPW return loop,UPW and reclaim,-279.3,1577.8,13.1,467.6,0.6,0.6,P2,D
+UPW.S,UPW supply loop,UPW and reclaim,-37.8,1576.7,44.3,0.6,153.1,0.6,P2,D
+UPW.R,UPW return loop,UPW and reclaim,-36.7,1576.7,45.1,0.6,153.1,0.6,P2,D
+UPW.S,UPW supply loop,UPW and reclaim,-279.3,1576.7,44.3,467.6,0.6,0.6,P2,D
+UPW.R,UPW return loop,UPW and reclaim,-279.3,1577.8,45.1,467.6,0.6,0.6,P2,D
+RCL,Reclaimed-water recovery (low-concentration rinse drain → recovery plant),UPW and reclaim,-33.8,1713.7,1.5,0.6,13.1,0.6,P2,D
+RCL,Reclaimed-water recovery (low-concentration rinse drain → recovery plant),UPW and reclaim,-33.8,1726.2,1.5,0.6,139.6,0.6,P2,D
+RCL,Reclaimed-water recovery (low-concentration rinse drain → recovery plant),UPW and reclaim,-138.3,1865.2,1.5,105.1,0.6,0.6,P2,D
+RCL,Reclaimed-water recovery (low-concentration rinse drain → recovery plant),UPW and reclaim,-138.3,1865.2,1.5,0.6,0.6,5.8,P2,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-318.25,1730.55,8.55,33.7,0.9,0.9,P2,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-285.45,1730.55,7.15,0.9,0.9,33.9,P2,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-285.4,1730.6,7.2,471.8,0.8,0.8,P2,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-285.4,1730.6,40.2,471.8,0.8,0.8,P2,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-320.05,1732.15,8.55,35.5,0.9,0.9,P2,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-285.45,1732.15,7.15,0.9,0.9,33.9,P2,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-285.4,1732.2,7.2,471.8,0.8,0.8,P2,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-285.4,1732.2,40.2,471.8,0.8,0.8,P2,D
+ELEC.UPS,UPS and voltage-sag compensation power (selected critical loads),Power,-257.3,1736.7,5.9,443.6,0.6,0.6,P2,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-253.3,1730.7,7.3,0.6,0.6,7.6,P2,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-253.3,1574.7,14.3,0.6,156.6,0.6,P2,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-123.3,1730.7,7.3,0.6,0.6,7.6,P2,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-123.3,1574.7,14.3,0.6,156.6,0.6,P2,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,6.7,1730.7,7.3,0.6,0.6,7.6,P2,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,6.7,1574.7,14.3,0.6,156.6,0.6,P2,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,136.7,1730.7,7.3,0.6,0.6,7.6,P2,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,136.7,1574.7,14.3,0.6,156.6,0.6,P2,D
+ELEC.UPS,UPS and voltage-sag compensation power (selected critical loads),Power,-257.3,1736.7,38.9,443.6,0.6,0.6,P2,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-253.3,1730.7,40.3,0.6,0.6,7.6,P2,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-253.3,1574.7,47.3,0.6,156.6,0.6,P2,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-123.3,1730.7,40.3,0.6,0.6,7.6,P2,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-123.3,1574.7,47.3,0.6,156.6,0.6,P2,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,6.7,1730.7,40.3,0.6,0.6,7.6,P2,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,6.7,1574.7,47.3,0.6,156.6,0.6,P2,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,136.7,1730.7,40.3,0.6,0.6,7.6,P2,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,136.7,1574.7,47.3,0.6,156.6,0.6,P2,D
+ELEC.EMERG,Emergency power (emergency generators → selected emergency loads),Power,-287.3,1739.7,5.1,473.6,0.6,0.6,P2,D
+ELEC.EMERG,Emergency power (emergency generators → selected emergency loads),Power,-283.3,1739.7,5.1,0.6,0.6,33.6,P2,D
+ELEC.EMERG,Emergency power (emergency generators → selected emergency loads),Power,-283.3,1739.7,38.1,469.6,0.6,0.6,P2,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,7.9,1163.9,5.4,1.2,1.2,15.2,P3,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,7.9,1163.9,19.4,1.2,125.2,1.2,P3,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,7.9,1287.9,2.4,1.2,1.2,18.2,P3,D
+CHW.R,Chilled water return,Thermal management,9.2,1165.2,6.4,1.2,1.2,15.2,P3,D
+CHW.R,Chilled water return,Thermal management,9.2,1165.2,20.4,1.2,125.2,1.2,P3,D
+CHW.R,Chilled water return,Thermal management,9.2,1289.2,3.4,1.2,1.2,18.2,P3,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,7.9,1287.9,19.4,1.2,1.2,42.2,P3,D
+CHW.R,Chilled water return,Thermal management,9.2,1289.2,20.4,1.2,1.2,42.2,P3,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,8.0,1288.0,28.1,1.0,16.0,1.0,P3,D
+CHW.R,Chilled water return,Thermal management,9.3,1289.3,29.1,1.0,16.0,1.0,P3,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-276.5,1303.0,28.1,570.0,1.0,1.0,P3,D
+CHW.R,Chilled water return,Thermal management,-275.2,1304.3,29.1,570.0,1.0,1.0,P3,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,8.0,1303.0,28.1,1.0,164.0,1.0,P3,D
+CHW.R,Chilled water return,Thermal management,9.3,1304.3,29.1,1.0,164.0,1.0,P3,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-276.5,1466.0,28.1,570.0,1.0,1.0,P3,D
+CHW.R,Chilled water return,Thermal management,-275.2,1467.3,29.1,570.0,1.0,1.0,P3,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-270.35,1291.15,30.45,284.2,0.7,0.7,P3,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,13.15,1291.15,30.45,274.2,0.7,0.7,P3,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,8.0,1288.0,60.1,1.0,16.0,1.0,P3,D
+CHW.R,Chilled water return,Thermal management,9.3,1289.3,61.1,1.0,16.0,1.0,P3,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-276.5,1303.0,60.1,570.0,1.0,1.0,P3,D
+CHW.R,Chilled water return,Thermal management,-275.2,1304.3,61.1,570.0,1.0,1.0,P3,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,8.0,1303.0,60.1,1.0,164.0,1.0,P3,D
+CHW.R,Chilled water return,Thermal management,9.3,1304.3,61.1,1.0,164.0,1.0,P3,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-276.5,1466.0,60.1,570.0,1.0,1.0,P3,D
+CHW.R,Chilled water return,Thermal management,-275.2,1467.3,61.1,570.0,1.0,1.0,P3,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-270.35,1291.15,62.45,284.2,0.7,0.7,P3,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,13.15,1291.15,62.45,274.2,0.7,0.7,P3,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-99.35,1163.15,5.65,113.2,0.7,0.7,P3,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,13.15,1163.15,5.65,0.7,0.7,16.7,P3,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,13.15,1163.15,21.65,0.7,128.7,0.7,P3,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,13.15,1291.15,21.65,0.7,0.7,41.5,P3,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,8.1,1288.1,2.6,14.8,0.8,0.8,P3,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,22.1,1288.1,2.6,0.8,4.8,0.8,P3,D
+CHW.R,Chilled water return,Thermal management,8.1,1289.3,3.5,14.8,0.8,0.8,P3,D
+CHW.R,Chilled water return,Thermal management,22.1,1289.3,3.5,0.8,4.8,0.8,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,30.1,1293.1,3.2,0.8,0.8,2.5,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,30.1,1293.1,4.9,0.8,89.3,0.8,P3,D
+PCW.R,Process cooling water return,PCW,31.3,1293.1,4.1,0.8,0.8,2.5,P3,D
+PCW.R,Process cooling water return,PCW,31.3,1293.1,5.8,0.8,89.3,0.8,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-276.4,1381.6,4.9,569.8,0.8,0.8,P3,D
+PCW.R,Process cooling water return,PCW,-276.4,1383.0,5.8,569.8,0.8,0.8,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-263.03,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-262.23,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-263.03,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-262.23,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-237.03,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-236.22,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-237.03,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-236.22,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-211.03,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-210.22,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-211.03,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-210.22,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-185.03,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-184.22,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-185.03,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-184.22,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-159.03,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-158.22,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-159.03,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-158.22,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-133.03,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-132.22,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-133.03,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-132.22,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-107.02,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-106.22,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-107.02,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-106.22,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-81.02,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-80.22,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-81.02,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-80.22,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-55.02,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-54.23,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-55.02,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-54.23,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-29.03,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-28.23,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-29.03,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-28.23,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-3.02,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-2.22,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-3.02,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-2.22,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,22.97,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,23.77,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,22.97,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,23.77,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,48.98,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,49.77,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,48.98,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,49.77,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,74.98,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,75.78,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,74.98,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,75.78,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,100.98,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,101.78,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,100.98,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,101.78,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,126.98,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,127.78,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,126.98,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,127.78,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,152.97,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,153.78,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,152.97,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,153.78,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,178.97,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,179.78,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,178.97,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,179.78,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,204.97,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,205.78,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,204.97,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,205.78,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,230.97,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,231.78,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,230.97,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,231.78,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,256.97,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,257.77,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,256.97,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,257.77,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,282.97,1311.78,5.08,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,283.77,1311.78,5.98,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,282.97,1337.78,5.08,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,283.77,1337.78,5.08,0.45,0.45,12.75,P3,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,8.1,1288.1,35.6,14.8,0.8,0.8,P3,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,22.1,1288.1,35.6,0.8,4.8,0.8,P3,D
+CHW.R,Chilled water return,Thermal management,8.1,1289.3,36.5,14.8,0.8,0.8,P3,D
+CHW.R,Chilled water return,Thermal management,22.1,1289.3,36.5,0.8,4.8,0.8,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,30.1,1293.1,36.2,0.8,0.8,2.5,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,30.1,1293.1,37.9,0.8,89.3,0.8,P3,D
+PCW.R,Process cooling water return,PCW,31.3,1293.1,37.1,0.8,0.8,2.5,P3,D
+PCW.R,Process cooling water return,PCW,31.3,1293.1,38.8,0.8,89.3,0.8,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-276.4,1381.6,37.9,569.8,0.8,0.8,P3,D
+PCW.R,Process cooling water return,PCW,-276.4,1383.0,38.8,569.8,0.8,0.8,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-263.03,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-262.23,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-263.03,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-262.23,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-237.03,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-236.22,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-237.03,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-236.22,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-211.03,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-210.22,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-211.03,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-210.22,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-185.03,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-184.22,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-185.03,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-184.22,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-159.03,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-158.22,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-159.03,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-158.22,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-133.03,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-132.22,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-133.03,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-132.22,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-107.02,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-106.22,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-107.02,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-106.22,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-81.02,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-80.22,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-81.02,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-80.22,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-55.02,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-54.23,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-55.02,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-54.23,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-29.03,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-28.23,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-29.03,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-28.23,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-3.02,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,-2.22,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-3.02,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,-2.22,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,22.97,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,23.77,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,22.97,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,23.77,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,48.98,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,49.77,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,48.98,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,49.77,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,74.98,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,75.78,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,74.98,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,75.78,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,100.98,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,101.78,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,100.98,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,101.78,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,126.98,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,127.78,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,126.98,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,127.78,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,152.97,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,153.78,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,152.97,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,153.78,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,178.97,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,179.78,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,178.97,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,179.78,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,204.97,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,205.78,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,204.97,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,205.78,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,230.97,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,231.78,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,230.97,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,231.78,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,256.97,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,257.77,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,256.97,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,257.77,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,282.97,1311.78,38.07,0.45,146.45,0.45,P3,D
+PCW.R,Process cooling water return,PCW,283.77,1311.78,38.97,0.45,146.45,0.45,P3,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,282.97,1337.78,38.07,0.45,0.45,12.75,P3,D
+PCW.R,Process cooling water return,PCW,283.77,1337.78,38.07,0.45,0.45,12.75,P3,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-316.4,1294.1,11.6,316.3,0.8,0.8,P3,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-0.9,1294.1,11.6,0.8,0.8,35.2,P3,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-0.85,1294.15,14.05,0.7,91.2,0.7,P3,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-276.35,1384.65,14.05,569.7,0.7,0.7,P3,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-274.3,1294.2,4.7,0.6,0.6,6.8,P3,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-274.3,1294.2,10.9,0.6,32.1,0.6,P3,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-274.3,1325.7,10.9,0.6,118.6,0.6,P3,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-274.3,1325.7,10.9,567.6,0.6,0.6,P3,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-274.3,1443.7,10.9,567.6,0.6,0.6,P3,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-0.85,1294.15,46.05,0.7,91.2,0.7,P3,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-276.35,1384.65,46.05,569.7,0.7,0.7,P3,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-274.3,1294.2,4.7,0.6,0.6,38.8,P3,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-274.3,1294.2,42.9,0.6,32.1,0.6,P3,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-274.3,1325.7,42.9,0.6,118.6,0.6,P3,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-274.3,1325.7,42.9,567.6,0.6,0.6,P3,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-274.3,1443.7,42.9,567.6,0.6,0.6,P3,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-278.4,1304.4,6.6,573.8,0.8,0.8,P3,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-211.4,1288.6,6.6,0.8,16.6,0.8,P3,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-71.4,1288.6,6.6,0.8,16.6,0.8,P3,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,68.6,1288.6,6.6,0.8,16.6,0.8,P3,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,208.6,1288.6,6.6,0.8,16.6,0.8,P3,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-278.4,1304.4,39.6,573.8,0.8,0.8,P3,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-211.4,1288.6,39.6,0.8,16.6,0.8,P3,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-71.4,1288.6,39.6,0.8,16.6,0.8,P3,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,68.6,1288.6,39.6,0.8,16.6,0.8,P3,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,208.6,1288.6,39.6,0.8,16.6,0.8,P3,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-211.45,1288.55,6.55,0.9,0.9,78.3,P3,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-71.45,1288.55,6.55,0.9,0.9,78.3,P3,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,68.55,1288.55,6.55,0.9,0.9,78.3,P3,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,208.55,1288.55,6.55,0.9,0.9,78.3,P3,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-266.55,1288.45,83.85,569.1,1.1,1.1,P3,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-278.4,1303.0,7.05,573.8,0.8,0.8,P3,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-209.6,1290.76,7.05,0.8,13.04,0.8,P3,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-69.6,1290.76,7.05,0.8,13.04,0.8,P3,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,70.4,1290.76,7.05,0.8,13.04,0.8,P3,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,210.4,1290.76,7.05,0.8,13.04,0.8,P3,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-278.4,1303.0,40.05,573.8,0.8,0.8,P3,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-209.6,1290.76,40.05,0.8,13.04,0.8,P3,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-69.6,1290.76,40.05,0.8,13.04,0.8,P3,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,70.4,1290.76,40.05,0.8,13.04,0.8,P3,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,210.4,1290.76,40.05,0.8,13.04,0.8,P3,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-209.65,1290.71,6.55,0.9,0.9,79.2,P3,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-69.65,1290.71,6.55,0.9,0.9,79.2,P3,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,70.35,1290.71,6.55,0.9,0.9,79.2,P3,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,210.35,1290.71,6.55,0.9,0.9,79.2,P3,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-266.55,1290.61,84.75,569.1,1.1,1.1,P3,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-278.4,1464.8,6.6,573.8,0.8,0.8,P3,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-211.4,1464.8,6.6,0.8,16.6,0.8,P3,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-71.4,1464.8,6.6,0.8,16.6,0.8,P3,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,68.6,1464.8,6.6,0.8,16.6,0.8,P3,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,208.6,1464.8,6.6,0.8,16.6,0.8,P3,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-278.4,1464.8,39.6,573.8,0.8,0.8,P3,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-211.4,1464.8,39.6,0.8,16.6,0.8,P3,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-71.4,1464.8,39.6,0.8,16.6,0.8,P3,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,68.6,1464.8,39.6,0.8,16.6,0.8,P3,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,208.6,1464.8,39.6,0.8,16.6,0.8,P3,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-211.45,1480.55,6.55,0.9,0.9,78.3,P3,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-71.45,1480.55,6.55,0.9,0.9,78.3,P3,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,68.55,1480.55,6.55,0.9,0.9,78.3,P3,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,208.55,1480.55,6.55,0.9,0.9,78.3,P3,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-266.55,1480.45,83.85,569.1,1.1,1.1,P3,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-278.4,1466.2,7.05,573.8,0.8,0.8,P3,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-209.6,1466.2,7.05,0.8,13.04,0.8,P3,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-69.6,1466.2,7.05,0.8,13.04,0.8,P3,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,70.4,1466.2,7.05,0.8,13.04,0.8,P3,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,210.4,1466.2,7.05,0.8,13.04,0.8,P3,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-278.4,1466.2,40.05,573.8,0.8,0.8,P3,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-209.6,1466.2,40.05,0.8,13.04,0.8,P3,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-69.6,1466.2,40.05,0.8,13.04,0.8,P3,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,70.4,1466.2,40.05,0.8,13.04,0.8,P3,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,210.4,1466.2,40.05,0.8,13.04,0.8,P3,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-209.65,1478.39,6.55,0.9,0.9,79.2,P3,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-69.65,1478.39,6.55,0.9,0.9,79.2,P3,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,70.35,1478.39,6.55,0.9,0.9,79.2,P3,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,210.35,1478.39,6.55,0.9,0.9,79.2,P3,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-266.55,1478.29,84.75,569.1,1.1,1.1,P3,D
+WW.F,Fluoride wastewater,Wastewater,-276.3,1309.7,0.6,569.6,0.6,0.6,P3,D
+WW.F,Fluoride wastewater,Wastewater,12.2,1255.7,0.6,0.6,54.6,0.6,P3,D
+WW.F,Fluoride wastewater,Wastewater,12.2,1255.7,0.6,466.1,0.6,0.6,P3,D
+WW.F,Fluoride wastewater,Wastewater,477.7,1149.7,0.6,0.6,106.6,0.6,P3,D
+WW.F,Fluoride wastewater,Wastewater,477.7,1149.7,0.6,22.6,0.6,0.6,P3,D
+WW.AA,Acid/alkali wastewater,Wastewater,-276.3,1310.8,0.6,569.6,0.6,0.6,P3,D
+WW.AA,Acid/alkali wastewater,Wastewater,13.3,1256.8,0.6,0.6,54.6,0.6,P3,D
+WW.AA,Acid/alkali wastewater,Wastewater,13.3,1256.8,0.6,466.1,0.6,0.6,P3,D
+WW.AA,Acid/alkali wastewater,Wastewater,478.8,1150.8,0.6,0.6,106.6,0.6,P3,D
+WW.AA,Acid/alkali wastewater,Wastewater,478.8,1150.8,0.6,21.5,0.6,0.6,P3,D
+WW.ORG,Organic wastewater,Wastewater,-276.3,1311.9,0.6,569.6,0.6,0.6,P3,D
+WW.ORG,Organic wastewater,Wastewater,14.4,1257.9,0.6,0.6,54.6,0.6,P3,D
+WW.ORG,Organic wastewater,Wastewater,14.4,1257.9,0.6,466.1,0.6,0.6,P3,D
+WW.ORG,Organic wastewater,Wastewater,479.9,1151.9,0.6,0.6,106.6,0.6,P3,D
+WW.ORG,Organic wastewater,Wastewater,479.9,1151.9,0.6,20.4,0.6,0.6,P3,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-290.3,1174.2,7.7,0.6,0.6,10.6,P3,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-290.3,1174.2,17.7,283.1,0.6,0.6,P3,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-7.8,1174.2,17.7,0.6,122.6,0.6,P3,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-7.8,1296.2,17.7,0.6,0.6,20.2,P3,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-7.8,1296.2,4.3,0.6,0.6,14.0,P3,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-7.8,1288.2,4.3,0.6,8.6,0.6,P3,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-272.3,1288.2,4.3,565.6,0.6,0.6,P3,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-7.8,1288.2,37.3,0.6,8.6,0.6,P3,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-272.3,1288.2,37.3,565.6,0.6,0.6,P3,D
+UPW.S,UPW supply loop,UPW and reclaim,-202.35,1192.15,8.65,0.7,0.7,15.7,P3,D
+UPW.S,UPW supply loop,UPW and reclaim,-202.35,1192.15,23.65,219.2,0.7,0.7,P3,D
+UPW.S,UPW supply loop,UPW and reclaim,16.15,1192.15,23.65,0.7,107.7,0.7,P3,D
+UPW.S,UPW supply loop,UPW and reclaim,16.15,1299.15,11.65,0.7,0.7,12.7,P3,D
+UPW.R,UPW return loop,UPW and reclaim,-201.25,1193.25,9.45,0.7,0.7,15.7,P3,D
+UPW.R,UPW return loop,UPW and reclaim,-201.25,1193.25,24.45,219.2,0.7,0.7,P3,D
+UPW.R,UPW return loop,UPW and reclaim,17.25,1193.25,24.45,0.7,107.7,0.7,P3,D
+UPW.R,UPW return loop,UPW and reclaim,17.25,1300.25,12.45,0.7,0.7,12.7,P3,D
+UPW.S,UPW supply loop,UPW and reclaim,16.15,1299.15,23.65,0.7,0.7,23.3,P3,D
+UPW.R,UPW return loop,UPW and reclaim,17.25,1300.25,23.65,0.7,0.7,23.3,P3,D
+UPW.S,UPW supply loop,UPW and reclaim,16.2,1299.2,12.3,0.6,157.1,0.6,P3,D
+UPW.R,UPW return loop,UPW and reclaim,17.3,1299.2,13.1,0.6,157.1,0.6,P3,D
+UPW.S,UPW supply loop,UPW and reclaim,-276.3,1455.7,12.3,569.6,0.6,0.6,P3,D
+UPW.R,UPW return loop,UPW and reclaim,-276.3,1456.8,13.1,569.6,0.6,0.6,P3,D
+UPW.S,UPW supply loop,UPW and reclaim,16.2,1299.2,44.3,0.6,157.1,0.6,P3,D
+UPW.R,UPW return loop,UPW and reclaim,17.3,1299.2,45.1,0.6,157.1,0.6,P3,D
+UPW.S,UPW supply loop,UPW and reclaim,-276.3,1455.7,44.3,569.6,0.6,0.6,P3,D
+UPW.R,UPW return loop,UPW and reclaim,-276.3,1456.8,45.1,569.6,0.6,0.6,P3,D
+RCL,Reclaimed-water recovery (low-concentration rinse drain → recovery plant),UPW and reclaim,20.2,1302.2,1.5,0.6,13.1,0.6,P3,D
+RCL,Reclaimed-water recovery (low-concentration rinse drain → recovery plant),UPW and reclaim,20.2,1192.2,1.5,0.6,110.6,0.6,P3,D
+RCL,Reclaimed-water recovery (low-concentration rinse drain → recovery plant),UPW and reclaim,-131.3,1192.2,1.5,152.1,0.6,0.6,P3,D
+RCL,Reclaimed-water recovery (low-concentration rinse drain → recovery plant),UPW and reclaim,-131.3,1192.2,1.5,0.6,0.6,5.8,P3,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-318.25,1471.55,8.55,36.7,0.9,0.9,P3,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-282.45,1471.55,7.15,0.9,0.9,33.9,P3,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-282.4,1471.6,7.2,573.8,0.8,0.8,P3,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-282.4,1471.6,40.2,573.8,0.8,0.8,P3,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-320.05,1473.15,8.55,38.5,0.9,0.9,P3,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-282.45,1473.15,7.15,0.9,0.9,33.9,P3,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-282.4,1473.2,7.2,573.8,0.8,0.8,P3,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-282.4,1473.2,40.2,573.8,0.8,0.8,P3,D
+ELEC.UPS,UPS and voltage-sag compensation power (selected critical loads),Power,-254.3,1477.7,5.9,545.6,0.6,0.6,P3,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-250.3,1471.7,7.3,0.6,0.6,7.6,P3,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-250.3,1311.7,14.3,0.6,160.6,0.6,P3,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-120.3,1471.7,7.3,0.6,0.6,7.6,P3,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-120.3,1311.7,14.3,0.6,160.6,0.6,P3,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,9.7,1471.7,7.3,0.6,0.6,7.6,P3,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,9.7,1311.7,14.3,0.6,160.6,0.6,P3,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,139.7,1471.7,7.3,0.6,0.6,7.6,P3,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,139.7,1311.7,14.3,0.6,160.6,0.6,P3,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,269.7,1471.7,7.3,0.6,0.6,7.6,P3,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,269.7,1311.7,14.3,0.6,160.6,0.6,P3,D
+ELEC.UPS,UPS and voltage-sag compensation power (selected critical loads),Power,-254.3,1477.7,38.9,545.6,0.6,0.6,P3,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-250.3,1471.7,40.3,0.6,0.6,7.6,P3,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-250.3,1311.7,47.3,0.6,160.6,0.6,P3,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-120.3,1471.7,40.3,0.6,0.6,7.6,P3,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-120.3,1311.7,47.3,0.6,160.6,0.6,P3,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,9.7,1471.7,40.3,0.6,0.6,7.6,P3,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,9.7,1311.7,47.3,0.6,160.6,0.6,P3,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,139.7,1471.7,40.3,0.6,0.6,7.6,P3,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,139.7,1311.7,47.3,0.6,160.6,0.6,P3,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,269.7,1471.7,40.3,0.6,0.6,7.6,P3,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,269.7,1311.7,47.3,0.6,160.6,0.6,P3,D
+ELEC.EMERG,Emergency power (emergency generators → selected emergency loads),Power,-284.3,1480.7,5.1,575.6,0.6,0.6,P3,D
+ELEC.EMERG,Emergency power (emergency generators → selected emergency loads),Power,-280.3,1480.7,5.1,0.6,0.6,33.6,P3,D
+ELEC.EMERG,Emergency power (emergency generators → selected emergency loads),Power,-280.3,1480.7,38.1,571.6,0.6,0.6,P3,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,3.9,1163.9,5.4,1.2,1.2,15.2,P4,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,3.9,1061.9,19.4,1.2,103.2,1.2,P4,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,3.9,1061.9,2.4,1.2,1.2,18.2,P4,D
+CHW.R,Chilled water return,Thermal management,5.2,1165.2,6.4,1.2,1.2,15.2,P4,D
+CHW.R,Chilled water return,Thermal management,5.2,1063.2,20.4,1.2,103.2,1.2,P4,D
+CHW.R,Chilled water return,Thermal management,5.2,1063.2,3.4,1.2,1.2,18.2,P4,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,3.9,1061.9,19.4,1.2,1.2,42.2,P4,D
+CHW.R,Chilled water return,Thermal management,5.2,1063.2,20.4,1.2,1.2,42.2,P4,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,4.0,1047.0,28.1,1.0,16.0,1.0,P4,D
+CHW.R,Chilled water return,Thermal management,5.3,1048.3,29.1,1.0,16.0,1.0,P4,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-277.5,1047.0,28.1,564.0,1.0,1.0,P4,D
+CHW.R,Chilled water return,Thermal management,-276.2,1048.3,29.1,564.0,1.0,1.0,P4,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,4.0,884.0,28.1,1.0,164.0,1.0,P4,D
+CHW.R,Chilled water return,Thermal management,5.3,885.3,29.1,1.0,164.0,1.0,P4,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-277.5,884.0,28.1,564.0,1.0,1.0,P4,D
+CHW.R,Chilled water return,Thermal management,-276.2,885.3,29.1,564.0,1.0,1.0,P4,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-271.35,1059.15,30.45,281.2,0.7,0.7,P4,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,9.15,1059.15,30.45,271.2,0.7,0.7,P4,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,4.0,1047.0,60.1,1.0,16.0,1.0,P4,D
+CHW.R,Chilled water return,Thermal management,5.3,1048.3,61.1,1.0,16.0,1.0,P4,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-277.5,1047.0,60.1,564.0,1.0,1.0,P4,D
+CHW.R,Chilled water return,Thermal management,-276.2,1048.3,61.1,564.0,1.0,1.0,P4,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,4.0,884.0,60.1,1.0,164.0,1.0,P4,D
+CHW.R,Chilled water return,Thermal management,5.3,885.3,61.1,1.0,164.0,1.0,P4,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,-277.5,884.0,60.1,564.0,1.0,1.0,P4,D
+CHW.R,Chilled water return,Thermal management,-276.2,885.3,61.1,564.0,1.0,1.0,P4,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-271.35,1059.15,62.45,281.2,0.7,0.7,P4,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,9.15,1059.15,62.45,271.2,0.7,0.7,P4,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,-99.35,1163.15,5.65,109.2,0.7,0.7,P4,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,9.15,1163.15,5.65,0.7,0.7,16.7,P4,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,9.15,1059.15,21.65,0.7,104.7,0.7,P4,D
+HR,Heat-recovery hot water (optional system: condenser heat → MAU reheat/preheat),Thermal management,9.15,1059.15,21.65,0.7,0.7,41.5,P4,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,4.1,1062.1,2.6,14.8,0.8,0.8,P4,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,18.1,1058.1,2.6,0.8,4.8,0.8,P4,D
+CHW.R,Chilled water return,Thermal management,4.1,1063.3,3.5,14.8,0.8,0.8,P4,D
+CHW.R,Chilled water return,Thermal management,18.1,1059.3,3.5,0.8,4.8,0.8,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,26.1,1057.1,3.2,0.8,0.8,2.5,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,26.1,962.6,4.9,0.8,95.3,0.8,P4,D
+PCW.R,Process cooling water return,PCW,27.3,1057.1,4.1,0.8,0.8,2.5,P4,D
+PCW.R,Process cooling water return,PCW,27.3,962.6,5.8,0.8,95.3,0.8,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-277.4,962.6,4.9,563.8,0.8,0.8,P4,D
+PCW.R,Process cooling water return,PCW,-277.4,964.0,5.8,563.8,0.8,0.8,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-267.03,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-266.23,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-267.03,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-266.23,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-241.03,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-240.22,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-241.03,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-240.22,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-215.03,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-214.22,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-215.03,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-214.22,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-189.03,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-188.22,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-189.03,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-188.22,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-163.03,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-162.22,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-163.03,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-162.22,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-137.03,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-136.22,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-137.03,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-136.22,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-111.02,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-110.22,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-111.02,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-110.22,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-85.02,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-84.22,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-85.02,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-84.22,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-59.02,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-58.23,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-59.02,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-58.23,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-33.02,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-32.22,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-33.02,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-32.22,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-7.02,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-6.22,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-7.02,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-6.22,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,18.97,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,19.77,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,18.97,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,19.77,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,44.98,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,45.77,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,44.98,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,45.77,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,70.98,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,71.78,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,70.98,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,71.78,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,96.98,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,97.78,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,96.98,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,97.78,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,122.98,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,123.78,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,122.98,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,123.78,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,148.97,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,149.78,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,148.97,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,149.78,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,174.97,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,175.78,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,174.97,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,175.78,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,200.97,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,201.78,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,200.97,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,201.78,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,226.97,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,227.78,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,226.97,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,227.78,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,252.97,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,253.78,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,252.97,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,253.78,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,278.97,892.77,5.08,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,279.77,892.77,5.98,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,278.97,918.77,5.08,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,279.77,918.77,5.08,0.45,0.45,12.75,P4,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,4.1,1062.1,35.6,14.8,0.8,0.8,P4,D
+CHW.S,"Chilled water supply (chiller evaporator → MAU, DCC, PCW heat exchangers)",Thermal management,18.1,1058.1,35.6,0.8,4.8,0.8,P4,D
+CHW.R,Chilled water return,Thermal management,4.1,1063.3,36.5,14.8,0.8,0.8,P4,D
+CHW.R,Chilled water return,Thermal management,18.1,1059.3,36.5,0.8,4.8,0.8,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,26.1,1057.1,36.2,0.8,0.8,2.5,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,26.1,962.6,37.9,0.8,95.3,0.8,P4,D
+PCW.R,Process cooling water return,PCW,27.3,1057.1,37.1,0.8,0.8,2.5,P4,D
+PCW.R,Process cooling water return,PCW,27.3,962.6,38.8,0.8,95.3,0.8,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-277.4,962.6,37.9,563.8,0.8,0.8,P4,D
+PCW.R,Process cooling water return,PCW,-277.4,964.0,38.8,563.8,0.8,0.8,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-267.03,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-266.23,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-267.03,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-266.23,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-241.03,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-240.22,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-241.03,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-240.22,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-215.03,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-214.22,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-215.03,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-214.22,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-189.03,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-188.22,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-189.03,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-188.22,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-163.03,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-162.22,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-163.03,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-162.22,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-137.03,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-136.22,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-137.03,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-136.22,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-111.02,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-110.22,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-111.02,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-110.22,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-85.02,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-84.22,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-85.02,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-84.22,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-59.02,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-58.23,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-59.02,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-58.23,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-33.02,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-32.22,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-33.02,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-32.22,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-7.02,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,-6.22,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,-7.02,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,-6.22,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,18.97,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,19.77,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,18.97,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,19.77,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,44.98,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,45.77,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,44.98,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,45.77,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,70.98,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,71.78,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,70.98,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,71.78,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,96.98,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,97.78,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,96.98,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,97.78,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,122.98,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,123.78,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,122.98,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,123.78,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,148.97,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,149.78,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,148.97,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,149.78,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,174.97,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,175.78,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,174.97,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,175.78,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,200.97,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,201.78,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,200.97,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,201.78,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,226.97,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,227.78,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,226.97,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,227.78,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,252.97,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,253.78,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,252.97,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,253.78,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,278.97,892.77,38.07,0.45,146.45,0.45,P4,D
+PCW.R,Process cooling water return,PCW,279.77,892.77,38.97,0.45,146.45,0.45,P4,D
+PCW.S,"Process cooling water supply (heat exchanger → tools, pumps, scrubbers)",PCW,278.97,918.77,38.07,0.45,0.45,12.75,P4,D
+PCW.R,Process cooling water return,PCW,279.77,918.77,38.07,0.45,0.45,12.75,P4,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-316.4,1056.1,11.6,312.3,0.8,0.8,P4,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-4.9,1056.1,11.6,0.8,0.8,35.2,P4,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-4.85,965.65,14.05,0.7,91.2,0.7,P4,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-277.35,965.65,14.05,563.7,0.7,0.7,P4,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-275.3,1056.2,4.7,0.6,0.6,6.8,P4,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-275.3,906.7,10.9,0.6,150.1,0.6,P4,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-275.3,906.7,10.9,0.6,118.6,0.6,P4,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-275.3,906.7,10.9,561.6,0.6,0.6,P4,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-275.3,1024.7,10.9,561.6,0.6,0.6,P4,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-4.85,965.65,46.05,0.7,91.2,0.7,P4,D
+GAS.BULK,"Bulk gas (N2, O2, Ar, H2, etc.: pipeline from external plants → purification → CSF header)",Gas supply and filling,-277.35,965.65,46.05,563.7,0.7,0.7,P4,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-275.3,1056.2,4.7,0.6,0.6,38.8,P4,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-275.3,906.7,42.9,0.6,150.1,0.6,P4,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-275.3,906.7,42.9,0.6,118.6,0.6,P4,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-275.3,906.7,42.9,561.6,0.6,0.6,P4,D
+GAS.SPEC,Specialty gas (gas cabinet / BSGS → VMB → tool),Gas supply and filling,-275.3,1024.7,42.9,561.6,0.6,0.6,P4,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-279.4,885.4,6.6,567.8,0.8,0.8,P4,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-212.4,869.6,6.6,0.8,16.6,0.8,P4,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-72.4,869.6,6.6,0.8,16.6,0.8,P4,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,67.6,869.6,6.6,0.8,16.6,0.8,P4,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,207.6,869.6,6.6,0.8,16.6,0.8,P4,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-279.4,885.4,39.6,567.8,0.8,0.8,P4,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-212.4,869.6,39.6,0.8,16.6,0.8,P4,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-72.4,869.6,39.6,0.8,16.6,0.8,P4,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,67.6,869.6,39.6,0.8,16.6,0.8,P4,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,207.6,869.6,39.6,0.8,16.6,0.8,P4,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-212.45,869.55,6.55,0.9,0.9,78.3,P4,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-72.45,869.55,6.55,0.9,0.9,78.3,P4,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,67.55,869.55,6.55,0.9,0.9,78.3,P4,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,207.55,869.55,6.55,0.9,0.9,78.3,P4,D
+EXH.ACID,Acid exhaust (→ central wet scrubber → stack),Hazardous exhaust,-267.55,869.45,83.85,563.1,1.1,1.1,P4,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-279.4,884.0,7.05,567.8,0.8,0.8,P4,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-210.6,871.76,7.05,0.8,13.04,0.8,P4,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-70.6,871.76,7.05,0.8,13.04,0.8,P4,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,69.4,871.76,7.05,0.8,13.04,0.8,P4,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,209.4,871.76,7.05,0.8,13.04,0.8,P4,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-279.4,884.0,40.05,567.8,0.8,0.8,P4,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-210.6,871.76,40.05,0.8,13.04,0.8,P4,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-70.6,871.76,40.05,0.8,13.04,0.8,P4,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,69.4,871.76,40.05,0.8,13.04,0.8,P4,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,209.4,871.76,40.05,0.8,13.04,0.8,P4,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-210.65,871.71,6.55,0.9,0.9,79.2,P4,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-70.65,871.71,6.55,0.9,0.9,79.2,P4,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,69.35,871.71,6.55,0.9,0.9,79.2,P4,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,209.35,871.71,6.55,0.9,0.9,79.2,P4,D
+EXH.ALK,Alkali (ammonia) exhaust (→ dedicated wet scrubber),Hazardous exhaust,-267.55,871.61,84.75,563.1,1.1,1.1,P4,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-279.4,1045.8,6.6,567.8,0.8,0.8,P4,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-212.4,1045.8,6.6,0.8,16.6,0.8,P4,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-72.4,1045.8,6.6,0.8,16.6,0.8,P4,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,67.6,1045.8,6.6,0.8,16.6,0.8,P4,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,207.6,1045.8,6.6,0.8,16.6,0.8,P4,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-279.4,1045.8,39.6,567.8,0.8,0.8,P4,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-212.4,1045.8,39.6,0.8,16.6,0.8,P4,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-72.4,1045.8,39.6,0.8,16.6,0.8,P4,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,67.6,1045.8,39.6,0.8,16.6,0.8,P4,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,207.6,1045.8,39.6,0.8,16.6,0.8,P4,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-212.45,1061.55,6.55,0.9,0.9,78.3,P4,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-72.45,1061.55,6.55,0.9,0.9,78.3,P4,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,67.55,1061.55,6.55,0.9,0.9,78.3,P4,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,207.55,1061.55,6.55,0.9,0.9,78.3,P4,D
+EXH.VOC,Organic (VOC/solvent) exhaust (→ zeolite concentrator rotor + oxidizer),Hazardous exhaust,-267.55,1061.45,83.85,563.1,1.1,1.1,P4,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-279.4,1047.2,7.05,567.8,0.8,0.8,P4,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-210.6,1047.2,7.05,0.8,13.04,0.8,P4,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-70.6,1047.2,7.05,0.8,13.04,0.8,P4,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,69.4,1047.2,7.05,0.8,13.04,0.8,P4,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,209.4,1047.2,7.05,0.8,13.04,0.8,P4,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-279.4,1047.2,40.05,567.8,0.8,0.8,P4,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-210.6,1047.2,40.05,0.8,13.04,0.8,P4,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-70.6,1047.2,40.05,0.8,13.04,0.8,P4,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,69.4,1047.2,40.05,0.8,13.04,0.8,P4,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,209.4,1047.2,40.05,0.8,13.04,0.8,P4,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-210.65,1059.39,6.55,0.9,0.9,79.2,P4,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-70.65,1059.39,6.55,0.9,0.9,79.2,P4,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,69.35,1059.39,6.55,0.9,0.9,79.2,P4,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,209.35,1059.39,6.55,0.9,0.9,79.2,P4,D
+EXH.HEAT,Heat / general exhaust (separate system),Hazardous exhaust,-267.55,1059.29,84.75,563.1,1.1,1.1,P4,D
+WW.F,Fluoride wastewater,Wastewater,-277.3,1040.7,0.6,563.6,0.6,0.6,P4,D
+WW.F,Fluoride wastewater,Wastewater,8.2,1040.7,0.6,0.6,53.6,0.6,P4,D
+WW.F,Fluoride wastewater,Wastewater,8.2,1093.7,0.6,470.1,0.6,0.6,P4,D
+WW.F,Fluoride wastewater,Wastewater,477.7,959.7,0.6,0.6,134.6,0.6,P4,D
+WW.F,Fluoride wastewater,Wastewater,477.7,959.7,0.6,22.6,0.6,0.6,P4,D
+WW.AA,Acid/alkali wastewater,Wastewater,-277.3,1039.6,0.6,563.6,0.6,0.6,P4,D
+WW.AA,Acid/alkali wastewater,Wastewater,9.3,1039.6,0.6,0.6,55.8,0.6,P4,D
+WW.AA,Acid/alkali wastewater,Wastewater,9.3,1094.8,0.6,470.1,0.6,0.6,P4,D
+WW.AA,Acid/alkali wastewater,Wastewater,478.8,960.8,0.6,0.6,134.6,0.6,P4,D
+WW.AA,Acid/alkali wastewater,Wastewater,478.8,960.8,0.6,21.5,0.6,0.6,P4,D
+WW.ORG,Organic wastewater,Wastewater,-277.3,1038.5,0.6,563.6,0.6,0.6,P4,D
+WW.ORG,Organic wastewater,Wastewater,10.4,1038.5,0.6,0.6,58.0,0.6,P4,D
+WW.ORG,Organic wastewater,Wastewater,10.4,1095.9,0.6,470.1,0.6,0.6,P4,D
+WW.ORG,Organic wastewater,Wastewater,479.9,961.9,0.6,0.6,134.6,0.6,P4,D
+WW.ORG,Organic wastewater,Wastewater,479.9,961.9,0.6,20.4,0.6,0.6,P4,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-290.3,1174.2,7.7,0.6,0.6,10.6,P4,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-290.3,1174.2,17.7,279.1,0.6,0.6,P4,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-11.8,1054.2,17.7,0.6,120.6,0.6,P4,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-11.8,1054.2,17.7,0.6,0.6,20.2,P4,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-11.8,1054.2,4.3,0.6,0.6,14.0,P4,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-11.8,869.2,4.3,0.6,185.6,0.6,P4,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-273.3,869.2,4.3,559.6,0.6,0.6,P4,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-11.8,869.2,37.3,0.6,185.6,0.6,P4,D
+CHEM,Chemical supply (tanker unloading and ACQC → storage → CCSS → VMB),Chemicals,-273.3,869.2,37.3,559.6,0.6,0.6,P4,D
+UPW.S,UPW supply loop,UPW and reclaim,-202.35,1192.15,8.65,0.7,0.7,15.7,P4,D
+UPW.S,UPW supply loop,UPW and reclaim,-202.35,1192.15,23.65,215.2,0.7,0.7,P4,D
+UPW.S,UPW supply loop,UPW and reclaim,12.15,1051.15,23.65,0.7,141.7,0.7,P4,D
+UPW.S,UPW supply loop,UPW and reclaim,12.15,1051.15,11.65,0.7,0.7,12.7,P4,D
+UPW.R,UPW return loop,UPW and reclaim,-201.25,1193.25,9.45,0.7,0.7,15.7,P4,D
+UPW.R,UPW return loop,UPW and reclaim,-201.25,1193.25,24.45,215.2,0.7,0.7,P4,D
+UPW.R,UPW return loop,UPW and reclaim,13.25,1052.25,24.45,0.7,141.7,0.7,P4,D
+UPW.R,UPW return loop,UPW and reclaim,13.25,1052.25,12.45,0.7,0.7,12.7,P4,D
+UPW.S,UPW supply loop,UPW and reclaim,12.15,1051.15,23.65,0.7,0.7,23.3,P4,D
+UPW.R,UPW return loop,UPW and reclaim,13.25,1052.25,23.65,0.7,0.7,23.3,P4,D
+UPW.S,UPW supply loop,UPW and reclaim,12.2,894.7,12.3,0.6,157.1,0.6,P4,D
+UPW.R,UPW return loop,UPW and reclaim,13.3,894.7,13.1,0.6,157.1,0.6,P4,D
+UPW.S,UPW supply loop,UPW and reclaim,-277.3,894.7,12.3,563.6,0.6,0.6,P4,D
+UPW.R,UPW return loop,UPW and reclaim,-277.3,895.8,13.1,563.6,0.6,0.6,P4,D
+UPW.S,UPW supply loop,UPW and reclaim,12.2,894.7,44.3,0.6,157.1,0.6,P4,D
+UPW.R,UPW return loop,UPW and reclaim,13.3,894.7,45.1,0.6,157.1,0.6,P4,D
+UPW.S,UPW supply loop,UPW and reclaim,-277.3,894.7,44.3,563.6,0.6,0.6,P4,D
+UPW.R,UPW return loop,UPW and reclaim,-277.3,895.8,45.1,563.6,0.6,0.6,P4,D
+RCL,Reclaimed-water recovery (low-concentration rinse drain → recovery plant),UPW and reclaim,16.2,1035.7,1.5,0.6,13.1,0.6,P4,D
+RCL,Reclaimed-water recovery (low-concentration rinse drain → recovery plant),UPW and reclaim,16.2,1048.2,1.5,0.6,144.6,0.6,P4,D
+RCL,Reclaimed-water recovery (low-concentration rinse drain → recovery plant),UPW and reclaim,-131.3,1192.2,1.5,148.1,0.6,0.6,P4,D
+RCL,Reclaimed-water recovery (low-concentration rinse drain → recovery plant),UPW and reclaim,-131.3,1192.2,1.5,0.6,0.6,5.8,P4,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-318.25,1052.55,8.55,35.7,0.9,0.9,P4,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-283.45,1052.55,7.15,0.9,0.9,33.9,P4,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-283.4,1052.6,7.2,567.8,0.8,0.8,P4,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-283.4,1052.6,40.2,567.8,0.8,0.8,P4,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-320.05,1054.15,8.55,37.5,0.9,0.9,P4,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-283.45,1054.15,7.15,0.9,0.9,33.9,P4,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-283.4,1054.2,7.2,567.8,0.8,0.8,P4,D
+ELEC.MV,"Medium-voltage distribution (22.9 kV assumed, dual A/B feeders)",Power,-283.4,1054.2,40.2,567.8,0.8,0.8,P4,D
+ELEC.UPS,UPS and voltage-sag compensation power (selected critical loads),Power,-255.3,1058.7,5.9,539.6,0.6,0.6,P4,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-251.3,1052.7,7.3,0.6,0.6,7.6,P4,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-251.3,892.7,14.3,0.6,160.6,0.6,P4,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-121.3,1052.7,7.3,0.6,0.6,7.6,P4,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-121.3,892.7,14.3,0.6,160.6,0.6,P4,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,8.7,1052.7,7.3,0.6,0.6,7.6,P4,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,8.7,892.7,14.3,0.6,160.6,0.6,P4,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,138.7,1052.7,7.3,0.6,0.6,7.6,P4,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,138.7,892.7,14.3,0.6,160.6,0.6,P4,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,268.7,1052.7,7.3,0.6,0.6,7.6,P4,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,268.7,892.7,14.3,0.6,160.6,0.6,P4,D
+ELEC.UPS,UPS and voltage-sag compensation power (selected critical loads),Power,-255.3,1058.7,38.9,539.6,0.6,0.6,P4,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-251.3,1052.7,40.3,0.6,0.6,7.6,P4,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-251.3,892.7,47.3,0.6,160.6,0.6,P4,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-121.3,1052.7,40.3,0.6,0.6,7.6,P4,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,-121.3,892.7,47.3,0.6,160.6,0.6,P4,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,8.7,1052.7,40.3,0.6,0.6,7.6,P4,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,8.7,892.7,47.3,0.6,160.6,0.6,P4,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,138.7,1052.7,40.3,0.6,0.6,7.6,P4,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,138.7,892.7,47.3,0.6,160.6,0.6,P4,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,268.7,1052.7,40.3,0.6,0.6,7.6,P4,D
+ELEC.LV,Low-voltage busduct (electrical-room transformer → CSF power racks),Power,268.7,892.7,47.3,0.6,160.6,0.6,P4,D
+ELEC.EMERG,Emergency power (emergency generators → selected emergency loads),Power,-285.3,1061.7,5.1,569.6,0.6,0.6,P4,D
+ELEC.EMERG,Emergency power (emergency generators → selected emergency loads),Power,-281.3,1061.7,5.1,0.6,0.6,33.6,P4,D
+ELEC.EMERG,Emergency power (emergency generators → selected emergency loads),Power,-281.3,1061.7,38.1,565.6,0.6,0.6,P4,D
+WW.OUT,Treated effluent discharge (green building → public wastewater treatment plant → stream),Wastewater,543.6,1144.1,0.8,90.8,0.8,0.8,,D
+WW.OUT,Treated effluent discharge (green building → public wastewater treatment plant → stream),Wastewater,633.6,1144.1,0.8,66.8,0.8,0.8,,D
+WW.OUT,Treated effluent discharge (green building → public wastewater treatment plant → stream),Wastewater,699.6,1044.6,0.8,0.8,100.3,0.8,,D
+WW.OUT,Treated effluent discharge (green building → public wastewater treatment plant → stream),Wastewater,699.6,1044.6,0.8,28.8,0.8,0.8,,D
+WW.OUT,Treated effluent discharge (green building → public wastewater treatment plant → stream),Wastewater,543.6,954.1,0.8,90.8,0.8,0.8,,D
+WW.OUT,Treated effluent discharge (green building → public wastewater treatment plant → stream),Wastewater,633.6,954.1,0.8,66.8,0.8,0.8,,D
+WW.OUT,Treated effluent discharge (green building → public wastewater treatment plant → stream),Wastewater,699.6,954.1,0.8,0.8,91.3,0.8,,D
+WW.OUT,Treated effluent discharge (green building → public wastewater treatment plant → stream),Wastewater,699.6,1044.6,0.8,28.8,0.8,0.8,,D

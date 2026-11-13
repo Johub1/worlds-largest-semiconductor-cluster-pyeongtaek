@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pyeongtaek Campus P1–P4 open 3D model</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* layout: full-bleed 3D canvas, control rail on the left, inspector on the right; drawing-sheet feel */
+  --ink:#0e1620; --sheet:#152131; --line:#2a3b50; --text:#e7edf4; --muted:#93a4b8;
+  --accent:#f2cc3a; --red:#d0232b; --blue:#3c7be0;
+  --font-body:"IBM Plex Sans KR",system-ui,"Malgun Gothic",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--ink);color:var(--text);font-family:var(--font-body);font-size:13px;line-height:1.5;overflow:hidden}
+#c{position:fixed;inset:0;width:100%;height:100%;display:block}
+.panel{position:fixed;top:12px;bottom:12px;width:300px;background:color-mix(in srgb,var(--sheet) 94%,transparent);border:1px solid var(--line);border-radius:6px;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:14px}
+#left{left:12px} #right{right:12px;width:340px}
+h1{font-size:16px;font-weight:600;margin:0;text-wrap:balance;word-break:keep-all}
+p,td,small,span,li{word-break:keep-all}
+h2{font-size:11px;font-weight:600;letter-spacing:.08em;color:var(--muted);margin:0 0 6px;text-transform:uppercase}
+.sub{color:var(--muted);font-size:12px;margin:4px 0 0}
+.warn{border-left:3px solid var(--accent);padding:6px 8px;background:#1b2a3d;font-size:12px}
+.row{display:flex;gap:6px;flex-wrap:wrap}
+button{font:inherit;color:var(--text);background:#1d2c40;border:1px solid var(--line);border-radius:4px;padding:5px 9px;cursor:pointer}
+button:hover{border-color:var(--accent)} button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button.on{background:var(--accent);color:#141a22;border-color:var(--accent);font-weight:600}
+label.chk{display:flex;align-items:center;gap:7px;padding:2px 0;cursor:pointer}
+label.chk input{accent-color:var(--accent)}
+.sl{display:grid;grid-template-columns:1fr auto;gap:2px 8px;align-items:center}
+.sl input[type=range]{grid-column:1/3;width:100%;accent-color:var(--accent)}
+.num{font-family:var(--font-mono);font-variant-numeric:tabular-nums;color:var(--accent)}
+.pill{display:inline-block;font-family:var(--font-mono);font-size:11px;padding:1px 7px;border-radius:10px;border:1px solid var(--line)}
+.gA{background:#1f5f3a;border-color:#2f8a55} .gB{background:#1d4f86;border-color:#3c7be0} .gC{background:#6b5312;border-color:#b48a1a} .gD{background:#4a2a52;border-color:#8a4c99} .gM{background:#0f5a5a;border-color:#2aa7a7}
+table{border-collapse:collapse;width:100%} td,th{padding:3px 4px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left;font-size:12px}
+th{color:var(--muted);font-weight:500}
+td.n{font-family:var(--font-mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.chip{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.eq{padding:6px 0;border-bottom:1px solid var(--line)} .eq b{font-weight:600}
+.eq small{display:block;color:var(--muted)} .eq .site,.site{color:var(--accent)}
+.role{margin-top:10px;font-size:12px;font-weight:600;color:var(--text)}
+a{color:#8fb8ff} ol.src{margin:0;padding-left:18px} ol.src li{margin-bottom:5px;font-size:12px;overflow-wrap:anywhere}
+#sel .name,#floorSheet .name{font-size:14px;font-weight:600}
+#floorSheet{border:1px solid var(--accent);border-radius:5px;padding:10px;display:none}
+#toggles{position:fixed;top:12px;left:50%;transform:translateX(-50%);display:none;gap:6px;z-index:5}
+#hint{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);color:var(--muted);font-size:12px;background:#0e1620cc;padding:4px 10px;border-radius:4px;pointer-events:none;white-space:nowrap}
+@media (max-width:900px){
+  .panel{width:auto;left:8px;right:8px;top:auto;bottom:8px;max-height:46%;display:none}
+  .panel.open{display:flex} #toggles{display:flex} #hint{display:none}
+}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="toggles"><button id="tL">Controls</button><button id="tR">Info and sources</button></div>
+
+<aside class="panel" id="left">
+  <div>
+    <h1>Samsung Electronics Pyeongtaek Campus P1–P4 open 3D model</h1>
+    <p class="sub">Massing model from public sources + concept interior by floor + concept utility systems · units m · satellite imagery 2025-12-22</p>
+  </div>
+  <div class="warn">Built only from public material. Building outlines are measured from satellite imagery, heights and floor arrangement are partly estimated, <b>the interior equipment layout is a concept drawing following a typical 300 mm fab structure</b> and is not the actual layout.<br><span class="sub">Unofficial concept model built only from public sources. Interior layout is generic, not the actual facility layout.</span></div>
+  <div>
+    <h2>Floor view</h2>
+    <div class="row" id="fabSel"></div>
+    <div class="row" id="floorSel" style="margin-top:6px"></div>
+    <div class="row" style="margin-top:6px"><button id="ehsBtn">EHS(safety) layers on</button></div>
+    <p class="sub">Pick a fab and a floor to cut out that floor and view it from above; equipment, suppliers and evidence for the floor appear on the right.</p>
+  </div>
+  <div>
+    <h2>Utility systems (concept)</h2>
+    <div class="row"><button id="utilBtn">Show utility systems</button></div>
+    <div class="row" id="utilSel" style="margin-top:6px"></div>
+    <p class="sub">Supply → use → return and treatment flows for thermal management, PCW, gas supply and filling, exhaust, wastewater, chemicals, UPW and power. Buildings are shown semi-transparent. Routes are a generic reference design, not actual pipe or power routes.</p>
+  </div>
+  <div>
+    <h2>View presets</h2>
+    <div class="row" id="presets"></div>
+  </div>
+  <div>
+    <h2>Move</h2>
+    <div class="row" id="focus"></div>
+  </div>
+  <div>
+    <h2>Section cut</h2>
+    <div class="sl"><span>Cut away from the south</span><span class="num" id="vY"></span><input id="cutY" type="range" min="-650" max="2500" step="1" value="-650"></div>
+    <div class="sl"><span>Height cut (hide above this height)</span><span class="num" id="vZ"></span><input id="cutZ" type="range" min="1" max="95" step="0.5" value="95"></div>
+    <div class="row" style="margin-top:6px"><button id="uncut">Clear cut</button></div>
+  </div>
+  <div>
+    <h2>Layers</h2>
+    <div id="layers"></div>
+  </div>
+</aside>
+
+<aside class="panel" id="right">
+  <div id="floorSheet"></div>
+  <div id="sel">
+    <h2>Selected element</h2>
+    <div id="selBody"><span class="sub">Click a building or a tool to see its dimensions, evidence and sources.</span></div>
+  </div>
+  <div>
+    <h2>Fab dimensions</h2>
+    <table id="dims"></table>
+    <p class="sub">main body = excludes the east end block. Where press figures and measurements differ, the measurement is used in the model.</p>
+  </div>
+  <div>
+    <h2>Phase (Ph) positions</h2>
+    <table id="phase"></table>
+    <p class="sub">Positions confirmed from contract names in Samsung C&T and Samsung Heavy Industries filings and from press. P1 and P2 could not be confirmed.</p>
+  </div>
+  <div>
+    <h2>Products by line</h2>
+    <table id="prod"></table>
+    <p class="sub" id="prodNote"></p>
+  </div>
+  <div>
+    <h2>Confidence grades</h2>
+    <div class="row"><span class="pill gA">A official, press, filings</span><span class="pill gB">B estimated from satellite imagery</span><span class="pill gM">M public map label</span><span class="pill gC">C estimate or assumption</span><span class="pill gD">D generic concept</span></div>
+  </div>
+  <div>
+    <h2>Floor arrangement (estimated)</h2>
+    <table id="lv"></table>
+  </div>
+  <div>
+    <h2>Equipment types and suppliers</h2>
+    <p class="sub"><span class="site">Yellow text</span>marks companies confirmed in press or filings related to this site; grey marks representative industry suppliers of that equipment (delivery to this site not confirmed).</p>
+    <div id="legend"></div>
+  </div>
+  <div>
+    <h2>Sources</h2>
+    <ol class="src" id="src"></ol>
+  </div>
+</aside>
+<div id="hint">Drag to rotate · wheel to zoom · right-drag to pan · click to select</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+const D = /*__DATA__*/;
+const CY = 1500;
+const P = (x,y,z)=>new THREE.Vector3(x, z, -(y-CY));
+const canvas = document.getElementById('c');
+const renderer = new THREE.WebGLRenderer({canvas, antialias:true, logarithmicDepthBuffer:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+const scene = new THREE.Scene(); scene.background = new THREE.Color(0x0e1620);
+scene.fog = new THREE.Fog(0x0e1620, 3500, 9000);
+const camera = new THREE.PerspectiveCamera(40, 1, 2, 20000);
+const controls = new THREE.OrbitControls(camera, canvas);
+controls.enableDamping = true; controls.dampingFactor = .08; controls.maxPolarAngle = Math.PI/2 - 0.01;
+scene.add(new THREE.HemisphereLight(0xdfe9f5, 0x2a323c, 0.62));
+const sun = new THREE.DirectionalLight(0xffffff, 0.5); sun.position.set(-800, 1400, 900); scene.add(sun);
+
+const planeY = new THREE.Plane(new THREE.Vector3(0,0,-1), 0);   // keeps y_north >= cutY
+const planeZ = new THREE.Plane(new THREE.Vector3(0,-1,0), 95);  // keeps height <= top
+const planeZ0 = new THREE.Plane(new THREE.Vector3(0,1,0), 5);   // keeps height >= bottom
+renderer.clippingPlanes = [planeY, planeZ, planeZ0];
+
+const layers = {};
+function L(name){ if(!layers[name]){ layers[name]=new THREE.Group(); layers[name].name=name; scene.add(layers[name]); } return layers[name]; }
+const pickables = [];
+const unit = new THREE.BoxGeometry(1,1,1);
+const edgeGeo = new THREE.EdgesGeometry(unit);
+const edgeMat = new THREE.LineBasicMaterial({color:0x0e1620, transparent:true, opacity:.55});
+const matCache = {};
+function mat(color, op){ const k=color+'|'+op; if(!matCache[k]) matCache[k]=new THREE.MeshLambertMaterial({color, transparent:op<1, opacity:op, depthWrite:op>=1}); return matCache[k]; }
+
+for(const e of D.elems){
+  const [x0,y0,z0,x1,y1,z1] = e.box;
+  const m = new THREE.Mesh(unit, mat(e.color, e.opacity||1));
+  m.scale.set(x1-x0, z1-z0, y1-y0);
+  m.position.copy(P((x0+x1)/2,(y0+y1)/2,(z0+z1)/2));
+  if(e.rot) m.rotation.y = e.rot*Math.PI/180;
+  m.userData = {kind:'elem', e};
+  L(e.layer).add(m);
+  if(e.layer!=='Ground') pickables.push(m);
+  if(['Envelope','Annex buildings','Connecting bridges','Support rooms','Utility plant','Filling and exchange points'].includes(e.layer)) m.add(new THREE.LineSegments(edgeGeo, edgeMat));
+}
+const ROLE_LAYER = {FAB:'Cleanroom tools', CSF:'CSF equipment', FSF:'FSF equipment', PLN:'Plenum equipment', ROOF:'Rooftop equipment'};
+const buckets = {};
+for(const q of D.equip){ (buckets[q[6]]=buckets[q[6]]||[]).push(q); }
+const dummy = new THREE.Object3D();
+for(const ti in buckets){
+  const t = D.types[+ti]; const arr = buckets[ti];
+  const im = new THREE.InstancedMesh(unit, new THREE.MeshLambertMaterial({color:t.color}), arr.length);
+  arr.forEach((q,i)=>{ const [x,y,z,dx,dy,dz]=q; dummy.position.copy(P(x+dx/2,y+dy/2,z+dz/2)); dummy.scale.set(dx,dz,dy); dummy.updateMatrix(); im.setMatrixAt(i,dummy.matrix); });
+  im.userData = {kind:'equip', t, arr}; L(ROLE_LAYER[t.role]).add(im); pickables.push(im);
+}
+{ const arr=D.rails; const im=new THREE.InstancedMesh(unit,new THREE.MeshLambertMaterial({color:0xf4f6f8}),arr.length);
+  arr.forEach((q,i)=>{ const [x,y,z,dx,dy,dz]=q; dummy.position.copy(P(x+dx/2,y+dy/2,z+dz/2)); dummy.scale.set(dx,dz,dy); dummy.updateMatrix(); im.setMatrixAt(i,dummy.matrix); });
+  im.userData={kind:'rail'}; L('OHT rails').add(im); pickables.push(im); }
+
+function makeLabel(text, x,y,z, size, color){
+  const c=document.createElement('canvas'); const g=c.getContext('2d'); const fs=64;
+  g.font=`600 ${fs}px "IBM Plex Sans KR","Malgun Gothic",sans-serif`; const w=Math.ceil(g.measureText(text).width)+36;
+  c.width=w; c.height=fs+30; g.font=`600 ${fs}px "IBM Plex Sans KR","Malgun Gothic",sans-serif`;
+  g.fillStyle='rgba(14,22,32,.82)'; g.fillRect(0,0,w,c.height); g.fillStyle=color||'#f2cc3a'; g.fillRect(0,0,8,c.height);
+  g.fillStyle='#e7edf4'; g.textBaseline='middle'; g.fillText(text,22,c.height/2+2);
+  const tx=new THREE.CanvasTexture(c); tx.minFilter=THREE.LinearFilter;
+  const s=new THREE.Sprite(new THREE.SpriteMaterial({map:tx, depthTest:false, transparent:true})); s.renderOrder=10;
+  s.scale.set(size*w/c.height, size, 1); s.position.copy(P(x,y,z)); return s;
+}
+for(const f of D.fabs) L('Labels').add(makeLabel(`${f.id}  ${f.Lmain}×${f.W} m`, (f.x0+f.x1)/2,(f.y0+f.y1)/2, f.H+34, 34));
+const LBL = {'V2':'EUV building (V2)','UT-12':'UT building (est.)','UT-34':'UT building (est.)','GATE-W':'Office 1','WA':'Office 2','W1':'Office complex','WD':'Office 3','OFF-2':'Tech building parking tower','OFF-3':'Materials 1','S1':'Green building (est.)','CUB-N':'Utility and cooling towers','CT-1':'Cooling towers','SS-A':'KEPCO Godeok substation (press, OSM)','PAD-P5':'P5 construction site','PARK-2':'Complex 2 parking building','PARK-NW':'Employee parking lot','BR-W':'Overbridge (road crossing)','BR-12a':'Overbridge','BR-23a':'Overbridge','BR-34a':'Overbridge','LOG-WH':'Samsung logistics warehouse','AP-PROC':'Air Products plant','AF-PROC':'Air First plant','LINDE-BLD':'Linde Korea plant','PUB-WWTP':'Godeok public WWTP'};
+for(const e of D.elems){ if(e.layer==='Map label points'){ const b=e.box; L('Labels').add(makeLabel(e.name.replace(' (Kakao Map label)',''), (b[0]+b[3])/2,(b[1]+b[4])/2, 16, 11, '#f2cc3a')); }
+  if(LBL[e.id]){ const b=e.box; L('Labels').add(makeLabel(LBL[e.id], (b[0]+b[3])/2,(b[1]+b[4])/2, b[5]+22, 20, '#3c7be0')); } }
+{ const g=new THREE.Group(); const lm=new THREE.LineBasicMaterial({color:0xf2cc3a});
+  g.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([P(820,820,1),P(820,960,1),P(800,925,1),P(820,960,1),P(840,925,1)]),lm));
+  g.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([P(760,760,1),P(960,760,1)]),lm)); L('Labels').add(g);
+  L('Labels').add(makeLabel('N', 820, 985, 6, 22)); L('Labels').add(makeLabel('200 m', 860, 735, 6, 18)); }
+// ---- EHS concept layers
+const PIPE_COL=['#3fd17a','#ff4d4d','#ff9f2e']; const PIPE_NAME=['Gas supply (CSF gas box → tool)','Process exhaust (tool → FSF pump and scrubber)','Treated exhaust (FSF header → rooftop scrubber and stack)'];
+[0,1,2].forEach(k=>{ const arr=D.pipes.filter(p=>p[6]===k); const im=new THREE.InstancedMesh(unit,new THREE.MeshBasicMaterial({color:PIPE_COL[k]}),arr.length);
+  arr.forEach((q,i)=>{ const [x,y,z,dx,dy,dz]=q; dummy.position.copy(P(x+dx/2,y+dy/2,z+dz/2)); dummy.scale.set(dx,dz,dy); dummy.updateMatrix(); im.setMatrixAt(i,dummy.matrix); });
+  im.userData={kind:'pipe',k}; L('EHS gas and exhaust flow').add(im); pickables.push(im); });
+{ const arr=D.dets; const im=new THREE.InstancedMesh(new THREE.SphereGeometry(0.9,10,8),new THREE.MeshBasicMaterial({color:0xff3df0}),arr.length);
+  arr.forEach((q,i)=>{ dummy.position.copy(P(q[0],q[1],q[2])); dummy.scale.set(1,1,1); dummy.updateMatrix(); im.setMatrixAt(i,dummy.matrix); });
+  im.userData={kind:'det'}; L('EHS gas detectors').add(im); pickables.push(im); }
+const egCol=d=>d<=30?'#2e9e5b':d<=50?'#8fc93a':d<=61?'#e8d21a':d<=75?'#f0a020':d<=100?'#e8632a':'#c8202a';
+{ const arr=D.egress; const im=new THREE.InstancedMesh(unit,new THREE.MeshBasicMaterial({transparent:true,opacity:.78}),arr.length); const c=new THREE.Color();
+  arr.forEach((q,i)=>{ const [x,y,z,dx,dy,dist]=q; dummy.position.copy(P(x+dx/2,y+dy/2,z)); dummy.scale.set(dx-0.3,0.06,dy-0.3); dummy.updateMatrix(); im.setMatrixAt(i,dummy.matrix); im.setColorAt(i,c.set(egCol(dist))); });
+  im.userData={kind:'egress',arr}; L('EHS egress travel distance').add(im); pickables.push(im); }
+// ---- utility-system concept layers (v4)
+const UG = D.ugroups.map(g=>g.key); const UL = k=>'System · '+k;
+D.usys.forEach((sy,si)=>{ const arr=D.util.filter(u=>u[6]===si); if(!arr.length) return;
+  const im=new THREE.InstancedMesh(unit,new THREE.MeshBasicMaterial({color:sy[2]}),arr.length);
+  arr.forEach((q,i)=>{ const [x,y,z,dx,dy,dz]=q; dummy.position.copy(P(x+dx/2,y+dy/2,z+dz/2)); dummy.scale.set(dx,dz,dy); dummy.updateMatrix(); im.setMatrixAt(i,dummy.matrix); });
+  im.userData={kind:'util',si,arr}; L(UL(sy[3])).add(im); pickables.push(im); });
+const utilLabels = new THREE.Group(); utilLabels.visible=false; scene.add(utilLabels);
+const ULBL={'GAS-YARD':'Bulk gas yard (concept)','GAS-FILL':'Tanker transfer connection','GAS-EDGE':'To Air First (south)','GAS-EDGE-AP':'To Air Products (northeast)','GAS-EDGE-LD':'To Linde (southwest)','PWR-EDGE-E':'345 kV Godeok–Seoanseong (east)','PWR-EDGE-W':'500 kV HVDC Bukdangjin (west)','PWR-RCV':'Campus power receiving (concept)','PV-CANOPY':'Parking-lot solar (location est.)','WTR-EDGE':'Industrial water intake (Paldang system)','WTR-REUSE-EDGE':'Sewage-reclaimed water (planned)','WW-EDGE':'Treated effluent discharge (press)','UT-34-CT':'Cooling towers (est.)',
+  'UT-12-CH1':'Chiller (concept)','UT-34-CH1':'Chiller (concept)','UT-12-UPW':'UPW plant (concept)','UT-34-UPW':'UPW plant (concept)','UT-12-CHEM-DOCK':'Chemical unloading bay','UT-34-CHEM-DOCK':'Chemical unloading bay','S1-WW-AA':'Wastewater treatment stage (concept)','S2-WW-AA':'Wastewater treatment stage (concept)'};
+for(const e of D.elems){ const b=e.box; let t=ULBL[e.id]; if(!t&&/CYL-DOCK$/.test(e.id)) t='Cylinder exchange area'; if(!t&&/GASROOM$/.test(e.id)) t='Specialty gas supply room'; if(!t&&/-GEN$/.test(e.id)) t='Emergency generators'; if(!t&&/1F-PCW-HX$/.test(e.id)) t='PCW heat exchangers';
+  if(t) utilLabels.add(makeLabel(t,(b[0]+b[3])/2,(b[1]+b[4])/2,b[5]+14,13,e.color)); }
+// ---- v6 interior detail: structure and emergency equipment
+const ST_COL=['#8c949e','#69727c','#b7a36a','#c9d3dc']; const ST_NAME=['Structural columns (concept)','Plenum trusses (concept)','CSF lateral racks (pipes and cable trays, concept)','Cleanroom ceiling pipe and duct bundles (seen in video; location is concept)'];
+[0,1,2,3].forEach(k=>{ const arr=D.struct.filter(p=>p[6]===k); if(!arr.length) return; const im=new THREE.InstancedMesh(unit,new THREE.MeshLambertMaterial({color:ST_COL[k]}),arr.length);
+  arr.forEach((q,i)=>{ const [x,y,z,dx,dy,dz]=q; dummy.position.copy(P(x+dx/2,y+dy/2,z+dz/2)); dummy.scale.set(dx,dz,dy); dummy.updateMatrix(); im.setMatrixAt(i,dummy.matrix); });
+  im.userData={kind:'struct',k,arr}; L('Structural columns and trusses').add(im); pickables.push(im); });
+const SF_COL=['#19c37d','#e02424','#00e676']; const SF_NAME=['Emergency shower and eyewash (concept)','Extinguishers and hose cabinets (concept)','Emergency exits (concept)']; const SF_DIM=[[0.9,0.9,2.3],[0.8,0.35,1.3],[1.8,0.25,2.2]];
+[0,1,2].forEach(k=>{ const arr=D.safety.filter(p=>p[3]===k); if(!arr.length) return; const im=new THREE.InstancedMesh(unit,new THREE.MeshBasicMaterial({color:SF_COL[k]}),arr.length); const d=SF_DIM[k];
+  arr.forEach((q,i)=>{ dummy.position.copy(P(q[0],q[1],q[2]+d[2]/2)); dummy.scale.set(d[0],d[2],d[1]); dummy.updateMatrix(); im.setMatrixAt(i,dummy.matrix); });
+  im.userData={kind:'safety',k,arr}; L('EHS emergency equipment').add(im); pickables.push(im); });
+const floorLabels = new THREE.Group(); scene.add(floorLabels);
+
+// ---------- UI
+const $=id=>document.getElementById(id);
+const layerOrder=['Envelope','Roofs','Roof racks','Rooftop equipment','Exterior graphics','Annex buildings','Map label points','Connecting bridges','Floor slabs','Cleanroom zones','Process zones','Yellow room','Subfab zones','Plenum zones','Support zones','Support rooms','Reference design (move-in)','HVAC','Cores','FFU ceiling','Structural columns and trusses','Cleanroom tools','OHT rails','CSF equipment','FSF equipment','Plenum equipment','Utility plant','Filling and exchange points',...D.ugroups.map(g=>'System · '+g.key),'EHS gas and exhaust flow','EHS gas detectors','EHS emergency equipment','EHS egress travel distance','Labels','Ground'];
+const layerNote={'Reference design (move-in)':'weak evidence · hidden by default','Cleanroom tools':'concept layout','CSF equipment':'concept','FSF equipment':'concept','Plenum equipment':'concept','Rooftop equipment':'concept spacing','OHT rails':'concept layout','FFU ceiling':'concept','Floor slabs':'floor height assumed','Support zones':'estimate','Support rooms':'estimate','HVAC':'concept','Process zones':'concept','Yellow room':'seen in video; location is concept','EHS gas and exhaust flow':'concept','EHS gas detectors':'concept','EHS egress travel distance':'based on model assumptions','EHS emergency equipment':'concept','Structural columns and trusses':'concept','Utility plant':'concept','Filling and exchange points':'concept'}; D.ugroups.forEach(g=>layerNote['System · '+g.key]='concept routes');
+for(const n of layerOrder){ if(!layers[n]) continue;
+  const lb=document.createElement('label'); lb.className='chk'; const id='ly_'+layerOrder.indexOf(n);
+  lb.innerHTML=`<input type="checkbox" id="${id}" checked><span>${n}${layerNote[n]?` <span class="sub">· ${layerNote[n]}</span>`:''}</span>`;
+  $('layers').appendChild(lb); lb.firstChild.addEventListener('change',ev=>{layers[n].visible=ev.target.checked;});
+}
+function setLayers(on){ layerOrder.forEach((n,i)=>{ if(!layers[n])return; const v=on.includes(n); layers[n].visible=v; const cb=$('ly_'+i); if(cb) cb.checked=v; }); }
+const EHS_L=['EHS gas and exhaust flow','EHS gas detectors','EHS emergency equipment','EHS egress travel distance']; let ehsOn=false;
+const UTIL_L=['Utility plant','Filling and exchange points',...UG.map(UL)]; let utilOn=false, utilSel=null;
+const utilVis=()=>utilOn?['Utility plant','Filling and exchange points',...(utilSel?[UL(utilSel)]:UG.map(UL))]:[];
+const ALL=layerOrder.filter(n=>!EHS_L.includes(n)&&!UTIL_L.includes(n)); const EXT=['Envelope','Roofs','Roof racks','Rooftop equipment','Exterior graphics','Annex buildings','Map label points','Connecting bridges','Labels','Ground'];
+const INT=ALL.filter(n=>!['Roofs','Roof racks','Rooftop equipment','Exterior graphics','FFU ceiling'].includes(n));
+let zBottom=-5;
+function setCut(y,z,z0){ $('cutY').value=y; $('cutZ').value=z; zBottom=(z0===undefined?-5:z0); applyCut(); }
+function applyCut(){ const y=+$('cutY').value, z=+$('cutZ').value; planeY.constant=(CY-y); planeZ.constant=z; planeZ0.constant=-zBottom;
+  $('vY').textContent = y<=-650?'All':('Y '+y+' m'); $('vZ').textContent = z>=95?'All':(z.toFixed(1)+' m'); }
+$('cutY').addEventListener('input',applyCut); $('cutZ').addEventListener('input',()=>{zBottom=-5;applyCut();});
+function view(tx,ty,tz, dx,dy,dz){ controls.target.copy(P(tx,ty,tz)); camera.position.copy(P(tx+dx,ty+dy,tz+dz)); controls.update(); }
+const fabBy=id=>D.fabs.find(f=>f.id===id);
+function clearFloor(){ floorLabels.clear(); $('floorSheet').style.display='none'; [...$('floorSel').children].forEach(c=>c.classList.remove('on')); curFloor=null; }
+const presets=[
+ ['Exterior overview', ()=>{clearFloor(); setLayers(EXT); setCut(-650,95); view(0,1500,20, -1500,-1700,1200);}],
+ ['P1 cross-section', ()=>{clearFloor(); setLayers(ALL.filter(n=>n!=='FFU ceiling')); setCut(2040,95); view(-230,2040,38, -260,-430,150);}],
+ ['P3 cross-section', ()=>{clearFloor(); setLayers(ALL.filter(n=>n!=='FFU ceiling')); setCut(1385,95); view(20,1385,38, -300,-470,160);}],
+ ['Cleanroom aisle at eye level', ()=>{ clearFloor(); const f=fabBy('P1'); setLayers(INT.filter(n=>n!=='Labels'&&n!=='FFU ceiling')); setCut(-650,22.9,16.4); const r=D.rails.filter(q=>q[6]==='P1'&&q[7]==='3F'&&q[4]>q[3])[9]; const x=r[0]+0.15; view(x, r[1]+r[4]*0.8, 18.7, 0.02, -r[4]*0.62, 0.45); }],
+ ['Inside the subfab (FSF)', ()=>{ clearFloor(); const f=fabBy('P1'); setLayers(INT.filter(n=>n!=='Labels')); setCut(-650,8.1,-0.05); view(f.cr[0]+84.5,(f.cr[2]+f.cr[3])/2+20,2, -26,-36,20); }],
+ ['Campus see-through', ()=>{clearFloor(); setLayers(INT.filter(n=>n!=='Envelope')); setCut(-650,95); view(0,1500,20, -1300,-1500,900);}],
+];
+presets.forEach(([n,fn])=>{ const b=document.createElement('button'); b.textContent=n; b.onclick=()=>{setUtil(false,true); fn(); [...$('presets').children].forEach(c=>c.classList.remove('on')); b.classList.add('on');}; $('presets').appendChild(b); });
+['P1','P2','P3','P4'].forEach(id=>{ const b=document.createElement('button'); b.textContent=id; b.onclick=()=>{const f=fabBy(id); view((f.x0+f.x1)/2,(f.y0+f.y1)/2,30, -420,-560,380);}; $('focus').appendChild(b); });
+{ const b=document.createElement('button'); b.textContent='EUV building'; b.onclick=()=>view(-436,1676,30,-260,-330,240); $('focus').appendChild(b); }
+$('uncut').onclick=()=>{ clearFloor(); setCut(-650,95); };
+// ---------- utility mode
+const GHOST_L=['Envelope','Roofs','Annex buildings','Connecting bridges','Exterior graphics','Roof racks'];
+function ghost(on){ GHOST_L.forEach(n=>{ if(!layers[n]) return; layers[n].children.forEach(m=>{ if(!m.isMesh) return; if(!m.userData.orig) m.userData.orig=m.material; m.material = on ? mat(m.userData.e.color, 0.08) : m.userData.orig; }); }); }
+function utilSheet(){ const gs=utilSel?D.ugroups.filter(g=>g.key===utilSel):D.ugroups;
+  const li=a=>'<ul style="margin:4px 0 8px;padding-left:18px">'+a.map(t=>`<li>${t}</li>`).join('')+'</ul>';
+  $('floorSheet').style.display='block';
+  $('floorSheet').innerHTML=`<h2>About the utility systems</h2><div class="row" style="margin:4px 0"><span class="pill gD">Routes D · generic reference design</span><span class="pill gA">Site facts from press and official material only</span></div>`+
+   (utilSel?'':`<p class="sub">Use the buttons below to show one system. Click a coloured line to see the flow of that system.</p>`)+
+   gs.map(g=>`<div class="role">${g.title}</div><p>${D.usys.filter(s=>s[3]===g.key).map(s=>`<span style="white-space:nowrap"><span class="chip" style="background:${s[2]}"></span>${s[0]}</span>`).join(' · ')}</p>`+
+     (utilSel?`<b>Flow sequence</b>${li(g.flow)}<b>Representative figures from the literature</b>${li(g.values)}<b class="site">Public facts about the Pyeongtaek campus</b>${li(g.site)}<p class="sub">Limits: ${g.limit}</p><p class="sub">Evidence ${srcLinks(g.src)}</p>`
+             :`<p class="sub">${g.flow[0]}</p>`)).join('');
+  if(innerWidth<=900){ $('right').classList.add('open'); $('left').classList.remove('open'); } }
+function setUtil(on, quiet){ utilOn=on; if(!on) utilSel=null; ghost(on); utilLabels.visible=on;
+  $('utilBtn').classList.toggle('on',on); $('utilBtn').textContent=on?'Hide utility systems':'Show utility systems';
+  [...$('utilSel').children].forEach(c=>c.classList.toggle('on',on&&c.dataset.k===utilSel));
+  if(quiet) return;
+  if(on){ clearFloor(); [...$('presets').children].forEach(c=>c.classList.remove('on')); setLayers(['Envelope','Annex buildings','Connecting bridges','Rooftop equipment','Labels','Ground',...utilVis()]); setCut(-650,95); utilSheet(); }
+  else { $('presets').children[0].click(); } }
+$('utilBtn').onclick=()=>{ const on=!utilOn; setUtil(on); if(on) view(60,1500,10,-1250,-1500,1150); };
+D.ugroups.forEach(g=>{ const b=document.createElement('button'); b.textContent=g.key; b.dataset.k=g.key; b.onclick=()=>{ const same=utilOn&&utilSel===g.key; utilOn=true; utilSel=same?null:g.key; const keepFloor=curFloor; setUtil(true,true);
+  if(keepFloor){ showFloor(curFab,keepFloor); } else { utilLabels.visible=true; setLayers(['Envelope','Annex buildings','Connecting bridges','Rooftop equipment','Labels','Ground',...utilVis()]); setCut(-650,95); }
+  utilSheet(); }; $('utilSel').appendChild(b); });
+
+// ---------- per-floor mode
+let curFab='P1', curFloor=null;
+const srcKeys=Object.keys(D.sources);
+const srcLinks=keys=>[...new Set(keys)].map(k=>`<a href="${D.sources[k]?D.sources[k][1]:'#'}" target="_blank" rel="noopener" title="${D.sources[k]?D.sources[k][0].replace(/"/g,''):''}">[${srcKeys.indexOf(k)+1}]</a>`).join(' ');
+const ROLE_SRC={FSF:['CSF_FSF','SMOCK','STI','NFPA318','GEN'],CSF:['CSF_FSF','SMOCK','NFPA318','GEN'],FAB:['TOUR_3F','TOOLS','CR4','CR_AREA','LAYOUT','AMHS_H','YT'],PLN:['SKECO','DCC','FFU_SRC','GEN'],ROOF:['P3_UT','YT','ESRI']};
+function showFloor(fabId, fl){
+  utilLabels.visible=false;
+  curFab=fabId; curFloor=fl; const f=fabBy(fabId); const lv=D.levels.find(l=>l[0]===fl); const [ , z0, z1, role, nm, what]=lv;
+  [...$('fabSel').children].forEach(c=>c.classList.toggle('on',c.textContent===fabId));
+  [...$('floorSel').children].forEach(c=>c.classList.toggle('on',c.textContent===fl));
+  [...$('presets').children].forEach(c=>c.classList.remove('on'));
+  if(role==='ROOF'){ setLayers(['Envelope','Roofs','Roof racks','Rooftop equipment','Annex buildings','Connecting bridges','Ground',...utilVis()]); setCut(-650,95,z0-11); }
+  else { setLayers(INT.filter(n=>n!=='Labels').concat(ehsOn?(role==='FAB'?EHS_L:EHS_L.slice(0,3)):[]).concat(utilVis())); const top = role==='FAB'? z0+6.4 : z1-1.35; setCut(-650, top, role==='PLN'? z0-0.7 : z0-0.05); }
+  view((f.x0+f.x1)/2,(f.y0+f.y1)/2,z0+2, -40,-230,430);
+  // labels for this floor
+  floorLabels.clear();
+  for(const e of D.elems){ if(e.fab!==fabId||e.fl!==fl) continue; const b=e.box;
+    if(e.layer==='Process zones'&&!e.id.includes('spine')) floorLabels.add(makeLabel(e.name.replace('(concept)',''), (b[0]+b[3])/2, b[4]-14, z0+5.5, 7, e.color));
+    if(e.layer==='Cleanroom zones'&&!e.id.endsWith('ffu')){ const ph=(e.name.match(/Ph\d/)||[''])[0]; floorLabels.add(makeLabel((e.id.endsWith('-W')?'West':'East')+(ph?' · '+ph:''), (b[0]+b[3])/2, b[1]+10, z0+5.5, 9, '#f2cc3a')); }
+    if(e.id.endsWith('smock')||e.id==='P1-3F-window'||(e.id.endsWith('movein'))) floorLabels.add(makeLabel(e.name.replace(/^P\d FAB \w+ /,'').replace('(est.)',''), (b[0]+b[3])/2,(b[1]+b[4])/2, z0+5.5, 6, '#3c7be0'));
+  }
+  // floor sheet
+  const cnt={}; for(const q of D.equip){ if(q[7]===fabId&&q[8]===fl) cnt[q[6]]=(cnt[q[6]]||0)+1; }
+  const rows=Object.keys(cnt).map(ti=>{const t=D.types[+ti]; return `<div class="eq"><b><span class="chip" style="background:${t.color}"></span>${t.ko}</b> <span class="sub">boxes ${cnt[ti].toLocaleString()} · ${t.shape}</span>${t.vendors_site?`<small class="site">Site-related press and filings: ${t.vendors_site}</small>`:''}<small>Representative industry suppliers: ${t.vendors}</small></div>`;}).join('');
+  const ph=D.phase[fabId]; let phTxt='';
+  if(role==='FAB'){ phTxt = ph ? ['W','E'].map(h=>{const v=ph[h+'|'+fl]; return v?`<tr><td>${h==='W'?'West':'East'}</td><td><b>${v[0]}</b></td><td>${v[1]}</td></tr>`:'';}).join('') : ''; phTxt = phTxt?`<table>${phTxt}</table>`:`<p class="sub">Phase names and positions for this fab could not be confirmed from public sources.</p>`; }
+  const extra = role==='FAB' ? `<p>Cleanroom extent ${Math.round(f.cr[1]-f.cr[0])} × ${Math.round(f.cr[3]-f.cr[2])} m, two zones, west and east. Cleanroom area in the model (two levels combined) ${f.cr_area.toLocaleString()}㎡ · brokerage report figure about ${D.cr_report[fabId].toLocaleString()}㎡. OHT is by SEMES (official video and press); about 1,850 vehicles and more than 2,000 tools in P1 (press).</p>`:'';
+  let ehs='';
+  if(ehsOn){ ehs=`<div class="role">EHS layers (concept)</div><p><span class="chip" style="background:#3fd17a"></span>gas supply · <span class="chip" style="background:#ff4d4d"></span>process exhaust · <span class="chip" style="background:#ff9f2e"></span>treated exhaust · <span class="chip" style="background:#ff3df0"></span>gas detector positions · <span class="chip" style="background:#19c37d"></span>emergency shower and eyewash · <span class="chip" style="background:#e02424"></span>extinguishers and hose cabinets · <span class="chip" style="background:#00e676"></span>emergency exits (all concept). Shown only in etch, deposition, diffusion and implant bays, which use toxic or flammable gases. Not actual pipe routes.</p>`;
+    if(role==='FAB'){ const d=D.egress.filter(q=>q[6]===fabId&&q[7]===fl).map(q=>q[5]); const pc=t=>Math.round(100*d.filter(v=>v<=t).length/d.length);
+      ehs+=`<p><b>Egress travel distance (to the stairs assumed in this model)</b>: max ${Math.max(...d)} m · within 61 m ${pc(61)}% · within 75 m ${pc(75)}% · within 100 m ${pc(100)}%</p>
+      <div class="row">${[[30,'≤30'],[50,'≤50'],[61,'≤61'],[75,'≤75'],[100,'≤100'],[999,'>100']].map(([t,l])=>`<span class="pill" style="background:${egCol(t)};color:#111">${l} m</span>`).join('')}</div>
+      <p class="sub">Reference lines: Enforcement Decree of the Building Act (Korea) Article 34 (30 m; 50 m fire-resistive; 75 m automated-production factory; 100 m unmanned factory), IBC H-5 200 ft (61 m). Stair positions are assumed, so this says nothing about compliance of the real building. Zones beyond 75 m mean the stair assumption in the model is sparser than reality. ${srcLinks(['LAW34','IBC_H5','NFPA318'])}</p>`; } }
+  $('floorSheet').style.display='block';
+  $('floorSheet').innerHTML=`<h2>About this floor</h2><div class="name">${fabId} ${fl} · ${nm}</div><div class="row" style="margin:4px 0"><span class="pill gC">floor arrangement C · estimate</span><span class="pill gD">layout D · concept</span><span class="pill">height ${z0}–${z1} m(assumed)</span></div><p>${what}</p>${extra}${phTxt}${rows||'<p class="sub">No concept equipment is placed on this floor.</p>'}${ehs}${utilOn?`<div class="role">Utility systems (concept)</div><p class="sub">Concept routes of the ${utilSel||'All'} systems passing through this floor are also shown. Click a coloured line to see the flow sequence and evidence.</p>`:''}<p class="sub">Evidence ${srcLinks(ROLE_SRC[role]||['GEN'])}</p>`;
+  if(innerWidth<=900){ $('right').classList.add('open'); $('left').classList.remove('open'); }
+}
+['P1','P2','P3','P4'].forEach(id=>{ const b=document.createElement('button'); b.textContent=id; b.onclick=()=>showFloor(id, curFloor||'3F'); $('fabSel').appendChild(b); });
+D.levels.forEach(l=>{ const b=document.createElement('button'); b.textContent=l[0]; b.title=l[4]; b.onclick=()=>showFloor(curFab,l[0]); $('floorSel').appendChild(b); });
+$('ehsBtn').onclick=()=>{ ehsOn=!ehsOn; $('ehsBtn').classList.toggle('on',ehsOn); $('ehsBtn').textContent=ehsOn?'EHS(safety) layers off':'EHS(safety) layers on'; showFloor(curFab, curFloor||'3F'); };
+
+// ---------- tables
+$('dims').innerHTML='<tr><th>Fab</th><th>Main body length</th><th>incl. end block</th><th>Width</th><th>height</th></tr>'+D.fabs.map(f=>`<tr><td>${f.id}</td><td class="n">${f.Lmain}</td><td class="n">${f.L}</td><td class="n">${f.W}</td><td class="n">${f.H}${f.id==='P1'?' <span class="pill gA">A</span>':' <span class="pill gC">C</span>'}</td></tr>`).join('');
+$('phase').innerHTML='<tr><th>Fab</th><th>Lower W</th><th>Lower E</th><th>Upper W</th><th>Upper E</th></tr>'+Object.keys(D.phase).map(k=>{const p=D.phase[k]; const c=key=>p[key]?p[key][0]+(p[key][1].includes('estimate')?' <span class="pill gC">C</span>':''):'-'; return `<tr><td>${k}</td><td>${c('W|3F')}</td><td>${c('E|3F')}</td><td>${c('W|7F')}</td><td>${c('E|7F')}</td></tr>`;}).join('');
+if(D.meta.products){ $('prod').innerHTML='<tr><th>Fab</th><th>Zone</th><th>Product</th></tr>'+D.meta.products.rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td><b>${r[2]}</b><br><span class="sub">${r[3]}</span></td></tr>`).join(''); $('prodNote').textContent=D.meta.products.rule; }
+$('lv').innerHTML='<tr><th>Floor</th><th>Height (m, assumed)</th><th>Use</th></tr>'+D.levels.slice().reverse().map(l=>`<tr><td>${l[0]}</td><td class="n">${l[1]}–${l[0]==='RF'?'':l[2]}</td><td>${l[4]}</td></tr>`).join('');
+const roleName={FAB:'Cleanroom (3F, 7F)',CSF:'CSF(2F·6F)',FSF:'FSF(1F·5F)',PLN:'Plenum (4F, 8F)',ROOF:'Roof'};
+$('legend').innerHTML=Object.keys(roleName).map(r=>`<div class="role">${roleName[r]}</div>`+D.types.filter(t=>t.role===r).map(t=>`<div class="eq"><b><span class="chip" style="background:${t.color}"></span>${t.ko}</b> <span class="sub">${t.size[0]}×${t.size[1]}×${t.size[2]} m representative outline</span>${t.vendors_site?`<small class="site">Site-related press and filings: ${t.vendors_site}</small>`:''}<small>Representative industry suppliers: ${t.vendors}</small></div>`).join('')
+ +(r==='FAB'?`<div class="eq"><b><span class="chip" style="background:#f4f6f8"></span>OHT(overhead transport)</b><small class="site">Site-related press and official video: SEMES · about 1,850 in P1 (press)</small><small>Representative industry suppliers: SEMES, Daifuku, Murata Machinery</small></div>`:'')).join('');
+$('src').innerHTML=srcKeys.map(k=>`<li id="s_${k}">${D.sources[k][0]}<br><a href="${D.sources[k][1]}" target="_blank" rel="noopener">${new URL(D.sources[k][1]).hostname}</a></li>`).join('');
+
+// ---------- picking
+const ray=new THREE.Raycaster(); let down=null;
+canvas.addEventListener('pointerdown',e=>{down=[e.clientX,e.clientY];});
+canvas.addEventListener('pointerup',e=>{ if(!down||Math.hypot(e.clientX-down[0],e.clientY-down[1])>4) return;
+  const r=canvas.getBoundingClientRect(); const m=new THREE.Vector2((e.clientX-r.left)/r.width*2-1, -(e.clientY-r.top)/r.height*2+1);
+  ray.setFromCamera(m,camera);
+  const hits=ray.intersectObjects(pickables.filter(o=>o.parent.visible&&!(utilOn&&GHOST_L.includes(o.parent.name))),false).filter(h=>renderer.clippingPlanes.every(p=>p.distanceToPoint(h.point)>=-0.01));
+  if(!hits.length) return; const h=hits[0], u=h.object.userData; let html='';
+  if(u.kind==='elem'){ const e=u.e,b=e.box; html=`<div class="name">${e.name}</div><div class="row" style="margin:4px 0"><span class="pill g${e.conf}">${e.conf} · ${D.meta.grades[e.conf]}</span><span class="pill">${e.layer}</span></div>
+   <table><tr><th>E–W × N–S × height</th><td class="n">${(b[3]-b[0]).toFixed(0)} × ${(b[4]-b[1]).toFixed(0)} × ${(b[5]-b[2]).toFixed(1)} m</td></tr><tr><th>Floor level</th><td class="n">${b[2].toFixed(1)} m</td></tr><tr><th>ID</th><td class="n">${e.id}</td></tr></table>
+   ${e.note?`<p>${e.note}</p>`:''}<p class="sub">Sources ${srcLinks(e.src)}</p>`; }
+  else if(u.kind==='equip'){ const t=u.t,q=u.arr[h.instanceId]; html=`<div class="name"><span class="chip" style="background:${t.color}"></span>${t.ko}</div><div class="row" style="margin:4px 0"><span class="pill gD">D · generic concept</span><span class="pill">${q[7]} ${q[8]}</span></div>
+   <p>Shape: ${t.shape}. Representative outline ${t.size[0]}×${t.size[1]}×${t.size[2]} m. Position is a concept layout.</p>${t.vendors_site?`<p class="site">Site-related press and filings: ${t.vendors_site}</p>`:''}<p>Representative industry suppliers (delivery to this site unconfirmed): ${t.vendors}</p>`; }
+  else if(u.kind==='pipe'){ html=`<div class="name"><span class="chip" style="background:${PIPE_COL[u.k]}"></span>${PIPE_NAME[u.k]}</div><div class="row" style="margin:4px 0"><span class="pill gD">D · generic concept</span><span class="pill">EHS</span></div><p>Concept lines showing the general flow of toxic and flammable process gases: gas boxes and VMBs in the CSF → cleanroom tools → dry pumps and scrubbers in the FSF → rooftop scrubbers and stacks. Not actual pipe routes or sizes.</p><p>Related contractors: Hanyang ENG (P5 piping contract filing), Sebo MEC (filing of a Pyeongtaek mechanical works contract with Samsung C&T). ${srcLinks(['CSF_FSF','NFPA318','P5','SEBO'])}</p>`; }
+  else if(u.kind==='util'){ const sy=D.usys[u.si], g=D.ugroups.find(x=>x.key===sy[3]), q=u.arr[h.instanceId]; html=`<div class="name"><span class="chip" style="background:${sy[2]}"></span>${sy[0]} · ${sy[1]}</div><div class="row" style="margin:4px 0"><span class="pill gD">D · generic reference design</span><span class="pill">${g.key}</span>${q[7]?`<span class="pill">${q[7]}</span>`:''}</div><p><b>Flow sequence</b></p><ul style="margin:4px 0;padding-left:18px">${g.flow.map(t=>`<li>${t}</li>`).join('')}</ul><p class="site">Public facts about Pyeongtaek: ${g.site[0]}</p><p class="sub">Limits: ${g.limit}</p><p class="sub">Evidence ${srcLinks(g.src)}</p>`; }
+  else if(u.kind==='struct'){ html=`<div class="name"><span class="chip" style="background:${ST_COL[u.k]}"></span>${ST_NAME[u.k]}</div><div class="row" style="margin:4px 0"><span class="pill gD">D · generic concept</span></div><p>${['Closely spaced columns are assumed in the subfab and widely spaced columns in the cleanroom. Spacing and sections are assumed values, not an actual structural design.','Long-span trusses in the plenum level above the cleanroom, shown conceptually. Depth and spacing are assumed values.','Lateral racks under the CSF ceiling carrying pipes and cables up to the tools, shown conceptually.','Cleanroom scenes in the official video (2026-06) show silver pipes and ducts running densely in several tiers above the OHT rails. Number of tiers and positions are concept.'][u.k]}</p><p class="sub">${srcLinks(['GEN','SKECO','CSF_FSF'])}</p>`; }
+  else if(u.kind==='safety'){ const q=u.arr[h.instanceId]; html=`<div class="name"><span class="chip" style="background:${SF_COL[u.k]}"></span>${SF_NAME[u.k]}</div><div class="row" style="margin:4px 0"><span class="pill gD">D · generic concept</span><span class="pill">${q[4]} ${q[5]}</span></div><p>${['ANSI/ISEA Z358.1 recommends emergency showers and eyewashes within 10 seconds of the hazard (typically about 55 ft ≈ 16.8 m), on the same level with an unobstructed path. This model is a first-pass layout at about 30 m spacing along clean and CMP bay aisles and in FSF chemical supply zones. Installation spacing and the actual time to reach a unit from a hazard are different questions; access paths from each exposure point were not verified, and these are not actual positions or quantities.','Shows the general principle of placing extinguishers and hose cabinets along the central aisle and around stair cores. Spacing is arbitrary and this is not a fire-code compliance review.','Doors leading to the assumed stair cores used in the egress travel-distance calculation. Positions are model assumptions.'][u.k]}</p><p class="sub">${srcLinks(u.k===0?['Z358','CSF_FSF']:u.k===2?['LAW34','IBC_H5']:['NFPA318'])}</p>`; }
+  else if(u.kind==='det'){ html=`<div class="name"><span class="chip" style="background:#ff3df0"></span>Gas detector positions (concept)</div><div class="row" style="margin:4px 0"><span class="pill gD">D · generic concept</span><span class="pill">EHS</span></div><p>Shows the general principle of placing detectors at possible leak points such as gas boxes and VMBs, around tools and around scrubbers. Not the actual number or positions of detectors.</p>`; }
+  else if(u.kind==='egress'){ const q=u.arr[h.instanceId]; html=`<div class="name">Egress travel distance ${q[5]} m</div><div class="row" style="margin:4px 0"><span class="pill gD">D · model assumption</span><span class="pill">${q[6]} ${q[7]}</span></div><p>Travel distance from this point to the nearest stair core or central core assumed in the model (moving along bay aisles). Not an egress performance assessment of the real building.</p><p class="sub">${srcLinks(['LAW34','IBC_H5','NFPA318'])}</p>`; }
+  else { html=`<div class="name">OHT rails</div><div class="row" style="margin:4px 0"><span class="pill gD">D · generic concept</span></div><p>Central spine (interbay) and per-bay (intrabay) rails shown conceptually. SEMES OHT confirmed in official video and tour press; about 1,850 in P1 (press).</p>`; }
+  $('selBody').innerHTML=html; if(innerWidth<=900){ $('right').classList.add('open'); $('left').classList.remove('open'); }
+});
+$('tL').onclick=()=>{ $('left').classList.toggle('open'); $('right').classList.remove('open'); };
+$('tR').onclick=()=>{ $('right').classList.toggle('open'); $('left').classList.remove('open'); };
+
+function resize(){ const w=innerWidth,h=innerHeight; renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix(); }
+addEventListener('resize',resize); resize();
+EHS_L.concat(UTIL_L).concat(['Reference design (move-in)']).forEach(n=>{ if(!layers[n]) return; layers[n].visible=false; const cb=$('ly_'+layerOrder.indexOf(n)); if(cb) cb.checked=false;});
+applyCut(); $('presets').children[0].click();
+(function loop(){ controls.update(); renderer.render(scene,camera); requestAnimationFrame(loop); })();
+</script>
+</body>
+</html>
