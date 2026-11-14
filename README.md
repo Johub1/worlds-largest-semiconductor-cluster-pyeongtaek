@@ -1,4 +1,4 @@
-# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.29 (English edition)
+# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.30 (English edition)
 
 > **Status: living project, updated continuously.** This model is revised whenever new public material is found or an error is reported; the current version and every change are listed in `CHANGELOG.md`. Corrections backed by a public source are welcome through GitHub Issues. Latest version: https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek
 
@@ -17,7 +17,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | Item | Content |
 |---|---|
 | Scope | The wider Pyeongtaek complex: fabs P1, P2, P3, P4, the EUV building (V2), utility buildings, cooling tower banks, office and support buildings, the KEPCO Godeok substation lot, the Linde Korea plant, the Godeok public wastewater treatment plant, the P5 construction site, the Air Products and Air First gas plants, the Samsung logistics warehouse west of Complex 2, and map points for supplier sites and construction camps |
-| Building elements | 1,473 elements (boxes and cylinders) with name, layer, confidence grade, source keys and a note each |
+| Building elements | 1,474 elements (boxes and cylinders) with name, layer, confidence grade, source keys and a note each |
 | Concept interior | 86,620 equipment boxes of 26 types on 8 floors per fab, 608 OHT rail segments, 10,440 structural members |
 | Concept utilities | 29 systems in 8 groups, 1,521 route segments (thermal, PCW, gas, exhaust, wastewater, chemicals, UPW, power) |
 | Concept EHS | 960 gas/exhaust flow lines, 1,152 gas detector points, 1,552 emergency equipment points, 15,320 egress travel-distance samples |
@@ -345,7 +345,7 @@ Overlap check before intake: the public wastewater plant (4 elements `PUB-WWTP*`
 | SP-E055 | Press (2026-08-11): an overbridge of about 360 m for wafers is being built "in front of P4" | Held | Which face of P4, which P5 building, height and floor are not public. The P4–P5 bridge is still not drawn |
 | SP-E056 | Press photo caption (Dealsite, published 2025-06-24, modified 2025-08-25): four bridges in all at P4 PH2 and P3 PH2, with the complex building between them; SEMES OHT expected | Concept note | `BR-34a/b/c` notes and source `DEALSITE_BR`, v7.25. Article checked by Codex and Astra; it could not be reopened here. Connection points, floors and coordinates are unknown; "PH2" is kept as printed and is not read as the same floor or height in both fabs; "expected" is not "installed". The count of four is not matched to the three overbridges and two pipe rack bridges in the model |
 | SP-E057 | Building register, Godeok-dong 1721: three buildings of the public wastewater plant with storeys, heights and areas | Already in, wording added | The register heights (30.2 m, 13.2 m, 18.1 m) were recorded in v7.21. Which box is which building is still unsettled, so box heights stay arbitrary. The rows relayed in this bundle are a transcription; Codex checked only their sums (total floor area matches 21,840.49 m²; building areas differ by 24.36 m²). The stage-3 floor area of 9,080.72 m² is numerically close to a contractor's published 9,081 m² |
-| SP-E058 | Building register, Godeok-dong 1730: KEPCO converter station and substations with storeys, heights and areas | Already in, wording corrected | `KEPCO-PAD` note, v7.25. Existing `SS-*` boxes were matched to register buildings by comparing areas and say so; no further height is changed or copied. Sum of the per-building floor areas differs from the register total by 11.39 m² (Codex arithmetic) |
+| SP-E058 | Building register, Godeok-dong 1730: KEPCO converter station and substations with storeys, heights and areas | In (notes), wording current as of v7.30 | Status when received: transcribed rows, sums checked by Codex only. Since then Codex obtained the official full-column exports of the summary title section (1 row) and the per-building title sections (9 rows) for the same data month: summary floor area 48,546.62 m² against a per-building sum of 48,558.01 m² (11.39 m² more), building area 20,081.47 against 20,081.46 m². `KEPCO-PAD` note gives both; the cause is not established and nothing is derived from the difference. Heights in the export: converter station 23.80 m, substation 32.85 m, substation-2 33.45 m; which `SS-*` box is which building is unsettled, and register keys do not join to permit building keys |
 
 Seventh bundle (campus lots in the building register) and the sender's corrections to the sixth:
 
@@ -370,6 +370,25 @@ Eighth bundle and two data audits by Codex (meta wording only; no geometry chang
 | Meta audit (Codex) | Old conclusions left in `meta.floor_area` | Corrected | `official.P2` no longer treats 128,900 m² as the P2 fab floor area; `check` (model plan "may be 13% small") is withdrawn; `gov_register` says the values are transcriptions and gives the per-stage approval dates of the wastewater plant; `gov_register_parcels` counts rows, not buildings; the permit-query scope is updated |
 
 Also corrected: the `OFF-2` note called the building a candidate for Office building 2, which contradicted `WA`; it now only compares its plan with the register area.
+
+## What v7.30 adds (cross road; register summary; structure records; what evidence is still needed)
+
+- One ground-level element read from imagery (grade B; ±10 m reading precision, not a surveyed bound): `ROAD-NW`, a public road in the built-up area north-west of the campus, passing the intersection at the north-west end of `ROAD-W3`. Fit checked by overlay. No existing box changed.
+- `KEPCO-PAD` note: the register summary and the sum of the nine per-building rows are now given separately (48,546.62 m² and 48,558.01 m²; official exports checked by Codex). The earlier wording called the summary value a "sum".
+- `meta.floor_area.gov_register_campus`: structure and use from the full-column floor summary (Codex's review). FAB floor records are mostly steel-reinforced concrete; CT building records are general steel above ground and steel-reinforced concrete in the basement; every floor record has the main use "other factory". Basement, above-ground and rooftop areas of the FAB and CT buildings are listed. A structure name gives no member section, column spacing or floor height; the 10,440 structural members in the model remain concept elements.
+
+**What the public record no longer yields, and what evidence would move each open item:**
+
+| Open item | Evidence that would settle it | Where it might exist |
+|---|---|---|
+| East strips of the fabs (wall face or end block), and the westward displacement of roof-read outlines | Orthorectified ground-level building outlines, or imagery of the same buildings from another direction | National digital topographic map or orthophoto (NGII, VWorld) — being checked by Astra |
+| Fab heights, floor heights, elevations | A register title section or a permit record with a height field for the FAB buildings | Not returned for these lots so far; the permit exports have no height column |
+| Which permit building is P1, P2, P3, P4 | A company or government document that gives both the building name and the line name, or a located permit drawing | Company newsroom material with labelled site plans; amendment history of the permit |
+| Location of the complex building, UT buildings, CT buildings | The same, or a contractor's published site plan | Contractor portfolios and technical papers |
+| Roads east of the campus and the railway curve | A map layer that separates public roads, internal roads and tracks | Official road and rail layers; not derivable from the imagery alone |
+| Internal layout of any building | Nothing public is expected; the interior stays a concept drawing | — |
+
+Until one of these arrives, further elements are limited to ground-level public features that can be read unambiguously; no box is moved to fit an unconfirmed position.
 
 ## What v7.29 adds (west public road continued; imagery and register notes tightened)
 
@@ -477,6 +496,8 @@ Held: assignment of building-name suffixes to P numbers; any change of height, f
 
 ## Verification done for this release
 
+v7.30: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.29, one note changed (`KEPCO-PAD`) and one element was added.
+
 v7.29: Korean and English data files compared element by element (1,473 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.28, one note changed (`ROAD-W`) and two elements were added.
 
 v7.28: Korean and English data files compared element by element (1,471 ids, source keys, grades and boxes identical; no duplicate id; no untranslated text). Against v7.27, no existing element changed box, grade, name or note; three elements were added.
@@ -490,8 +511,8 @@ v7.25: Korean and English data files compared element by element (1,458 ids, sou
 | Check | Result |
 |---|---|
 | Fab bodies and all annexes overlaid on the zoom-18 satellite mosaic (about 0.48 m/px) | All four fab outlines and the east, west and north annexes fall on the imagery; three technology-cluster buildings were re-oriented in v7.13 after this check |
-| STEP read back with the OpenCascade kernel (v7.29 build) | 1,249 solids, 7,161 faces; the first 400 solids pass the shape validity check |
-| DXF read back and audited with ezdxf | 2D: 119,633 entities on 178 layers, 0 audit errors; 3D: 1,693 meshes on 166 layers, 0 audit errors; units metres |
+| STEP read back with the OpenCascade kernel (v7.30 build) | 1,250 solids, 7,167 faces; the first 400 solids pass the shape validity check |
+| DXF read back and audited with ezdxf | 2D: 119,633 entities on 178 layers, 0 audit errors; 3D: 1,694 meshes on 166 layers, 0 audit errors; units metres |
 | Registered areas vs. plans read from imagery | Parking building 1%, Linde site 2.5%, wastewater plant 7%, KEPCO lot 0.4% |
 | Viewer | Loads without page errors, with no network requests; all 23 previews regenerated from this version |
 | Bridges and parking | 12 bridges checked against imagery; 5 structures that were missing (2 overbridges between the UT building and P2, 1 link between the west support building and P2, 2 pipe rack bridges east of the P3–P4 utility building) were added |

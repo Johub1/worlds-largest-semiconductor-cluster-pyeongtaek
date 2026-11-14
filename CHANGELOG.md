@@ -1,5 +1,11 @@
 # Changelog
 
+## v7.30 — 2026-11-15
+- `ROAD-NW` added (public cross road north-west of the campus, grade B, rotated rectangle). 1,474 elements. No existing box changed.
+- `KEPCO-PAD` note separates the register summary (48,546.62 m²) from the per-building sum (48,558.01 m²), both from official exports.
+- `meta.floor_area.gov_register_campus`: structure and use records of the FAB and CT buildings; model structure stays conceptual.
+- README: table of the evidence that would settle each open item; SP-E058 row rewritten to the current state.
+
 ## v7.29 — 2026-11-15
 - Two ground-level road elements read from imagery: `ROAD-W2` and `ROAD-W3` (rotated rectangles, grade B, ±10 m). 1,473 elements. No existing box changed.
 - `meta.imagery_geometry`: seven tiles verified identical to the tiles served now (by hash); substation heights quoted from the official title-section export.
