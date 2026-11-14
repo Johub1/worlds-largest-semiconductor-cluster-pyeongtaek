@@ -1,4 +1,4 @@
-# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.30 (English edition)
+# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.31 (English edition)
 
 > **Status: living project, updated continuously.** This model is revised whenever new public material is found or an error is reported; the current version and every change are listed in `CHANGELOG.md`. Corrections backed by a public source are welcome through GitHub Issues. Latest version: https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek
 
@@ -21,7 +21,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | Concept interior | 86,620 equipment boxes of 26 types on 8 floors per fab, 608 OHT rail segments, 10,440 structural members |
 | Concept utilities | 29 systems in 8 groups, 1,521 route segments (thermal, PCW, gas, exhaust, wastewater, chemicals, UPW, power) |
 | Concept EHS | 960 gas/exhaust flow lines, 1,152 gas detector points, 1,552 emergency equipment points, 15,320 egress travel-distance samples |
-| Sources | 183 keyed sources in three tiers: 42 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 99 Korean press and local |
+| Sources | 184 keyed sources in three tiers: 43 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 99 Korean press and local |
 | Units, origin | metres; local tangent plane at WGS84 37.02 N, 127.06 E; X east, Y north, Z up |
 | Imagery date | 2025-12-22 (source resolution 0.5 m, per Esri's metadata layer) for dimensions; the zoom-18 mosaic used for re-checks was downloaded on 2026-11-12 and 13 |
 
@@ -43,7 +43,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | `data/*.csv` | Elements, equipment, floors, phases, vendors, structure, EHS and utility tables |
 | `preview/` | 27 screenshots of the viewer |
 | `src/` | Export, viewer and check scripts that run on `data/campus.json`; `src/generator_ko/` holds the original generator and the translation tables (see "Rebuilding") |
-| `SOURCES.md` | All 183 sources with URLs, grouped by tier |
+| `SOURCES.md` | All 184 sources with URLs, grouped by tier |
 | `CONSULTATION.md` | Record of what other AI models proposed and what was adopted, verified, held or rejected |
 
 ## Coordinates
@@ -371,11 +371,17 @@ Eighth bundle and two data audits by Codex (meta wording only; no geometry chang
 
 Also corrected: the `OFF-2` note called the building a candidate for Office building 2, which contradicted `WA`; it now only compares its plan with the register area.
 
+## What v7.31 corrects and adds (CT building structure; second official image)
+
+- **Correction of this model's own summary (found by Codex's review of v7.30).** `meta.floor_area.gov_register_campus` said that CT building and CT building-2 both have a general steel structure on floor 1. In the official export only CT building does (floor 1, 645.92 m²; basement 17,157.64 m² steel-reinforced concrete). All records of CT building-2 — floor 1 (187.93 + 329.30 m²) and first basement (9,666.11 + 11,073.80 m²) — are steel-reinforced concrete. The official record was right; the summary was wrong. No geometry is affected.
+- **Comparison with a second official image (new source `NGII_ORTHO_2025`; no image is redistributed).** Codex opened the public preview of the National Geographic Information Institute's 2025 orthophoto (map sheet 37713083, 25 cm project, DEM used; acquisition date not in the public metadata). On that capture, at about 2.3 m per screen pixel, the P1 roof reads as about 530 m long (±9 m) when the screen scale is set from the 201 m width read on the Esri imagery — between the 519 m of the roof-level main body and the 549 m with the east strip. This does not decide the east-strip question, and because the scale rests on the Esri reading it is not an independent check of length. The preview shows no bright surface where the Esri imagery shows the strip, only a dark band of undetermined nature. Recorded in `meta.imagery_geometry`; no box is changed.
+- Criteria registered in advance for the next, quantitative check (measurements on the official orthophoto with a recorded scale): P1 and P2 near 520 m and P3 and P4 near 620 m would support "roof-level main body = whole building"; near 549 m and 651 m would support a separate end block; anything in between leaves it open.
+
 ## What v7.30 adds (cross road; register summary; structure records; what evidence is still needed)
 
 - One ground-level element read from imagery (grade B; ±10 m reading precision, not a surveyed bound): `ROAD-NW`, a public road in the built-up area north-west of the campus, passing the intersection at the north-west end of `ROAD-W3`. Fit checked by overlay. No existing box changed.
 - `KEPCO-PAD` note: the register summary and the sum of the nine per-building rows are now given separately (48,546.62 m² and 48,558.01 m²; official exports checked by Codex). The earlier wording called the summary value a "sum".
-- `meta.floor_area.gov_register_campus`: structure and use from the full-column floor summary (Codex's review). FAB floor records are mostly steel-reinforced concrete; CT building records are general steel above ground and steel-reinforced concrete in the basement; every floor record has the main use "other factory". Basement, above-ground and rooftop areas of the FAB and CT buildings are listed. A structure name gives no member section, column spacing or floor height; the 10,440 structural members in the model remain concept elements.
+- `meta.floor_area.gov_register_campus`: structure and use from the full-column floor summary (Codex's review). FAB floor records are mostly steel-reinforced concrete; CT building is general steel on floor 1 and steel-reinforced concrete in the basement, while every record of CT building-2 is steel-reinforced concrete (corrected in v7.31); every floor record has the main use "other factory". Basement, above-ground and rooftop areas of the FAB and CT buildings are listed. A structure name gives no member section, column spacing or floor height; the 10,440 structural members in the model remain concept elements.
 
 **What the public record no longer yields, and what evidence would move each open item:**
 
@@ -496,6 +502,8 @@ Held: assignment of building-name suffixes to P numbers; any change of height, f
 
 ## Verification done for this release
 
+v7.31: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.30, no element changed; two meta entries changed and one source was added.
+
 v7.30: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.29, one note changed (`KEPCO-PAD`) and one element was added.
 
 v7.29: Korean and English data files compared element by element (1,473 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.28, one note changed (`ROAD-W`) and two elements were added.
@@ -511,7 +519,7 @@ v7.25: Korean and English data files compared element by element (1,458 ids, sou
 | Check | Result |
 |---|---|
 | Fab bodies and all annexes overlaid on the zoom-18 satellite mosaic (about 0.48 m/px) | All four fab outlines and the east, west and north annexes fall on the imagery; three technology-cluster buildings were re-oriented in v7.13 after this check |
-| STEP read back with the OpenCascade kernel (v7.30 build) | 1,250 solids, 7,167 faces; the first 400 solids pass the shape validity check |
+| STEP read back with the OpenCascade kernel (v7.31 build, geometry identical to v7.30) | 1,250 solids, 7,167 faces; the first 400 solids pass the shape validity check |
 | DXF read back and audited with ezdxf | 2D: 119,633 entities on 178 layers, 0 audit errors; 3D: 1,694 meshes on 166 layers, 0 audit errors; units metres |
 | Registered areas vs. plans read from imagery | Parking building 1%, Linde site 2.5%, wastewater plant 7%, KEPCO lot 0.4% |
 | Viewer | Loads without page errors, with no network requests; all 23 previews regenerated from this version |

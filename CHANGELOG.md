@@ -1,5 +1,10 @@
 # Changelog
 
+## v7.31 — 2026-11-15
+- Correction: `meta.floor_area.gov_register_campus` wrongly summarised floor 1 of CT building-2 as general steel; all its records are steel-reinforced concrete (only CT building has general steel on floor 1). An error of this model's summary, not of the official record.
+- `meta.imagery_geometry`: comparison with the public preview of the NGII 2025 orthophoto (P1 about 530 ± 9 m at about 2.3 m per screen pixel; does not decide the east-strip question; not an independent length check). New source `NGII_ORTHO_2025`. No image redistributed.
+- No element changed. 184 sources (43 official, 42 international, 99 Korean).
+
 ## v7.30 — 2026-11-15
 - `ROAD-NW` added (public cross road north-west of the campus, grade B, rotated rectangle). 1,474 elements. No existing box changed.
 - `KEPCO-PAD` note separates the register summary (48,546.62 m²) from the per-building sum (48,558.01 m²), both from official exports.
