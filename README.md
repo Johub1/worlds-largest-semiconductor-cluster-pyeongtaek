@@ -1,4 +1,4 @@
-# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.25 (English edition)
+# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.26 (English edition)
 
 > **Status: living project, updated continuously.** This model is revised whenever new public material is found or an error is reported; the current version and every change are listed in `CHANGELOG.md`. Corrections backed by a public source are welcome through GitHub Issues. Latest version: https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek
 
@@ -17,11 +17,11 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | Item | Content |
 |---|---|
 | Scope | The wider Pyeongtaek complex: fabs P1, P2, P3, P4, the EUV building (V2), utility buildings, cooling tower banks, office and support buildings, the KEPCO Godeok substation lot, the Linde Korea plant, the Godeok public wastewater treatment plant, the P5 construction site, the Air Products and Air First gas plants, the Samsung logistics warehouse west of Complex 2, and map points for supplier sites and construction camps |
-| Building elements | 1,458 elements (boxes and cylinders) with name, layer, confidence grade, source keys and a note each |
+| Building elements | 1,468 elements (boxes and cylinders) with name, layer, confidence grade, source keys and a note each |
 | Concept interior | 86,620 equipment boxes of 26 types on 8 floors per fab, 608 OHT rail segments, 10,440 structural members |
 | Concept utilities | 29 systems in 8 groups, 1,521 route segments (thermal, PCW, gas, exhaust, wastewater, chemicals, UPW, power) |
 | Concept EHS | 960 gas/exhaust flow lines, 1,152 gas detector points, 1,552 emergency equipment points, 15,320 egress travel-distance samples |
-| Sources | 180 keyed sources in three tiers: 39 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 99 Korean press and local |
+| Sources | 181 keyed sources in three tiers: 40 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 99 Korean press and local |
 | Units, origin | metres; local tangent plane at WGS84 37.02 N, 127.06 E; X east, Y north, Z up |
 | Imagery date | 2025-12-22 (0.5 m) for dimensions; zoom-18 mosaic re-acquired 2026-11-12 for re-checks |
 
@@ -43,7 +43,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | `data/*.csv` | Elements, equipment, floors, phases, vendors, structure, EHS and utility tables |
 | `preview/` | 27 screenshots of the viewer |
 | `src/` | Export, viewer and check scripts that run on `data/campus.json`; `src/generator_ko/` holds the original generator and the translation tables (see "Rebuilding") |
-| `SOURCES.md` | All 180 sources with URLs, grouped by tier |
+| `SOURCES.md` | All 181 sources with URLs, grouped by tier |
 | `CONSULTATION.md` | Record of what other AI models proposed and what was adopted, verified, held or rejected |
 
 ## Coordinates
@@ -83,7 +83,7 @@ Korean press still makes up most of the list because contract amounts, phase nam
 - P1: the press plan figure that names P1 (about 520 m × 200 m, Etoday 2022-09-07) agrees with the satellite measurement. The 83 m comes from a ZDNet article (518 × 201 × 83 m) that speaks of "the production line of the Pyeongtaek campus" without naming P1, so the height is a model assumption from a press figure whose subject is unsettled (corrected in v7.25; it was shown as grade A before).
 - P2, P3, P4 heights are not public; in drone photos taken from the west the four fabs look about the same height, so the same 83 m is kept as a concept assumption — it is not a copy of a confirmed P1 height.
 - Press figures that disagree with the measurement (for example "P3 700 m") are recorded in the notes; the measurement is used.
-- Area policy: official material of Samsung Electronics, Samsung C&T, Samsung E&A and Samsung Heavy Industries comes first; press figures are reference only. Official figures found: campus site 2.89 million㎡ / 2.83 million㎡ (Samsung newsrooms), whole Pyeongtaek complex total floor area 3,967,000㎡ (Samsung C&T portfolio), and a figure worded as "total floor area 128,900㎡" for P2 (Samsung Newsroom; Samsung E&A utility project page) whose scope is unsettled — it is not used as the floor area of the P2 fab and is not compared with the model plan. No per-building areas for P1, P3 or P4 were found in official material.
+- Area policy: official material of Samsung Electronics, Samsung C&T, Samsung E&A and Samsung Heavy Industries comes first; press figures are reference only. Official figures found: campus site 2.89 million㎡ / 2.83 million㎡ (Samsung newsrooms), a project floor area of 3,967,000㎡ on the Samsung C&T portfolio page "Pyeongtaek complex (Pyeongtaek P-PJT)" — the page states no included buildings, phase, reference date or construction period, so it is not treated as the current whole-campus total (wording corrected in v7.26), and a figure worded as "total floor area 128,900㎡" for P2 (Samsung Newsroom; Samsung E&A utility project page) whose scope is unsettled — it is not used as the floor area of the P2 fab and is not compared with the model plan. No per-building areas for P1, P3 or P4 were found in official material.
 
 ## Floor arrangement (estimated; floor heights are assumed)
 
@@ -371,15 +371,51 @@ Eighth bundle and two data audits by Codex (meta wording only; no geometry chang
 
 Also corrected: the `OFF-2` note called the building a candidate for Office building 2, which contradicted `WA`; it now only compares its plan with the register area.
 
+## What v7.26 adds (permit building names and floor numbers, comparison with the model, roof reading)
+
+**Official permit data now joined to building names.** Codex downloaded 701 floor-level rows of the building-permit record for lot Godeok-dong 1695 from the official Building HUB site (eight selected columns, data month 2026-09; not a raw API response, no floor-level key). Joined by permit key and building key with the 28 per-building rows transcribed earlier (SP-E063), every row gets a building name. This workstream read all 701 rows and all columns of the 28-row table by script. Two derived tables are published; the downloaded file itself is not redistributed.
+
+- `data/register_vs_model.csv` — 28 permit buildings against candidate model boxes (building area, floor numbers shown, model plan area, difference).
+- `data/permit_floor_areas.csv` — floor areas per building and floor number, summed over rows.
+
+What the comparison shows, and what it does not:
+
+| Permit building (building area) | Model box (plan area) | Difference | Reading |
+|---|---|---|---|
+| FAB building (107,653 m²), FAB building-2 (111,791 m²) | P1 (110,349 m²), P2 (112,608 m²) | 0.7–4.6% in every pairing | The pair matches the pair; area alone cannot say which is P1 and which is P2 |
+| FAB building-3 (138,388 m²), FAB building-4 (134,164 m²) | P3 (135,408 m²), P4 (136,032 m²) | 0.9–2.2% in every pairing | Same: which is P3 and which is P4 stays open |
+| EUV building (31,623 m²) | `V2` (31,304 m²) | −1.0% | Candidate |
+| Complex building (87,014 m²) | `UT-34` + `UT-34E` (79,990 m²) | −8.1% | Candidate; agrees with the press caption placing the complex building between P3 and P4, disagrees with a site-observation channel that labels the fab's east end block. Unsettled |
+| UT building (16,349 m²), UT building-2 (19,154 m²) | `UT-12E` (17,762 m²); `UT-12` (25,896 m²) | east box within 9%; west box and the sum do not match | Unsettled |
+| Green building-3 (25,583 m²), -4 (24,741 m²) | `S2` (25,730 m²), `S1` (28,175 m²) | 0.6–14% | Candidates; which is which is open |
+| GCS building (43,199 m²) | `E1` (14,014 m²) | −68% | The box labelled as GCS candidate does not match; `M1` + `M2` (39,592 m², −8.4%) is closer |
+| Office building, -2, -3; Technology building, parking tower | `GATE-W`, `WA`, `W1`, `OFF-T`, `OFF-2` | model 25–35% smaller | Model boxes follow the visible tower outlines; the permit building area probably covers more (podiums, attached parts). Not resized |
+| CT building, CT building-2 | `CT-1`–`CT-4` | — | Above-ground building areas are only 646 and 517 m²; first-basement areas are 17,158 and 20,740 m². The four banks total 17,876 m²; no relation confirmed |
+
+The earlier check that divided 128,900 m² by the P2 plan was withdrawn in v7.25; with building areas from the permit record the four fab plans read from imagery now have an independent comparison, and they agree within 5%.
+
+Floor numbers shown in the permit snapshot: FAB building 1–9 above ground and 1 basement; FAB building-2 and -3 1–8 and 1 basement; FAB building-4 1–8 with no basement row (not proof that there is none); complex building and EUV building 1–9 and 1 basement; UT building and UT building-2 1–5 and 1 basement; Office building 1–10, Office building-2 1–12 (the press says 9 and 11 storeys; counting method unknown). In the four fab buildings floors 1, 3, 4, 5 and 7 carry roughly a full footprint each, floors 2 and 6 are small and floor 8 is about half — recorded as observed areas only. These are permit floor numbers, not heights, floor heights or the number of production levels; the model keeps its eight-level concept section, the concept cleanroom levels 3F and 7F and the assumed 83 m.
+
+Changes in the model (no existing box moved, resized or regraded):
+
+- Notes extended, with the new source `HUB_FLR_1695`, on the 20 fab shell elements (`P1`–`P4` `-wall-*`, `-endblk`), `V2`, `UT-34`, `UT-34E`, `UT-12`, `UT-12E`, `S1`, `S2`, `CT-1`–`CT-4`, `E1`, `OFF-2`, `OFF-T`, `GATE-W`, `WA`.
+- `UT-34` renamed from "presumed UT building" to "candidate for the complex building or a UT building — unsettled". This also revises SP-E052: the permit record does name UT building, UT building-2, CT building and CT building-2 on the lot; where they stand is still unconfirmed.
+- `meta.floor_area`: the key "total floor area of the whole Pyeongtaek complex" is now "Samsung C&T Pyeongtaek P-PJT portfolio floor area (scope and reference date not stated)"; `gov_register_campus` no longer says the permit rows carry no building names or floor numbers.
+- Ten new elements from imagery on the roof of the building between P1 and P2 (grade B, plan extents ±3 m, type and height unknown, display heights arbitrary): equipment groups `UT12-RF-N1`–`N6`, steel lattice structures `UT12-RF-S1`–`S3`, and the central lengthwise strip `UT12-RF-SP`. They are separate from the concept equipment inside the building.
+
+Held: assignment of building-name suffixes to P numbers; any change of height, floor count or section; splitting `UT-12` or `UT-34` into separate buildings (the imagery shows roof zones, not building joints); roads and bridges (no new reading in this version); the P4–P5 bridge.
+
 ## Verification done for this release
+
+v7.26: Korean and English data files compared element by element (1,468 ids, source keys, grades and boxes identical; no duplicate id; no untranslated note). Against v7.25, no existing element changed box or grade; ten elements were added.
 
 v7.25: Korean and English data files compared element by element (1,458 ids, source keys, grades and boxes identical; no duplicate id; no untranslated note).
 
 | Check | Result |
 |---|---|
 | Fab bodies and all annexes overlaid on the zoom-18 satellite mosaic (about 0.48 m/px) | All four fab outlines and the east, west and north annexes fall on the imagery; three technology-cluster buildings were re-oriented in v7.13 after this check |
-| STEP read back with the OpenCascade kernel (v7.25 build) | 1,234 solids, 7,071 faces; the first 400 solids pass the shape validity check |
-| DXF read back and audited with ezdxf | 2D: 119,633 entities on 178 layers, 0 audit errors; 3D: 1,678 meshes on 166 layers, 0 audit errors; units metres |
+| STEP read back with the OpenCascade kernel (v7.26 build) | 1,244 solids, 7,131 faces; the first 400 solids pass the shape validity check |
+| DXF read back and audited with ezdxf | 2D: 119,633 entities on 178 layers, 0 audit errors; 3D: 1,688 meshes on 166 layers, 0 audit errors; units metres |
 | Registered areas vs. plans read from imagery | Parking building 1%, Linde site 2.5%, wastewater plant 7%, KEPCO lot 0.4% |
 | Viewer | Loads without page errors, with no network requests; all 23 previews regenerated from this version |
 | Bridges and parking | 12 bridges checked against imagery; 5 structures that were missing (2 overbridges between the UT building and P2, 1 link between the west support building and P2, 2 pipe rack bridges east of the P3–P4 utility building) were added |

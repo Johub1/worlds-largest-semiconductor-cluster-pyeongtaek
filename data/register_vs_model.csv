@@ -1,0 +1,46 @@
+﻿register_name,building_key_suffix,building_area_m2,total_floor_area_m2,above_ground_floor_numbers,basement_floor_numbers,largest_floor,largest_floor_area_m2,basement_area_m2,model_ids,model_plan_area_m2,diff_pct,model_grade,status
+FAB building-3,1421681,138388.36,718974.17,1-8,1,above ground 5,123195.95,35052.29,P3,135408,-2.2,B,candidate (area within 5%)
+FAB building-3,1421681,138388.36,718974.17,1-8,1,above ground 5,123195.95,35052.29,P4,136032,-1.7,B,candidate (area within 5%)
+FAB building-4,1421690,134164.3,711432.11,1-8,,above ground 1,131095.55,0,P4,136032,1.4,B,candidate (area within 5%)
+FAB building-4,1421690,134164.3,711432.11,1-8,,above ground 1,131095.55,0,P3,135408,0.9,B,candidate (area within 5%)
+FAB building,1421594,107653.47,596448.13,1-9,1,above ground 1,100242.49,364.72,P1,110349,2.5,B,candidate (area within 5%)
+FAB building,1421594,107653.47,596448.13,1-9,1,above ground 1,100242.49,364.72,P2,112608,4.6,B,candidate (area within 5%)
+FAB building-2,1421675,111791.28,591152.02,1-8,1,above ground 1,100257.01,23919.66,P2,112608,0.7,B,candidate (area within 5%)
+FAB building-2,1421675,111791.28,591152.02,1-8,1,above ground 1,100257.01,23919.66,P1,110349,-1.3,B,candidate (area within 5%)
+Complex building,1421682,87013.82,534667.62,1-9,1,above ground 6,75419.78,820.0,UT-34+UT-34E,79990,-8.1,B/B,candidate (area within 15%)
+Office building-3,1382637,34545.94,259435.72,1-9,1,above ground 4,33088.06,17411.46,W1,24150,-30.1,M,area does not match
+Office building-3,1382637,34545.94,259435.72,1-9,1,above ground 4,33088.06,17411.46,WD,18600,-46.2,M,area does not match
+EUV building,1421676,31623.49,175490.33,1-9,1,above ground 1,28203.39,8357.27,V2,31304,-1.0,B,candidate (area within 5%)
+Green building-3,1421684,25583.41,127591.48,1-6,,above ground 4,25360.15,0,S2,25730,0.6,B,candidate (area within 5%)
+Green building-3,1421684,25583.41,127591.48,1-6,,above ground 4,25360.15,0,S1,28175,10.1,B,candidate (area within 15%)
+GCS building,1421647,43199.47,124035.01,1-6,1,above ground 1,34238.95,2650.84,E1,14014,-67.6,B,area does not match
+GCS building,1421647,43199.47,124035.01,1-6,1,above ground 1,34238.95,2650.84,M1+M2,39592,-8.4,B/B,candidate (area within 15%)
+Green building-4,1421692,24741.09,106566.43,1-5,,above ground 4,24581.33,0,S2,25730,4.0,B,candidate (area within 5%)
+Green building-4,1421692,24741.09,106566.43,1-5,,above ground 4,24581.33,0,S1,28175,13.9,B,candidate (area within 15%)
+UT building-2,1421672,19153.67,98187.58,1-5,1,above ground 1,19120.42,13812.02,UT-12E,17762,-7.3,B,candidate (area within 15%)
+UT building-2,1421672,19153.67,98187.58,1-5,1,above ground 1,19120.42,13812.02,UT-12,25896,35.2,B,area does not match
+UT building-2,1421672,19153.67,98187.58,1-5,1,above ground 1,19120.42,13812.02,CUB-N,33524,75.0,B,area does not match
+Office building-2,1421677,10861.63,90951.36,1-12,1,above ground 4,9478.31,6543.28,WA,7050,-35.1,M,area does not match
+UT building,1421595,16348.93,72914.13,1-5,1,above ground 1,16334.22,11004.13,UT-12E,17762,8.6,B,candidate (area within 15%)
+UT building,1421595,16348.93,72914.13,1-5,1,above ground 1,16334.22,11004.13,UT-12,25896,58.4,B,area does not match
+UT building,1421595,16348.93,72914.13,1-5,1,above ground 1,16334.22,11004.13,CUB-N,33524,105.1,B,area does not match
+Office building,1421648,8964.21,63881.09,1-10,1,above ground 1,8046.73,6980.53,GATE-W,5984,-33.2,M,area does not match
+Technology building-2,1421688,6412.72,51410.1,1-11,1,above ground 1,6299.01,5668.16,OFF-2,6020,-6.1,M,candidate (area within 15%)
+Technology building-2,1421688,6412.72,51410.1,1-11,1,above ground 1,6299.01,5668.16,OFF-T,3402,-46.9,M,area does not match
+Technology building parking tower,1421696,8160.3,48452.65,1-6,,above ground 5,8136.74,0,OFF-2,6020,-26.2,M,area does not match
+154 kV building-4,1421691,11056.24,38891.2,1-5,1,above ground 1,10929.0,1467.5,M3,10914,-1.3,B,candidate (area within 5%)
+154 kV building-4,1421691,11056.24,38891.2,1-5,1,above ground 1,10929.0,1467.5,M5,11536,4.3,B,candidate (area within 5%)
+154 kV building-2,1421671,15671.83,37218.37,1-4,1,above ground 1,15568.44,188.01,M4,17388,11.0,B,candidate (area within 15%)
+154 kV building-3,1421683,14360.0,34108.93,1-4,1,above ground 1,14300.94,132.42,M4,17388,21.1,B,area does not match
+Green building-2,1421674,11393.85,31895.99,1-2,"1,2",above ground 1,11231.52,10202.82,M5,11536,1.2,B,candidate (area within 5%)
+Green building-2,1421674,11393.85,31895.99,1-2,"1,2",above ground 1,11231.52,10202.82,M3,10914,-4.2,B,candidate (area within 5%)
+General warehouse 1,1421649,7054.5,27470.98,1-5,,above ground 1,7021.19,0,OFF-3,6721,-4.7,M,candidate (area within 5%)
+Green building,1421593,11353.47,27120.15,1-2,"1,2",above ground 1,11110.19,7496.82,M5,11536,1.6,B,candidate (area within 5%)
+Green building,1421593,11353.47,27120.15,1-2,"1,2",above ground 1,11110.19,7496.82,M3,10914,-3.9,B,candidate (area within 5%)
+CT building-2,1421673,517.23,21257.14,1-1,1,basement 1,20739.91,20739.91,CT-1+CT-2+CT-3+CT-4,17876,3356.1,B/B/B/B,compared with basement area instead: -13.8% — relation unconfirmed
+154 kV building,1421591,7567.41,19863.57,1-4,1,above ground 1,7567.41,164.23,SM2,5916,-21.8,B,area does not match
+154 kV building,1421591,7567.41,19863.57,1-4,1,above ground 1,7567.41,164.23,SM1,6090,-19.5,B,area does not match
+CT building,1421646,645.92,17803.56,1-1,1,basement 1,17157.64,17157.64,CT-1+CT-2+CT-3+CT-4,17876,2667.5,B/B/B/B,compared with basement area instead: +4.2% — relation unconfirmed
+Water treatment plant,1421670,2466.66,17221.46,1-3,"1,2,3",basement 1,4524.82,11429.7,,,,,no candidate box
+Technology building,1421680,4552.02,13143.97,1-5,1,above ground 1,4316.21,1493.64,OFF-T,3402,-25.3,M,area does not match
+Warehouse building,1382623,7812.99,11552.11,1-1,1,above ground 1,7812.99,3739.12,OFF-3,6721,-14.0,M,candidate (area within 15%)

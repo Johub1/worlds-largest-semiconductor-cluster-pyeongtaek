@@ -1,0 +1,196 @@
+﻿register_name,building_key_suffix,floor_class,floor_number,floor_area_m2_summed_over_rows,rows
+FAB building-3,1421681,basement,1,35052.29,1
+FAB building-3,1421681,above ground,1,98863.24,2
+FAB building-3,1421681,above ground,2,31463.29,2
+FAB building-3,1421681,above ground,3,118270.01,2
+FAB building-3,1421681,above ground,4,121093.57,2
+FAB building-3,1421681,above ground,5,123195.95,1
+FAB building-3,1421681,above ground,6,12229.97,1
+FAB building-3,1421681,above ground,7,114960.4,1
+FAB building-3,1421681,above ground,8,54678.7,1
+FAB building-3,1421681,rooftop structure,1,9166.75,1
+FAB building-4,1421690,above ground,1,131095.55,2
+FAB building-4,1421690,above ground,2,21602.46,2
+FAB building-4,1421690,above ground,3,116305.37,2
+FAB building-4,1421690,above ground,4,124272.14,2
+FAB building-4,1421690,above ground,5,124967.01,2
+FAB building-4,1421690,above ground,6,12618.22,2
+FAB building-4,1421690,above ground,7,113821.82,2
+FAB building-4,1421690,above ground,8,55488.43,2
+FAB building-4,1421690,rooftop structure,1,11261.11,2
+FAB building,1421594,basement,1,364.72,1
+FAB building,1421594,above ground,1,100242.49,2
+FAB building,1421594,above ground,2,23188.62,2
+FAB building,1421594,above ground,3,93879.74,1
+FAB building,1421594,above ground,4,99945.76,2
+FAB building,1421594,above ground,5,99927.69,2
+FAB building,1421594,above ground,6,8876.62,2
+FAB building,1421594,above ground,7,92108.61,2
+FAB building,1421594,above ground,8,53484.88,2
+FAB building,1421594,above ground,9,24429.0,1
+FAB building-2,1421675,basement,1,23919.66,3
+FAB building-2,1421675,above ground,1,100257.01,5
+FAB building-2,1421675,above ground,2,12553.54,4
+FAB building-2,1421675,above ground,3,95594.42,5
+FAB building-2,1421675,above ground,4,98936.73,1
+FAB building-2,1421675,above ground,5,98944.97,3
+FAB building-2,1421675,above ground,6,14404.52,1
+FAB building-2,1421675,above ground,7,95394.68,4
+FAB building-2,1421675,above ground,8,44221.38,3
+FAB building-2,1421675,rooftop structure,1,6925.11,3
+Complex building,1421682,basement,1,820.0,1
+Complex building,1421682,above ground,1,63519.99,2
+Complex building,1421682,above ground,2,23633.93,2
+Complex building,1421682,above ground,3,72155.01,2
+Complex building,1421682,above ground,4,69835.59,2
+Complex building,1421682,above ground,5,75008.16,2
+Complex building,1421682,above ground,6,75419.78,2
+Complex building,1421682,above ground,7,71764.9,2
+Complex building,1421682,above ground,8,74900.07,2
+Complex building,1421682,above ground,9,7610.19,2
+Office building-3,1382637,basement,1,17411.46,2
+Office building-3,1382637,above ground,1,25511.23,3
+Office building-3,1382637,above ground,2,33011.33,3
+Office building-3,1382637,above ground,3,32630.02,2
+Office building-3,1382637,above ground,4,33088.06,3
+Office building-3,1382637,above ground,5,31575.86,2
+Office building-3,1382637,above ground,6,30324.56,1
+Office building-3,1382637,above ground,7,29291.85,1
+Office building-3,1382637,above ground,8,22868.79,1
+Office building-3,1382637,above ground,9,3722.56,1
+EUV building,1421676,basement,1,8357.27,2
+EUV building,1421676,above ground,1,28203.39,3
+EUV building,1421676,above ground,2,7617.96,3
+EUV building,1421676,above ground,3,26358.42,3
+EUV building,1421676,above ground,4,4874.04,2
+EUV building,1421676,above ground,5,28027.17,3
+EUV building,1421676,above ground,6,28116.69,3
+EUV building,1421676,above ground,7,10087.71,3
+EUV building,1421676,above ground,8,25510.21,3
+EUV building,1421676,above ground,9,7128.72,3
+EUV building,1421676,rooftop structure,1,1208.75,1
+Green building-3,1421684,above ground,1,25360.15,2
+Green building-3,1421684,above ground,2,15811.03,2
+Green building-3,1421684,above ground,3,19603.37,2
+Green building-3,1421684,above ground,4,25360.15,2
+Green building-3,1421684,above ground,5,20898.67,1
+Green building-3,1421684,above ground,6,20558.11,2
+GCS building,1421647,basement,1,2650.84,1
+GCS building,1421647,above ground,1,34238.95,3
+GCS building,1421647,above ground,2,18554.11,3
+GCS building,1421647,above ground,3,26686.82,2
+GCS building,1421647,above ground,4,19284.99,2
+GCS building,1421647,above ground,5,21288.79,2
+GCS building,1421647,above ground,6,1330.51,1
+Green building-4,1421692,above ground,1,24581.33,2
+Green building-4,1421692,above ground,2,15790.44,2
+Green building-4,1421692,above ground,3,20182.09,2
+Green building-4,1421692,above ground,4,24581.33,2
+Green building-4,1421692,above ground,5,21431.24,2
+UT building-2,1421672,basement,1,13812.02,2
+UT building-2,1421672,above ground,1,19120.42,3
+UT building-2,1421672,above ground,2,9225.37,2
+UT building-2,1421672,above ground,3,18676.59,2
+UT building-2,1421672,above ground,4,18676.59,3
+UT building-2,1421672,above ground,5,18676.59,3
+Office building-2,1421677,basement,1,6543.28,1
+Office building-2,1421677,above ground,1,9380.37,2
+Office building-2,1421677,above ground,2,9024.0,1
+Office building-2,1421677,above ground,3,8996.19,1
+Office building-2,1421677,above ground,4,9478.31,2
+Office building-2,1421677,above ground,5,8409.43,2
+Office building-2,1421677,above ground,6,6194.18,2
+Office building-2,1421677,above ground,7,5936.78,2
+Office building-2,1421677,above ground,8,5936.78,2
+Office building-2,1421677,above ground,9,5936.78,2
+Office building-2,1421677,above ground,10,5936.78,2
+Office building-2,1421677,above ground,11,5936.78,2
+Office building-2,1421677,above ground,12,3241.7,2
+UT building,1421595,basement,1,11004.13,1
+UT building,1421595,above ground,1,16334.22,3
+UT building,1421595,above ground,2,6069.54,2
+UT building,1421595,above ground,3,15820.6,1
+UT building,1421595,above ground,4,15820.6,1
+UT building,1421595,above ground,5,7865.04,1
+Office building,1421648,basement,1,6980.53,1
+Office building,1421648,above ground,1,8046.73,1
+Office building,1421648,above ground,2,7277.29,1
+Office building,1421648,above ground,3,5515.92,1
+Office building,1421648,above ground,4,5431.52,1
+Office building,1421648,above ground,5,5694.58,1
+Office building,1421648,above ground,6,5499.35,1
+Office building,1421648,above ground,7,5431.52,1
+Office building,1421648,above ground,8,5515.92,1
+Office building,1421648,above ground,9,5431.52,1
+Office building,1421648,above ground,10,3056.21,1
+Office building,1421648,rooftop structure,1,181.32,1
+Technology building-2,1421688,basement,1,5668.16,3
+Technology building-2,1421688,above ground,1,6299.01,2
+Technology building-2,1421688,above ground,2,5615.01,1
+Technology building-2,1421688,above ground,3,5604.41,1
+Technology building-2,1421688,above ground,4,5608.57,1
+Technology building-2,1421688,above ground,5,3452.94,1
+Technology building-2,1421688,above ground,6,3139.09,1
+Technology building-2,1421688,above ground,7,2217.43,1
+Technology building-2,1421688,above ground,8,3451.37,1
+Technology building-2,1421688,above ground,9,3451.37,1
+Technology building-2,1421688,above ground,10,3451.37,1
+Technology building-2,1421688,above ground,11,3451.37,1
+Technology building parking tower,1421696,above ground,1,8077.68,2
+Technology building parking tower,1421696,above ground,2,8136.74,2
+Technology building parking tower,1421696,above ground,3,8136.74,2
+Technology building parking tower,1421696,above ground,4,8136.74,2
+Technology building parking tower,1421696,above ground,5,8136.74,2
+Technology building parking tower,1421696,above ground,6,7828.01,2
+154 kV building-4,1421691,basement,1,1467.5,2
+154 kV building-4,1421691,above ground,1,10929.0,2
+154 kV building-4,1421691,above ground,2,9897.26,2
+154 kV building-4,1421691,above ground,3,9142.28,2
+154 kV building-4,1421691,above ground,4,237.16,1
+154 kV building-4,1421691,above ground,5,7218.0,2
+154 kV building-2,1421671,basement,1,188.01,1
+154 kV building-2,1421671,above ground,1,15568.44,3
+154 kV building-2,1421671,above ground,2,5182.84,1
+154 kV building-2,1421671,above ground,3,12038.66,1
+154 kV building-2,1421671,above ground,4,4240.42,1
+154 kV building-3,1421683,basement,1,132.42,2
+154 kV building-3,1421683,above ground,1,14300.94,3
+154 kV building-3,1421683,above ground,2,4918.08,3
+154 kV building-3,1421683,above ground,3,10795.69,3
+154 kV building-3,1421683,above ground,4,3961.8,1
+Green building-2,1421674,basement,1,639.77,2
+Green building-2,1421674,basement,2,9563.05,2
+Green building-2,1421674,above ground,1,11231.52,2
+Green building-2,1421674,above ground,2,10461.65,2
+General warehouse 1,1421649,above ground,1,7021.19,2
+General warehouse 1,1421649,above ground,2,5567.01,2
+General warehouse 1,1421649,above ground,3,5056.99,2
+General warehouse 1,1421649,above ground,4,6771.45,2
+General warehouse 1,1421649,above ground,5,3054.34,2
+Green building,1421593,basement,1,461.97,1
+Green building,1421593,basement,2,7034.85,1
+Green building,1421593,above ground,1,11110.19,1
+Green building,1421593,above ground,2,8513.14,1
+CT building-2,1421673,basement,1,20739.91,2
+CT building-2,1421673,above ground,1,517.23,2
+154 kV building,1421591,basement,1,164.23,1
+154 kV building,1421591,above ground,1,7567.41,1
+154 kV building,1421591,above ground,2,2894.02,1
+154 kV building,1421591,above ground,3,6160.31,1
+154 kV building,1421591,above ground,4,3077.6,1
+CT building,1421646,basement,1,17157.64,1
+CT building,1421646,above ground,1,645.92,1
+Water treatment plant,1421670,basement,1,4524.82,1
+Water treatment plant,1421670,basement,2,3353.78,1
+Water treatment plant,1421670,basement,3,3551.1,1
+Water treatment plant,1421670,above ground,1,1999.2,1
+Water treatment plant,1421670,above ground,2,1963.25,2
+Water treatment plant,1421670,above ground,3,1829.31,2
+Technology building,1421680,basement,1,1493.64,1
+Technology building,1421680,above ground,1,4316.21,1
+Technology building,1421680,above ground,2,2301.04,1
+Technology building,1421680,above ground,3,2301.04,1
+Technology building,1421680,above ground,4,2301.04,1
+Technology building,1421680,above ground,5,431.0,1
+Warehouse building,1382623,basement,1,3739.12,1
+Warehouse building,1382623,above ground,1,7812.99,1

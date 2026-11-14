@@ -1,5 +1,13 @@
 # Changelog
 
+## v7.26 — 2026-11-15
+- Permit record joined to building names: 701 floor-level rows downloaded by Codex from the official Building HUB site (lot Godeok-dong 1695, data month 2026-09) joined with the 28 per-building rows. All rows read by script here. New derived tables `data/register_vs_model.csv` and `data/permit_floor_areas.csv`; the downloaded file is not redistributed.
+- Building areas compared with model boxes: the four fabs and the EUV building agree within 5%, but FAB building / -2 against P1 / P2 and FAB building-3 / -4 against P3 / P4 cannot be told apart by area. Recorded as candidates in the notes of 36 elements (new source `HUB_FLR_1695`); no existing box moved, resized or regraded.
+- `UT-34` renamed: "presumed UT building" → "candidate for the complex building or a UT building — unsettled".
+- `meta.floor_area`: the 3,967,000 m² figure is now labelled as the Samsung C&T P-PJT portfolio floor area with scope and reference date not stated; the permit summary text updated.
+- Ten new roof elements read from imagery on the building between P1 and P2 (`UT12-RF-N1`–`N6`, `UT12-RF-S1`–`S3`, `UT12-RF-SP`), grade B, type and height unknown. 1,468 elements.
+- 181 sources (40 official, 42 international, 99 Korean).
+
 ## v7.25 — 2026-11-14
 - No box moved, resized or regraded. Removed `UT-34-CT`, an assumed cooling tower zone from an earlier version that overlapped the rows `CT34-R4`/`CT34-R5` and the unidentified blue modules read from imagery in v7.24; 1,458 elements.
 - Notes extended on `UT-12` (the "240,000 refrigeration tons" is a size expression, not a daily volume, load or count; not copied to P3/P4), `BR-34a/b/c` (press photo caption on four bridges recorded as a concept note, new source `DEALSITE_BR`) and `PUB-WWTP` (use-approval date is not an operation date).

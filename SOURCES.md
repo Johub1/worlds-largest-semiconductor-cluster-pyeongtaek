@@ -6,7 +6,7 @@ Source priority: (1) official material and filings of Samsung Electronics and it
 
 Third-party imagery, video frames and vendor CAD were consulted but are not redistributed in this package.
 
-## Tier 1 — official material, filings, public registers, public maps and imagery (39)
+## Tier 1 — official material, filings, public registers, public maps and imagery (40)
 
 | Key | Source | URL |
 |---|---|---|
@@ -28,6 +28,7 @@ Third-party imagery, video frames and vendor CAD were consulted but are not redi
 | `EA_P2WT` | Samsung E&A project page: Pyeongtaek P2 Phase 1 water treatment — wastewater treatment 86,000 m³/d; air pollution control, water purification, UPW, wastewater treatment and reuse facilities | https://samsungena.com/kr/business/project-template?idx=80 |
 | `OFF_SE_P2` | Samsung Newsroom 2020-08: Pyeongtaek line 2 in operation — total floor area 128,900㎡, site 2.89 million㎡ | https://news.samsung.com/kr/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-%EC%84%B8%EA%B3%84-%EC%B5%9C%EB%8C%80%EA%B7%9C%EB%AA%A8-%ED%8F%89%ED%83%9D-2%EB%9D%BC%EC%9D%B8-%EA%B0%80%EB%8F%99 |
 | `OFF_CT_PJT` | Samsung C&T E&C Group portfolio: Pyeongtaek complex (Pyeongtaek P-PJT) — total floor area 3,967,000㎡ | https://www.secc.co.kr/ko/business/portfolio/building/7 |
+| `HUB_FLR_1695` | Building HUB building-permit floor summary and per-building summary (Ministry of Land, Infrastructure and Transport) — Godeok-dong 1695, Pyeongtaek, data month 2026-09. 701 rows of a selected eight-column download made by Codex on the official site and 28 transcribed per-building rows (not a raw API response) | https://www.hub.go.kr/portal/opn/tyb/idx-acpmslg-flrcb.do |
 | `KRX_P3PH4` | Samsung Engineering supply-contract filing (KRX KIND 2022-11-24): [P3 Ph4] green building and UT building, rooftop exhaust, UPW finishing works | https://kind.krx.co.kr/external/2022/11/24/000282/20221123000578/91370.htm |
 | `OFF_EA_P2EN` | Samsung E&A: Pyeongtaek P2 Utility Project — gross area 128,999㎡, UT and CT buildings | https://www.samsungena.com/en/business/project-template?idx=73 |
 | `OFF_SE_SITE` | Samsung Semiconductor Newsroom 2026-06: Pyeongtaek campus 2.83 million㎡ in total (about 860,000 pyeong) | https://news.samsungsemiconductor.com/kr/tag/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-%ED%8F%89%ED%83%9D%EC%BA%A0%ED%8D%BC%EC%8A%A4/ |
