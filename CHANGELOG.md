@@ -1,5 +1,10 @@
 # Changelog
 
+## v7.29 — 2026-11-15
+- Two ground-level road elements read from imagery: `ROAD-W2` and `ROAD-W3` (rotated rectangles, grade B, ±10 m). 1,473 elements. No existing box changed.
+- `meta.imagery_geometry`: seven tiles verified identical to the tiles served now (by hash); substation heights quoted from the official title-section export.
+- README: block areas of Notice No. 2026-189 that add up to the lot 1696 permit site area; OpenStreetMap outlines not adopted; east-side railway and roads held.
+
 ## v7.28 — 2026-11-15
 - Imagery metadata confirmed on Esri's official metadata layer (acquisition 2025-12-22, 0.5 m, WV02, Vantor; no viewing-angle field). `meta.imagery_geometry` corrected: the "date may differ between tiles" remark withdrawn, the 80–120 m figure marked exploratory, no shift applied. New source `ESRI_META`.
 - New `meta.permit_basic_summary` from the full-column basic-summary exports for lots 1695 and 1696, including the unresolved difference between the basic and per-building totals for 1696.

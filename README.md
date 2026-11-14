@@ -1,4 +1,4 @@
-# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.28 (English edition)
+# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.29 (English edition)
 
 > **Status: living project, updated continuously.** This model is revised whenever new public material is found or an error is reported; the current version and every change are listed in `CHANGELOG.md`. Corrections backed by a public source are welcome through GitHub Issues. Latest version: https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek
 
@@ -17,13 +17,13 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | Item | Content |
 |---|---|
 | Scope | The wider Pyeongtaek complex: fabs P1, P2, P3, P4, the EUV building (V2), utility buildings, cooling tower banks, office and support buildings, the KEPCO Godeok substation lot, the Linde Korea plant, the Godeok public wastewater treatment plant, the P5 construction site, the Air Products and Air First gas plants, the Samsung logistics warehouse west of Complex 2, and map points for supplier sites and construction camps |
-| Building elements | 1,471 elements (boxes and cylinders) with name, layer, confidence grade, source keys and a note each |
+| Building elements | 1,473 elements (boxes and cylinders) with name, layer, confidence grade, source keys and a note each |
 | Concept interior | 86,620 equipment boxes of 26 types on 8 floors per fab, 608 OHT rail segments, 10,440 structural members |
 | Concept utilities | 29 systems in 8 groups, 1,521 route segments (thermal, PCW, gas, exhaust, wastewater, chemicals, UPW, power) |
 | Concept EHS | 960 gas/exhaust flow lines, 1,152 gas detector points, 1,552 emergency equipment points, 15,320 egress travel-distance samples |
 | Sources | 183 keyed sources in three tiers: 42 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 99 Korean press and local |
 | Units, origin | metres; local tangent plane at WGS84 37.02 N, 127.06 E; X east, Y north, Z up |
-| Imagery date | 2025-12-22 (0.5 m) for dimensions; zoom-18 mosaic re-acquired 2026-11-12 for re-checks |
+| Imagery date | 2025-12-22 (source resolution 0.5 m, per Esri's metadata layer) for dimensions; the zoom-18 mosaic used for re-checks was downloaded on 2026-11-12 and 13 |
 
 ## Files
 
@@ -58,7 +58,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | Grade | Meaning |
 |---|---|
 | A | Confirmed by official material, press or regulatory filings |
-| B | Dimensions estimated from public satellite imagery (0.5 m resolution, error of a few metres) |
+| B | Plan dimensions read from public satellite imagery (0.5 m source resolution). The stated ± values are the estimated precision of reading the image, not a surveyed error bound: absolute positional accuracy is unconfirmed and roof-level outlines may be displaced by the oblique view (see `meta.imagery_geometry`). Heights of B elements are assumptions unless a note says otherwise |
 | M | Confirmed by a public map label or the public building register (a map coordinate may be an entrance or a representative point, not a building outline) |
 | C | Estimate or assumption |
 | D | Generic concept, not site-specific information |
@@ -371,11 +371,20 @@ Eighth bundle and two data audits by Codex (meta wording only; no geometry chang
 
 Also corrected: the `OFF-2` note called the building a candidate for Office building 2, which contradicted `WA`; it now only compares its plan with the register area.
 
+## What v7.29 adds (west public road continued; imagery and register notes tightened)
+
+- Two ground-level elements read from imagery (grade B; ±10 m is the estimated reading precision, not a surveyed error bound; rotated rectangles standing in for a gently curving road): `ROAD-W2` (bend north of `ROAD-W`) and `ROAD-W3` (straight section running north-west between Complex 1 and Complex 2, parallel to the north-east side of the parking building). The fit was checked by overlaying the rectangles on the imagery. No existing box changed.
+- `meta.imagery_geometry`: Astra compared the tiles at the seven metadata points with the tiles served now and found byte counts and SHA-256 identical; the other 983 tiles, the recompressed mosaic, viewing angle and orthorectification remain unchecked. The substation heights are now given as in the official title-section export (32.85 m and 33.45 m; which box is which building is unsettled, and register keys do not join to permit building keys).
+- Recorded, not modelled:
+  - Gyeonggi Notice No. 2026-189, pages 16, 20, 25 and 26 (checked by Codex on the rendered originals): block A1-1 804,237.8 m² + A1-2 109,835.0 m² + C2-1 23,826.9 m² (a parking lot designated under Neighbourhood Park 3) = 937,899.7 m², the site area of the lot 1696 main permit. This explains that sum only; it does not place the parking building in C2-1 or explain the 19-versus-20 building difference. Block A3 (78,833.4 m²) is designated "manufacturing (gas supply)"; ownership is not stated and it is not matched to a model lot.
+  - OpenStreetMap building outlines near the fabs (Astra): traced from Bing and partly from Esri imagery, with name tags that do not line up with the model's fab positions and a construction-area polygon among them. Not adopted as independent footprints, and not used to settle the east-strip question.
+  - Read on the imagery but held: the railway curve and the roads east of the campus (several parallel tracks and roads could not be told apart reliably, and it is unclear which road is public), the bend of the south road near X 720, and the pedestrian bridge over the west road.
+
 ## What v7.28 adds (imagery metadata, permit basic summary, public roads at ground level)
 
 - **Imagery metadata confirmed (Astra, Esri's official metadata layer, new source `ESRI_META`).** Seven campus points and the campus extent return one record: acquisition date 2025-12-22, source resolution 0.5 m, source code WV02, provider Vantor. The public metadata has no off-nadir angle, azimuth or orthorectification field, and its 8.47 m accuracy value has no confidence definition that could be confirmed. Corrections to v7.27 in `meta.imagery_geometry`: the remark that the date may differ between tiles is withdrawn (the Complex 2 parking building returns the same record); the 80–120 m figure is stated as exploratory only, not as independent evidence of fab height; no shift is applied. The mosaic used for all readings is 990 zoom-18 tiles (rows 101992–102021, columns 223578–223610) downloaded on 2026-11-12 and 13; a text manifest with per-tile hashes was handed to the reviewers, and the tiles themselves are not redistributed.
 - **Permit basic summary (Codex, full-column official web exports; new `meta.permit_basic_summary`).** Lot 1695 main permit: site area 1,833,839.50 m², floor area 4,713,467.42 m² (equal to the 70 buildings of the per-building summary; building area differs by 304.96 m², unexplained). Lot 1696 main permit: site area 937,899.70 m², 19 buildings and 2,160,822.49 m² in the basic summary against 20 buildings and 2,321,855.03 m² in the per-building summary; the gap is not explained by removing the parking building. Neither figure is used as a completed total or a building count, and permit-level dates are not building completion or operation dates.
-- **Three ground-level elements read from imagery (grade B, ±5 m, little affected by the oblique view):** `ROAD-W` (public north–south road west of Complex 1, straight section; presumed Samsung-ro from the road-name addresses in the register), `ROAD-S` (public east–west road south of the campus, straight section), `RAIL-E` (double-track railway east of the campus, southern straight section). Curved continuations are not drawn. Gates, checkpoints, internal circulation and the pedestrian bridge over the west road are not modelled.
+- **Three ground-level elements read from imagery (grade B; ±5 m is the estimated reading precision on the image, not a surveyed error bound; little affected by the oblique view):** `ROAD-W` (public north–south road west of Complex 1, straight section; presumed Samsung-ro from the road-name addresses in the register), `ROAD-S` (public east–west road south of the campus, straight section), `RAIL-E` (double-track railway east of the campus, southern straight section). Curved continuations are not drawn. Gates, checkpoints, internal circulation and the pedestrian bridge over the west road are not modelled.
 - Evidence rows SP-E038 and SP-E063 and the opening paragraph of the v7.26 section were rewritten to the current state, with the earlier state kept as history.
 
 Open items after this version:
@@ -468,6 +477,8 @@ Held: assignment of building-name suffixes to P numbers; any change of height, f
 
 ## Verification done for this release
 
+v7.29: Korean and English data files compared element by element (1,473 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.28, one note changed (`ROAD-W`) and two elements were added.
+
 v7.28: Korean and English data files compared element by element (1,471 ids, source keys, grades and boxes identical; no duplicate id; no untranslated text). Against v7.27, no existing element changed box, grade, name or note; three elements were added.
 
 v7.27: Korean and English data files compared element by element (1,468 ids, source keys, grades and boxes identical; no duplicate id; no untranslated note or viewer label). Against v7.26, no box or grade changed; 36 notes, 4 names and 3 meta entries changed.
@@ -479,8 +490,8 @@ v7.25: Korean and English data files compared element by element (1,458 ids, sou
 | Check | Result |
 |---|---|
 | Fab bodies and all annexes overlaid on the zoom-18 satellite mosaic (about 0.48 m/px) | All four fab outlines and the east, west and north annexes fall on the imagery; three technology-cluster buildings were re-oriented in v7.13 after this check |
-| STEP read back with the OpenCascade kernel (v7.28 build) | 1,247 solids, 7,149 faces; the first 400 solids pass the shape validity check |
-| DXF read back and audited with ezdxf | 2D: 119,633 entities on 178 layers, 0 audit errors; 3D: 1,691 meshes on 166 layers, 0 audit errors; units metres |
+| STEP read back with the OpenCascade kernel (v7.29 build) | 1,249 solids, 7,161 faces; the first 400 solids pass the shape validity check |
+| DXF read back and audited with ezdxf | 2D: 119,633 entities on 178 layers, 0 audit errors; 3D: 1,693 meshes on 166 layers, 0 audit errors; units metres |
 | Registered areas vs. plans read from imagery | Parking building 1%, Linde site 2.5%, wastewater plant 7%, KEPCO lot 0.4% |
 | Viewer | Loads without page errors, with no network requests; all 23 previews regenerated from this version |
 | Bridges and parking | 12 bridges checked against imagery; 5 structures that were missing (2 overbridges between the UT building and P2, 1 link between the west support building and P2, 2 pipe rack bridges east of the P3–P4 utility building) were added |
@@ -496,7 +507,7 @@ Not done: the files were not opened in a commercial CAD program (only with open-
 
 ## Limits
 
-- Building plans carry an error of a few metres; heights other than P1 and the registered buildings are assumptions.
+- Building plans carry a reading uncertainty of a few metres on the image, plus an unquantified displacement for tall buildings and an unconfirmed absolute positional accuracy; all fab heights and the heights of buildings without a register value are assumptions.
 - Imagery is oblique: roofs appear displaced from footprints, which was taken into account when reading outlines.
 - Map labels are points, not outlines, and OpenStreetMap is not an official source.
 - Press figures differ in date and basis (for example water supplied vs. water used); the notes keep date and basis together.
