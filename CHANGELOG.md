@@ -1,5 +1,9 @@
 # Changelog
 
+## v7.37 — 2026-11-15
+- `meta.infra_plan`: history of the 450,000 m³/day in the industrial-complex support plan (345 → 450 thousand in Notice 2023-181 of 2023-06-30; unchanged in 2024-1 and 2025-121). New source `GG_2023_181`. Relation to the 340,000 basic plan still not established.
+- No element changed. 196 sources (54 official, 42 international, 100 Korean).
+
 ## v7.36 — 2026-11-15
 - New `meta.permit_link_corridors` (six permit records of link corridors: structure, areas, recorded floor numbers; no match to bridge boxes); pointer added to 15 bridge-element notes.
 - `meta.module_oac_records`: suspended-ceiling connection hierarchy and modular method from K-ENSOL's ICR brochure (new source `KENSOL_ICR`, general product description); re-check wording corrected.
