@@ -1,5 +1,10 @@
 # Changelog
 
+## v7.32 — 2026-11-15
+- `meta.imagery_geometry`: orthophoto capture with a recorded scale — bright roof edges of the northern fab 526–547 m apart (two independent readings) and about 539 m here; scale-free length ÷ width about 2.57 on the orthophoto against 2.57 (Esri main body) and 2.70 (Esri with strip). No decision; no box changed. The length-only decision rule written in v7.31 is withdrawn.
+- New `meta.p_number_layout` and source `SSEC_20251023`: a brokerage report labels P1–P4 north to south, as the model does.
+- No element changed.
+
 ## v7.31 — 2026-11-15
 - Correction: `meta.floor_area.gov_register_campus` wrongly summarised floor 1 of CT building-2 as general steel; all its records are steel-reinforced concrete (only CT building has general steel on floor 1). An error of this model's summary, not of the official record.
 - `meta.imagery_geometry`: comparison with the public preview of the NGII 2025 orthophoto (P1 about 530 ± 9 m at about 2.3 m per screen pixel; does not decide the east-strip question; not an independent length check). New source `NGII_ORTHO_2025`. No image redistributed.

@@ -1,4 +1,4 @@
-# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.31 (English edition)
+# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.32 (English edition)
 
 > **Status: living project, updated continuously.** This model is revised whenever new public material is found or an error is reported; the current version and every change are listed in `CHANGELOG.md`. Corrections backed by a public source are welcome through GitHub Issues. Latest version: https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek
 
@@ -21,7 +21,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | Concept interior | 86,620 equipment boxes of 26 types on 8 floors per fab, 608 OHT rail segments, 10,440 structural members |
 | Concept utilities | 29 systems in 8 groups, 1,521 route segments (thermal, PCW, gas, exhaust, wastewater, chemicals, UPW, power) |
 | Concept EHS | 960 gas/exhaust flow lines, 1,152 gas detector points, 1,552 emergency equipment points, 15,320 egress travel-distance samples |
-| Sources | 184 keyed sources in three tiers: 43 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 99 Korean press and local |
+| Sources | 185 keyed sources in three tiers: 43 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 100 Korean press and local |
 | Units, origin | metres; local tangent plane at WGS84 37.02 N, 127.06 E; X east, Y north, Z up |
 | Imagery date | 2025-12-22 (source resolution 0.5 m, per Esri's metadata layer) for dimensions; the zoom-18 mosaic used for re-checks was downloaded on 2026-11-12 and 13 |
 
@@ -43,7 +43,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | `data/*.csv` | Elements, equipment, floors, phases, vendors, structure, EHS and utility tables |
 | `preview/` | 27 screenshots of the viewer |
 | `src/` | Export, viewer and check scripts that run on `data/campus.json`; `src/generator_ko/` holds the original generator and the translation tables (see "Rebuilding") |
-| `SOURCES.md` | All 184 sources with URLs, grouped by tier |
+| `SOURCES.md` | All 185 sources with URLs, grouped by tier |
 | `CONSULTATION.md` | Record of what other AI models proposed and what was adopted, verified, held or rejected |
 
 ## Coordinates
@@ -371,11 +371,19 @@ Eighth bundle and two data audits by Codex (meta wording only; no geometry chang
 
 Also corrected: the `OFF-2` note called the building a candidate for Office building 2, which contradicted `WA`; it now only compares its plan with the register area.
 
+## What v7.32 adds (scaled orthophoto comparison; P-number cross-check; no geometry change)
+
+- **Orthophoto capture with a recorded scale** (Astra; 1.2021 projected m per screen pixel, EPSG:5179; the capture is kept for internal review and not redistributed). Distance between the bright roof edges of the northern fab: 531.3–547.0 m (Codex) and 526.5–543.4 m (Astra) — ranges of manual selection, not error intervals — and about 539 m in the brightness-profile reading made here. On the Esri imagery the same kind of edges are about 522 m apart for the roof-level main body and about 549 m with the east strip.
+- **A scale-free comparison made here:** length ÷ width of the P1 roof is about 2.57 on the orthophoto, about 2.57 for the Esri main body and about 2.70 for the Esri extent with the strip. This agrees with the main body, but it rests on one capture read by one workstream, and the south edge shows several bright lines; it needs to be reproduced independently before it carries weight. Length and width on the orthophoto are each about 3% larger than on the Esri imagery, which is what a slight enlargement of tall roofs in a DEM-rectified aerial image would look like — a possible explanation, not a measured one.
+- **No decision and no change to any box.** Roof edges are not ground wall lines. What is still needed is evidence of the wall line at ground level.
+- **P-number layout cross-checked** (new `meta.p_number_layout`, new source `SSEC_20251023`): a Samsung Securities research report of 2025-10-23 labels P1 to P4 from north to south on a satellite photo, as this model does. It is the brokerage's own labelling, not an official site plan. The OpenStreetMap name tags that disagree are not adopted. Permit building names remain area-similar candidates for the P numbers.
+- NGII's building-height database is described by the agency as restricted to approved applicants and is outside the public material used here.
+
 ## What v7.31 corrects and adds (CT building structure; second official image)
 
 - **Correction of this model's own summary (found by Codex's review of v7.30).** `meta.floor_area.gov_register_campus` said that CT building and CT building-2 both have a general steel structure on floor 1. In the official export only CT building does (floor 1, 645.92 m²; basement 17,157.64 m² steel-reinforced concrete). All records of CT building-2 — floor 1 (187.93 + 329.30 m²) and first basement (9,666.11 + 11,073.80 m²) — are steel-reinforced concrete. The official record was right; the summary was wrong. No geometry is affected.
 - **Comparison with a second official image (new source `NGII_ORTHO_2025`; no image is redistributed).** Codex opened the public preview of the National Geographic Information Institute's 2025 orthophoto (map sheet 37713083, 25 cm project, DEM used; acquisition date not in the public metadata). On that capture, at about 2.3 m per screen pixel, the P1 roof reads as about 530 m long (±9 m) when the screen scale is set from the 201 m width read on the Esri imagery — between the 519 m of the roof-level main body and the 549 m with the east strip. This does not decide the east-strip question, and because the scale rests on the Esri reading it is not an independent check of length. The preview shows no bright surface where the Esri imagery shows the strip, only a dark band of undetermined nature. Recorded in `meta.imagery_geometry`; no box is changed.
-- Criteria registered in advance for the next, quantitative check (measurements on the official orthophoto with a recorded scale): P1 and P2 near 520 m and P3 and P4 near 620 m would support "roof-level main body = whole building"; near 549 m and 651 m would support a separate end block; anything in between leaves it open.
+- A decision rule based on length alone, written here in the first v7.31 text, was withdrawn in v7.32: a roof-edge length cannot by itself tell a wall face from an end block, because roof edges are not ground wall lines and an aerial orthophoto can enlarge tall roofs. Lengths on different images are kept as comparisons of visible lines only.
 
 ## What v7.30 adds (cross road; register summary; structure records; what evidence is still needed)
 
@@ -502,6 +510,8 @@ Held: assignment of building-name suffixes to P numbers; any change of height, f
 
 ## Verification done for this release
 
+v7.32: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.31, no element changed; one meta entry was extended, one added and one source added.
+
 v7.31: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.30, no element changed; two meta entries changed and one source was added.
 
 v7.30: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.29, one note changed (`KEPCO-PAD`) and one element was added.
@@ -519,7 +529,7 @@ v7.25: Korean and English data files compared element by element (1,458 ids, sou
 | Check | Result |
 |---|---|
 | Fab bodies and all annexes overlaid on the zoom-18 satellite mosaic (about 0.48 m/px) | All four fab outlines and the east, west and north annexes fall on the imagery; three technology-cluster buildings were re-oriented in v7.13 after this check |
-| STEP read back with the OpenCascade kernel (v7.31 build, geometry identical to v7.30) | 1,250 solids, 7,167 faces; the first 400 solids pass the shape validity check |
+| STEP read back with the OpenCascade kernel (v7.32 build, geometry identical to v7.30) | 1,250 solids, 7,167 faces; the first 400 solids pass the shape validity check |
 | DXF read back and audited with ezdxf | 2D: 119,633 entities on 178 layers, 0 audit errors; 3D: 1,694 meshes on 166 layers, 0 audit errors; units metres |
 | Registered areas vs. plans read from imagery | Parking building 1%, Linde site 2.5%, wastewater plant 7%, KEPCO lot 0.4% |
 | Viewer | Loads without page errors, with no network requests; all 23 previews regenerated from this version |
