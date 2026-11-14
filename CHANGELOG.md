@@ -1,5 +1,13 @@
 # Changelog
 
+## v7.24 — 2026-11-14
+- Utility building between P3 and P4: five presumed cooling tower rows with 98 fan cylinders and two rows of unidentified blue modules, read from imagery; 1,457 elements. Preview 29.
+- P5 site note: second press figure for Fab 1 (211 m × 638 m) recorded next to the earlier one.
+- Evidence intake table for 23 items received from the financial-analysis workstream (README).
+- CITATION.cff restored: it was empty in the v7.20–v7.23 packages because of a script error; copies of v7.23 already distributed still contain the empty file.
+- Announcement posted on LinkedIn (link in README).
+- STEP read-back: 1,233 solids, 7,065 faces; DXF audit 0 errors.
+
 ## v7.23 — 2026-11-14
 - Published: GitHub release, Zenodo DOI 10.5281/zenodo.24209049, and mirrors on Hugging Face, Kaggle, Internet Archive, Printables and Sketchfab (links in README).
 - 16 more supplier locations from Kakao Map added as markers (Applied Materials, KLA, Lam Research, Tokyo Electron, KCTech, Unisem, PSK, PSK Holdings, STI, Hansung Cleantech, Merck, Versum Materials, FST, a second Wonik IPS location, KC ENC, Samsung C&T camp); 1,352 elements.

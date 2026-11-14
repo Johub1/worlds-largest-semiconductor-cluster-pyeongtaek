@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this model, please cite it as below."
 title: "Samsung Electronics Pyeongtaek Campus P1-P4 open 3D model (unofficial, built only from public sources)"
 type: dataset
-version: "7.23"
+version: "7.24"
 date-released: 2026-11-14
 license: CC-BY-4.0
 authors:

@@ -45,7 +45,7 @@ Third-party imagery, video frames and vendor CAD were consulted but are not redi
 | `KAKAO2` | Kakao Map place search (queried 2026-11-13): Samsung Electronics logistics warehouse (Godeok-dong 1696-1), Air Products Korea Pyeongtaek plant (Jangdang-dong 627), Air First Pyeongtaek plant (Bangchuk-ri 151-1, Godeok-myeon), Samsung E&A Pyeongtaek camps, SEMES Pyeongtaek office, Wonik IPS Pyeongtaek site, Hanyang ENG | https://map.kakao.com/ |
 | `GOOGLE2` | Google Maps place search (queried 2026-11-13): Air Products Korea Pyeongtaek plant — 1029 Gyeonggi-daero | https://www.google.com/maps |
 
-## Tier 2 — international wire services, trade media, journals, patents and standards bodies (41)
+## Tier 2 — international wire services, trade media, journals, patents and standards bodies (42)
 
 | Key | Source | URL |
 |---|---|---|
@@ -90,6 +90,7 @@ Third-party imagery, video frames and vendor CAD were consulted but are not redi
 | `GAS_LINDE19` | Gas News 2019: Linde Korea completes and starts the phase-1 ASU plant of its Pyeongtaek project; several ASUs and hydrogen plants, purifiers and a pipeline system | http://www.gasnews.com/news/articleView.html?idxno=91198 |
 | `WIPS_MZ` | Meritz Securities 2025-11: estimated share of Wonik IPS sales to Samsung Electronics; CVD and ALD tools | https://home.imeritz.com/include/resource/research/WorkFlow/20251116182831976K_02.pdf |
 | `P52_IN` | iNews24 2026: site workers say it is called P5-2 internally and that excavation has started | https://inews24.com/view/1965929 |
+| `P5_HK` | Hankook Ilbo 2026-10-30 (site report): P5 Fab 1 floor plate 211 m north-south by 638 m east-west, triple fab, about 100 m high when complete, total floor area 1.45 million m², one production level set about 30 m high | https://www.hankookilbo.com/news/article/A2026102911560004232 |
 
 ## Tier 3 — Korean press and other local or unofficial sources (98)
 

@@ -1,10 +1,10 @@
-# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.23 (English edition)
+# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.24 (English edition)
 
 > **Status: living project, updated continuously.** This model is revised whenever new public material is found or an error is reported; the current version and every change are listed in `CHANGELOG.md`. Corrections backed by a public source are welcome through GitHub Issues. Latest version: https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek
 
 **DOI:** [10.5281/zenodo.24209049](https://doi.org/10.5281/zenodo.24209049) (v7.23; later GitHub releases are archived on Zenodo automatically)
 
-**Mirrors (v7.23):** [Zenodo](https://zenodo.org/records/24209049) · [Hugging Face](https://huggingface.co/datasets/Johojun/pyeongtaek-semiconductor-campus-open-model) · [Kaggle](https://www.kaggle.com/datasets/hojunjoooo/pyeongtaek-campus-open-3d-model-v7-23) · [Internet Archive](https://archive.org/details/pyeongtaek_p1-p4_open_model_v7.23_en) · [Printables](https://www.printables.com/model/1913576-pyeongtaek-semiconductor-campus-p1-p4-open-model-v) · [Sketchfab](https://skfb.ly/pQ8or). The GitHub repository is always the newest version; mirrors may lag behind.
+**Mirrors (v7.23):** [Zenodo](https://zenodo.org/records/24209049) · [Hugging Face](https://huggingface.co/datasets/Johojun/pyeongtaek-semiconductor-campus-open-model) · [Kaggle](https://www.kaggle.com/datasets/hojunjoooo/pyeongtaek-campus-open-3d-model-v7-23) · [Internet Archive](https://archive.org/details/pyeongtaek_p1-p4_open_model_v7.23_en) · [Printables](https://www.printables.com/model/1913576-pyeongtaek-semiconductor-campus-p1-p4-open-model-v) · [Sketchfab](https://skfb.ly/pQ8or). Announcement: [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7527149024009670656/). The GitHub repository is always the newest version; mirrors may lag behind.
 
 An educational, open-source 3D model of the world's largest semiconductor manufacturing cluster, built **only from public material**.
 
@@ -21,7 +21,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | Concept interior | 86,620 equipment boxes of 26 types on 8 floors per fab, 608 OHT rail segments, 10,440 structural members |
 | Concept utilities | 29 systems in 8 groups, 1,521 route segments (thermal, PCW, gas, exhaust, wastewater, chemicals, UPW, power) |
 | Concept EHS | 960 gas/exhaust flow lines, 1,152 gas detector points, 1,552 emergency equipment points, 15,320 egress travel-distance samples |
-| Sources | 173 keyed sources in three tiers: 34 official/register/map, 41 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 98 Korean press and local |
+| Sources | 174 keyed sources in three tiers: 34 official/register/map, 41 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 98 Korean press and local |
 | Units, origin | metres; local tangent plane at WGS84 37.02 N, 127.06 E; X east, Y north, Z up |
 | Imagery date | 2025-12-22 (0.5 m) for dimensions; zoom-18 mosaic re-acquired 2026-11-12 for re-checks |
 
@@ -43,7 +43,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | `data/*.csv` | Elements, equipment, floors, phases, vendors, structure, EHS and utility tables |
 | `preview/` | 27 screenshots of the viewer |
 | `src/` | Export, viewer and check scripts that run on `data/campus.json`; `src/generator_ko/` holds the original generator and the translation tables (see "Rebuilding") |
-| `SOURCES.md` | All 173 sources with URLs, grouped by tier |
+| `SOURCES.md` | All 174 sources with URLs, grouped by tier |
 | `CONSULTATION.md` | Record of what other AI models proposed and what was adopted, verified, held or rejected |
 
 ## Coordinates
@@ -261,12 +261,39 @@ Sixteen further supplier locations registered on Kakao Map inside the model area
 
 Found on the map but outside the modelled ground, so listed here only: Lam Research Pyeongtaek site (Godeok-dong 1977-1), Global Standard Technology Pyeongtaek (Gajae-dong 345-27), Samsung Electronics DS Division supplier EHS academy (Godeok-myeon, Jiwon 1-gil 16). Many small engineering and construction firms also appear in the same search and were left out because their role could not be identified.
 
+## What v7.24 adds (cooling towers from imagery, evidence intake)
+
+**Rooftop of the utility building between P3 and P4.** The 2025-12-22 imagery shows rows of circular fans with vapour plumes on this roof. Five rows were added as presumed cooling towers (plan extent grade B), with 98 fan cylinders placed at an approximate 13 m pitch (grade C: the real count, maker and capacity are not confirmed), plus two rows of blue-topped modules whose use is not identified. Heights are arbitrary. Preview 29.
+
+**P5 site note.** A second press figure for P5 Fab 1 (211 m × 638 m, triple fab, about 100 m high, 1.45 million m²; Hankook Ilbo 2026-10-30, opened and checked) now stands next to the earlier 650 m × 195 m figure. Because they differ, the model still draws only the site extent.
+
+**Evidence intake.** A bundle of 23 items (SP-E001–E023) was received from the companion financial-analysis workstream and judged as follows. "Already in" means the model had it before; "held" means it is not used as geometry.
+
+| Item | Subject | Verdict | Where / why |
+|---|---|---|---|
+| SP-E001 | "Single fab" footprint about 120,000 m², floor area about 990,000 m² (Samsung newsroom) | Held | Page not opened here. The measured P3 footprint is about 174,700 m² and P1/P2 about 135,600/138,900 m², so 120,000 m² matches none of them directly |
+| SP-E002 | P3 "about 700 m" long (press) | Held, with a measurement | Imagery gives 623 m for the main body and 651 m with the end block |
+| SP-E003 | P1 about 2,000 tools (press) | Already in | Source key TOOLS, concept layer only |
+| SP-E004 | One production set (cleanroom + sub-fab below + air handling above) about 30 m high (press, said of P5) | Concept | Matches the model's generic section; not used as a P1–P4 dimension |
+| SP-E005 | P4 phases Ph1–Ph4 as lower-west, lower-east, upper-west, upper-east | Already in | Viewer phase table; "lower/upper" is a vertical reading and is not drawn as plan quadrants. Contract periods other than Ph2 are not checked here |
+| SP-E006 | Buildings named in contract titles (fab, complex, green, substation, air pollution control, UPW) | Already in | Phase table scope line |
+| SP-E007, E019, E020, E021 | Contract filings (P3 green building and water plant, gas supply tunnel, P5 water plant, P5 work packages) | Held | Filings could not be opened from this workspace; amounts are never turned into size or position |
+| SP-E008 | P5 Fab 1 dimensions | In (note only) | Element PAD-P5, v7.24 |
+| SP-E009, E010, E015, E022 | P5 floor-area ratio change, Fab 2 site 661 m × 194 m, new substations, capacity | Held | Plans or press not opened here |
+| SP-E011 | P4–P5 bridge about 360 m | Held | Article not retrievable; connection points unknown, so no bridge is drawn |
+| SP-E012, E013 | 345 kV Godeok–Seoanseong line, 500 kV HVDC | Already in | Power group sources |
+| SP-E014 | Godeok substation floor area 100,000 m² (press) | Held, conflict | The building register gives 48,546.62 m² for the converter station and substation lot; the register value stays |
+| SP-E016 | Green building 34,000 m², 70,000 t/day, 2.6 km discharge pipe | Held | Article not opened here; the model keeps the official 81,600 m³/day for the P3 green building |
+| SP-E017 | Industrial water and reclaimed sewage supply | Already in | Water group sources |
+| SP-E018 | Site area 2.89 million m² vs about 3.9 million m² | Partly in | Official 2.89/2.83 million m² in the model; the larger figure is held |
+| SP-E023 | Company-wide water flow | Held | Not separable for Pyeongtaek |
+
 ## Verification done for this release
 
 | Check | Result |
 |---|---|
 | Fab bodies and all annexes overlaid on the zoom-18 satellite mosaic (about 0.48 m/px) | All four fab outlines and the east, west and north annexes fall on the imagery; three technology-cluster buildings were re-oriented in v7.13 after this check |
-| STEP read back with the OpenCascade kernel (v7.22 build) | 1,112 solids, 6,633 faces; the first 400 solids pass the shape validity check |
+| STEP read back with the OpenCascade kernel (v7.24 build) | 1,233 solids, 7,065 faces; the first 400 solids pass the shape validity check |
 | DXF read back and audited with ezdxf | 2D: 119,397 entities on 178 layers, 0 audit errors; 3D: 1,514 meshes on 166 layers, 0 audit errors; units metres |
 | Registered areas vs. plans read from imagery | Parking building 1%, Linde site 2.5%, wastewater plant 7%, KEPCO lot 0.4% |
 | Viewer | Loads without page errors, with no network requests; all 23 previews regenerated from this version |
