@@ -6,7 +6,7 @@ Source priority: (1) official material and filings of Samsung Electronics and it
 
 Third-party imagery, video frames and vendor CAD were consulted but are not redistributed in this package.
 
-## Tier 1 — official material, filings, public registers, public maps and imagery (52)
+## Tier 1 — official material, filings, public registers, public maps and imagery (53)
 
 | Key | Source | URL |
 |---|---|---|
@@ -59,6 +59,7 @@ Third-party imagery, video frames and vendor CAD were consulted but are not redi
 | `SHINSUNG_2119` | Shinsung Engineering official reference list '2023' (central air conditioning, ishinsung.com 2119, posted 2024-07-08): Pyeongtaek P4 Ph1 lot 2 precision air conditioner and AHU supply and installation, P3L Ph2 and Ph4 DCC, P3L green building Ph4 AHU installation — a list by contract year | https://ishinsung.com/product/partner/2119 |
 | `KENSOL_H1_2026` | K-ENSOL 38th-term half-year report (2026-08-14, as of 2026-06-30) — major order-contract table (only contracts of 5% or more of the previous year's revenue), revenue notes (consolidated 17, separate 16), business description (OAC = outdoor air conditioner; modular system-ceiling method applied at Pyeongtaek) | https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003241 |
 | `KENSOL_Q1_2026` | K-ENSOL first-quarter 2026 report (KIND filing) — major order-contract table and revenue notes (Pyeongtaek P3 and P4 module S/C and OAC contracts) | https://kind.krx.co.kr/external/2026/05/15/002134/20260515004740/11013.htm |
+| `KENSOL_ICR` | K-ENSOL official ICR (industrial cleanroom) brochure PDF — suspended-ceiling connection hierarchy, modular installation method, OAC make-up (general product description, not Pyeongtaek specifications) | https://k-ensol.com/wp-content/uploads/2024/11/KE_ICR_k-web.pdf |
 | `OFF_SS_FAB101` | Samsung Semiconductor official glossary article 'All about the fab': air circulates from top to bottom through high-performance ceiling filters and perforated floor grating; OHT on ceiling rails carries FOUPs to the tools automatically (no specific fab named) | https://semiconductor.samsung.com/kr/support/tools-resources/dictionary/semiconductors-101-part-7-all-about-the-fab-the-birthplace-of-semiconductor-chips/ |
 | `OFF_SS_OHT` | Samsung Semiconductor global newsroom 2025-09-04: OHT on ceiling rails carries FOUPs; one vehicle travels about 100 km a day (no specific fab named) | https://news.samsungsemiconductor.com/global/the-invisible-highways-tracing-the-journey-inside-a-semiconductor-fab/ |
 | `OFF_SS_LEGO` | Samsung Semiconductor official page: Pyeongtaek Campus Line 1 reproduced as a 1:520 block model of about 15,000 pieces showing air showers, dry cooling coils and ULPA filters (a promotional model, not a drawing of the real building) | https://semiconductor.samsung.com/support/tools-resources/fabrication-process/a-lego-model-of-the-worlds-largest-semiconductor-production-line-fab-on-the-block/ |

@@ -1,5 +1,11 @@
 # Changelog
 
+## v7.36 — 2026-11-15
+- New `meta.permit_link_corridors` (six permit records of link corridors: structure, areas, recorded floor numbers; no match to bridge boxes); pointer added to 15 bridge-element notes.
+- `meta.module_oac_records`: suspended-ceiling connection hierarchy and modular method from K-ENSOL's ICR brochure (new source `KENSOL_ICR`, general product description); re-check wording corrected.
+- `meta.imagery_geometry`: integrated GIS building data recorded as the next public path for ground outlines (records not obtained).
+- No box changed. 1,474 elements; 195 sources (53 official, 42 international, 100 Korean).
+
 ## v7.35 — 2026-11-15
 - New `meta.module_oac_records`; sources `KENSOL_H1_2026`, `KENSOL_Q1_2026` (K-ENSOL module S/C work for P3 PH4 and P4 PH2–PH4, module OAC for P4 Ph1 and PH3; OAC defined as outdoor air conditioner; modular system-ceiling method applied at Pyeongtaek from 2020).
 - Notes and source lists of the eight P3/P4 FFU ceiling elements; FFU and MAU type descriptions. Boxes unchanged and still grade D.
