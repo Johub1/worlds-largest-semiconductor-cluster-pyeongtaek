@@ -1,5 +1,12 @@
 # Changelog
 
+## v7.27 — 2026-11-15
+- Finding recorded, no geometry changed: the public satellite imagery is oblique. The "east end blocks" of the fabs show the wall graphic and are most likely the east walls seen between roof edge and wall foot; roof-read outlines may lie too far west by about 0.3 × height. New `meta.imagery_geometry`; `P1`–`P4-endblk` renamed; `UT-34E` note. Plan corrections are deferred until orthorectified outlines are checked.
+- Viewer legend: grade B reads "plan read from imagery (heights assumed)"; Korean label left in the English viewer for `UT-34` fixed.
+- `meta.infra_plan`: first approval date of the Godeok stage split stated as not established. `HUB_FLR_1695` and 36 notes describe the full-column exports; earlier route kept as history.
+- `data/register_vs_model.csv`: status wording "area-similar candidate"; new columns for fab plans without the east strip (1.3–7.3% smaller than the permit building areas).
+- `src/tools/register_compare.py`: command-line arguments, documented inputs and SHA-256; no absolute paths.
+
 ## v7.26 — 2026-11-15
 - Permit record joined to building names: 701 floor-level rows downloaded by Codex from the official Building HUB site (lot Godeok-dong 1695, data month 2026-09) joined with the 28 per-building rows. All rows read by script here. New derived tables `data/register_vs_model.csv` and `data/permit_floor_areas.csv`; the downloaded file is not redistributed.
 - Building areas compared with model boxes: the four fabs and the EUV building agree within 5%, but FAB building / -2 against P1 / P2 and FAB building-3 / -4 against P3 / P4 cannot be told apart by area. Recorded as candidates in the notes of 36 elements (new source `HUB_FLR_1695`); no existing box moved, resized or regraded.

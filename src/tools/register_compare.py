@@ -1,17 +1,52 @@
-# Compares building-permit rows (lot Godeok-dong 1695, main permit) with model boxes. Candidates only; no geometry is changed.
-import json,csv,collections,sys
-W='/home/claude/work/'
-SRC='/mnt/user-data/uploads/outputs/'
-J=json.load(open(SRC+'SP_HUB_1695_층별개요_공식다운로드_2026-11-14.json',encoding='utf-8-sig'))['Data']
-R=list(csv.DictReader(open(SRC+'SP_HUB_1695_E063_PK결합_28동_2026-11-14.csv',encoding='utf-8-sig')))
-D=json.load(open(W+'campus.json')); E={e['id']:e for e in D['elems']}
+#!/usr/bin/env python3
+"""Compare building-permit records with model boxes (candidates only; no geometry is changed).
+
+Inputs (not redistributed in this repository; download them yourself):
+  Building HUB (Ministry of Land, Infrastructure and Transport), public building-permit lookup, no login:
+    per-building summary  https://www.hub.go.kr/portal/opn/tyb/idx-acpmslg-dgcb.do
+    floor summary         https://www.hub.go.kr/portal/opn/tyb/idx-acpmslg-flrcb.do
+  Select Gyeonggi-do > Pyeongtaek-si > Godeok-dong > lot type "daeji" > 1695-0000, choose all columns in the
+  custom column selection and export as JSON. Data month used here: 2026-09.
+  SHA256 of the exports this table was built from (made by Codex on 2026-11-15):
+    per-building, 316 rows x 29 columns  d032337d8a3d4f89f91eb443ea0a51ae1bab6c6bc09086bf32c1fdf39bdf0b8e
+    floor,        701 rows x 24 columns  7e75b3dfef9a739dbccba7417738908893ed724bddf8d3d65506fd778d7ed44a
+  (an earlier floor export with eight selected columns, 31527492cfc752370b723c9c34a55e39cf827ba393681430548c9d71e24bc25e,
+   has the same rows in the columns used here.)
+  The per-building file may be the JSON export or a CSV with the same field names
+  (ACPMSLG_SN, ACPMSLG_DGCB_OUN_SN, BDAR, GFA).
+
+Usage:
+  python3 register_compare.py --buildings <per-building.json|csv> --floors <floor.json> \
+      --model data/campus.json --out <output folder> [--permit 1099100090586] [--min-gfa 10000]
+  --model must be the Korean master (src/generator_ko output) for the Korean table; with the English
+  data/campus.json only the English tables are written.
+"""
+import json,csv,collections,sys,argparse,os
+ap=argparse.ArgumentParser()
+ap.add_argument('--buildings',required=True); ap.add_argument('--floors',required=True)
+ap.add_argument('--model',required=True); ap.add_argument('--out',required=True)
+ap.add_argument('--permit',default='1099100090586'); ap.add_argument('--min-gfa',type=float,default=10000)
+a_=ap.parse_args(); W=a_.out.rstrip('/')+'/'; os.makedirs(W,exist_ok=True)
+def load(p):
+    if p.lower().endswith('.csv'): return list(csv.DictReader(open(p,encoding='utf-8-sig')))
+    j=json.load(open(p,encoding='utf-8-sig')); return j['Data'] if isinstance(j,dict) else j
+J=load(a_.floors)
+names={}
+for r in J: names[(r['ACPMSLG_SN'],r['ACPMSLG_DGCB_OUN_SN'])]=r['BLDG_NM']
+R=[]
+for r in load(a_.buildings):
+    if r['ACPMSLG_SN']!=a_.permit or float(r['GFA'] or 0)<a_.min_gfa: continue
+    R.append({'관리동별개요PK':r['ACPMSLG_DGCB_OUN_SN'],'건축면적_㎡':r['BDAR'],'연면적_㎡':r['GFA'],'공식층별_건물명':names[(r['ACPMSLG_SN'],r['ACPMSLG_DGCB_OUN_SN'])]})
+R.sort(key=lambda r:-float(r['연면적_㎡']))
+D=json.load(open(a_.model,encoding='utf-8')); E={e['id']:e for e in D['elems']}
 F={f['id']:f for f in D['fabs']}
 def area(i):
     if i in F: return F[i]['L']*F[i]['W']
     b=E[i]['box']; return (b[3]-b[0])*(b[4]-b[1])
+def area_main(i): return F[i]['Lmain']*F[i]['W'] if i in F else None
 fl=collections.defaultdict(lambda: collections.defaultdict(float))
 for r in J:
-    if r['ACPMSLG_SN']=='1099100090586': fl[r['ACPMSLG_DGCB_OUN_SN']][(r['FLR_SE_CD_NM'],r['FLR_NO'])]+=float(r['FLR_AREA'] or 0)
+    if r['ACPMSLG_SN']==a_.permit: fl[r['ACPMSLG_DGCB_OUN_SN']][(r['FLR_SE_CD_NM'],r['FLR_NO'])]+=float(r['FLR_AREA'] or 0)
 # candidate model boxes per register building name (sets are summed)
 C={'FAB동':[['P1'],['P2']],'FAB동-2':[['P2'],['P1']],'FAB동-3':[['P3'],['P4']],'FAB동-4':[['P4'],['P3']],
  '복합동':[['UT-34','UT-34E']], 'EUV동':[['V2']],
@@ -30,17 +65,17 @@ for r in R:
     ug_area=sum(v for k,v in f.items() if k[0]=='지하')
     cands=C.get(n,[])
     if not cands:
-        out.append(dict(register_name=n,building_area_m2=ba,total_floor_area_m2=float(r['연면적_㎡']),above_ground_floor_numbers=f"{ag[0]}-{ag[-1]}" if ag else '',basement_floor_numbers=','.join(map(str,ug)),largest_floor=f"{mx[0][0]}{mx[0][1]}",largest_floor_area_m2=round(mx[1],2),basement_area_m2=round(ug_area,2),model_ids='',model_plan_area_m2='',diff_pct='',model_name_ko='',model_grade='',status='no candidate box'))
+        out.append(dict(register_name=n,building_area_m2=ba,total_floor_area_m2=float(r['연면적_㎡']),above_ground_floor_numbers=f"{ag[0]}-{ag[-1]}" if ag else '',basement_floor_numbers=','.join(map(str,ug)),largest_floor=f"{mx[0][0]}{mx[0][1]}",largest_floor_area_m2=round(mx[1],2),basement_area_m2=round(ug_area,2),model_ids='',model_plan_area_m2='',diff_pct='',model_plan_area_without_east_strip_m2='',diff_without_east_strip_pct='',model_name_ko='',model_grade='',status='no candidate box'))
     for c in cands:
         a=sum(area(i) for i in c); d=(a-ba)/ba*100
         ref=ba
-        st='candidate (area within 5%)' if abs(d)<=5 else ('candidate (area within 15%)' if abs(d)<=15 else 'area does not match')
+        st='area-similar candidate (within 5%)' if abs(d)<=5 else ('area-similar candidate (within 15%)' if abs(d)<=15 else 'area does not match')
         if n in('CT동','CT동-2'):
             d2=(a-ug_area)/ug_area*100; st=f'compared with basement area instead: {d2:+.1f}% — relation unconfirmed'
         out.append(dict(register_name=n,building_area_m2=ba,total_floor_area_m2=float(r['연면적_㎡']),above_ground_floor_numbers=f"{ag[0]}-{ag[-1]}" if ag else '',basement_floor_numbers=','.join(map(str,ug)),largest_floor=f"{mx[0][0]}{mx[0][1]}",largest_floor_area_m2=round(mx[1],2),basement_area_m2=round(ug_area,2),
-            model_ids='+'.join(c),model_plan_area_m2=round(a),diff_pct=round(d,1),model_name_ko=' / '.join((E[i]['name'] if i in E else i+' FAB') for i in c),model_grade='/'.join((E[i]['conf'] if i in E else 'B') for i in c),status=st))
+            model_ids='+'.join(c),model_plan_area_m2=round(a),diff_pct=round(d,1),model_plan_area_without_east_strip_m2=(round(area_main(c[0])) if len(c)==1 and c[0] in F else ''),diff_without_east_strip_pct=(round((area_main(c[0])-ba)/ba*100,1) if len(c)==1 and c[0] in F else ''),model_name_ko=' / '.join((E[i]['name'] if i in E else i+' FAB') for i in c),model_grade='/'.join((E[i]['conf'] if i in E else 'B') for i in c),status=st))
 keys=list(out[0].keys())
-with open(W+'regcmp/register_vs_model.csv','w',newline='',encoding='utf-8-sig') as fh:
+with open(W+'register_vs_model_raw.csv','w',newline='',encoding='utf-8-sig') as fh:
     w=csv.DictWriter(fh,fieldnames=keys); w.writeheader(); w.writerows(out)
 for o in out: print(o['register_name'],'|',o['building_area_m2'],'|',o['above_ground_floor_numbers'],'B'+o['basement_floor_numbers'],'|',o['largest_floor'],o['largest_floor_area_m2'],'|',o['model_ids'],o['model_plan_area_m2'],o['diff_pct'],'|',o['status'])
 
@@ -48,7 +83,7 @@ for o in out: print(o['register_name'],'|',o['building_area_m2'],'|',o['above_gr
 EN={'FAB동':'FAB building','FAB동-2':'FAB building-2','FAB동-3':'FAB building-3','FAB동-4':'FAB building-4','복합동':'Complex building','EUV동':'EUV building','UT동':'UT building','UT동-2':'UT building-2','CT동':'CT building','CT동-2':'CT building-2','그린동':'Green building','그린동-2':'Green building-2','그린동-3':'Green building-3','그린동-4':'Green building-4','GCS동':'GCS building','정수장':'Water treatment plant','사무동':'Office building','사무동-2':'Office building-2','사무동-3':'Office building-3','기술동':'Technology building','기술동-2':'Technology building-2','기술동 주차타워':'Technology building parking tower','154kV동':'154 kV building','154kV동-2':'154 kV building-2','154kV동-3':'154 kV building-3','154kV동-4':'154 kV building-4','일반창고1':'General warehouse 1','창고동':'Warehouse building'}
 FLK={'지상':'above ground ','지하':'basement '}
 pk={r['공식층별_건물명']:r['관리동별개요PK'][-7:] for r in R}
-KO_ST={'candidate (area within 5%)':'후보(면적 5% 이내)','candidate (area within 15%)':'후보(면적 15% 이내)','area does not match':'면적 불일치','no candidate box':'후보 상자 없음'}
+KO_ST={'area-similar candidate (within 5%)':'면적 유사 후보(5% 이내)','area-similar candidate (within 15%)':'면적 유사 후보(15% 이내)','area does not match':'면적 불일치','no candidate box':'후보 상자 없음'}
 def write(path,lang):
     rows=[]
     for o in out:
@@ -63,9 +98,9 @@ def write(path,lang):
     ks=['register_name','building_key_suffix']+[k for k in rows[0] if k not in('register_name','building_key_suffix')]
     with open(path,'w',newline='',encoding='utf-8-sig') as fh:
         w=csv.DictWriter(fh,fieldnames=ks); w.writeheader(); w.writerows(rows)
-write(W+'regcmp/register_vs_model_en.csv','en'); write(W+'regcmp/register_vs_model_ko.csv','ko')
+write(W+'register_vs_model_en.csv','en'); write(W+'register_vs_model_ko.csv','ko')
 # per-floor table (all 28 buildings)
-with open(W+'regcmp/permit_floor_areas_en.csv','w',newline='',encoding='utf-8-sig') as fh:
+with open(W+'permit_floor_areas_en.csv','w',newline='',encoding='utf-8-sig') as fh:
     w=csv.writer(fh); w.writerow(['register_name','building_key_suffix','floor_class','floor_number','floor_area_m2_summed_over_rows','rows'])
     cnt=collections.Counter((r['ACPMSLG_DGCB_OUN_SN'],r['FLR_SE_CD_NM'],r['FLR_NO']) for r in J)
     for r in R:

@@ -1,4 +1,4 @@
-# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.26 (English edition)
+# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.27 (English edition)
 
 > **Status: living project, updated continuously.** This model is revised whenever new public material is found or an error is reported; the current version and every change are listed in `CHANGELOG.md`. Corrections backed by a public source are welcome through GitHub Issues. Latest version: https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek
 
@@ -371,6 +371,41 @@ Eighth bundle and two data audits by Codex (meta wording only; no geometry chang
 
 Also corrected: the `OFF-2` note called the building a candidate for Office building 2, which contradicted `WA`; it now only compares its plan with the register area.
 
+## What v7.27 adds (the imagery is oblique; wording corrections; reproducible comparison script)
+
+No box was moved, resized, added or regraded in this version. It records a finding that affects how every outline read from the imagery should be understood, and it will lead to plan corrections in a later version.
+
+**The public satellite imagery is not vertical.** Re-reading the east ends of the fabs at full resolution shows the exterior graphic of the east walls (the red and yellow panels) inside the 29–37 m strip that earlier versions modelled as an "east end block" of P1, P3 and P4. A wall face is visible there, so the strip is most likely the wall seen between the roof edge and the foot of the wall, not a separate block. For P2 the graphic could not be made out and the same reading is by analogy.
+
+| Check | Reading | What it supports |
+|---|---|---|
+| Press figure that names P1 | about 520 m long | The roof-level "main body" of P1 is 519 m; with the strip it would be 549 m |
+| Two substation buildings with a register height of 33 m | wall face about 10–12 m wide east of the roof | Visible wall width ÷ height ≈ 0.30–0.36 |
+| Same ratio applied to the fab strips (28–37 m) | fab height roughly 80–120 m | Does not contradict the assumed 83 m; far too coarse to fix a height |
+| Permit building areas | fab plans 0.7–4.6% larger or smaller with the strip, 1.3–7.3% smaller without it | Does not decide either way (new columns in `data/register_vs_model.csv`) |
+
+Consequences, recorded in `meta.imagery_geometry`:
+
+- Boxes drawn from roof outlines may have their west edge too far west by about 0.3 × height (about 28 m for an 83 m fab, about 11 m for a 35 m building) and may be off by about 0.1 × height north–south. Boxes whose east edge was read at the foot of the wall may be too wide by the same amount. Low buildings, roads and ground are hardly affected. The ±3 m stated for plan readings is the reading precision on the image, not this displacement.
+- Grade B means "plan read from imagery". It never covered heights; heights of B elements are assumptions unless a note says otherwise. The viewer legend now says so.
+- The acquisition date 2025-12-22 is the value recorded in earlier versions; it was not queried again, and tiles can differ in date and angle (no wall face is visible on the tile around the Complex 2 parking building).
+- Not corrected here. The correction needs orthorectified building outlines (for example the national digital map layers shown by Korean map services) to fix the true wall lines; shifting boxes by an assumed height would stack one assumption on another.
+
+Changed elements (names and notes only): `P1-endblk`, `P2-endblk`, `P3-endblk`, `P4-endblk` renamed from "east end block (presumed complex building)" to "boundary of the east strip (probably the east wall seen in the imagery)"; `UT-34E` note (the 33 m box may likewise be a wall face). The complex-building candidates are therefore down to one box group by area (`UT-34`), still unsettled; the site-observation channel's label of an east end block stays on record as a conflicting source.
+
+Other readings made in this unit, recorded here and not modelled: on the building between P3 and P4 a raised central block at about X −15…15, an east roof at about X 300…355 with two raised volumes, and the cooling tower rows and blue module rows already in the model; `M4` reads as two parts (north part Y 1440–1492 with a raised block, main part Y 1296–1432 with a central slot); `SM1` and `SM2` each show a central slot and rooftop units. None of these was added because their positions carry the displacement described above.
+
+Wording corrections requested by Codex's review of v7.26: the wastewater plan sentence no longer suggests that Notice No. 2025-370 is when the Godeok stage split was first approved (the first approval date is not established); the source `HUB_FLR_1695` and the 36 element notes now describe the current full-column exports (316 × 29 and 701 × 24) with the earlier eight-column route kept as history; "pair matches" and "probably covers podiums" in the v7.26 table are reduced to "area-similar candidates" and "one unchecked hypothesis". The English viewer label for `UT-34` was left in Korean in v7.26 and is fixed.
+
+Evidence received during this unit, recorded here only (no element, note or meta entry changed):
+
+| Item | Content | Verdict |
+|---|---|---|
+| Permit records for lot Godeok-dong 1696 (Codex, full-column official web exports, data month 2026-09: 332 per-building rows, 470 floor rows) | 312 temporary structures, 16 factory and 4 warehouse records. One permit (project description "A1-1, A1-2, C2-1 blocks") has 20 buildings, among them FAB building-5 (building area 142,808.26 m², floor area 964,265.35 m², floors 1–13 and 1 basement shown), Complex building-5 (83,444.20 m², floors 1–11), Green building-5, Water treatment plant-3, 154 kV building-5, Office complex building, Office building-6 and the parking building | Read from Codex's review; of the 332-row table only the row counts were checked here. Not modelled: the suffix -5 is not mapped to the marketing name P5, floor numbers are not production levels or heights, and a permit snapshot is not completion or operation. `PAD-P5` keeps its press figures. The parking building equals `PARK-2` (already from the register). Office building-6 has the same building area as the parking building (42,285.72 m²) for a reason not known; no second shape is drawn. Floor areas are not added up to approach the press figure of about 1.45 million m² |
+| Hanbang Ubis supervision record "Samsung Electronics Pyeongtaek P2" (Astra, page text, HTML metadata and attachments) | No building number, lot number or permit identifier on the page | Held. The record's 592,077 m² is close to the 591,152.02 m² of FAB building-2 in the permit, but closeness of area is not identity; `P2_FLOORS` stays a project-level figure |
+
+`src/tools/register_compare.py` now takes its inputs, the model file and the output folder as command-line arguments and documents the official export procedure and the SHA-256 of the exports used; rerun from the full-column per-building table it reproduces the published comparison.
+
 ## What v7.26 adds (permit building names and floor numbers, comparison with the model, roof reading)
 
 **Official permit data now joined to building names.** Codex downloaded 701 floor-level rows of the building-permit record for lot Godeok-dong 1695 from the official Building HUB site (eight selected columns, data month 2026-09; not a raw API response, no floor-level key). Joined by permit key and building key with the 28 per-building rows transcribed earlier (SP-E063), every row gets a building name. This workstream read all 701 rows and all columns of the 28-row table by script. Two derived tables are published; the downloaded file itself is not redistributed.
@@ -382,17 +417,17 @@ What the comparison shows, and what it does not:
 
 | Permit building (building area) | Model box (plan area) | Difference | Reading |
 |---|---|---|---|
-| FAB building (107,653 m²), FAB building-2 (111,791 m²) | P1 (110,349 m²), P2 (112,608 m²) | 0.7–4.6% in every pairing | The pair matches the pair; area alone cannot say which is P1 and which is P2 |
+| FAB building (107,653 m²), FAB building-2 (111,791 m²) | P1 (110,349 m²), P2 (112,608 m²) | 0.7–4.6% in every pairing | Area-similar candidates only; area cannot say which is P1 and which is P2, and similarity of area does not establish identity |
 | FAB building-3 (138,388 m²), FAB building-4 (134,164 m²) | P3 (135,408 m²), P4 (136,032 m²) | 0.9–2.2% in every pairing | Same: which is P3 and which is P4 stays open |
 | EUV building (31,623 m²) | `V2` (31,304 m²) | −1.0% | Candidate |
 | Complex building (87,014 m²) | `UT-34` + `UT-34E` (79,990 m²) | −8.1% | Candidate; agrees with the press caption placing the complex building between P3 and P4, disagrees with a site-observation channel that labels the fab's east end block. Unsettled |
 | UT building (16,349 m²), UT building-2 (19,154 m²) | `UT-12E` (17,762 m²); `UT-12` (25,896 m²) | east box within 9%; west box and the sum do not match | Unsettled |
 | Green building-3 (25,583 m²), -4 (24,741 m²) | `S2` (25,730 m²), `S1` (28,175 m²) | 0.6–14% | Candidates; which is which is open |
 | GCS building (43,199 m²) | `E1` (14,014 m²) | −68% | The box labelled as GCS candidate does not match; `M1` + `M2` (39,592 m², −8.4%) is closer |
-| Office building, -2, -3; Technology building, parking tower | `GATE-W`, `WA`, `W1`, `OFF-T`, `OFF-2` | model 25–35% smaller | Model boxes follow the visible tower outlines; the permit building area probably covers more (podiums, attached parts). Not resized |
+| Office building, -2, -3; Technology building, parking tower | `GATE-W`, `WA`, `W1`, `OFF-T`, `OFF-2` | model 25–35% smaller | Unexplained. One hypothesis is that the permit building area covers lower or attached parts that the boxes leave out; this was not checked. Not resized |
 | CT building, CT building-2 | `CT-1`–`CT-4` | — | Above-ground building areas are only 646 and 517 m²; first-basement areas are 17,158 and 20,740 m². The four banks total 17,876 m²; no relation confirmed |
 
-The earlier check that divided 128,900 m² by the P2 plan was withdrawn in v7.25; with building areas from the permit record the four fab plans read from imagery now have an independent comparison, and they agree within 5%.
+The earlier check that divided 128,900 m² by the P2 plan was withdrawn in v7.25; with building areas from the permit record the four fab plans read from imagery now have an independent comparison. They are within 5% when the east strip is counted and 1–7% smaller without it (see v7.27).
 
 Floor numbers shown in the permit snapshot: FAB building 1–9 above ground and 1 basement; FAB building-2 and -3 1–8 and 1 basement; FAB building-4 1–8 with no basement row (not proof that there is none); complex building and EUV building 1–9 and 1 basement; UT building and UT building-2 1–5 and 1 basement; Office building 1–10, Office building-2 1–12 (the press says 9 and 11 storeys; counting method unknown). In the four fab buildings floors 1, 3, 4, 5 and 7 carry roughly a full footprint each, floors 2 and 6 are small and floor 8 is about half — recorded as observed areas only. These are permit floor numbers, not heights, floor heights or the number of production levels; the model keeps its eight-level concept section, the concept cleanroom levels 3F and 7F and the assumed 83 m.
 
@@ -412,6 +447,8 @@ Follow-up on the same day (wording and meta only):
 Held: assignment of building-name suffixes to P numbers; any change of height, floor count or section; splitting `UT-12` or `UT-34` into separate buildings (the imagery shows roof zones, not building joints); roads and bridges (no new reading in this version); the P4–P5 bridge.
 
 ## Verification done for this release
+
+v7.27: Korean and English data files compared element by element (1,468 ids, source keys, grades and boxes identical; no duplicate id; no untranslated note or viewer label). Against v7.26, no box or grade changed; 36 notes, 4 names and 3 meta entries changed.
 
 v7.26: Korean and English data files compared element by element (1,468 ids, source keys, grades and boxes identical; no duplicate id; no untranslated note). Against v7.25, no existing element changed box or grade; ten elements were added.
 
