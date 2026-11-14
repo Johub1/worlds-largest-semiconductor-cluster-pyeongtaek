@@ -269,7 +269,7 @@ Found on the map but outside the modelled ground, so listed here only: Lam Resea
 
 **P5 site note.** A second press figure for P5 Fab 1 (211 m × 638 m, triple fab, about 100 m high, 1.45 million m²; Hankook Ilbo 2026-10-30, opened and checked) now stands next to the earlier 650 m × 195 m figure. Because they differ, the model still draws only the site extent.
 
-**Evidence intake.** A bundle of 24 items (SP-E001–E024) was received from the companion financial-analysis workstream and judged as follows. "Already in" means the model had it before; "held" means it is not used as geometry.
+**Evidence intake.** Bundles of 32 items in total (SP-E001–E032) were received from the companion financial-analysis workstream and judged as follows. "Already in" means the model had it before; "held" means it is not used as geometry.
 
 | Item | Subject | Verdict | Where / why |
 |---|---|---|---|
@@ -295,6 +295,15 @@ Found on the map but outside the modelled ground, so listed here only: Lam Resea
 | SP-E017 | Industrial water and reclaimed sewage supply | Already in | Water group sources |
 | SP-E018 | Site area 2.89 million m² vs about 3.9 million m² | Partly in | Official 2.89/2.83 million m² (Samsung) in the model. Notice No. 2026-189 gives 3,905,709.9 m² for the whole industrial complex and 2,861,212.4 m² of manufacturing land; these are different scopes, and whether either equals Samsung's 2.89 million m² is not confirmed |
 | SP-E023 | Company-wide water flow | Held | Not separable for Pyeongtaek |
+| SP-E025 | Notice No. 2026-189: zone A1-1 at 350% or less | In (note) | Same as SP-E009: element PAD-P5 note, source GG_2026_189 |
+| SP-E026 | Whole complex 3,905,709.9 m², manufacturing land 2,861,212.4 m² (notice); GH overview 3,906 thousand m² | Recorded | Same as SP-E018. No model boundary is fitted to either figure; Samsung's 2.89 million m² is kept as Samsung's own figure |
+| SP-E027 | Public wastewater treatment basic plan: 340,000 m³/day in four stages; discharge Seojeongni Stream → Jinwi Stream → Anseong Stream | Historical value only | The 2026 notice gives 450,000 m³/day (R8), so 340,000 is not used as the current plan. The discharge order is recorded in `meta.infra_plan` |
+| SP-E028 | Stage capacities and the stage-3 building (9,874 m² treatment facility, a separate 9,081 m² building with B2–3F) from contractor material | Held | Stage figures conflict (R7 open). The storey count applies to one building only and its position inside the lot is unknown, so the existing PUB-WWTP boxes are unchanged. The register heights already in the PUB-WWTP note stay |
+| SP-E029 | GH overview: older water and energy plan values | Not used | Superseded in date by the 2026 notice; the odd power unit is not used or corrected |
+| SP-E030 | Samsung E&A project page: Pyeongtaek water plant 130,000 m³/day, 145,000 after expansion; stage 1 for P1–P2, expansion for P3 Ph1, stage 2 for P3–P4 | Recorded, no element | Process-water treatment, not UPW capacity; page date unknown; no position, so no water plant is drawn. In `meta.infra_plan` |
+| SP-E031 | Press figures for water supplied and used | Held | Definitions differ between articles |
+| SP-E032 | Air emission capacities from EIA or integrated permit | Not found | No stack count or capacity is put into the model |
+| R8 | Notice pages 10–12: 3,324,190 kVA, 478,950 m³/day water, 449,211 m³/day wastewater, 450,000 m³/day public facility | Recorded | `meta.infra_plan` in `campus.json`, v7.24. Plan figures for the whole complex; not converted into geometry, counts or pipe sizes |
 
 ## Verification done for this release
 
