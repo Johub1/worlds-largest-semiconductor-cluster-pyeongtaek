@@ -5,6 +5,7 @@
 - Notes extended on `UT-12` (the "240,000 refrigeration tons" is a size expression, not a daily volume, load or count; not copied to P3/P4), `BR-34a/b/c` (press photo caption on four bridges recorded as a concept note, new source `DEALSITE_BR`) and `PUB-WWTP` (use-approval date is not an operation date).
 - `KEPCO-PAD` note corrected: the press figure of about 100,000 m² is no longer said to correspond to the register's site area; press, site area and total floor area are recorded side by side.
 - Evidence intake for ten more items (SP-E049–E058) in README; none required a new element.
+- Seventh bundle (SP-E059–E062): the register rows for lots 1695 and 1696 were already in the model; they were queried again and match. `meta.floor_area.gov_register_campus` reworded (query result, not a building count; Technology building-2 left unassigned; lot areas 1,833,839.5 m² and 804,237.8 m² recorded without fitting any boundary). Stale wording removed from the `OFF-2` note.
 - 179 sources (38 official, 42 international, 99 Korean).
 - STEP read-back: 1,234 solids, 7,071 faces; DXF audit 0 errors; Korean and English data identical in ids, sources, grades and boxes.
 

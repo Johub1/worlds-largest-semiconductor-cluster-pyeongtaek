@@ -347,6 +347,18 @@ Overlap check before intake: the public wastewater plant (4 elements `PUB-WWTP*`
 | SP-E057 | Building register, Godeok-dong 1721: three buildings of the public wastewater plant with storeys, heights and areas | Already in, wording added | The register heights (30.2 m, 13.2 m, 18.1 m) were recorded in v7.21. Which box is which building is still unsettled, so box heights stay arbitrary. The rows relayed in this bundle are a transcription; Codex checked only their sums (total floor area matches 21,840.49 m²; building areas differ by 24.36 m²). The stage-3 floor area of 9,080.72 m² is numerically close to a contractor's published 9,081 m² |
 | SP-E058 | Building register, Godeok-dong 1730: KEPCO converter station and substations with storeys, heights and areas | Already in, wording corrected | `KEPCO-PAD` note, v7.25. Existing `SS-*` boxes were matched to register buildings by comparing areas and say so; no further height is changed or copied. Sum of the per-building floor areas differs from the register total by 11.39 m² (Codex arithmetic) |
 
+Seventh bundle (campus lots in the building register) and the sender's corrections to the sixth:
+
+| ID | Claim received | Verdict | Where / why |
+|---|---|---|---|
+| SP-E059 | Register, Godeok-dong 1695: Technology building-2 (11 floors and 1 basement, 67.90 m, building area 6,412.72 m²) and North gate building (2 floors, 10.32 m) | Already in, wording tightened | In the model since v7.12 from this workstream's own register query: `NGATE-BLD` and `meta.floor_area.gov_register_campus`. Queried again on 2026-11-14 through the Building HUB connector: every figure in the transcription matches (no request URL or raw response file is held). Technology building-2 is still not assigned to a box — `OFF-T` about 3,400 m², `OFF-2` about 6,020 m², `WA` about 7,050 m² against 6,412.72 m² — and its floors and height are not used for the P2 fab. The meta text no longer says "only two buildings are published" (it is a query result) and no longer says Office building 2 and Technology building-2 are different buildings |
+| SP-E060 | Register, Godeok-dong 1696: parking building of Complex 2 (4 floors and 1 basement, 20.99 m, building area 42,285.72 m², 4,858 indoor spaces) | Already in | `PARK-2` (plan from imagery, 1% from the register area; height from the register). Re-queried 2026-11-14, figures match. The main use "factory" in the register does not make it a production fab, and registered spaces are not occupancy or traffic |
+| SP-E061 | Site areas: 1,833,839.5 m² (lot 1695) and 804,237.8 m² (lot 1696), sum 2,638,077.3 m² | Recorded side by side | `meta.floor_area.gov_register_campus`. The extent of the 37 additional lots and the campus boundary are unverified; no boundary in the model is changed to fit 2.89 million m² or 2,861,212.4 m² |
+| SP-E062 | No register entry or floor levels for the P1 and P2 fabs yet; permit pages 2–8 and two more districts still to be queried | Agreed, unchanged | Fab heights and floor levels stay assumptions |
+| Corrections to E051, E056, E057, E058 | Sender withdraws the cooling-tower ownership wording, the "not the same floor" reading of PH2, "partly resolved" for the wastewater plant, and the reading of the press 100,000 m² as a site-area error | Consistent | The v7.25 notes above were already written within these limits; nothing to undo |
+
+Also corrected: the `OFF-2` note called the building a candidate for Office building 2, which contradicted `WA`; it now only compares its plan with the register area.
+
 ## Verification done for this release
 
 v7.25: Korean and English data files compared element by element (1,458 ids, source keys, grades and boxes identical; no duplicate id; no untranslated note).
