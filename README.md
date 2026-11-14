@@ -17,7 +17,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | Item | Content |
 |---|---|
 | Scope | The wider Pyeongtaek complex: fabs P1, P2, P3, P4, the EUV building (V2), utility buildings, cooling tower banks, office and support buildings, the KEPCO Godeok substation lot, the Linde Korea plant, the Godeok public wastewater treatment plant, the P5 construction site, the Air Products and Air First gas plants, the Samsung logistics warehouse west of Complex 2, and map points for supplier sites and construction camps |
-| Building elements | 1,457 elements (boxes and cylinders) with name, layer, confidence grade, source keys and a note each |
+| Building elements | 1,459 elements (boxes and cylinders) with name, layer, confidence grade, source keys and a note each |
 | Concept interior | 86,620 equipment boxes of 26 types on 8 floors per fab, 608 OHT rail segments, 10,440 structural members |
 | Concept utilities | 29 systems in 8 groups, 1,521 route segments (thermal, PCW, gas, exhaust, wastewater, chemicals, UPW, power) |
 | Concept EHS | 960 gas/exhaust flow lines, 1,152 gas detector points, 1,552 emergency equipment points, 15,320 egress travel-distance samples |
@@ -267,9 +267,11 @@ Found on the map but outside the modelled ground, so listed here only: Lam Resea
 
 **Rooftop of the utility building between P3 and P4.** The 2025-12-22 imagery shows rows of circular fans with vapour plumes on this roof. Five rows were added as presumed cooling towers (plan extent grade B), with 98 fan cylinders placed at an approximate 13 m pitch (grade C: the real count, maker and capacity are not confirmed), plus two rows of blue-topped modules whose use is not identified. Heights are arbitrary. Preview 29.
 
+**P1 roof racks.** In the imagery the outer strip of the perimeter band on the west half of P1 is roof surface. The south and north racks now cover the full band depth only on the east half; on the west half two new elements (P1-rack-S2, P1-rack-N2) cover the inner strip only.
+
 **P5 site note.** A second press figure for P5 Fab 1 (211 m × 638 m, triple fab, about 100 m high, 1.45 million m²; Hankook Ilbo 2026-10-30, opened and checked) now stands next to the earlier 650 m × 195 m figure. Because they differ, the model still draws only the site extent.
 
-**Evidence intake.** Bundles of 37 items in total (SP-E001–E037) were received from the companion financial-analysis workstream and judged as follows. "Already in" means the model had it before; "held" means it is not used as geometry.
+**Evidence intake.** Bundles of 42 items in total (SP-E001–E042) were received from the companion financial-analysis workstream and judged as follows. "Already in" means the model had it before; "held" means it is not used as geometry.
 
 | Item | Subject | Verdict | Where / why |
 |---|---|---|---|
@@ -305,6 +307,11 @@ Found on the map but outside the modelled ground, so listed here only: Lam Resea
 | SP-E032 | Air emission capacities from EIA or integrated permit | Not found | No stack count or capacity is put into the model |
 | SP-E033–E036 | Notice pages 10–12: power demand, water supply plan, wastewater, heat demand of the whole complex | Recorded | Same as R8, `meta.infra_plan`; heat demand (5,370,360 Gcal/year) is listed here only |
 | SP-E037 | Integrated environmental permit completed 2024-12-30 (press quoting the ministry); rooftop combined process-gas treatment (RCS) described in press | Held | Permit documents and capacities not obtained. The existing rooftop zones keep their neutral name; no RCS count or position is added |
+| SP-E038 | Later consolidated notice on the public wastewater basic plan (No. 2026-15, 2026-01-13) exists; stage figures are unverified candidates | Recorded | Same row as SP-E027; no stage capacity is used |
+| SP-E039 | Samsung E&A project page: P2 Phase 1 water treatment, EPC, completed 2020, 86,000 m³/day; scope lists air pollution control, water plant, ultrapure water production, wastewater treatment and reuse | Recorded as system types | The five system types already exist as concept utility groups. 86,000 m³/day is a project size, not the capacity of a green building, UPW output or an operating figure; nothing is sized or placed from it |
+| SP-E040 | Press: P4 as four kinds of facility (fab, complex, substation, green) with precast concrete quantities | Wording corrected | Element S1 note now says "four kinds of facility (a press classification, not a count of separate buildings)". Quantities conflict between articles (substation 15,000 vs 18,000 m³; items sum to 215,000 vs an estimated total of 200,000 m³) and are not used. "Steel plus precast" is a general trade description, not a confirmed P4 structure |
+| SP-E041 | Samsung C&T patent on segmented precast waffle beams; press description of composite columns at P5 | Concept only | The 3.6 m in the patent is the transport width given as background, not a span or a Pyeongtaek module. Beam and column items are different members. No dimension is taken into the model |
+| SP-E042 | Press (Seoul Economic Daily, 2026-04-23): half of P4 operating; east zones to follow after temporary use approval in July and November | Held | A plan reported in April, not a confirmed status. Temporary use approval, tool move-in, set-up, trial run and production are separate stages; no operating state is shown per zone |
 | R8 | Notice pages 10–12: 3,324,190 kVA, 478,950 m³/day water, 449,211 m³/day wastewater, 450,000 m³/day public facility | Recorded | `meta.infra_plan` in `campus.json`, v7.24. Plan figures for the whole complex; not converted into geometry, counts or pipe sizes |
 
 ## Verification done for this release
@@ -312,7 +319,7 @@ Found on the map but outside the modelled ground, so listed here only: Lam Resea
 | Check | Result |
 |---|---|
 | Fab bodies and all annexes overlaid on the zoom-18 satellite mosaic (about 0.48 m/px) | All four fab outlines and the east, west and north annexes fall on the imagery; three technology-cluster buildings were re-oriented in v7.13 after this check |
-| STEP read back with the OpenCascade kernel (v7.24 build) | 1,233 solids, 7,065 faces; the first 400 solids pass the shape validity check |
+| STEP read back with the OpenCascade kernel (v7.24 build) | 1,235 solids, 7,077 faces; the first 400 solids pass the shape validity check |
 | DXF read back and audited with ezdxf | 2D: 119,397 entities on 178 layers, 0 audit errors; 3D: 1,514 meshes on 166 layers, 0 audit errors; units metres |
 | Registered areas vs. plans read from imagery | Parking building 1%, Linde site 2.5%, wastewater plant 7%, KEPCO lot 0.4% |
 | Viewer | Loads without page errors, with no network requests; all 23 previews regenerated from this version |
