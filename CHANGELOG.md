@@ -3,8 +3,9 @@
 ## v7.24 — 2026-11-14
 - Utility building between P3 and P4: five presumed cooling tower rows with 98 fan cylinders and two rows of unidentified blue modules, read from imagery; 1,457 elements. Preview 29.
 - P1 roof racks corrected from imagery: full band depth on the east half only, inner strip on the west half (new elements P1-rack-S2, P1-rack-N2); 1,459 elements in total.
+- Three Samsung pages (glossary on fabs, OHT article, Line 1 block model) opened, checked and attached as sources to existing concept elements: FFU ceiling, interbay OHT aisles, plenum zones. No new element and no grade change.
 - P5 site note: second press figure for Fab 1 (211 m × 638 m) recorded next to the earlier one.
-- Evidence intake table for 42 items received from the financial-analysis workstream (README). P4 phase filing periods recorded in `meta.p4_phases.filings_latest`; the P3 Ph1 position now cites the filing instead of an inference.
+- Evidence intake table for 48 items received from the financial-analysis workstream (README). P4 phase filing periods recorded in `meta.p4_phases.filings_latest`; the P3 Ph1 position now cites the filing instead of an inference.
 - CITATION.cff restored: it was empty in the v7.20–v7.23 packages because of a script error; copies of v7.23 already distributed still contain the empty file.
 - Announcement posted on LinkedIn (link in README).
 - PAD-P5 note and source GG_2026_189: the official notice of 2026-07-30 keeps zone A1-1 at a floor-area ratio of 350% or less; the triple fab stays a press-reported plan.

@@ -6,7 +6,7 @@ Source priority: (1) official material and filings of Samsung Electronics and it
 
 Third-party imagery, video frames and vendor CAD were consulted but are not redistributed in this package.
 
-## Tier 1 — official material, filings, public registers, public maps and imagery (35)
+## Tier 1 — official material, filings, public registers, public maps and imagery (38)
 
 | Key | Source | URL |
 |---|---|---|
@@ -45,6 +45,9 @@ Third-party imagery, video frames and vendor CAD were consulted but are not redi
 | `KAKAO2` | Kakao Map place search (queried 2026-11-13): Samsung Electronics logistics warehouse (Godeok-dong 1696-1), Air Products Korea Pyeongtaek plant (Jangdang-dong 627), Air First Pyeongtaek plant (Bangchuk-ri 151-1, Godeok-myeon), Samsung E&A Pyeongtaek camps, SEMES Pyeongtaek office, Wonik IPS Pyeongtaek site, Hanyang ENG | https://map.kakao.com/ |
 | `GOOGLE2` | Google Maps place search (queried 2026-11-13): Air Products Korea Pyeongtaek plant — 1029 Gyeonggi-daero | https://www.google.com/maps |
 | `GG_2026_189` | Gyeonggi Province Notice No. 2026-189 (2026-07-30), approval of a change to the Pyeongtaek Godeok International Planning District general industrial complex plan (Korea Land Use Regulation Information Service): industrial complex 3,905,709.9 m², manufacturing land 2,861,212.4 m², base floor-area ratio of zone A1-1 350% or less | https://www.eum.go.kr/web/gs/gv/gvGosiDet.jsp?seq=639228 |
+| `OFF_SS_FAB101` | Samsung Semiconductor official glossary article 'All about the fab': air circulates from top to bottom through high-performance ceiling filters and perforated floor grating; OHT on ceiling rails carries FOUPs to the tools automatically (no specific fab named) | https://semiconductor.samsung.com/kr/support/tools-resources/dictionary/semiconductors-101-part-7-all-about-the-fab-the-birthplace-of-semiconductor-chips/ |
+| `OFF_SS_OHT` | Samsung Semiconductor global newsroom 2025-09-04: OHT on ceiling rails carries FOUPs; one vehicle travels about 100 km a day (no specific fab named) | https://news.samsungsemiconductor.com/global/the-invisible-highways-tracing-the-journey-inside-a-semiconductor-fab/ |
+| `OFF_SS_LEGO` | Samsung Semiconductor official page: Pyeongtaek Campus Line 1 reproduced as a 1:520 block model of about 15,000 pieces showing air showers, dry cooling coils and ULPA filters (a promotional model, not a drawing of the real building) | https://semiconductor.samsung.com/support/tools-resources/fabrication-process/a-lego-model-of-the-worlds-largest-semiconductor-production-line-fab-on-the-block/ |
 
 ## Tier 2 — international wire services, trade media, journals, patents and standards bodies (42)
 

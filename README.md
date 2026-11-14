@@ -21,7 +21,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | Concept interior | 86,620 equipment boxes of 26 types on 8 floors per fab, 608 OHT rail segments, 10,440 structural members |
 | Concept utilities | 29 systems in 8 groups, 1,521 route segments (thermal, PCW, gas, exhaust, wastewater, chemicals, UPW, power) |
 | Concept EHS | 960 gas/exhaust flow lines, 1,152 gas detector points, 1,552 emergency equipment points, 15,320 egress travel-distance samples |
-| Sources | 175 keyed sources in three tiers: 35 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 98 Korean press and local |
+| Sources | 178 keyed sources in three tiers: 38 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 98 Korean press and local |
 | Units, origin | metres; local tangent plane at WGS84 37.02 N, 127.06 E; X east, Y north, Z up |
 | Imagery date | 2025-12-22 (0.5 m) for dimensions; zoom-18 mosaic re-acquired 2026-11-12 for re-checks |
 
@@ -43,7 +43,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | `data/*.csv` | Elements, equipment, floors, phases, vendors, structure, EHS and utility tables |
 | `preview/` | 27 screenshots of the viewer |
 | `src/` | Export, viewer and check scripts that run on `data/campus.json`; `src/generator_ko/` holds the original generator and the translation tables (see "Rebuilding") |
-| `SOURCES.md` | All 175 sources with URLs, grouped by tier |
+| `SOURCES.md` | All 178 sources with URLs, grouped by tier |
 | `CONSULTATION.md` | Record of what other AI models proposed and what was adopted, verified, held or rejected |
 
 ## Coordinates
@@ -271,11 +271,13 @@ Found on the map but outside the modelled ground, so listed here only: Lam Resea
 
 **P5 site note.** A second press figure for P5 Fab 1 (211 m × 638 m, triple fab, about 100 m high, 1.45 million m²; Hankook Ilbo 2026-10-30, opened and checked) now stands next to the earlier 650 m × 195 m figure. Because they differ, the model still draws only the site extent.
 
-**Evidence intake.** Bundles of 42 items in total (SP-E001–E042) were received from the companion financial-analysis workstream and judged as follows. "Already in" means the model had it before; "held" means it is not used as geometry.
+**Layers by flow.** Air (FFU ceiling, plenum zones), wafer transport (OHT aisles, rails and vehicles in the concept interior), people (cores and the egress samples of the EHS layer) and piping (utility systems) are separate layers in the viewer and separate DXF layers. All of them are concept layers; the sources added in this version describe the principle only and do not raise any position to a higher grade.
+
+**Evidence intake.** Bundles of 48 items in total (SP-E001–E048) were received from the companion financial-analysis workstream and judged as follows. "Already in" means the model had it before; "held" means it is not used as geometry.
 
 | Item | Subject | Verdict | Where / why |
 |---|---|---|---|
-| SP-E001 | "Single fab" footprint about 120,000 m², floor area about 990,000 m² (Samsung newsroom, 2025-08-21) | Held | Checked by Codex: the article does not say which fab. Not opened here. The measured P3 footprint is about 174,700 m² and P1/P2 about 135,600/138,900 m², so 120,000 m² matches none of them directly |
+| SP-E001 | "Single fab" building area about 120,000 m², total floor area about 990,000 m² (Samsung Semiconductor newsroom, 2025-08-21) | Already a source, not used as a dimension | Opened and checked here: the article says "single fab" and "one of our fab facilities" at the Pyeongtaek campus without naming which fab. It was already cited as key `SITE_AREA` for the 2.89 million m² campus figure. The measured footprints are about 135,600 (P1), 138,900 (P2), 174,700 (P3) and 172,900 m² (P4), so 120,000 m² is not fitted to any of them |
 | SP-E002 | P3 "about 700 m" long (press) | Held, with a measurement | Imagery gives 623 m for the main body and 651 m with the end block |
 | SP-E003 | P1 about 2,000 tools (press) | Already in | Source key TOOLS, concept layer only |
 | SP-E004 | One production set (cleanroom + sub-fab below + air handling above) about 30 m high (press, said of P5) | Concept | Matches the model's generic section; not used as a P1–P4 dimension |
@@ -312,6 +314,12 @@ Found on the map but outside the modelled ground, so listed here only: Lam Resea
 | SP-E040 | Press: P4 as four kinds of facility (fab, complex, substation, green) with precast concrete quantities | Wording corrected | Element S1 note now says "four kinds of facility (a press classification, not a count of separate buildings)". Quantities conflict between articles (substation 15,000 vs 18,000 m³; items sum to 215,000 vs an estimated total of 200,000 m³) and are not used. "Steel plus precast" is a general trade description, not a confirmed P4 structure |
 | SP-E041 | Samsung C&T patent on segmented precast waffle beams; press description of composite columns at P5 | Concept only | The 3.6 m in the patent is the transport width given as background, not a span or a Pyeongtaek module. Beam and column items are different members. No dimension is taken into the model |
 | SP-E042 | Press (Seoul Economic Daily, 2026-04-23): half of P4 operating; east zones to follow after temporary use approval in July and November | Held | A plan reported in April, not a confirmed status. Temporary use approval, tool move-in, set-up, trial run and production are separate stages; no operating state is shown per zone |
+| SP-E043 | Samsung glossary article: air flows from ceiling filters down through the perforated floor | Source added to existing concept elements | 16 "FFU ceiling" elements (grade D) now also cite `OFF_SS_FAB101`. No new element, no grade change. The article names no fab and gives no height, flow or filter count |
+| SP-E044 | Samsung glossary and newsroom (2025-09-04): OHT on ceiling rails carries FOUPs; one vehicle about 100 km a day | Source added to existing concept elements | 16 "central aisle · interbay OHT" elements (grade D) now also cite `OFF_SS_FAB101` and `OFF_SS_OHT`. The existing concept rails and vehicles are reused; the 100 km figure is not used for route length, speed or vehicle count, and nothing is said about a P4–P5 link |
+| SP-E045 | Samsung page: Pyeongtaek Line 1 as a 1:520 block model showing air showers, dry cooling coils and ULPA filters | Source added to existing concept elements | 16 "FFU ceiling" and 16 "plenum zone" elements now also cite `OFF_SS_LEGO`, as a list of element kinds only. A promotional model is not a drawing; positions and counts are unchanged |
+| SP-E046 | Samsung newsroom articles (2022-10-26 and 2022-09-23): rooftop combined process-gas treatment (RCS) with catalyst, developed in 2009; treatment efficiency raised "up to 95%" | Held, principle recorded | Originals checked by Astra, not opened here. A general technology description: it is not a measured efficiency for any Pyeongtaek fab, every gas or every operating condition, and not a reduction rate of total emissions. Units, positions, capacities and connections are unknown, so the rooftop zones keep their neutral name and no RCS unit is placed |
+| SP-E047 | Samsung community page on the 2025-10-21 meeting: chemicals are handled in "five manufacturing buildings" and in gas and chemical supply buildings | Held | Original checked by Astra, not opened here. The wording counts chemical-handling facilities; which five buildings, whether each is a fab and whether they operate is not stated. They are not mapped to P1–P5 and no fifth fab or supply building is added |
+| SP-E048 | Samsung job interview (2018-09-06): facility work in three groups — utility supply, water treatment, environmental treatment; article on water (2020-05-22) | No change | Originals checked by Astra, not opened here. The three groups describe one job family, not the whole infrastructure (power is separate), so the model keeps its eight concept utility groups. The three uses of water are not merged into ultrapure water |
 | R8 | Notice pages 10–12: 3,324,190 kVA, 478,950 m³/day water, 449,211 m³/day wastewater, 450,000 m³/day public facility | Recorded | `meta.infra_plan` in `campus.json`, v7.24. Plan figures for the whole complex; not converted into geometry, counts or pipe sizes |
 
 ## Verification done for this release

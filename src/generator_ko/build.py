@@ -810,6 +810,9 @@ SOURCES["YT_P6"] = ("유튜브 달팽이의 반도체 현장(고덕달팽이부�
 SOURCES["P5_HK"] = ("한국일보 2026-10-30(현장 르포): P5 팹1 바닥 남북 211 m × 동서 638 m, 트리플 팹, 완공 시 높이 약 100 m, 연면적 145만㎡, 생산층 한 세트 30여 m", "https://www.hankookilbo.com/news/article/A2026102911560004232")
 SOURCES["GG_2026_189"] = ("경기도 고시 제2026-189호(2026-07-30) 평택 고덕국제화계획지구 일반산업단지계획 변경 승인 고시(토지이음): 산업단지 3,905,709.9㎡, 제조시설용지 2,861,212.4㎡, A1-1 기준용적률 350% 이하", "https://www.eum.go.kr/web/gs/gv/gvGosiDet.jsp?seq=639228")
 META["infra_plan"] = "산업단지 계획값(경기도 고시 제2026-189호, 2026-07-30, 10~12쪽 — Codex가 고시문을 대조, 이 모델 작성 과정에서는 직접 열지 못함). 전력수요량 3,324,190 kVA(유효전력 MW가 아님) / 용수공급계획 478,950 m³/일 = 공업용수 473,485 + 생활용수 5,465 / 오·폐수 449,211 m³/일(산단 밖 시설분 8,997 포함) / 공공폐수처리시설 규모 450,000 m³/일 / 통합 처리 후 서정리천 방류 계획. 모두 산업단지 전체의 계획값이며 특정 팹의 실제 소비량·가동 능력·준공 용량이 아님. 관경·설비 대수·위치로 바꿔 쓰지 않음. 정수(공정용수), 초순수, 사내 그린동 전처리, 산업단지 공공폐수처리시설은 서로 다른 단계임. 삼성E&A 실적 페이지의 평택 정수장 130,000 m³/일(1단계 증설 뒤 145,000 m³/일)은 공정용수 처리 규모이며 초순수 생산 능력이 아님(Codex와 역산분석 방이 페이지를 확인)"
+SOURCES["OFF_SS_FAB101"] = ("삼성전자 반도체 공식 용어 설명 '팹(FAB)의 모든 것': 천장 고성능 필터와 바닥 격자 구멍으로 공기가 위에서 아래로 순환, FOUP을 천장 레일의 OHT가 설비로 자동 운송(특정 공장 지칭 없음)", "https://semiconductor.samsung.com/kr/support/tools-resources/dictionary/semiconductors-101-part-7-all-about-the-fab-the-birthplace-of-semiconductor-chips/")
+SOURCES["OFF_SS_OHT"] = ("삼성 반도체 글로벌 뉴스룸 2025-09-04: 천장 레일의 OHT가 FOUP을 운반, 차량 1대가 하루 약 100 km 주행(특정 팹 지칭 없음)", "https://news.samsungsemiconductor.com/global/the-invisible-highways-tracing-the-journey-inside-a-semiconductor-fab/")
+SOURCES["OFF_SS_LEGO"] = ("삼성전자 반도체 공식 페이지: 평택캠퍼스 1라인을 1:520, 약 15,000피스 블록 모형으로 재현 — 에어 샤워, 드라이 쿨링 코일, ULPA 필터 표현(홍보용 모형이며 실제 도면이 아님)", "https://semiconductor.samsung.com/support/tools-resources/fabrication-process/a-lego-model-of-the-worlds-largest-semiconductor-production-line-fab-on-the-block/")
 META["source_policy"] = "출처 우선순위: (1) 삼성전자·시공사의 공식 자료와 공시, 공공 대장 (2) 국제 통신사·해외 전문 매체(Reuters, TrendForce, DIGITIMES 등) (3) 국내 언론. 같은 사실에 여러 출처가 있으면 앞 순위를 먼저 적는다. 해외 매체가 국내 보도를 인용한 경우가 많으므로 원 보도도 함께 남긴다"
 META["products"] = dict(
     rule="삼성전자 공식 발표와 보도에 나온 내용만 적는다. 건물 안 어느 구역인지는 공개된 경우에만 적고, 나머지는 '구역 미공개'로 둔다. 제품 구성은 수요에 따라 자주 바뀌므로 보도 시점을 함께 본다",
@@ -831,6 +834,10 @@ if __name__ == "__main__":
     # v7.21: storage tanks are exported as cylinders (diameter = shorter plan side of the box)
     CYL_OLD = ("원통형 탱크도 상자로 단순화", "원통형 탱크·공정 설비는 상자로 단순화")
     for e in ELEMS:
+        # v7.24: official Samsung descriptions attached to existing concept layers (kind and principle only; grades unchanged)
+        if e["layer"] == "FFU 천장": e["src"] += [k for k in ("OFF_SS_FAB101", "OFF_SS_LEGO") if k not in e["src"]]
+        if e["layer"] == "플레넘 구역": e["src"] += [k for k in ("OFF_SS_LEGO",) if k not in e["src"]]
+        if e["layer"] == "공정 구역" and "OHT" in e["name"]: e["src"] += [k for k in ("OFF_SS_FAB101", "OFF_SS_OHT") if k not in e["src"]]
         if e["id"] == "LINDE-NE":
             e["box"][5] = 22.55; e["conf"] = "M"; e["note"] += " 높이 갱신(v7.21): 건축물대장(고덕동 1722) 주건축물 제38동이 건축면적 2,796.08㎡·높이 22.55 m로, 이 박스 평면(약 2,756㎡)과 1.4% 차이여서 같은 건물로 보고 높이를 22.55 m로 적용. 대응은 면적 비교에 따른 추정"
             if "BLDG_REG" not in e["src"]: e["src"].append("BLDG_REG")
