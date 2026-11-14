@@ -267,17 +267,22 @@ Found on the map but outside the modelled ground, so listed here only: Lam Resea
 
 **P5 site note.** A second press figure for P5 Fab 1 (211 m × 638 m, triple fab, about 100 m high, 1.45 million m²; Hankook Ilbo 2026-10-30, opened and checked) now stands next to the earlier 650 m × 195 m figure. Because they differ, the model still draws only the site extent.
 
-**Evidence intake.** A bundle of 23 items (SP-E001–E023) was received from the companion financial-analysis workstream and judged as follows. "Already in" means the model had it before; "held" means it is not used as geometry.
+**Evidence intake.** A bundle of 24 items (SP-E001–E024) was received from the companion financial-analysis workstream and judged as follows. "Already in" means the model had it before; "held" means it is not used as geometry.
 
 | Item | Subject | Verdict | Where / why |
 |---|---|---|---|
-| SP-E001 | "Single fab" footprint about 120,000 m², floor area about 990,000 m² (Samsung newsroom) | Held | Page not opened here. The measured P3 footprint is about 174,700 m² and P1/P2 about 135,600/138,900 m², so 120,000 m² matches none of them directly |
+| SP-E001 | "Single fab" footprint about 120,000 m², floor area about 990,000 m² (Samsung newsroom, 2025-08-21) | Held | Checked by Codex: the article does not say which fab. Not opened here. The measured P3 footprint is about 174,700 m² and P1/P2 about 135,600/138,900 m², so 120,000 m² matches none of them directly |
 | SP-E002 | P3 "about 700 m" long (press) | Held, with a measurement | Imagery gives 623 m for the main body and 651 m with the end block |
 | SP-E003 | P1 about 2,000 tools (press) | Already in | Source key TOOLS, concept layer only |
 | SP-E004 | One production set (cleanroom + sub-fab below + air handling above) about 30 m high (press, said of P5) | Concept | Matches the model's generic section; not used as a P1–P4 dimension |
-| SP-E005 | P4 phases Ph1–Ph4 as lower-west, lower-east, upper-west, upper-east | Already in | Viewer phase table; "lower/upper" is a vertical reading and is not drawn as plan quadrants. Contract periods other than Ph2 are not checked here |
+| SP-E005 | P4 phases Ph1–Ph4 as lower-west, lower-east, upper-west, upper-east | Already in, updated | Viewer phase table; "lower/upper" is vertical and is not drawn as plan quadrants. Latest amended periods and amounts (checked against DART originals by Codex and Astra, not opened here) are in `campus.json` → `meta.p4_phases.filings_latest`: Ph1 2023-03-01 to 2025-12-31, Ph2 2023-07-15 to 2027-12-31, Ph3 2024-06-17 to 2026-03-31, Ph4 2025-07-18 to 2027-04-30. These are the fit-out periods stated in the filings, not actual start or operation dates. The Ph2 amount is VAT-excluded while the others are VAT-included, so they must not be summed as they stand |
+| SP-E024 | P3 phases: Ph1 lower west, Ph2 upper west, Ph3 lower east, Ph4 upper east (Samsung C&T filings, originals checked by Codex and by the financial-analysis workstream) | Already in, basis upgraded | The viewer phase table already had this arrangement; the P3 Ph1 entry was an inference and now cites the filing. P3 and P4 number their phases differently (P4: Ph2 lower east, Ph3 upper west), so phase numbers are kept per fab and never copied between fabs. Boundaries, floor numbers and coordinates stay unconfirmed |
+| Withdrawn by the sender | Splitting P4 into four plan zones (from SP-E005); fitting the P3 footprint to 120,000 m² (from SP-E001) | Not applied | Neither was ever applied to the model |
+| Profit sensitivity figures | — | Not used | No profit or cost figure is put into the building model |
 | SP-E006 | Buildings named in contract titles (fab, complex, green, substation, air pollution control, UPW) | Already in | Phase table scope line |
-| SP-E007, E019, E020, E021 | Contract filings (P3 green building and water plant, gas supply tunnel, P5 water plant, P5 work packages) | Held | Filings could not be opened from this workspace; amounts are never turned into size or position |
+| SP-E007 | P3 filings by Samsung E&A: green building structure and water plant phase 2, 154 kV structure | Record only | Checked against originals by Astra. They show that such contracts exist; location, completion, number of buildings and power capacity are not in the filings, so nothing is placed |
+| SP-E020 | Kolon Global filing "Pyeongtaek P5 water plant 3-gi" | Record only | Checked by Codex. What "3-gi" means (three units, third unit or third phase) is not defined in the filing, so no water plant is drawn or multiplied |
+| SP-E019, E021 | Gas supply tunnel, P5 work packages | Held | Not opened here; amounts and package numbers are never turned into size or position |
 | SP-E008 | P5 Fab 1 dimensions | In (note only) | Element PAD-P5, v7.24 |
 | SP-E009, E010, E015, E022 | P5 floor-area ratio change, Fab 2 site 661 m × 194 m, new substations, capacity | Held | Plans or press not opened here |
 | SP-E011 | P4–P5 bridge about 360 m | Held | Article not retrievable; connection points unknown, so no bridge is drawn |

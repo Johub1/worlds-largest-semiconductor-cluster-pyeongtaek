@@ -3,7 +3,7 @@
 ## v7.24 — 2026-11-14
 - Utility building between P3 and P4: five presumed cooling tower rows with 98 fan cylinders and two rows of unidentified blue modules, read from imagery; 1,457 elements. Preview 29.
 - P5 site note: second press figure for Fab 1 (211 m × 638 m) recorded next to the earlier one.
-- Evidence intake table for 23 items received from the financial-analysis workstream (README).
+- Evidence intake table for 24 items received from the financial-analysis workstream (README). P4 phase filing periods recorded in `meta.p4_phases.filings_latest`; the P3 Ph1 position now cites the filing instead of an inference.
 - CITATION.cff restored: it was empty in the v7.20–v7.23 packages because of a script error; copies of v7.23 already distributed still contain the empty file.
 - Announcement posted on LinkedIn (link in README).
 - STEP read-back: 1,233 solids, 7,065 faces; DXF audit 0 errors.
