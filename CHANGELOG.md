@@ -1,5 +1,11 @@
 # Changelog
 
+## v7.33 — 2026-11-15
+- New `meta.design_firm_records`; sources `SAMOO_P2`, `SAMOO_INSIGHT`, `POSCOANC_P5`, `EA_SR2018`. Samoo's P2-Project record (828,992 m², 8 floors + 1 basement, 2021) is recorded without assigning it to a building; one design-stage rendering compared qualitatively (not redistributed, no dimension read).
+- `PAD-P5` note: POSCO A&C CM/CS record (year 2028 is a future year). `UT-12-UPW` note: CEDI stated for the P1 ultrapure water project (box remains conceptual).
+- `P1-endblk` … `P4-endblk`: names and notes now say the east strip is undetermined rather than "probably a wall face".
+- No box changed. 1,474 elements; 189 sources (47 official, 42 international, 100 Korean).
+
 ## v7.32 — 2026-11-15
 - `meta.imagery_geometry`: orthophoto capture with a recorded scale — bright roof edges of the northern fab 526–547 m apart (two independent readings) and about 539 m here; scale-free length ÷ width about 2.57 on the orthophoto against 2.57 (Esri main body) and 2.70 (Esri with strip). No decision; no box changed. The length-only decision rule written in v7.31 is withdrawn.
 - New `meta.p_number_layout` and source `SSEC_20251023`: a brokerage report labels P1–P4 north to south, as the model does.

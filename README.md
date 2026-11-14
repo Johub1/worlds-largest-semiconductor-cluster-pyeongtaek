@@ -1,4 +1,4 @@
-# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.32 (English edition)
+# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.33 (English edition)
 
 > **Status: living project, updated continuously.** This model is revised whenever new public material is found or an error is reported; the current version and every change are listed in `CHANGELOG.md`. Corrections backed by a public source are welcome through GitHub Issues. Latest version: https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek
 
@@ -21,7 +21,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | Concept interior | 86,620 equipment boxes of 26 types on 8 floors per fab, 608 OHT rail segments, 10,440 structural members |
 | Concept utilities | 29 systems in 8 groups, 1,521 route segments (thermal, PCW, gas, exhaust, wastewater, chemicals, UPW, power) |
 | Concept EHS | 960 gas/exhaust flow lines, 1,152 gas detector points, 1,552 emergency equipment points, 15,320 egress travel-distance samples |
-| Sources | 185 keyed sources in three tiers: 43 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 100 Korean press and local |
+| Sources | 189 keyed sources in three tiers: 47 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 100 Korean press and local |
 | Units, origin | metres; local tangent plane at WGS84 37.02 N, 127.06 E; X east, Y north, Z up |
 | Imagery date | 2025-12-22 (source resolution 0.5 m, per Esri's metadata layer) for dimensions; the zoom-18 mosaic used for re-checks was downloaded on 2026-11-12 and 13 |
 
@@ -43,7 +43,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | `data/*.csv` | Elements, equipment, floors, phases, vendors, structure, EHS and utility tables |
 | `preview/` | 27 screenshots of the viewer |
 | `src/` | Export, viewer and check scripts that run on `data/campus.json`; `src/generator_ko/` holds the original generator and the translation tables (see "Rebuilding") |
-| `SOURCES.md` | All 185 sources with URLs, grouped by tier |
+| `SOURCES.md` | All 189 sources with URLs, grouped by tier |
 | `CONSULTATION.md` | Record of what other AI models proposed and what was adopted, verified, held or rejected |
 
 ## Coordinates
@@ -371,6 +371,16 @@ Eighth bundle and two data audits by Codex (meta wording only; no geometry chang
 
 Also corrected: the `OFF-2` note called the building a candidate for Office building 2, which contradicted `WA`; it now only compares its plan with the register area.
 
+## What v7.33 adds (design-firm records; ultrapure-water process note; east-strip wording; no geometry change)
+
+- **Design-firm portfolio record for P2** (new `meta.design_firm_records`, new source `SAMOO_P2`; page opened here and separately by Codex): Samoo Architects & Engineers lists "P2-Project", Pyeongtaek-si, Industrial, 828,992 m², 8 floors above ground and 1 basement, completion 2021. The page names no buildings, so the area is not assigned to any building and is not matched by combining building areas; its difference from the supervision record (592,077 m²) and from "FAB building-2" in the permit (591,152.02 m²) is a difference of unknown scope, not an error. 2021 is not a date of use approval or operation.
+- **One design-stage rendering on that page was compared qualitatively** (kept for internal review; not redistributed). Its arrangement — two long fabs side by side with one offset along its length, a lower building between them joined by elevated links, a nearly square tall building at the near end of the offset fab, roofs low in the middle with raised perimeter bands — does not conflict with the model's P1, P2, UT-12, BR-12a–f and V2 when read as a view from the west (the direction is this workstream's reading). It shows the west ends and so says nothing about the east strip. No dimension or height was read from it, no box changed, and no grade was raised.
+- **Samoo Insight article** (source `SAMOO_INSIGHT`, checked by Astra): names the Pyeongtaek campus as a master-planning example; gives no building list, areas or heights.
+- **P5** (`PAD-P5` note, source `POSCOANC_P5`, checked by Codex; the page could not be opened here): POSCO A&C lists "Pyeongtaek P5 Ph1 Semi-Production Facility CM/CS", client Samsung Electronics, year 2028 — a future year, not evidence of completion. Area and floor fields are empty placeholders. Not used for geometry.
+- **Ultrapure water at P1** (`UT-12-UPW` note, source `EA_SR2018`, checked by Codex; not opened here): Samsung Engineering's 2018 sustainability report states that CEDI was applied in the P1 ultrapure water project (reverse osmosis → CEDI instead of reverse osmosis → mixed bed). The 20,000 t/day in that report is the basis of an effect calculation, not the P1 capacity. The box stays grade D: its position, number and size are conceptual.
+- **East-strip wording brought in line with the current state** (`P1-endblk` … `P4-endblk`, names and notes): the names said the strip is "probably" the east wall; they now say it is undetermined (the v7.27 re-reading favoured a wall face; no determination up to v7.32). Geometry unchanged.
+- NGII general map (Astra): a rectangular outline is drawn at the northern fab, but as part of a tile image without readable geometry, date or ground/roof definition; not used as evidence of the wall line.
+
 ## What v7.32 adds (scaled orthophoto comparison; P-number cross-check; no geometry change)
 
 - **Orthophoto capture with a recorded scale** (Astra; 1.2021 projected m per screen pixel, EPSG:5179; the capture is kept for internal review and not redistributed). Distance between the bright roof edges of the northern fab: 531.3–547.0 m (Codex) and 526.5–543.4 m (Astra) — ranges of manual selection, not error intervals — and about 539 m in the brightness-profile reading made here. On the Esri imagery the same kind of edges are about 522 m apart for the roof-level main body and about 549 m with the east strip.
@@ -510,6 +520,8 @@ Held: assignment of building-name suffixes to P numbers; any change of height, f
 
 ## Verification done for this release
 
+v7.33: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.32, six elements changed in name, note or source list (`P1-endblk` to `P4-endblk`, `UT-12-UPW`, `PAD-P5`), no box changed, one meta entry and four sources were added (189: 47 official, 42 international, 100 Korean).
+
 v7.32: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.31, no element changed; one meta entry was extended, one added and one source added.
 
 v7.31: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.30, no element changed; two meta entries changed and one source was added.
@@ -529,7 +541,7 @@ v7.25: Korean and English data files compared element by element (1,458 ids, sou
 | Check | Result |
 |---|---|
 | Fab bodies and all annexes overlaid on the zoom-18 satellite mosaic (about 0.48 m/px) | All four fab outlines and the east, west and north annexes fall on the imagery; three technology-cluster buildings were re-oriented in v7.13 after this check |
-| STEP read back with the OpenCascade kernel (v7.32 build, geometry identical to v7.30) | 1,250 solids, 7,167 faces; the first 400 solids pass the shape validity check |
+| STEP read back with the OpenCascade kernel (v7.33 build, geometry identical to v7.30) | 1,250 solids, 7,167 faces; the first 400 solids pass the shape validity check |
 | DXF read back and audited with ezdxf | 2D: 119,633 entities on 178 layers, 0 audit errors; 3D: 1,694 meshes on 166 layers, 0 audit errors; units metres |
 | Registered areas vs. plans read from imagery | Parking building 1%, Linde site 2.5%, wastewater plant 7%, KEPCO lot 0.4% |
 | Viewer | Loads without page errors, with no network requests; all 23 previews regenerated from this version |
