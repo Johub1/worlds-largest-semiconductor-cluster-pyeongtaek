@@ -269,7 +269,7 @@ Found on the map but outside the modelled ground, so listed here only: Lam Resea
 
 **P5 site note.** A second press figure for P5 Fab 1 (211 m × 638 m, triple fab, about 100 m high, 1.45 million m²; Hankook Ilbo 2026-10-30, opened and checked) now stands next to the earlier 650 m × 195 m figure. Because they differ, the model still draws only the site extent.
 
-**Evidence intake.** Bundles of 32 items in total (SP-E001–E032) were received from the companion financial-analysis workstream and judged as follows. "Already in" means the model had it before; "held" means it is not used as geometry.
+**Evidence intake.** Bundles of 37 items in total (SP-E001–E037) were received from the companion financial-analysis workstream and judged as follows. "Already in" means the model had it before; "held" means it is not used as geometry.
 
 | Item | Subject | Verdict | Where / why |
 |---|---|---|---|
@@ -297,12 +297,14 @@ Found on the map but outside the modelled ground, so listed here only: Lam Resea
 | SP-E023 | Company-wide water flow | Held | Not separable for Pyeongtaek |
 | SP-E025 | Notice No. 2026-189: zone A1-1 at 350% or less | In (note) | Same as SP-E009: element PAD-P5 note, source GG_2026_189 |
 | SP-E026 | Whole complex 3,905,709.9 m², manufacturing land 2,861,212.4 m² (notice); GH overview 3,906 thousand m² | Recorded | Same as SP-E018. No model boundary is fitted to either figure; Samsung's 2.89 million m² is kept as Samsung's own figure |
-| SP-E027 | Public wastewater treatment basic plan: 340,000 m³/day in four stages; discharge Seojeongni Stream → Jinwi Stream → Anseong Stream | Historical value only | The 2026 notice gives 450,000 m³/day (R8), so 340,000 is not used as the current plan. The discharge order is recorded in `meta.infra_plan` |
-| SP-E028 | Stage capacities and the stage-3 building (9,874 m² treatment facility, a separate 9,081 m² building with B2–3F) from contractor material | Held | Stage figures conflict (R7 open). The storey count applies to one building only and its position inside the lot is unknown, so the existing PUB-WWTP boxes are unchanged. The register heights already in the PUB-WWTP note stay |
+| SP-E027 | Public wastewater treatment basic plan: 340,000 m³/day in four stages; discharge Seojeongni Stream → Jinwi Stream → Anseong Stream | Recorded side by side | 340,000 m³/day comes from the basic plan for the public facility (2011 document and a 2022 reprint); 450,000 m³/day comes from the 2026 industrial complex plan (R8). They are different documents and how they relate is not settled; neither is said to replace the other. A later consolidated notice (Han River Basin Environmental Office No. 2026-15, 2026-01-13) exists, but its text for this facility was not obtained (R7 open). Not used for geometry |
+| SP-E028 | Stage capacities and the stage-3 building (9,874 m² treatment facility, a separate 9,081 m² building with B2–3F) from contractor material | Held | Stage figures conflict (R7 open); the contractor sentence about 62,000 t/day does not itself say "stage 2". The storey count applies to one building only and its position inside the lot is unknown, so the existing PUB-WWTP boxes are unchanged. The register heights already in the PUB-WWTP note stay |
 | SP-E029 | GH overview: older water and energy plan values | Not used | Superseded in date by the 2026 notice; the odd power unit is not used or corrected |
 | SP-E030 | Samsung E&A project page: Pyeongtaek water plant 130,000 m³/day, 145,000 after expansion; stage 1 for P1–P2, expansion for P3 Ph1, stage 2 for P3–P4 | Recorded, no element | Process-water treatment, not UPW capacity; page date unknown; no position, so no water plant is drawn. In `meta.infra_plan` |
 | SP-E031 | Press figures for water supplied and used | Held | Definitions differ between articles |
 | SP-E032 | Air emission capacities from EIA or integrated permit | Not found | No stack count or capacity is put into the model |
+| SP-E033–E036 | Notice pages 10–12: power demand, water supply plan, wastewater, heat demand of the whole complex | Recorded | Same as R8, `meta.infra_plan`; heat demand (5,370,360 Gcal/year) is listed here only |
+| SP-E037 | Integrated environmental permit completed 2024-12-30 (press quoting the ministry); rooftop combined process-gas treatment (RCS) described in press | Held | Permit documents and capacities not obtained. The existing rooftop zones keep their neutral name; no RCS count or position is added |
 | R8 | Notice pages 10–12: 3,324,190 kVA, 478,950 m³/day water, 449,211 m³/day wastewater, 450,000 m³/day public facility | Recorded | `meta.infra_plan` in `campus.json`, v7.24. Plan figures for the whole complex; not converted into geometry, counts or pipe sizes |
 
 ## Verification done for this release
