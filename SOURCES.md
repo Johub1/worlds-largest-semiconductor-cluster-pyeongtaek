@@ -6,7 +6,7 @@ Source priority: (1) official material and filings of Samsung Electronics and it
 
 Third-party imagery, video frames and vendor CAD were consulted but are not redistributed in this package.
 
-## Tier 1 — official material, filings, public registers, public maps and imagery (47)
+## Tier 1 — official material, filings, public registers, public maps and imagery (50)
 
 | Key | Source | URL |
 |---|---|---|
@@ -54,6 +54,9 @@ Third-party imagery, video frames and vendor CAD were consulted but are not redi
 | `POSCOANC_P5` | POSCO A&C official portfolio No. 959 'Pyeongtaek P5 Ph1 Semi-Production Facility CM/CS': service CM, client Samsung Electronics, year 2028 (a future year) — original checked by Codex | https://poscoanc.com/en/project/portfolio_view.do?num=959 |
 | `EA_SR2018` | Samsung Engineering Sustainability Report 2018 (printed page 30): continuous electrodeionisation (CEDI) applied in the 'Samsung Electronics Pyeongtaek P1 ultrapure water project' — original checked by Codex | https://www.samsungena.com/filesview/2018%20Samsung%20Engineering%20Sustainability%20Report_Korean.pdf?folder=%2Fupload%2Fpublishing%2F&storedfile=9913c016cac9490d96d7b1645da90ee1.pdf |
 | `SAMOO_INSIGHT` | Samoo Architects & Engineers, official Insight article 'High-Tech Industrial Facility Design Services' (2025-08-07): names Samsung Electronics Pyeongtaek Campus as a master-planning example — original checked by Astra | https://samoo.com/home/about/insightview.do?bbsSn=49635 |
+| `SHINSUNG_2105` | Shinsung Engineering official reference list '2015 - 2019' (ishinsung.com 2105): Pyeongtaek P2L Ph1 lot 2 air handler supply and installation (AHU), P2L Ph1 DCC (dry coil), P-PJT Ph-4 DCC, P PJT Ph2 OAC — a list by contract year | https://ishinsung.com/product/partner/2105?lang=ko |
+| `SHINSUNG_2111` | Shinsung Engineering official reference list '2020 - 2022' (central air conditioning, ishinsung.com 2111): Pyeongtaek P2L Ph2 and Ph4 AHU, EUV V2 AHU, V2-Ph2 EUV building OAC, EUV lower finishing DCC, P1L V2L DCC, P3L Ph1–Ph3 DCC, P3L green building AHU, P3L infrastructure complex building ph3 DHC — a list by contract year | https://ishinsung.com/product/partner/2111 |
+| `SHINSUNG_2119` | Shinsung Engineering official reference list '2023' (central air conditioning, ishinsung.com 2119, posted 2024-07-08): Pyeongtaek P4 Ph1 lot 2 precision air conditioner and AHU supply and installation, P3L Ph2 and Ph4 DCC, P3L green building Ph4 AHU installation — a list by contract year | https://ishinsung.com/product/partner/2119 |
 | `OFF_SS_FAB101` | Samsung Semiconductor official glossary article 'All about the fab': air circulates from top to bottom through high-performance ceiling filters and perforated floor grating; OHT on ceiling rails carries FOUPs to the tools automatically (no specific fab named) | https://semiconductor.samsung.com/kr/support/tools-resources/dictionary/semiconductors-101-part-7-all-about-the-fab-the-birthplace-of-semiconductor-chips/ |
 | `OFF_SS_OHT` | Samsung Semiconductor global newsroom 2025-09-04: OHT on ceiling rails carries FOUPs; one vehicle travels about 100 km a day (no specific fab named) | https://news.samsungsemiconductor.com/global/the-invisible-highways-tracing-the-journey-inside-a-semiconductor-fab/ |
 | `OFF_SS_LEGO` | Samsung Semiconductor official page: Pyeongtaek Campus Line 1 reproduced as a 1:520 block model of about 15,000 pieces showing air showers, dry cooling coils and ULPA filters (a promotional model, not a drawing of the real building) | https://semiconductor.samsung.com/support/tools-resources/fabrication-process/a-lego-model-of-the-worlds-largest-semiconductor-production-line-fab-on-the-block/ |

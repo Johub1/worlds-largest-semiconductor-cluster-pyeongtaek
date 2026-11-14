@@ -1,5 +1,11 @@
 # Changelog
 
+## v7.34 — 2026-11-15
+- New `meta.hvac_supplier_records`; sources `SHINSUNG_2105`, `SHINSUNG_2111`, `SHINSUNG_2119` (Shinsung Engineering reference lists by contract year: DCC for P2L, EUV and P3L; AHU/OAC for P2L, EUV V2 and P4 Ph1; precision air conditioner for P4 Ph1).
+- Notes and source lists of the P2 and P3 return-air shafts (24) and `V2`; DCC and MAU type descriptions. Boxes unchanged and still grade D.
+- Correction: unsourced vendor names (Shinsung E&G for MAU and DCC, Hanyang ENG for DCC) removed from the "representative industry suppliers" field.
+- No box changed. 1,474 elements; 192 sources (50 official, 42 international, 100 Korean).
+
 ## v7.33 — 2026-11-15
 - New `meta.design_firm_records`; sources `SAMOO_P2`, `SAMOO_INSIGHT`, `POSCOANC_P5`, `EA_SR2018`. Samoo's P2-Project record (828,992 m², 8 floors + 1 basement, 2021) is recorded without assigning it to a building; one design-stage rendering compared qualitatively (not redistributed, no dimension read).
 - `PAD-P5` note: POSCO A&C CM/CS record (year 2028 is a future year). `UT-12-UPW` note: CEDI stated for the P1 ultrapure water project (box remains conceptual).

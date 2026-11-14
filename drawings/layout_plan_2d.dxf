@@ -489,7 +489,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461360.2532060184
+2461360.266238426
   9
 $TDUCREATE
  40
@@ -497,7 +497,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461360.253252315
+2461360.2662847224
   9
 $TDUUPDATE
  40
@@ -929,11 +929,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{0DE01BA7-B3DC-452C-98D2-092243D65CB2}
+{2A7F0B8C-9AF1-4460-8E2B-68B6782C716E}
   9
 $VERSIONGUID
   2
-{07C754EC-B094-43DC-A141-613F457F1249}
+{742BF55D-B882-4CCD-91DD-33076AD582D8}
   9
 $EXTNAMES
 290
@@ -1323,9 +1323,9 @@ ISM
   0
 CLASS
   1
-ACDBPLACEHOLDER
+LAYOUT
   2
-AcDbPlaceHolder
+AcDbLayout
   3
 ObjectDBX Classes
  90
@@ -1339,9 +1339,9 @@ ObjectDBX Classes
   0
 CLASS
   1
-LAYOUT
+ACDBPLACEHOLDER
   2
-AcDbLayout
+AcDbPlaceHolder
   3
 ObjectDBX Classes
  90
@@ -3753661,7 +3753661,7 @@ AcDbText
  40
 4.0
   1
-Representative industry suppliers (delivery to this site unconfirmed): Shinsung E&G, Samsung E&A (construction)
+Representative industry suppliers (delivery to this site unconfirmed): Samsung E&A (construction)   |   Site-related press and filings: Shinsung Engineering (a different company from Shinsung E&G) official reference list: Pyeongtaek 'P PJT Ph2 OAC supply and installation' (2017), 'P2L Ph1 lot 2 air handler supply and installation' (2019, 2021), 'P2L Ph2 and Ph4 AHU' (2021–2022), 'EUV V2 AHU' and 'V2-Ph2 EUV building OAC' (2021), 'P4 Ph1 lot 2 AHU supply and installation' (2023), among others — years are contract years; number, model, capacity and position are not in the list. The listed items are AHU and OAC; whether they are the same equipment as this model's MAU boxes is not established
   7
 KO
  11
@@ -3753725,7 +3753725,7 @@ AcDbText
  40
 4.0
   1
-Representative industry suppliers (delivery to this site unconfirmed): Shinsung E&G, Hanyang ENG   |   Site-related press and filings: Contract name 'P4 Ph4 DCC section' disclosed
+Representative industry suppliers (delivery to this site unconfirmed): Not established (company names without a source removed in v7.34)   |   Site-related press and filings: Project name 'Ph4 DCC lot' for P4 published. Shinsung Engineering (a different company from Shinsung E&G) official reference list: Pyeongtaek 'P2L Ph1 DCC' (2019), 'P2L Ph2 DCC', 'EUV lower finishing DCC' and 'P1L V2L DCC' (2021–2022), 'P3L Ph1 lot 1, Ph2, Ph3 and Ph4 DCC' (2021–2023), item dry coil — years are contract years; repeated rows with the same wording are not unit counts; number, model and position are not in the list. 'P-PJT Ph-4 DCC' of 2017 and 2018 is an old project-phase name and not the P4 fab
   7
 KO
  11
@@ -3755255,7 +3755255,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-14T21:04:37.939745+00:00
+1.4.5 @ 2026-11-14T21:23:23.221781+00:00
   0
 VISUALSTYLE
   5
@@ -3755967,7 +3755967,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-14T21:04:41.804896+00:00
+1.4.5 @ 2026-11-14T21:23:27.311463+00:00
   0
 ENDSEC
   0

@@ -1,4 +1,4 @@
-# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.33 (English edition)
+# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.34 (English edition)
 
 > **Status: living project, updated continuously.** This model is revised whenever new public material is found or an error is reported; the current version and every change are listed in `CHANGELOG.md`. Corrections backed by a public source are welcome through GitHub Issues. Latest version: https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek
 
@@ -21,7 +21,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | Concept interior | 86,620 equipment boxes of 26 types on 8 floors per fab, 608 OHT rail segments, 10,440 structural members |
 | Concept utilities | 29 systems in 8 groups, 1,521 route segments (thermal, PCW, gas, exhaust, wastewater, chemicals, UPW, power) |
 | Concept EHS | 960 gas/exhaust flow lines, 1,152 gas detector points, 1,552 emergency equipment points, 15,320 egress travel-distance samples |
-| Sources | 189 keyed sources in three tiers: 47 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 100 Korean press and local |
+| Sources | 192 keyed sources in three tiers: 50 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 100 Korean press and local |
 | Units, origin | metres; local tangent plane at WGS84 37.02 N, 127.06 E; X east, Y north, Z up |
 | Imagery date | 2025-12-22 (source resolution 0.5 m, per Esri's metadata layer) for dimensions; the zoom-18 mosaic used for re-checks was downloaded on 2026-11-12 and 13 |
 
@@ -43,7 +43,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | `data/*.csv` | Elements, equipment, floors, phases, vendors, structure, EHS and utility tables |
 | `preview/` | 27 screenshots of the viewer |
 | `src/` | Export, viewer and check scripts that run on `data/campus.json`; `src/generator_ko/` holds the original generator and the translation tables (see "Rebuilding") |
-| `SOURCES.md` | All 189 sources with URLs, grouped by tier |
+| `SOURCES.md` | All 192 sources with URLs, grouped by tier |
 | `CONSULTATION.md` | Record of what other AI models proposed and what was adopted, verified, held or rejected |
 
 ## Coordinates
@@ -371,6 +371,13 @@ Eighth bundle and two data audits by Codex (meta wording only; no geometry chang
 
 Also corrected: the `OFF-2` note called the building a candidate for Office building 2, which contradicted `WA`; it now only compares its plan with the register area.
 
+## What v7.34 adds (air-handling supplier records; own vendor-list correction; no geometry change)
+
+- **Supplier reference lists of Shinsung Engineering** (new sources `SHINSUNG_2105`, `SHINSUNG_2111`, `SHINSUNG_2119`; new `meta.hvac_supplier_records`; lists read from the original HTML by Codex and Astra, selected rows read here). The lists give contract year, contracting party, project name, item and site only. Established: DCC (dry coil) for P2L Ph1 and Ph2, the EUV building and P3L Ph1–Ph4; AHU and OAC for P2L, EUV V2 and P4 Ph1 lot 2; a precision air conditioner for P4 Ph1 lot 2; AHU for the P3L green building; "DHC" (undefined) for a P3L infrastructure complex building.
+- **Linked where the match is by name:** DCC and MAU equipment-type descriptions, the P2 and P3 return-air shafts (24 elements, note and source list only) and the `V2` note. The boxes stay grade D; no number, size or position was taken from the lists, because the lists contain none.
+- **Not added, with reasons:** no precision-air-conditioner type or box (no number, capacity, floor or room in the list, and the model has no such type — adding one would mean inventing a position and a count); P3L green-building AHU not attached to a box (which box is the P3 green building is not established); DHC and the infrastructure complex building held (undefined). Contract years are not delivery or operation years; repeated rows are not unit counts; "P-PJT Ph-4" (2017–2018) is an old phase name and is not fab P4.
+- **Own correction:** up to v7.33 the "representative industry suppliers" of MAU and DCC named Shinsung E&G and (for DCC) Hanyang ENG without any source. The company with verified records is Shinsung Engineering, a differently named company; the unsourced names were removed and the verified records placed in the site-evidence field. Shinsung E&G remains only where its own sources support it (FFU, cleanroom ceiling).
+
 ## What v7.33 adds (design-firm records; ultrapure-water process note; east-strip wording; no geometry change)
 
 - **Design-firm portfolio record for P2** (new `meta.design_firm_records`, new source `SAMOO_P2`; page opened here and separately by Codex): Samoo Architects & Engineers lists "P2-Project", Pyeongtaek-si, Industrial, 828,992 m², 8 floors above ground and 1 basement, completion 2021. The page names no buildings, so the area is not assigned to any building and is not matched by combining building areas; its difference from the supervision record (592,077 m²) and from "FAB building-2" in the permit (591,152.02 m²) is a difference of unknown scope, not an error. 2021 is not a date of use approval or operation.
@@ -520,6 +527,8 @@ Held: assignment of building-name suffixes to P numbers; any change of height, f
 
 ## Verification done for this release
 
+v7.34: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.33, 25 elements changed in note and source list only (`P2-…-ra-S/N`, `P3-…-ra-S/N`, `V2`), two equipment-type descriptions changed (`MAU`, `DCC`), no box changed, one meta entry and three sources were added (192: 50 official, 42 international, 100 Korean).
+
 v7.33: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.32, six elements changed in name, note or source list (`P1-endblk` to `P4-endblk`, `UT-12-UPW`, `PAD-P5`), no box changed, one meta entry and four sources were added (189: 47 official, 42 international, 100 Korean).
 
 v7.32: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.31, no element changed; one meta entry was extended, one added and one source added.
@@ -541,7 +550,7 @@ v7.25: Korean and English data files compared element by element (1,458 ids, sou
 | Check | Result |
 |---|---|
 | Fab bodies and all annexes overlaid on the zoom-18 satellite mosaic (about 0.48 m/px) | All four fab outlines and the east, west and north annexes fall on the imagery; three technology-cluster buildings were re-oriented in v7.13 after this check |
-| STEP read back with the OpenCascade kernel (v7.33 build, geometry identical to v7.30) | 1,250 solids, 7,167 faces; the first 400 solids pass the shape validity check |
+| STEP read back with the OpenCascade kernel (v7.34 build, geometry identical to v7.30) | 1,250 solids, 7,167 faces; the first 400 solids pass the shape validity check |
 | DXF read back and audited with ezdxf | 2D: 119,633 entities on 178 layers, 0 audit errors; 3D: 1,694 meshes on 166 layers, 0 audit errors; units metres |
 | Registered areas vs. plans read from imagery | Parking building 1%, Linde site 2.5%, wastewater plant 7%, KEPCO lot 0.4% |
 | Viewer | Loads without page errors, with no network requests; all 23 previews regenerated from this version |
