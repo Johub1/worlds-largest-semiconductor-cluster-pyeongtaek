@@ -6,7 +6,7 @@ Source priority: (1) official material and filings of Samsung Electronics and it
 
 Third-party imagery, video frames and vendor CAD were consulted but are not redistributed in this package.
 
-## Tier 1 — official material, filings, public registers, public maps and imagery (38)
+## Tier 1 — official material, filings, public registers, public maps and imagery (39)
 
 | Key | Source | URL |
 |---|---|---|
@@ -28,6 +28,7 @@ Third-party imagery, video frames and vendor CAD were consulted but are not redi
 | `EA_P2WT` | Samsung E&A project page: Pyeongtaek P2 Phase 1 water treatment — wastewater treatment 86,000 m³/d; air pollution control, water purification, UPW, wastewater treatment and reuse facilities | https://samsungena.com/kr/business/project-template?idx=80 |
 | `OFF_SE_P2` | Samsung Newsroom 2020-08: Pyeongtaek line 2 in operation — total floor area 128,900㎡, site 2.89 million㎡ | https://news.samsung.com/kr/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-%EC%84%B8%EA%B3%84-%EC%B5%9C%EB%8C%80%EA%B7%9C%EB%AA%A8-%ED%8F%89%ED%83%9D-2%EB%9D%BC%EC%9D%B8-%EA%B0%80%EB%8F%99 |
 | `OFF_CT_PJT` | Samsung C&T E&C Group portfolio: Pyeongtaek complex (Pyeongtaek P-PJT) — total floor area 3,967,000㎡ | https://www.secc.co.kr/ko/business/portfolio/building/7 |
+| `KRX_P3PH4` | Samsung Engineering supply-contract filing (KRX KIND 2022-11-24): [P3 Ph4] green building and UT building, rooftop exhaust, UPW finishing works | https://kind.krx.co.kr/external/2022/11/24/000282/20221123000578/91370.htm |
 | `OFF_EA_P2EN` | Samsung E&A: Pyeongtaek P2 Utility Project — gross area 128,999㎡, UT and CT buildings | https://www.samsungena.com/en/business/project-template?idx=73 |
 | `OFF_SE_SITE` | Samsung Semiconductor Newsroom 2026-06: Pyeongtaek campus 2.83 million㎡ in total (about 860,000 pyeong) | https://news.samsungsemiconductor.com/kr/tag/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-%ED%8F%89%ED%83%9D%EC%BA%A0%ED%8D%BC%EC%8A%A4/ |
 | `OFF_EA_SR21` | Samsung Engineering Sustainability Report 2021: P3 green building project — total wastewater treatment capacity of the Godeok site 81,600 m³ | https://www.samsungena.com/resources/kr/file/2021_Samsung_Engineering_Sustainability_Report_Kr.pdf |
@@ -101,7 +102,7 @@ Third-party imagery, video frames and vendor CAD were consulted but are not redi
 | Key | Source | URL |
 |---|---|---|
 | `YT_RE` | Pyeongtaek real-estate channel (EZ TV) drone photos — P1–P4, V2 and the new office building site seen from the west | https://www.youtube.com/watch?v=2OaCpiqyLGE |
-| `P1_DIM` | ZDNet Korea 2022-08-25: production line 518 m long, 201 m wide, 83 m high / Etoday: P1 520 m long, 200 m wide | https://zdnet.co.kr/view/?no=20220825080050 |
+| `P1_DIM` | Etoday 2022-09-07: P1 about 520 m long and about 200 m wide (quoting an official; no height) / ZDNet Korea 2022-08-25: production line of the Pyeongtaek campus 518 m long, 201 m wide, 83 m high (P1 not named) | https://zdnet.co.kr/view/?no=20220825080050 |
 | `PRESS_TOUR` | Etoday 2022-09 site report: office and production buildings separate, overbridges | https://www.etoday.co.kr/news/view/2171028 |
 | `OFFICE` | Invest Chosun 2024-02: Office building 1 has 9 floors above ground (P1), Office building 2 has 11 (P2), Office building 3 is west of P3, Office building 6 north of P6 | https://www.investchosun.com/site/data/html_dir/2024/02/01/2024020180225.html |
 | `P2_FLOORS` | Hanbang Ubis supervision record: Pyeongtaek P2, B1F–8F, total floor area 592,077㎡ | https://kfubis.co.kr/board/af_supervision/46 |

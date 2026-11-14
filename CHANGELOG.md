@@ -6,7 +6,9 @@
 - `KEPCO-PAD` note corrected: the press figure of about 100,000 m² is no longer said to correspond to the register's site area; press, site area and total floor area are recorded side by side.
 - Evidence intake for ten more items (SP-E049–E058) in README; none required a new element.
 - Seventh bundle (SP-E059–E062): the register rows for lots 1695 and 1696 were already in the model; they were queried again and match. `meta.floor_area.gov_register_campus` reworded (query result, not a building count; Technology building-2 left unassigned; lot areas 1,833,839.5 m² and 804,237.8 m² recorded without fitting any boundary). Stale wording removed from the `OFF-2` note.
-- 179 sources (38 official, 42 international, 99 Korean).
+- `meta.floor_area` reworded after a data audit by Codex: the 128,900 m² figure is no longer treated as the P2 fab floor area and the "model plan may be 13% small" check is withdrawn; register values are marked as transcriptions; permit-query scope updated with SP-E063 (28 large rows, not assigned to any fab). The 592,077 m² / B1–8F supervision record is kept as a project-level figure.
+- Height wording corrected: the 83 m press figure does not name P1, so the P1 height is now shown as an assumption (viewer grade A → C) and P2–P4 as the same concept assumption; geometry unchanged. `UT-34` note records that a KRX filing names a "UT building" for P3 (new source `KRX_P3PH4`).
+- 180 sources.
 - STEP read-back: 1,234 solids, 7,071 faces; DXF audit 0 errors; Korean and English data identical in ids, sources, grades and boxes.
 
 ## v7.24 — 2026-11-14

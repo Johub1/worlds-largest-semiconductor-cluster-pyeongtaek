@@ -21,7 +21,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | Concept interior | 86,620 equipment boxes of 26 types on 8 floors per fab, 608 OHT rail segments, 10,440 structural members |
 | Concept utilities | 29 systems in 8 groups, 1,521 route segments (thermal, PCW, gas, exhaust, wastewater, chemicals, UPW, power) |
 | Concept EHS | 960 gas/exhaust flow lines, 1,152 gas detector points, 1,552 emergency equipment points, 15,320 egress travel-distance samples |
-| Sources | 179 keyed sources in three tiers: 38 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 99 Korean press and local |
+| Sources | 180 keyed sources in three tiers: 39 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 99 Korean press and local |
 | Units, origin | metres; local tangent plane at WGS84 37.02 N, 127.06 E; X east, Y north, Z up |
 | Imagery date | 2025-12-22 (0.5 m) for dimensions; zoom-18 mosaic re-acquired 2026-11-12 for re-checks |
 
@@ -43,7 +43,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | `data/*.csv` | Elements, equipment, floors, phases, vendors, structure, EHS and utility tables |
 | `preview/` | 27 screenshots of the viewer |
 | `src/` | Export, viewer and check scripts that run on `data/campus.json`; `src/generator_ko/` holds the original generator and the translation tables (see "Rebuilding") |
-| `SOURCES.md` | All 179 sources with URLs, grouped by tier |
+| `SOURCES.md` | All 180 sources with URLs, grouped by tier |
 | `CONSULTATION.md` | Record of what other AI models proposed and what was adopted, verified, held or rejected |
 
 ## Coordinates
@@ -75,15 +75,15 @@ Korean press still makes up most of the list because contract amounts, phase nam
 
 | Fab | Main body (m) | Incl. east end block (m) | Width (m) | Height (m) | Model cleanroom area, two levels (㎡) | Brokerage report figure (㎡) |
 |---|---|---|---|---|---|---|
-| P1 | 519 | 549 | 201 | 83 (A) | 135,598 | about 135,300 |
+| P1 | 519 | 549 | 201 | 83 (C) | 135,598 | about 135,300 |
 | P2 | 521 | 552 | 204 | 83 (C) | 138,908 | about 148,500 |
 | P3 | 623 | 651 | 208 | 83 (C) | 174,748 | about 181,500 |
 | P4 | 617 | 654 | 208 | 83 (C) | 172,852 | about 181,500 |
 
-- P1: official and press figures (518–520 m × 200–201 m × 83 m) agree with the satellite measurement.
-- P2, P3, P4 heights are not public; in drone photos taken from the west the four fabs look about the same height, so P1's 83 m is assumed.
+- P1: the press plan figure that names P1 (about 520 m × 200 m, Etoday 2022-09-07) agrees with the satellite measurement. The 83 m comes from a ZDNet article (518 × 201 × 83 m) that speaks of "the production line of the Pyeongtaek campus" without naming P1, so the height is a model assumption from a press figure whose subject is unsettled (corrected in v7.25; it was shown as grade A before).
+- P2, P3, P4 heights are not public; in drone photos taken from the west the four fabs look about the same height, so the same 83 m is kept as a concept assumption — it is not a copy of a confirmed P1 height.
 - Press figures that disagree with the measurement (for example "P3 700 m") are recorded in the notes; the measurement is used.
-- Area policy: official material of Samsung Electronics, Samsung C&T, Samsung E&A and Samsung Heavy Industries comes first; press figures are reference only. Official figures found: campus site 2.89 million㎡ / 2.83 million㎡ (Samsung newsrooms), whole Pyeongtaek complex total floor area 3,967,000㎡ (Samsung C&T portfolio), P2 total floor area 128,900㎡ (Samsung Newsroom). No per-building areas for P1, P3 or P4 were found in official material.
+- Area policy: official material of Samsung Electronics, Samsung C&T, Samsung E&A and Samsung Heavy Industries comes first; press figures are reference only. Official figures found: campus site 2.89 million㎡ / 2.83 million㎡ (Samsung newsrooms), whole Pyeongtaek complex total floor area 3,967,000㎡ (Samsung C&T portfolio), and a figure worded as "total floor area 128,900㎡" for P2 (Samsung Newsroom; Samsung E&A utility project page) whose scope is unsettled — it is not used as the floor area of the P2 fab and is not compared with the model plan. No per-building areas for P1, P3 or P4 were found in official material.
 
 ## Floor arrangement (estimated; floor heights are assumed)
 
@@ -220,13 +220,13 @@ Every statement below comes from the cited public source; nothing was measured o
 | Public wastewater plant: register heights recorded in the note (30.2 m, 13.2 m, 18.1 m) | Building register (Godeok-dong 1721) | Which box is which building is unsettled, so model heights are unchanged |
 | New preview 28 (Linde plant) | — | — |
 
-Fab heights: P1 uses the 83 m reported by the press; P2–P4 carry the same value as an assumption (grade C in the viewer table). The register query for the campus lot returned only two records (a gate building and Technical Building 2, 67.9 m, 11 storeys), not the fabs.
+Fab heights: all four fabs use 83 m as an assumption (grade C in the viewer table); the press figure behind it does not name a fab, and measurement boundary, legal height and floor heights are unconfirmed. The register query for the campus lot returned only two records (a gate building and Technical Building 2, 67.9 m, 11 storeys), not the fabs.
 
 ## What v7.22 adds (rooftop zones and a shadow-ratio height check)
 
 **Rooftop equipment zones.** Nine semi-transparent zones were added on the west and east perimeter bands of each fab and between the two central roofs of P3, where the 2025-12-22 imagery shows dense steel lattice and piping. Plan extents are read from imagery (grade B); the 6 m height is arbitrary and the equipment type is not identified, so the name stays neutral.
 
-**Shadow-ratio check.** No acquisition time is published for the imagery, so sun angles were not used. Instead, shadows in the same image were compared with the one height that has a published figure (P1, 83 m).
+**Shadow-ratio check.** No acquisition time is published for the imagery, so sun angles were not used. Instead, shadows in the same image were compared with the P1 model height of 83 m, itself an assumption from a press figure that does not name P1 — so the check tests whether the fabs are alike, not their absolute heights.
 
 | Measurement in the imagery | Value | Result |
 |---|---|---|
@@ -339,7 +339,7 @@ Overlap check before intake: the public wastewater plant (4 elements `PUB-WWTP*`
 | SP-E049 | Samsung E&A project page: P2 utility project — chilled water, steam, compressed air and industrial water for the lines; "up to about 240,000 refrigeration tons"; UT and CT buildings laid out in blocks | Recorded (note only) | `UT-12` note, v7.25. Reviewed by Codex; not reopened here in this version (the page was already source `P2_UT`). No position, count or floor is derived, and nothing is copied to P3 or P4 |
 | SP-E050 | Supplier notice: final shipment of modules for the P2 UT/CT buildings (2020-09-04) | Reference only | Kind and number of modules are not given; nothing to model |
 | SP-E051 | Supplier track record: cooling towers ordered by phase for P2, P3 and P4 | Held, unverified | The page returned 403/502 to Astra and is not reachable here either. The relayed rows are not used; no statement is made about who built the cooling towers, and the 98 fan cylinders stay an approximation read from imagery |
-| SP-E052 | No filing, official page or drawing names a UT or CT building for P3 or P4 | Agreed, unchanged | `UT-34` stays "presumed utility building" (grade B plan from imagery); `CT34-R1`–`R5` stay "presumed cooling tower rows". The P2 arrangement is not copied |
+| SP-E052 | In the filings, company pages and searches reviewed, nothing was found that names a UT or CT building for P3 or P4 | Agreed, unchanged | `UT-34` stays "presumed utility building" (grade B plan from imagery); `CT34-R1`–`R5` stay "presumed cooling tower rows". The P2 arrangement is not copied |
 | SP-E053 | No building register entry for the P1 or P2 fab was found in the areas queried | Agreed, unchanged | Fab heights and floor levels stay assumptions (see "What remains an estimate") |
 | SP-E054 | Press: office building 1 has 9 storeys, office building 2 has 11 | Already in | Elements `GATE-W` and `WA` already carry these as press figures; heights stay assumed |
 | SP-E055 | Press (2026-08-11): an overbridge of about 360 m for wafers is being built "in front of P4" | Held | Which face of P4, which P5 building, height and floor are not public. The P4–P5 bridge is still not drawn |
@@ -356,6 +356,18 @@ Seventh bundle (campus lots in the building register) and the sender's correctio
 | SP-E061 | Site areas: 1,833,839.5 m² (lot 1695) and 804,237.8 m² (lot 1696), sum 2,638,077.3 m² | Recorded side by side | `meta.floor_area.gov_register_campus`. The extent of the 37 additional lots and the campus boundary are unverified; no boundary in the model is changed to fit 2.89 million m² or 2,861,212.4 m² |
 | SP-E062 | No register entry or floor levels for the P1 and P2 fabs yet; permit pages 2–8 and two more districts still to be queried | Agreed, unchanged | Fab heights and floor levels stay assumptions |
 | Corrections to E051, E056, E057, E058 | Sender withdraws the cooling-tower ownership wording, the "not the same floor" reading of PH2, "partly resolved" for the wastewater plant, and the reading of the press 100,000 m² as a site-area error | Consistent | The v7.25 notes above were already written within these limits; nothing to undo |
+
+Eighth bundle and two data audits by Codex (meta wording only; no geometry change):
+
+| ID | Claim received | Verdict | Where / why |
+|---|---|---|---|
+| SP-E063 | Building-permit per-building summary, lot 1695: 28 transcribed rows of 10,000 m² or more under the main permit, five of them with floor areas of 530,000–720,000 m² | Recorded, held | `meta.floor_area.gov_register_campus`. 156 of 316 entries were queried (rows 41–200 not), no raw response is held, and the rows have no building name, floor count or height. The five large rows are not assigned to P1–P5, the sums (4,669,137.36 m² for the 28 rows, 3,152,674.05 m² for the top five) are not a campus total, and no floor count or height is derived from areas. Codex saw 701 floor-level permit rows for the lot on the official site (data month 2026-09) but has not received the file |
+| Namwoong Construction track record (Astra) | "Pyeongtaek line 3 FAB new construction — complex building", B1–9F, 2021-01-14 to 2022-04-30, prime contractor Samsung C&T | Source candidate only | It is the complex building, not the P3 fab and not P1 or P2. No height or position; no box is matched or changed |
+| `P2_FLOORS` (Hanbang Ubis supervision record, already a source) | "Samsung Electronics Pyeongtaek P2", posted 2023-11-14, B1F–8F, 592,077 m² (original checked by Astra) | Wording limited | `meta.floor_area.reference_press`. The record does not separate fab, complex building and utility, so it is a project-level figure and not the legal floor count of the P2 fab alone |
+| `P1_DIM` (Astra compared both articles) | Etoday names P1 and gives about 520 m × 200 m, no height; ZDNet gives 518 × 201 × 83 m for "the production line" without naming P1 | Corrected | Source text `P1_DIM`, fab notes of P1–P4, viewer height grade of P1 (A → C). The plan figure stays; 83 m is kept in the geometry as an assumption and is not moved to P3 or presented as a measurement |
+| KRX filing 2022-11-24 (Astra) | Samsung Engineering contract title "[P3 Ph4] green building and UT building, rooftop exhaust, UPW finishing works" | Name recorded | `UT-34` note and source `KRX_P3PH4`. This corrects the earlier statement that no document names a UT building for P3 (SP-E052); floors, height, number of buildings and identity with the complex building stay unconfirmed, and the box is unchanged |
+| Hansung Cleantech company brochure 2023 (Astra) | Work titles "P3 ultrapure water new construction — complex building 4F facility works" (p. 45) and complex-building facility works for P3 Ph2/3/4 and P4 Ph1 (p. 44) | Source candidate only | A work on the 4th floor, not a four-storey building; not merged with the Namwoong B1–9F record. No box is matched |
+| Meta audit (Codex) | Old conclusions left in `meta.floor_area` | Corrected | `official.P2` no longer treats 128,900 m² as the P2 fab floor area; `check` (model plan "may be 13% small") is withdrawn; `gov_register` says the values are transcriptions and gives the per-stage approval dates of the wastewater plant; `gov_register_parcels` counts rows, not buildings; the permit-query scope is updated |
 
 Also corrected: the `OFF-2` note called the building a candidate for Office building 2, which contradicted `WA`; it now only compares its plan with the register area.
 
