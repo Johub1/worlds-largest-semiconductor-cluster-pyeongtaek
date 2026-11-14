@@ -21,7 +21,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | Concept interior | 86,620 equipment boxes of 26 types on 8 floors per fab, 608 OHT rail segments, 10,440 structural members |
 | Concept utilities | 29 systems in 8 groups, 1,521 route segments (thermal, PCW, gas, exhaust, wastewater, chemicals, UPW, power) |
 | Concept EHS | 960 gas/exhaust flow lines, 1,152 gas detector points, 1,552 emergency equipment points, 15,320 egress travel-distance samples |
-| Sources | 181 keyed sources in three tiers: 40 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 99 Korean press and local |
+| Sources | 182 keyed sources in three tiers: 41 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 99 Korean press and local |
 | Units, origin | metres; local tangent plane at WGS84 37.02 N, 127.06 E; X east, Y north, Z up |
 | Imagery date | 2025-12-22 (0.5 m) for dimensions; zoom-18 mosaic re-acquired 2026-11-12 for re-checks |
 
@@ -43,7 +43,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | `data/*.csv` | Elements, equipment, floors, phases, vendors, structure, EHS and utility tables |
 | `preview/` | 27 screenshots of the viewer |
 | `src/` | Export, viewer and check scripts that run on `data/campus.json`; `src/generator_ko/` holds the original generator and the translation tables (see "Rebuilding") |
-| `SOURCES.md` | All 181 sources with URLs, grouped by tier |
+| `SOURCES.md` | All 182 sources with URLs, grouped by tier |
 | `CONSULTATION.md` | Record of what other AI models proposed and what was adopted, verified, held or rejected |
 
 ## Coordinates
@@ -402,6 +402,12 @@ Changes in the model (no existing box moved, resized or regraded):
 - `UT-34` renamed from "presumed UT building" to "candidate for the complex building or a UT building — unsettled". This also revises SP-E052: the permit record does name UT building, UT building-2, CT building and CT building-2 on the lot; where they stand is still unconfirmed.
 - `meta.floor_area`: the key "total floor area of the whole Pyeongtaek complex" is now "Samsung C&T Pyeongtaek P-PJT portfolio floor area (scope and reference date not stated)"; `gov_register_campus` no longer says the permit rows carry no building names or floor numbers.
 - Ten new elements from imagery on the roof of the building between P1 and P2 (grade B, plan extents ±3 m, type and height unknown, display heights arbitrary): equipment groups `UT12-RF-N1`–`N6`, steel lattice structures `UT12-RF-S1`–`S3`, and the central lengthwise strip `UT12-RF-SP`. They are separate from the concept equipment inside the building.
+
+Follow-up on the same day (wording and meta only):
+
+- **Full-column export.** Codex downloaded the per-building summary (316 rows, 29 columns) and the floor summary (701 rows, 24 columns) again with all columns. All 701 floor-level keys are unique, so the 19 rows that looked identical in eight columns are separate records. The main permit has 70 buildings, 28 of them with 10,000 m² or more — the table used here misses none of those, and its 28 building areas equal the full export (checked by script here against the 316-row joined table). Per-building floor areas of the 70 buildings add up to 4,713,467.42 m²; this is one permit on one lot, not a campus total. The full export has no height, coordinate or elevation column. The 42 smaller buildings are not tabulated in this repository.
+- **Wastewater basic plan.** The consolidated notice No. 2026-15 of the Han River Basin Environmental Office, item 36, gives 340,000 m³/day for Godeok as 120,000 + 67,500 + 92,500 + 60,000 (checked by Astra in the official text and PDF page 45; new source `R7_2026_15`). It is a plan capacity, not an operating one. It stands beside the 450,000 m³/day of the industrial-complex notice; no document linking the two was found. Recorded in `meta.infra_plan`; not used for any shape, count or layout.
+- **Corrections relayed by the financial-analysis workstream.** The KRX filing of 2022-11-24 for "[P3 Ph4] green building and UT building, rooftop exhaust, UPW finishing works" is the first filing of a contract already in their ledger, not a missing one. Four Samsung E&A finishing contracts for P3 carry "UT building" in their titles; the P4 contract titles they read do not. Their earlier summary (SP-E006) had copied the P4 wording onto P3; SP-E052 is revised accordingly. Contract amounts remain outside this model.
 
 Held: assignment of building-name suffixes to P numbers; any change of height, floor count or section; splitting `UT-12` or `UT-34` into separate buildings (the imagery shows roof zones, not building joints); roads and bridges (no new reading in this version); the P4–P5 bridge.
 

@@ -6,7 +6,8 @@
 - `UT-34` renamed: "presumed UT building" → "candidate for the complex building or a UT building — unsettled".
 - `meta.floor_area`: the 3,967,000 m² figure is now labelled as the Samsung C&T P-PJT portfolio floor area with scope and reference date not stated; the permit summary text updated.
 - Ten new roof elements read from imagery on the building between P1 and P2 (`UT12-RF-N1`–`N6`, `UT12-RF-S1`–`S3`, `UT12-RF-SP`), grade B, type and height unknown. 1,468 elements.
-- 181 sources (40 official, 42 international, 99 Korean).
+- Follow-up: permit summary in `meta.floor_area` updated with Codex's full-column export (316 per-building rows, 701 floor rows with unique keys; 70 buildings in the main permit); `meta.infra_plan` records the official 340,000 m³/day basic-plan capacity for Godeok (new source `R7_2026_15`) beside the 450,000 m³/day of the complex notice.
+- 182 sources (41 official, 42 international, 99 Korean).
 
 ## v7.25 — 2026-11-14
 - No box moved, resized or regraded. Removed `UT-34-CT`, an assumed cooling tower zone from an earlier version that overlapped the rows `CT34-R4`/`CT34-R5` and the unidentified blue modules read from imagery in v7.24; 1,458 elements.
