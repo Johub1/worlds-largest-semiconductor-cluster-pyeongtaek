@@ -1,5 +1,13 @@
 # Changelog
 
+## v7.25 — 2026-11-14
+- No box moved, resized or regraded. Removed `UT-34-CT`, an assumed cooling tower zone from an earlier version that overlapped the rows `CT34-R4`/`CT34-R5` and the unidentified blue modules read from imagery in v7.24; 1,458 elements.
+- Notes extended on `UT-12` (the "240,000 refrigeration tons" is a size expression, not a daily volume, load or count; not copied to P3/P4), `BR-34a/b/c` (press photo caption on four bridges recorded as a concept note, new source `DEALSITE_BR`) and `PUB-WWTP` (use-approval date is not an operation date).
+- `KEPCO-PAD` note corrected: the press figure of about 100,000 m² is no longer said to correspond to the register's site area; press, site area and total floor area are recorded side by side.
+- Evidence intake for ten more items (SP-E049–E058) in README; none required a new element.
+- 179 sources (38 official, 42 international, 99 Korean).
+- STEP read-back: 1,234 solids, 7,071 faces; DXF audit 0 errors; Korean and English data identical in ids, sources, grades and boxes.
+
 ## v7.24 — 2026-11-14
 - Utility building between P3 and P4: five presumed cooling tower rows with 98 fan cylinders and two rows of unidentified blue modules, read from imagery; 1,457 elements. Preview 29.
 - P1 roof racks corrected from imagery: full band depth on the east half only, inner strip on the west half (new elements P1-rack-S2, P1-rack-N2); 1,459 elements in total.

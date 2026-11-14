@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this model, please cite it as below."
 title: "Samsung Electronics Pyeongtaek Campus P1-P4 open 3D model (unofficial, built only from public sources)"
 type: dataset
-version: "7.24"
+version: "7.25"
 date-released: 2026-11-14
 license: CC-BY-4.0
 authors:
@@ -17,5 +17,5 @@ keywords:
 identifiers:
   - type: doi
     value: 10.5281/zenodo.24209049
-    description: "Zenodo archive of the earlier version 7.23. A DOI for version 7.24 exists only after its GitHub release has been archived on Zenodo."
+    description: "Zenodo archive of the earlier version 7.23. A DOI for version 7.25 exists only after its GitHub release has been archived on Zenodo."
 repository-code: "https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek"

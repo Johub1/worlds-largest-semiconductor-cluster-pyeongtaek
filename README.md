@@ -1,4 +1,4 @@
-# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.24 (English edition)
+# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.25 (English edition)
 
 > **Status: living project, updated continuously.** This model is revised whenever new public material is found or an error is reported; the current version and every change are listed in `CHANGELOG.md`. Corrections backed by a public source are welcome through GitHub Issues. Latest version: https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek
 
@@ -17,11 +17,11 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | Item | Content |
 |---|---|
 | Scope | The wider Pyeongtaek complex: fabs P1, P2, P3, P4, the EUV building (V2), utility buildings, cooling tower banks, office and support buildings, the KEPCO Godeok substation lot, the Linde Korea plant, the Godeok public wastewater treatment plant, the P5 construction site, the Air Products and Air First gas plants, the Samsung logistics warehouse west of Complex 2, and map points for supplier sites and construction camps |
-| Building elements | 1,459 elements (boxes and cylinders) with name, layer, confidence grade, source keys and a note each |
+| Building elements | 1,458 elements (boxes and cylinders) with name, layer, confidence grade, source keys and a note each |
 | Concept interior | 86,620 equipment boxes of 26 types on 8 floors per fab, 608 OHT rail segments, 10,440 structural members |
 | Concept utilities | 29 systems in 8 groups, 1,521 route segments (thermal, PCW, gas, exhaust, wastewater, chemicals, UPW, power) |
 | Concept EHS | 960 gas/exhaust flow lines, 1,152 gas detector points, 1,552 emergency equipment points, 15,320 egress travel-distance samples |
-| Sources | 178 keyed sources in three tiers: 38 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 98 Korean press and local |
+| Sources | 179 keyed sources in three tiers: 38 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 99 Korean press and local |
 | Units, origin | metres; local tangent plane at WGS84 37.02 N, 127.06 E; X east, Y north, Z up |
 | Imagery date | 2025-12-22 (0.5 m) for dimensions; zoom-18 mosaic re-acquired 2026-11-12 for re-checks |
 
@@ -43,7 +43,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | `data/*.csv` | Elements, equipment, floors, phases, vendors, structure, EHS and utility tables |
 | `preview/` | 27 screenshots of the viewer |
 | `src/` | Export, viewer and check scripts that run on `data/campus.json`; `src/generator_ko/` holds the original generator and the translation tables (see "Rebuilding") |
-| `SOURCES.md` | All 178 sources with URLs, grouped by tier |
+| `SOURCES.md` | All 179 sources with URLs, grouped by tier |
 | `CONSULTATION.md` | Record of what other AI models proposed and what was adopted, verified, held or rejected |
 
 ## Coordinates
@@ -322,13 +322,40 @@ Found on the map but outside the modelled ground, so listed here only: Lam Resea
 | SP-E048 | Samsung job interview (2018-09-06): facility work in three groups — utility supply, water treatment, environmental treatment; article on water (2020-05-22) | No change | Originals checked by Astra, not opened here. The three groups describe one job family, not the whole infrastructure (power is separate), so the model keeps its eight concept utility groups. The three uses of water are not merged into ultrapure water |
 | R8 | Notice pages 10–12: 3,324,190 kVA, 478,950 m³/day water, 449,211 m³/day wastewater, 450,000 m³/day public facility | Recorded | `meta.infra_plan` in `campus.json`, v7.24. Plan figures for the whole complex; not converted into geometry, counts or pipe sizes |
 
+## What v7.25 adds (sixth evidence bundle, one duplicate removed)
+
+No box was moved, resized or regraded in this version. One element was removed and five notes were extended.
+
+- Removed `UT-34-CT`: an assumed cooling tower zone (grade C) from an earlier version. It overlapped the rows `CT34-R4` and `CT34-R5` and the two rows of unidentified blue modules that v7.24 read from imagery, so the same roof area was described twice and in two different ways. 1,458 elements remain.
+- `UT-12` (utility building between P1 and P2): the note now says that the "240,000 refrigeration tons" on the Samsung E&A page is the company's expression of cooling size and is not converted into a daily volume, an operating load or a number of machines; that the meaning of "CT" and the scope of the floor-area figure on that page are unsettled; and that the description is not carried over to P3 and P4.
+- `KEPCO-PAD` (substation lot): the earlier note said the press figure of about 100,000 m² "corresponds to" the site area in the register. That was an inference. The note now records the three figures side by side — press about 100,000 m², register site area 102,076 m², register total floor area 48,546.62 m² — and leaves the relation open.
+- `BR-34a`, `BR-34b`, `BR-34c` (overbridges at the P3–P4 utility building): a press photo caption is recorded as a concept note with the new source key `DEALSITE_BR`. Geometry is unchanged.
+- `PUB-WWTP`: the note now says that a use-approval date in the register is not a start-of-operation date or a capacity.
+
+Overlap check before intake: the public wastewater plant (4 elements `PUB-WWTP*`), the KEPCO lot (`KEPCO-PAD`, `SS-*`), the three overbridges `BR-34a/b/c`, the two pipe rack bridges `BR-PR1/2` and the office buildings (`GATE-W`, `WA`, `WD`, `W1`) already existed, so no element was added for any of the ten items.
+
+| ID | Claim received | Verdict | Where / why |
+|---|---|---|---|
+| SP-E049 | Samsung E&A project page: P2 utility project — chilled water, steam, compressed air and industrial water for the lines; "up to about 240,000 refrigeration tons"; UT and CT buildings laid out in blocks | Recorded (note only) | `UT-12` note, v7.25. Reviewed by Codex; not reopened here in this version (the page was already source `P2_UT`). No position, count or floor is derived, and nothing is copied to P3 or P4 |
+| SP-E050 | Supplier notice: final shipment of modules for the P2 UT/CT buildings (2020-09-04) | Reference only | Kind and number of modules are not given; nothing to model |
+| SP-E051 | Supplier track record: cooling towers ordered by phase for P2, P3 and P4 | Held, unverified | The page returned 403/502 to Astra and is not reachable here either. The relayed rows are not used; no statement is made about who built the cooling towers, and the 98 fan cylinders stay an approximation read from imagery |
+| SP-E052 | No filing, official page or drawing names a UT or CT building for P3 or P4 | Agreed, unchanged | `UT-34` stays "presumed utility building" (grade B plan from imagery); `CT34-R1`–`R5` stay "presumed cooling tower rows". The P2 arrangement is not copied |
+| SP-E053 | No building register entry for the P1 or P2 fab was found in the areas queried | Agreed, unchanged | Fab heights and floor levels stay assumptions (see "What remains an estimate") |
+| SP-E054 | Press: office building 1 has 9 storeys, office building 2 has 11 | Already in | Elements `GATE-W` and `WA` already carry these as press figures; heights stay assumed |
+| SP-E055 | Press (2026-08-11): an overbridge of about 360 m for wafers is being built "in front of P4" | Held | Which face of P4, which P5 building, height and floor are not public. The P4–P5 bridge is still not drawn |
+| SP-E056 | Press photo caption (Dealsite, published 2025-06-24, modified 2025-08-25): four bridges in all at P4 PH2 and P3 PH2, with the complex building between them; SEMES OHT expected | Concept note | `BR-34a/b/c` notes and source `DEALSITE_BR`, v7.25. Article checked by Codex and Astra; it could not be reopened here. Connection points, floors and coordinates are unknown; "PH2" is kept as printed and is not read as the same floor or height in both fabs; "expected" is not "installed". The count of four is not matched to the three overbridges and two pipe rack bridges in the model |
+| SP-E057 | Building register, Godeok-dong 1721: three buildings of the public wastewater plant with storeys, heights and areas | Already in, wording added | The register heights (30.2 m, 13.2 m, 18.1 m) were recorded in v7.21. Which box is which building is still unsettled, so box heights stay arbitrary. The rows relayed in this bundle are a transcription; Codex checked only their sums (total floor area matches 21,840.49 m²; building areas differ by 24.36 m²). The stage-3 floor area of 9,080.72 m² is numerically close to a contractor's published 9,081 m² |
+| SP-E058 | Building register, Godeok-dong 1730: KEPCO converter station and substations with storeys, heights and areas | Already in, wording corrected | `KEPCO-PAD` note, v7.25. Existing `SS-*` boxes were matched to register buildings by comparing areas and say so; no further height is changed or copied. Sum of the per-building floor areas differs from the register total by 11.39 m² (Codex arithmetic) |
+
 ## Verification done for this release
+
+v7.25: Korean and English data files compared element by element (1,458 ids, source keys, grades and boxes identical; no duplicate id; no untranslated note).
 
 | Check | Result |
 |---|---|
 | Fab bodies and all annexes overlaid on the zoom-18 satellite mosaic (about 0.48 m/px) | All four fab outlines and the east, west and north annexes fall on the imagery; three technology-cluster buildings were re-oriented in v7.13 after this check |
-| STEP read back with the OpenCascade kernel (v7.24 build) | 1,235 solids, 7,077 faces; the first 400 solids pass the shape validity check |
-| DXF read back and audited with ezdxf | 2D: 119,397 entities on 178 layers, 0 audit errors; 3D: 1,514 meshes on 166 layers, 0 audit errors; units metres |
+| STEP read back with the OpenCascade kernel (v7.25 build) | 1,234 solids, 7,071 faces; the first 400 solids pass the shape validity check |
+| DXF read back and audited with ezdxf | 2D: 119,633 entities on 178 layers, 0 audit errors; 3D: 1,678 meshes on 166 layers, 0 audit errors; units metres |
 | Registered areas vs. plans read from imagery | Parking building 1%, Linde site 2.5%, wastewater plant 7%, KEPCO lot 0.4% |
 | Viewer | Loads without page errors, with no network requests; all 23 previews regenerated from this version |
 | Bridges and parking | 12 bridges checked against imagery; 5 structures that were missing (2 overbridges between the UT building and P2, 1 link between the west support building and P2, 2 pipe rack bridges east of the P3–P4 utility building) were added |

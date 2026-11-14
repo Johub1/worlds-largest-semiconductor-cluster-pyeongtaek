@@ -96,7 +96,7 @@ Third-party imagery, video frames and vendor CAD were consulted but are not redi
 | `P52_IN` | iNews24 2026: site workers say it is called P5-2 internally and that excavation has started | https://inews24.com/view/1965929 |
 | `P5_HK` | Hankook Ilbo 2026-10-30 (site report): P5 Fab 1 floor plate 211 m north-south by 638 m east-west, triple fab, about 100 m high when complete, total floor area 1.45 million m², one production level set about 30 m high | https://www.hankookilbo.com/news/article/A2026102911560004232 |
 
-## Tier 3 — Korean press and other local or unofficial sources (98)
+## Tier 3 — Korean press and other local or unofficial sources (99)
 
 | Key | Source | URL |
 |---|---|---|
@@ -173,6 +173,7 @@ Third-party imagery, video frames and vendor CAD were consulted but are not redi
 | `EA_P3PH3` | Edaily 2022-06: Samsung Engineering [P3 Ph3 PJT] green building and UT building, rooftop exhaust, UPW finishing work, KRW 660 billion | https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=02974966632364344 |
 | `EA_P1GR` | Etoday 2015-12: Samsung Engineering, Pyeongtaek P-PJT green building 1, KRW 238.7 billion | https://www.etoday.co.kr/news/view/1260134 |
 | `AREA` | ZDNet Korea 2022-09: Pyeongtaek line 1 total floor area 240,000 pyeong, line 2 250,000 pyeong, line 3 1 million㎡ (about 300,000 pyeong), site 2.89 million㎡ | https://zdnet.co.kr/view/?no=20220907135616 |
+| `DEALSITE_BR` | Dealsite 2025-06-24 (modified 2025-08-25): report on follow-up works at Pyeongtaek P4 — photo caption mentions four bridges at P3 PH2 and P4 PH2 with the complex building between them, and SEMES OHT expected to be installed | https://dealsite.co.kr/articles/143484 |
 | `WW_PATH_B` | Etoday 2026-10: green building → Godeok public wastewater treatment plant → Seojeongni stream | https://www.etoday.co.kr/news/view/2632115 |
 | `ILSUNG` | Newsis 2026-07: Ilsung Construction — Pyeongtaek Complex 2 ancillary buildings group 2, building and telecom works, KRW 45.1 billion, three buildings with total floor area 2,774 pyeong (resource recirculation centre, oil-water separator, disaster prevention centre), until 2027-10-31 | https://news.nate.com/view/20260706n26076 |
 | `YT_DAL1` | YouTube channel on semiconductor construction sites ('Dalpaengi') — P4 Ph2 filing screen, captioned photo of P4 cleanroom sections, Ph3 schedule table (unofficial site-observation channel) | https://www.youtube.com/watch?v=tAFdsr6iP94 |
