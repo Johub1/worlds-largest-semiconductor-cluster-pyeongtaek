@@ -489,7 +489,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461360.266238426
+2461360.276539352
   9
 $TDUCREATE
  40
@@ -497,7 +497,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461360.2662847224
+2461360.2765856483
   9
 $TDUUPDATE
  40
@@ -929,11 +929,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{2A7F0B8C-9AF1-4460-8E2B-68B6782C716E}
+{59F775A1-B1C4-4783-BF6A-6253197F511B}
   9
 $VERSIONGUID
   2
-{742BF55D-B882-4CCD-91DD-33076AD582D8}
+{17D07E9D-018D-4F00-A777-8FF69D9F5BA3}
   9
 $EXTNAMES
 290
@@ -3753597,7 +3753597,7 @@ AcDbText
  40
 4.0
   1
-Representative industry suppliers (delivery to this site unconfirmed): Shinsung E&G, APEX   |   Site-related press and filings: Shinsung E&G (press: cleanroom supply to Pyeongtaek P1–P4; filing 2021: contract of about KRW 27.6 billion with Samsung C&T for Pyeongtaek cleanroom system ceiling work)
+Representative industry suppliers (delivery to this site unconfirmed): Shinsung E&G, APEX   |   Site-related press and filings: Shinsung E&G (press: cleanroom supply to Pyeongtaek P1–P4; filing 2021: contract of about KRW 27.6 billion with Samsung C&T for Pyeongtaek cleanroom system ceiling work) / K-ENSOL filing (first half of 2026): 'Pyeongtaek P3-PJT PH4 module S/C work' and 'P4-PJT PH2 and PH3 module S/C work' ordered by Samsung C&T (the separate revenue note also has a row 'P4-PJT PH4 module S/C work') — the contract table does not define S/C. The same report states that its modular system-ceiling method has been applied on site 'starting with Samsung Electronics' Pyeongtaek plant in 2020'. Number, area, floor and position are not in the filing
   7
 KO
  11
@@ -3753661,7 +3753661,7 @@ AcDbText
  40
 4.0
   1
-Representative industry suppliers (delivery to this site unconfirmed): Samsung E&A (construction)   |   Site-related press and filings: Shinsung Engineering (a different company from Shinsung E&G) official reference list: Pyeongtaek 'P PJT Ph2 OAC supply and installation' (2017), 'P2L Ph1 lot 2 air handler supply and installation' (2019, 2021), 'P2L Ph2 and Ph4 AHU' (2021–2022), 'EUV V2 AHU' and 'V2-Ph2 EUV building OAC' (2021), 'P4 Ph1 lot 2 AHU supply and installation' (2023), among others — years are contract years; number, model, capacity and position are not in the list. The listed items are AHU and OAC; whether they are the same equipment as this model's MAU boxes is not established
+Representative industry suppliers (delivery to this site unconfirmed): Samsung E&A (construction)   |   Site-related press and filings: Shinsung Engineering (a different company from Shinsung E&G) official reference list: Pyeongtaek 'P PJT Ph2 OAC supply and installation' (2017), 'P2L Ph1 lot 2 air handler supply and installation' (2019, 2021), 'P2L Ph2 and Ph4 AHU' (2021–2022), 'EUV V2 AHU' and 'V2-Ph2 EUV building OAC' (2021), 'P4 Ph1 lot 2 AHU supply and installation' (2023), among others — years are contract years; number, model, capacity and position are not in the list. The listed items are AHU and OAC; whether they are the same equipment as this model's MAU boxes is not established. K-ENSOL filing (first half of 2026): 'Pyeongtaek P4-PJT Ph1 module OAC fabrication and supply' and 'P4-PJT PH3 OAC fabrication and supply' ordered by Samsung C&T — the report defines OAC as an outdoor air conditioner. Number, model, airflow and installation floor are not in the filing, and the company-wide production figures (58 OAC units, etc.) are not numbers delivered to Pyeongtaek
   7
 KO
  11
@@ -3755255,7 +3755255,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-14T21:23:23.221781+00:00
+1.4.5 @ 2026-11-14T21:38:13.297781+00:00
   0
 VISUALSTYLE
   5
@@ -3755967,7 +3755967,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-14T21:23:27.311463+00:00
+1.4.5 @ 2026-11-14T21:38:17.194023+00:00
   0
 ENDSEC
   0

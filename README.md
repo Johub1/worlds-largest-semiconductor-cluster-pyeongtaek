@@ -1,4 +1,4 @@
-# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.34 (English edition)
+# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.35 (English edition)
 
 > **Status: living project, updated continuously.** This model is revised whenever new public material is found or an error is reported; the current version and every change are listed in `CHANGELOG.md`. Corrections backed by a public source are welcome through GitHub Issues. Latest version: https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek
 
@@ -21,7 +21,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | Concept interior | 86,620 equipment boxes of 26 types on 8 floors per fab, 608 OHT rail segments, 10,440 structural members |
 | Concept utilities | 29 systems in 8 groups, 1,521 route segments (thermal, PCW, gas, exhaust, wastewater, chemicals, UPW, power) |
 | Concept EHS | 960 gas/exhaust flow lines, 1,152 gas detector points, 1,552 emergency equipment points, 15,320 egress travel-distance samples |
-| Sources | 192 keyed sources in three tiers: 50 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 100 Korean press and local |
+| Sources | 194 keyed sources in three tiers: 52 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 100 Korean press and local |
 | Units, origin | metres; local tangent plane at WGS84 37.02 N, 127.06 E; X east, Y north, Z up |
 | Imagery date | 2025-12-22 (source resolution 0.5 m, per Esri's metadata layer) for dimensions; the zoom-18 mosaic used for re-checks was downloaded on 2026-11-12 and 13 |
 
@@ -43,7 +43,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | `data/*.csv` | Elements, equipment, floors, phases, vendors, structure, EHS and utility tables |
 | `preview/` | 27 screenshots of the viewer |
 | `src/` | Export, viewer and check scripts that run on `data/campus.json`; `src/generator_ko/` holds the original generator and the translation tables (see "Rebuilding") |
-| `SOURCES.md` | All 192 sources with URLs, grouped by tier |
+| `SOURCES.md` | All 194 sources with URLs, grouped by tier |
 | `CONSULTATION.md` | Record of what other AI models proposed and what was adopted, verified, held or rejected |
 
 ## Coordinates
@@ -371,6 +371,14 @@ Eighth bundle and two data audits by Codex (meta wording only; no geometry chang
 
 Also corrected: the `OFF-2` note called the building a candidate for Office building 2, which contradicted `WA`; it now only compares its plan with the register area.
 
+## What v7.35 adds (modular ceiling and outdoor-air-conditioner filings; no geometry change)
+
+- **K-ENSOL filings** (new sources `KENSOL_H1_2026`, `KENSOL_Q1_2026`; new `meta.module_oac_records`; read from the original HTML by Astra and Codex, selected rows and the business-description text read here). Five Pyeongtaek rows of the major-contract table (contracts of 5% or more of the previous year's revenue only), all ordered by Samsung C&T: P3-PJT PH4 module S/C work; P4-PJT Ph1 module OAC fabrication and supply; P4-PJT PH2 and PH3 module S/C work; P4-PJT PH3 OAC fabrication and supply. The separate revenue note adds a P4-PJT PH4 module S/C row whose ordering party and total are not given.
+- **Terms.** The report defines OAC as an outdoor air conditioner. S/C is not defined in the contract table and is kept as written; the same report lists its products as "outdoor air conditioners, System Ceiling, etc." in one table and "S/C, OAC, etc." in another, so S/C probably abbreviates System Ceiling (this workstream's reading). The report states that its modular system-ceiling method has been applied on site starting with Samsung Electronics' Pyeongtaek plant in 2020 — the fab and floor are not named.
+- **Linked:** FFU and MAU type descriptions; notes and source lists of the eight P3 and P4 FFU ceiling elements. Boxes, positions and grade D unchanged. Not used: amounts and progress, company-wide production totals (58 OAC units, 16,748 FFU units), module sizes and airflow (not in the filing). Date differences between tables (PT-F008, PT-F009) are recorded; no date is used as completion or operation.
+- **Wording correction** in `meta.hvac_supplier_records`: "four" lists corrected to five list pages (three with Samsung Pyeongtaek rows carry source keys).
+- Source-tier rule: filings on the KRX KIND site are now counted as official.
+
 ## What v7.34 adds (air-handling supplier records; own vendor-list correction; no geometry change)
 
 - **Supplier reference lists of Shinsung Engineering** (new sources `SHINSUNG_2105`, `SHINSUNG_2111`, `SHINSUNG_2119`; new `meta.hvac_supplier_records`; lists read from the original HTML by Codex and Astra, selected rows read here). The lists give contract year, contracting party, project name, item and site only. Established: DCC (dry coil) for P2L Ph1 and Ph2, the EUV building and P3L Ph1–Ph4; AHU and OAC for P2L, EUV V2 and P4 Ph1 lot 2; a precision air conditioner for P4 Ph1 lot 2; AHU for the P3L green building; "DHC" (undefined) for a P3L infrastructure complex building.
@@ -527,6 +535,8 @@ Held: assignment of building-name suffixes to P numbers; any change of height, f
 
 ## Verification done for this release
 
+v7.35: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.34, eight elements changed in note and source list only (P3 and P4 `-ffu`), two equipment-type descriptions changed (`FFU`, `MAU`), no box changed, one meta entry added and one reworded, two sources added (194: 52 official, 42 international, 100 Korean).
+
 v7.34: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.33, 25 elements changed in note and source list only (`P2-…-ra-S/N`, `P3-…-ra-S/N`, `V2`), two equipment-type descriptions changed (`MAU`, `DCC`), no box changed, one meta entry and three sources were added (192: 50 official, 42 international, 100 Korean).
 
 v7.33: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.32, six elements changed in name, note or source list (`P1-endblk` to `P4-endblk`, `UT-12-UPW`, `PAD-P5`), no box changed, one meta entry and four sources were added (189: 47 official, 42 international, 100 Korean).
@@ -550,7 +560,7 @@ v7.25: Korean and English data files compared element by element (1,458 ids, sou
 | Check | Result |
 |---|---|
 | Fab bodies and all annexes overlaid on the zoom-18 satellite mosaic (about 0.48 m/px) | All four fab outlines and the east, west and north annexes fall on the imagery; three technology-cluster buildings were re-oriented in v7.13 after this check |
-| STEP read back with the OpenCascade kernel (v7.34 build, geometry identical to v7.30) | 1,250 solids, 7,167 faces; the first 400 solids pass the shape validity check |
+| STEP read back with the OpenCascade kernel (v7.35 build, geometry identical to v7.30) | 1,250 solids, 7,167 faces; the first 400 solids pass the shape validity check |
 | DXF read back and audited with ezdxf | 2D: 119,633 entities on 178 layers, 0 audit errors; 3D: 1,694 meshes on 166 layers, 0 audit errors; units metres |
 | Registered areas vs. plans read from imagery | Parking building 1%, Linde site 2.5%, wastewater plant 7%, KEPCO lot 0.4% |
 | Viewer | Loads without page errors, with no network requests; all 23 previews regenerated from this version |

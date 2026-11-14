@@ -1,5 +1,11 @@
 # Changelog
 
+## v7.35 — 2026-11-15
+- New `meta.module_oac_records`; sources `KENSOL_H1_2026`, `KENSOL_Q1_2026` (K-ENSOL module S/C work for P3 PH4 and P4 PH2–PH4, module OAC for P4 Ph1 and PH3; OAC defined as outdoor air conditioner; modular system-ceiling method applied at Pyeongtaek from 2020).
+- Notes and source lists of the eight P3/P4 FFU ceiling elements; FFU and MAU type descriptions. Boxes unchanged and still grade D.
+- `meta.hvac_supplier_records`: "four lists" corrected to five list pages. KRX KIND filings counted as official sources.
+- No box changed. 1,474 elements; 194 sources (52 official, 42 international, 100 Korean).
+
 ## v7.34 — 2026-11-15
 - New `meta.hvac_supplier_records`; sources `SHINSUNG_2105`, `SHINSUNG_2111`, `SHINSUNG_2119` (Shinsung Engineering reference lists by contract year: DCC for P2L, EUV and P3L; AHU/OAC for P2L, EUV V2 and P4 Ph1; precision air conditioner for P4 Ph1).
 - Notes and source lists of the P2 and P3 return-air shafts (24) and `V2`; DCC and MAU type descriptions. Boxes unchanged and still grade D.
