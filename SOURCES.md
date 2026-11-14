@@ -6,7 +6,7 @@ Source priority: (1) official material and filings of Samsung Electronics and it
 
 Third-party imagery, video frames and vendor CAD were consulted but are not redistributed in this package.
 
-## Tier 1 — official material, filings, public registers, public maps and imagery (41)
+## Tier 1 — official material, filings, public registers, public maps and imagery (42)
 
 | Key | Source | URL |
 |---|---|---|
@@ -30,6 +30,7 @@ Third-party imagery, video frames and vendor CAD were consulted but are not redi
 | `OFF_CT_PJT` | Samsung C&T E&C Group portfolio: Pyeongtaek complex (Pyeongtaek P-PJT) — total floor area 3,967,000㎡ | https://www.secc.co.kr/ko/business/portfolio/building/7 |
 | `HUB_FLR_1695` | Building HUB building-permit per-building summary and floor summary (Ministry of Land, Infrastructure and Transport) — Godeok-dong 1695, Pyeongtaek, data month 2026-09. Full-column web exports made by Codex on the official site on 2026-11-15: 316 per-building rows with 29 columns and 701 floor rows with 24 columns (not a raw API response). History: on 2026-11-14 the join was first made with 701 rows of eight selected columns and 28 transcribed per-building rows; building areas and floor areas of the 28 buildings all equal the full export | https://www.hub.go.kr/portal/opn/tyb/idx-acpmslg-flrcb.do |
 | `R7_2026_15` | Han River Basin Environmental Office Notice No. 2026-15, consolidated notice of basic plans for public wastewater treatment facilities (2026-01-13), item 36 — Godeok treatment capacity 340,000 m³/day (120,000 + 67,500 + 92,500 + 60,000) | https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000272784 |
+| `ESRI_META` | Esri World Imagery metadata layer (MapServer 10, for zoom 18) — queried by Astra on 2026-11-15: all seven campus points and the extent return acquisition date 2025-12-22, source resolution 0.5 m, WV02, Vantor. No viewing-angle field | https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/10 |
 | `KRX_P3PH4` | Samsung Engineering supply-contract filing (KRX KIND 2022-11-24): [P3 Ph4] green building and UT building, rooftop exhaust, UPW finishing works | https://kind.krx.co.kr/external/2022/11/24/000282/20221123000578/91370.htm |
 | `OFF_EA_P2EN` | Samsung E&A: Pyeongtaek P2 Utility Project — gross area 128,999㎡, UT and CT buildings | https://www.samsungena.com/en/business/project-template?idx=73 |
 | `OFF_SE_SITE` | Samsung Semiconductor Newsroom 2026-06: Pyeongtaek campus 2.83 million㎡ in total (about 860,000 pyeong) | https://news.samsungsemiconductor.com/kr/tag/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-%ED%8F%89%ED%83%9D%EC%BA%A0%ED%8D%BC%EC%8A%A4/ |

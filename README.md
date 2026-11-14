@@ -1,4 +1,4 @@
-# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.27 (English edition)
+# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.28 (English edition)
 
 > **Status: living project, updated continuously.** This model is revised whenever new public material is found or an error is reported; the current version and every change are listed in `CHANGELOG.md`. Corrections backed by a public source are welcome through GitHub Issues. Latest version: https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek
 
@@ -17,11 +17,11 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | Item | Content |
 |---|---|
 | Scope | The wider Pyeongtaek complex: fabs P1, P2, P3, P4, the EUV building (V2), utility buildings, cooling tower banks, office and support buildings, the KEPCO Godeok substation lot, the Linde Korea plant, the Godeok public wastewater treatment plant, the P5 construction site, the Air Products and Air First gas plants, the Samsung logistics warehouse west of Complex 2, and map points for supplier sites and construction camps |
-| Building elements | 1,468 elements (boxes and cylinders) with name, layer, confidence grade, source keys and a note each |
+| Building elements | 1,471 elements (boxes and cylinders) with name, layer, confidence grade, source keys and a note each |
 | Concept interior | 86,620 equipment boxes of 26 types on 8 floors per fab, 608 OHT rail segments, 10,440 structural members |
 | Concept utilities | 29 systems in 8 groups, 1,521 route segments (thermal, PCW, gas, exhaust, wastewater, chemicals, UPW, power) |
 | Concept EHS | 960 gas/exhaust flow lines, 1,152 gas detector points, 1,552 emergency equipment points, 15,320 egress travel-distance samples |
-| Sources | 182 keyed sources in three tiers: 41 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 99 Korean press and local |
+| Sources | 183 keyed sources in three tiers: 42 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 99 Korean press and local |
 | Units, origin | metres; local tangent plane at WGS84 37.02 N, 127.06 E; X east, Y north, Z up |
 | Imagery date | 2025-12-22 (0.5 m) for dimensions; zoom-18 mosaic re-acquired 2026-11-12 for re-checks |
 
@@ -43,7 +43,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | `data/*.csv` | Elements, equipment, floors, phases, vendors, structure, EHS and utility tables |
 | `preview/` | 27 screenshots of the viewer |
 | `src/` | Export, viewer and check scripts that run on `data/campus.json`; `src/generator_ko/` holds the original generator and the translation tables (see "Rebuilding") |
-| `SOURCES.md` | All 182 sources with URLs, grouped by tier |
+| `SOURCES.md` | All 183 sources with URLs, grouped by tier |
 | `CONSULTATION.md` | Record of what other AI models proposed and what was adopted, verified, held or rejected |
 
 ## Coordinates
@@ -309,7 +309,7 @@ Found on the map but outside the modelled ground, so listed here only: Lam Resea
 | SP-E032 | Air emission capacities from EIA or integrated permit | Not found | No stack count or capacity is put into the model |
 | SP-E033–E036 | Notice pages 10–12: power demand, water supply plan, wastewater, heat demand of the whole complex | Recorded | Same as R8, `meta.infra_plan`; heat demand (5,370,360 Gcal/year) is listed here only |
 | SP-E037 | Integrated environmental permit completed 2024-12-30 (press quoting the ministry); rooftop combined process-gas treatment (RCS) described in press | Held | Permit documents and capacities not obtained. The existing rooftop zones keep their neutral name; no RCS count or position is added |
-| SP-E038 | Later consolidated notice on the public wastewater basic plan (No. 2026-15, 2026-01-13) exists; stage figures are unverified candidates | Recorded | Same row as SP-E027; no stage capacity is used |
+| SP-E038 | Later consolidated notice on the public wastewater basic plan (No. 2026-15, 2026-01-13) | In (meta), since v7.26 | Status when received: stage figures unverified. Since then Astra confirmed item 36 in the official text and PDF: 340,000 m³/day = 120,000 + 67,500 + 92,500 + 60,000 as plan capacity. Recorded in `meta.infra_plan` beside the 450,000 m³/day of the complex notice (source `R7_2026_15`); the first approval date of this split is not established; not used for shape, count or layout |
 | SP-E039 | Samsung E&A project page: P2 Phase 1 water treatment, EPC, completed 2020, 86,000 m³/day; scope lists air pollution control, water plant, ultrapure water production, wastewater treatment and reuse | Recorded as system types | The five system types already exist as concept utility groups. 86,000 m³/day is a project size, not the capacity of a green building, UPW output or an operating figure; nothing is sized or placed from it |
 | SP-E040 | Press: P4 as four kinds of facility (fab, complex, substation, green) with precast concrete quantities | Wording corrected | Element S1 note now says "four kinds of facility (a press classification, not a count of separate buildings)". Quantities conflict between articles (substation 15,000 vs 18,000 m³; items sum to 215,000 vs an estimated total of 200,000 m³) and are not used. "Steel plus precast" is a general trade description, not a confirmed P4 structure |
 | SP-E041 | Samsung C&T patent on segmented precast waffle beams; press description of composite columns at P5 | Concept only | The 3.6 m in the patent is the transport width given as background, not a span or a Pyeongtaek module. Beam and column items are different members. No dimension is taken into the model |
@@ -361,7 +361,7 @@ Eighth bundle and two data audits by Codex (meta wording only; no geometry chang
 
 | ID | Claim received | Verdict | Where / why |
 |---|---|---|---|
-| SP-E063 | Building-permit per-building summary, lot 1695: 28 transcribed rows of 10,000 m² or more under the main permit, five of them with floor areas of 530,000–720,000 m² | Recorded, held | `meta.floor_area.gov_register_campus`. 156 of 316 entries were queried (rows 41–200 not), no raw response is held, and the rows have no building name, floor count or height. The five large rows are not assigned to P1–P5, the sums (4,669,137.36 m² for the 28 rows, 3,152,674.05 m² for the top five) are not a campus total, and no floor count or height is derived from areas. Codex saw 701 floor-level permit rows for the lot on the official site (data month 2026-09) but has not received the file |
+| SP-E063 | Building-permit per-building summary, lot 1695: buildings of 10,000 m² or more under the main permit | In (meta, notes, tables), since v7.26 | Status when received: 28 transcribed rows from a partial query (156 of 316 entries), no building names, floor file not yet received. Since then Codex obtained full-column official web exports (per-building 316 × 29, floor 701 × 24, basic summary 122 × 41): the main permit has 70 buildings, 28 of them of 10,000 m² or more, all 28 with names and floor numbers by key join. Used for `data/register_vs_model.csv`, `data/permit_floor_areas.csv`, `meta.floor_area.gov_register_campus` and `meta.permit_basic_summary`. Still not done: assigning buildings to P numbers or boxes, deriving heights or production levels, treating sums as campus totals |
 | Namwoong Construction track record (Astra) | "Pyeongtaek line 3 FAB new construction — complex building", B1–9F, 2021-01-14 to 2022-04-30, prime contractor Samsung C&T | Source candidate only | It is the complex building, not the P3 fab and not P1 or P2. No height or position; no box is matched or changed |
 | `P2_FLOORS` (Hanbang Ubis supervision record, already a source) | "Samsung Electronics Pyeongtaek P2", posted 2023-11-14, B1F–8F, 592,077 m² (original checked by Astra) | Wording limited | `meta.floor_area.reference_press`. The record does not separate fab, complex building and utility, so it is a project-level figure and not the legal floor count of the P2 fab alone |
 | `P1_DIM` (Astra compared both articles) | Etoday names P1 and gives about 520 m × 200 m, no height; ZDNet gives 518 × 201 × 83 m for "the production line" without naming P1 | Corrected | Source text `P1_DIM`, fab notes of P1–P4, viewer height grade of P1 (A → C). The plan figure stays; 83 m is kept in the geometry as an assumption and is not moved to P3 or presented as a measurement |
@@ -370,6 +370,26 @@ Eighth bundle and two data audits by Codex (meta wording only; no geometry chang
 | Meta audit (Codex) | Old conclusions left in `meta.floor_area` | Corrected | `official.P2` no longer treats 128,900 m² as the P2 fab floor area; `check` (model plan "may be 13% small") is withdrawn; `gov_register` says the values are transcriptions and gives the per-stage approval dates of the wastewater plant; `gov_register_parcels` counts rows, not buildings; the permit-query scope is updated |
 
 Also corrected: the `OFF-2` note called the building a candidate for Office building 2, which contradicted `WA`; it now only compares its plan with the register area.
+
+## What v7.28 adds (imagery metadata, permit basic summary, public roads at ground level)
+
+- **Imagery metadata confirmed (Astra, Esri's official metadata layer, new source `ESRI_META`).** Seven campus points and the campus extent return one record: acquisition date 2025-12-22, source resolution 0.5 m, source code WV02, provider Vantor. The public metadata has no off-nadir angle, azimuth or orthorectification field, and its 8.47 m accuracy value has no confidence definition that could be confirmed. Corrections to v7.27 in `meta.imagery_geometry`: the remark that the date may differ between tiles is withdrawn (the Complex 2 parking building returns the same record); the 80–120 m figure is stated as exploratory only, not as independent evidence of fab height; no shift is applied. The mosaic used for all readings is 990 zoom-18 tiles (rows 101992–102021, columns 223578–223610) downloaded on 2026-11-12 and 13; a text manifest with per-tile hashes was handed to the reviewers, and the tiles themselves are not redistributed.
+- **Permit basic summary (Codex, full-column official web exports; new `meta.permit_basic_summary`).** Lot 1695 main permit: site area 1,833,839.50 m², floor area 4,713,467.42 m² (equal to the 70 buildings of the per-building summary; building area differs by 304.96 m², unexplained). Lot 1696 main permit: site area 937,899.70 m², 19 buildings and 2,160,822.49 m² in the basic summary against 20 buildings and 2,321,855.03 m² in the per-building summary; the gap is not explained by removing the parking building. Neither figure is used as a completed total or a building count, and permit-level dates are not building completion or operation dates.
+- **Three ground-level elements read from imagery (grade B, ±5 m, little affected by the oblique view):** `ROAD-W` (public north–south road west of Complex 1, straight section; presumed Samsung-ro from the road-name addresses in the register), `ROAD-S` (public east–west road south of the campus, straight section), `RAIL-E` (double-track railway east of the campus, southern straight section). Curved continuations are not drawn. Gates, checkpoints, internal circulation and the pedestrian bridge over the west road are not modelled.
+- Evidence rows SP-E038 and SP-E063 and the opening paragraph of the v7.26 section were rewritten to the current state, with the earlier state kept as history.
+
+Open items after this version:
+
+| Item | State |
+|---|---|
+| East strips of the fabs: wall face or end block | Unsettled. Needs an independent source (orthorectified official outlines, imagery from another angle); map polygons alone would not settle it |
+| Fab heights, floor heights, elevations | Assumed 83 m; no public value |
+| Building names in the permit ↔ P numbers ↔ model boxes | Area-similar candidates only |
+| Location of the complex building, UT buildings, CT buildings | Unconfirmed |
+| Roof zones and annex outlines read from imagery (P3–P4 building, M1, M2, E1, office podiums) | Read but not added until the displacement question is settled |
+| Internal roads, bridges, P4–P5 bridge | Not drawn |
+| Lot 1696 buildings (FAB building-5 and others) | Recorded only; not modelled |
+| 1696 basic vs per-building totals; 304.96 m² on 1695; amendment history; extent of the additional lots | Unresolved |
 
 ## What v7.27 adds (the imagery is oblique; wording corrections; reproducible comparison script)
 
@@ -408,7 +428,7 @@ Evidence received during this unit, recorded here only (no element, note or meta
 
 ## What v7.26 adds (permit building names and floor numbers, comparison with the model, roof reading)
 
-**Official permit data now joined to building names.** Codex downloaded 701 floor-level rows of the building-permit record for lot Godeok-dong 1695 from the official Building HUB site (eight selected columns, data month 2026-09; not a raw API response, no floor-level key). Joined by permit key and building key with the 28 per-building rows transcribed earlier (SP-E063), every row gets a building name. This workstream read all 701 rows and all columns of the 28-row table by script. Two derived tables are published; the downloaded file itself is not redistributed.
+**Official permit data joined to building names.** Current basis: full-column web exports of the building-permit records for lot Godeok-dong 1695 made by Codex on the official Building HUB site (per-building summary 316 rows × 29 columns, floor summary 701 rows × 24 columns with unique floor-level keys, data month 2026-09; not raw API responses). Joined by permit key and building key, every building of the main permit gets a name. History: when v7.26 was first prepared the join used an eight-column floor export and 28 transcribed per-building rows; the full exports confirmed those values. This workstream read the 701 floor rows and the 316-row joined table by script. Two derived tables are published; the downloaded files are not redistributed.
 
 - `data/register_vs_model.csv` — 28 permit buildings against candidate model boxes (building area, floor numbers shown, model plan area, difference).
 - `data/permit_floor_areas.csv` — floor areas per building and floor number, summed over rows.
@@ -448,6 +468,8 @@ Held: assignment of building-name suffixes to P numbers; any change of height, f
 
 ## Verification done for this release
 
+v7.28: Korean and English data files compared element by element (1,471 ids, source keys, grades and boxes identical; no duplicate id; no untranslated text). Against v7.27, no existing element changed box, grade, name or note; three elements were added.
+
 v7.27: Korean and English data files compared element by element (1,468 ids, source keys, grades and boxes identical; no duplicate id; no untranslated note or viewer label). Against v7.26, no box or grade changed; 36 notes, 4 names and 3 meta entries changed.
 
 v7.26: Korean and English data files compared element by element (1,468 ids, source keys, grades and boxes identical; no duplicate id; no untranslated note). Against v7.25, no existing element changed box or grade; ten elements were added.
@@ -457,8 +479,8 @@ v7.25: Korean and English data files compared element by element (1,458 ids, sou
 | Check | Result |
 |---|---|
 | Fab bodies and all annexes overlaid on the zoom-18 satellite mosaic (about 0.48 m/px) | All four fab outlines and the east, west and north annexes fall on the imagery; three technology-cluster buildings were re-oriented in v7.13 after this check |
-| STEP read back with the OpenCascade kernel (v7.26 build) | 1,244 solids, 7,131 faces; the first 400 solids pass the shape validity check |
-| DXF read back and audited with ezdxf | 2D: 119,633 entities on 178 layers, 0 audit errors; 3D: 1,688 meshes on 166 layers, 0 audit errors; units metres |
+| STEP read back with the OpenCascade kernel (v7.28 build) | 1,247 solids, 7,149 faces; the first 400 solids pass the shape validity check |
+| DXF read back and audited with ezdxf | 2D: 119,633 entities on 178 layers, 0 audit errors; 3D: 1,691 meshes on 166 layers, 0 audit errors; units metres |
 | Registered areas vs. plans read from imagery | Parking building 1%, Linde site 2.5%, wastewater plant 7%, KEPCO lot 0.4% |
 | Viewer | Loads without page errors, with no network requests; all 23 previews regenerated from this version |
 | Bridges and parking | 12 bridges checked against imagery; 5 structures that were missing (2 overbridges between the UT building and P2, 1 link between the west support building and P2, 2 pipe rack bridges east of the P3–P4 utility building) were added |

@@ -1,5 +1,12 @@
 # Changelog
 
+## v7.28 — 2026-11-15
+- Imagery metadata confirmed on Esri's official metadata layer (acquisition 2025-12-22, 0.5 m, WV02, Vantor; no viewing-angle field). `meta.imagery_geometry` corrected: the "date may differ between tiles" remark withdrawn, the 80–120 m figure marked exploratory, no shift applied. New source `ESRI_META`.
+- New `meta.permit_basic_summary` from the full-column basic-summary exports for lots 1695 and 1696, including the unresolved difference between the basic and per-building totals for 1696.
+- Three ground-level elements read from imagery: `ROAD-W`, `ROAD-S`, `RAIL-E` (grade B). 1,471 elements. No existing element changed.
+- README evidence rows SP-E038 and SP-E063 and the v7.26 opening paragraph rewritten to the current state.
+- 183 sources (42 official, 42 international, 99 Korean).
+
 ## v7.27 — 2026-11-15
 - Finding recorded, no geometry changed: the public satellite imagery is oblique. The "east end blocks" of the fabs show the wall graphic and are most likely the east walls seen between roof edge and wall foot; roof-read outlines may lie too far west by about 0.3 × height. New `meta.imagery_geometry`; `P1`–`P4-endblk` renamed; `UT-34E` note. Plan corrections are deferred until orthorectified outlines are checked.
 - Viewer legend: grade B reads "plan read from imagery (heights assumed)"; Korean label left in the English viewer for `UT-34` fixed.
