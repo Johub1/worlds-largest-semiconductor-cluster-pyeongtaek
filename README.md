@@ -2,7 +2,7 @@
 
 > **Status: living project, updated continuously.** This model is revised whenever new public material is found or an error is reported; the current version and every change are listed in `CHANGELOG.md`. Corrections backed by a public source are welcome through GitHub Issues. Latest version: https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek
 
-**DOI:** [10.5281/zenodo.24209049](https://doi.org/10.5281/zenodo.24209049) (v7.23; later GitHub releases are archived on Zenodo automatically)
+**DOI (v7.23 only):** [10.5281/zenodo.24209049](https://doi.org/10.5281/zenodo.24209049). This DOI identifies the archived v7.23 package, not the files in this repository after v7.23; a later version gets its own DOI once its GitHub release is archived on Zenodo
 
 **Mirrors (v7.23):** [Zenodo](https://zenodo.org/records/24209049) · [Hugging Face](https://huggingface.co/datasets/Johojun/pyeongtaek-semiconductor-campus-open-model) · [Kaggle](https://www.kaggle.com/datasets/hojunjoooo/pyeongtaek-campus-open-3d-model-v7-23) · [Internet Archive](https://archive.org/details/pyeongtaek_p1-p4_open_model_v7.23_en) · [Printables](https://www.printables.com/model/1913576-pyeongtaek-semiconductor-campus-p1-p4-open-model-v) · [Sketchfab](https://skfb.ly/pQ8or). Announcement: [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7527149024009670656/). The GitHub repository is always the newest version; mirrors may lag behind.
 
@@ -17,11 +17,11 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | Item | Content |
 |---|---|
 | Scope | The wider Pyeongtaek complex: fabs P1, P2, P3, P4, the EUV building (V2), utility buildings, cooling tower banks, office and support buildings, the KEPCO Godeok substation lot, the Linde Korea plant, the Godeok public wastewater treatment plant, the P5 construction site, the Air Products and Air First gas plants, the Samsung logistics warehouse west of Complex 2, and map points for supplier sites and construction camps |
-| Building elements | 1,327 boxes with name, layer, confidence grade, source keys and a note each |
+| Building elements | 1,457 elements (boxes and cylinders) with name, layer, confidence grade, source keys and a note each |
 | Concept interior | 86,620 equipment boxes of 26 types on 8 floors per fab, 608 OHT rail segments, 10,440 structural members |
 | Concept utilities | 29 systems in 8 groups, 1,521 route segments (thermal, PCW, gas, exhaust, wastewater, chemicals, UPW, power) |
 | Concept EHS | 960 gas/exhaust flow lines, 1,152 gas detector points, 1,552 emergency equipment points, 15,320 egress travel-distance samples |
-| Sources | 174 keyed sources in three tiers: 34 official/register/map, 41 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 98 Korean press and local |
+| Sources | 175 keyed sources in three tiers: 35 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 98 Korean press and local |
 | Units, origin | metres; local tangent plane at WGS84 37.02 N, 127.06 E; X east, Y north, Z up |
 | Imagery date | 2025-12-22 (0.5 m) for dimensions; zoom-18 mosaic re-acquired 2026-11-12 for re-checks |
 
@@ -43,7 +43,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | `data/*.csv` | Elements, equipment, floors, phases, vendors, structure, EHS and utility tables |
 | `preview/` | 27 screenshots of the viewer |
 | `src/` | Export, viewer and check scripts that run on `data/campus.json`; `src/generator_ko/` holds the original generator and the translation tables (see "Rebuilding") |
-| `SOURCES.md` | All 174 sources with URLs, grouped by tier |
+| `SOURCES.md` | All 175 sources with URLs, grouped by tier |
 | `CONSULTATION.md` | Record of what other AI models proposed and what was adopted, verified, held or rejected |
 
 ## Coordinates
@@ -100,6 +100,8 @@ Korean press still makes up most of the list because contract amounts, phase nam
 | 1F | 0–9 | FSF · utility subfab (lower) |
 
 Public basis: 8 floors above ground (construction supervisor record for P2), four cleanrooms on two levels (trade press), a visitor window corridor on P1 3F (press), and the FAB + CSF + FSF three-level structure of 300 mm lines (peer-reviewed occupational hygiene paper).
+
+Floor labels such as 3F and 7F in this model, in the viewer and in the generator's phase table are concept levels of the generic section above. The filings say only "lower level" and "upper level"; they do not give floor numbers, heights or boundaries.
 
 ## Phase positions (P3, P4)
 
@@ -284,13 +286,14 @@ Found on the map but outside the modelled ground, so listed here only: Lam Resea
 | SP-E020 | Kolon Global filing "Pyeongtaek P5 water plant 3-gi" | Record only | Checked by Codex. What "3-gi" means (three units, third unit or third phase) is not defined in the filing, so no water plant is drawn or multiplied |
 | SP-E019, E021 | Gas supply tunnel, P5 work packages | Held | Not opened here; amounts and package numbers are never turned into size or position |
 | SP-E008 | P5 Fab 1 dimensions | In (note only) | Element PAD-P5, v7.24 |
-| SP-E009, E010, E015, E022 | P5 floor-area ratio change, Fab 2 site 661 m × 194 m, new substations, capacity | Held | Plans or press not opened here |
+| SP-E009 | P5 triple fab through a floor-area ratio increase from 350% to 490% in zone A1-1 | Held, official text recorded | Astra obtained Gyeonggi Province Notice No. 2026-189 (2026-07-30): zone A1-1 stays at 350% or less. No later notice approving 490% was found, which is not proof that it was refused. Element PAD-P5 note and source key GG_2026_189, v7.24. The triple fab stays a press-reported plan |
+| SP-E010, E015, E022 | Fab 2 site 661 m × 194 m, new substations, capacity | Held | Plans or press not opened here |
 | SP-E011 | P4–P5 bridge about 360 m | Held | Article not retrievable; connection points unknown, so no bridge is drawn |
 | SP-E012, E013 | 345 kV Godeok–Seoanseong line, 500 kV HVDC | Already in | Power group sources |
 | SP-E014 | Godeok substation floor area 100,000 m² (press) | Held, conflict | The building register gives 48,546.62 m² for the converter station and substation lot; the register value stays |
 | SP-E016 | Green building 34,000 m², 70,000 t/day, 2.6 km discharge pipe | Held | Article not opened here; the model keeps the official 81,600 m³/day for the P3 green building |
 | SP-E017 | Industrial water and reclaimed sewage supply | Already in | Water group sources |
-| SP-E018 | Site area 2.89 million m² vs about 3.9 million m² | Partly in | Official 2.89/2.83 million m² in the model; the larger figure is held |
+| SP-E018 | Site area 2.89 million m² vs about 3.9 million m² | Partly in | Official 2.89/2.83 million m² (Samsung) in the model. Notice No. 2026-189 gives 3,905,709.9 m² for the whole industrial complex and 2,861,212.4 m² of manufacturing land; these are different scopes, and whether either equals Samsung's 2.89 million m² is not confirmed |
 | SP-E023 | Company-wide water flow | Held | Not separable for Pyeongtaek |
 
 ## Verification done for this release

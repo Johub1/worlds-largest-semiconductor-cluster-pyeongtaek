@@ -6,7 +6,7 @@ Source priority: (1) official material and filings of Samsung Electronics and it
 
 Third-party imagery, video frames and vendor CAD were consulted but are not redistributed in this package.
 
-## Tier 1 — official material, filings, public registers, public maps and imagery (34)
+## Tier 1 — official material, filings, public registers, public maps and imagery (35)
 
 | Key | Source | URL |
 |---|---|---|
@@ -44,6 +44,7 @@ Third-party imagery, video frames and vendor CAD were consulted but are not redi
 | `INT_SS_WATER` | Samsung Semiconductor Global Newsroom: MOU for the Gyeonggi-do Region Semiconductor Site Reclaimed Water Project (Phase 1) — sewage from Hwaseong and Osan reclaimed to supply 120,000 t a day | https://news.samsungsemiconductor.com/global/samsung-semiconductor-signs-mou-with-ministry-of-environment-and-local-governments-for-reclaimed-water-collaboration/ |
 | `KAKAO2` | Kakao Map place search (queried 2026-11-13): Samsung Electronics logistics warehouse (Godeok-dong 1696-1), Air Products Korea Pyeongtaek plant (Jangdang-dong 627), Air First Pyeongtaek plant (Bangchuk-ri 151-1, Godeok-myeon), Samsung E&A Pyeongtaek camps, SEMES Pyeongtaek office, Wonik IPS Pyeongtaek site, Hanyang ENG | https://map.kakao.com/ |
 | `GOOGLE2` | Google Maps place search (queried 2026-11-13): Air Products Korea Pyeongtaek plant — 1029 Gyeonggi-daero | https://www.google.com/maps |
+| `GG_2026_189` | Gyeonggi Province Notice No. 2026-189 (2026-07-30), approval of a change to the Pyeongtaek Godeok International Planning District general industrial complex plan (Korea Land Use Regulation Information Service): industrial complex 3,905,709.9 m², manufacturing land 2,861,212.4 m², base floor-area ratio of zone A1-1 350% or less | https://www.eum.go.kr/web/gs/gv/gvGosiDet.jsp?seq=639228 |
 
 ## Tier 2 — international wire services, trade media, journals, patents and standards bodies (42)
 

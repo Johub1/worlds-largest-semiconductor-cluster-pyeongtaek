@@ -14,5 +14,8 @@ keywords:
   - cleanroom
   - EHS
   - open data
-doi: 10.5281/zenodo.24209049
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24209049
+    description: "Zenodo archive of the earlier version 7.23. A DOI for version 7.24 exists only after its GitHub release has been archived on Zenodo."
 repository-code: "https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek"

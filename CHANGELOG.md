@@ -6,6 +6,8 @@
 - Evidence intake table for 24 items received from the financial-analysis workstream (README). P4 phase filing periods recorded in `meta.p4_phases.filings_latest`; the P3 Ph1 position now cites the filing instead of an inference.
 - CITATION.cff restored: it was empty in the v7.20–v7.23 packages because of a script error; copies of v7.23 already distributed still contain the empty file.
 - Announcement posted on LinkedIn (link in README).
+- PAD-P5 note and source GG_2026_189: the official notice of 2026-07-30 keeps zone A1-1 at a floor-area ratio of 350% or less; the triple fab stays a press-reported plan.
+- README summary table corrected (1,457 elements, tier counts); the v7.23 DOI is no longer given as the DOI of this version in CITATION.cff.
 - STEP read-back: 1,233 solids, 7,065 faces; DXF audit 0 errors.
 
 ## v7.23 — 2026-11-14
