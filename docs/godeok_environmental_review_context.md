@@ -47,7 +47,7 @@ The [2025 Gyeonggi statistical yearbook](https://ebook.gg.go.kr/src/viewer/main.
 
 | Figure | Facility and reporting scope | Interpretation limit |
 |---|---|---|
-| 108,000 m³/day | Godeok public sewage plant, 2025 yearbook, yearly totals through 2024; facility-row reference date not separately stated | Not assigned to PUB-WWTP or internal Green-dong buildings |
+| 108,000 m³/day | Godeok public sewage plant, 2025 yearbook, yearly totals through 2024; facility-row reference date not separately stated | Listed facility capacity, not demonstrated throughput; not assigned to PUB-WWTP or internal Green-dong buildings |
 | 187,500 m³/day | Industrial-complex public wastewater facility capacity in the 2024 operating statistics; the [2023 edition](https://mcee.go.kr/home/web/policy_data/read.do?menuId=10260&seq=8332) separately records stage 1 (120,000) plus stage 2 (67,500) | Historical reported capacity, not measured throughput or a current 2026 capacity verification |
 | 340,000 m³/day | Public wastewater basic-plan capacity in Han River Basin Environmental Office Notice 2026-15 | Plan figure, not a commissioning result |
 | 450,000 m³/day | Proposed public wastewater expansion in the environmental-review context above | Does not establish separate basic-plan approval or completed capacity |
