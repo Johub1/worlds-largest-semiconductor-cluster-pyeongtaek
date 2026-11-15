@@ -19,6 +19,8 @@ flowchart LR
 
 KC E&C lists P5 Ph1 OSC module fabrication and delivery, work package 3, under Samsung C&T in 2026. It also lists P4 PH2 module/rack integrated piping under Samsung Heavy Industries. These establish named supplier work scopes, not quantities or completion. Work package 3 does not mean three modules. The company separately lists automated STS welding research and tests for Samsung C&T; those entries do not identify Pyeongtaek deployment. [Official high-tech project references](https://www.kcenc.co.kr/business/hightech.php).
 
+Samil C&S's [P5 FAB2 filing](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260923800642) names PC-member fabrication and delivery under Samsung C&T. Kwangmyung Electric's [P5 filing](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261104800306) separately names an MCC package. These are contracted fabrication/delivery and electrical-equipment scopes, with no disclosed member strengths, installation sequence, panel counts or locations.
+
 ## Suspended-ceiling modules
 
 K-ENSOL’s general brochure shows low-level assembly followed by lifting and installation. Its suspended-ceiling support chain runs from deck inserts through hanging bolts, square-pipe supports and a mould-bar grid to FFUs, panels and lighting. This is distinct from the load-bearing floor structure. Its public business description identifies Pyeongtaek application starting in 2020, without assigning the method to a particular fab or floor. Brochure lift capabilities and claimed savings are not site-specific dimensions or performance. [Official ICR brochure](https://k-ensol.com/wp-content/uploads/2024/11/KE_ICR_k-web.pdf), PDF pages 4–5 and 10; [H1 filing](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003241).
@@ -43,7 +45,7 @@ Samsung E&A’s [EP07 frame-method video](https://www.youtube.com/watch?v=qZvZpc
 
 ## Construction materials
 
-The [material guide](construction_materials.md) adds 22 material evidence records, including named P3 PP-sheet work and P2/P3 insulation delivery references. General catalog properties are separated from installed site specifications.
+The [material guide](construction_materials.md) adds 26 material and equipment evidence records, including named P3 PP-sheet work and P2/P3 insulation delivery references. General catalog properties are separated from installed site specifications.
 
 ## Evidence catalog and remaining coverage
 
