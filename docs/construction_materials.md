@@ -1,0 +1,43 @@
+# Pyeongtaek construction materials
+
+Working evidence guide, 15 November 2026. Living project, updated continuously.
+
+This guide links material families to the [construction-method guide](construction_methods.md). Named supplier work and deliveries are distinguished from general catalogs, trials and development. It is not an as-built bill of materials. No material properties, quantities or geometry have been assigned to model elements.
+
+## Evidence by material
+
+| ID | Company / evidence | Material and scope | What remains unconfirmed |
+|---|---|---|---|
+| M01 | GPC: Named site work | Precast concrete members. P3/P4 Green-dong buildings. [Source](https://www.gpc.co.kr/33) (Semiconductor references). | Strength, mix, prestressing and individual building matches are unconfirmed. |
+| M02 | Samsung E&A: Named site method | Precast truss-wall blocks with concrete cast inside. P1 wastewater structures. [Source](https://www.samsungena.com/filesview/2019%20Samsung%20Engineering%20Sustainability%20Report_Korean.pdf?folder=%2Fupload%2Fpublishing%2F&storedfile=757dec1ef0bb4e85b7c1a8500ff45292.pdf) (PDF page 39). | Not a wall-thickness, reinforcement or waterproofing specification. |
+| M03 | Youjin Steel: Named site supply | Fabricated structural steel. FAB3; FAB2 support/EUV scopes. [Source](https://www.youjin.net/반도체/) (2018/2021 project entries). | Steel grade, section, coating and fire protection are not identified. |
+| M04 | Hanyang ENG: General method; site participation separately documented | H-beam module base. P2/P3 module participation. [Source](https://www.hanyangeng.co.kr/upload/bbs/brochure/kor/63eaf3df6a173.pdf) (PDF pages 6 and 8). | Project history does not specify an individual installed beam or its grade. |
+| M05 | Hanyang ENG: General service; site participation separately documented | Ultra-high-purity piping. P1–P3 participation. [Source](https://www.hanyangeng.co.kr/upload/bbs/brochure/kor/63eaf3df6a173.pdf) (PDF pages 3–5 and 8). | UHP describes service; it does not establish an alloy, diameter or finish. |
+| M06 | Hanyang ENG: General method | Piping and duct modules. Semiconductor utility modules. [Source](https://www.hanyangeng.co.kr/upload/bbs/brochure/kor/63eaf3df6a173.pdf) (PDF page 5). | Duct sheet, lining, thickness and individual Pyeongtaek installation are unconfirmed. |
+| M07 | KC E&C: Research/test service | STS piping for automated-welding research. Samsung C&T; Pyeongtaek deployment unspecified. [Source](https://www.kcenc.co.kr/business/hightech.php) (2019/2020 research/test entries). | STS is retained as written; SUS316L and Pyeongtaek deployment are not established. |
+| M08 | Samsung C&T: Named applications and separate test | Access-floor grating. P3 PH2/PH3 application; P4 PH1 test. [Source](https://www.secc.co.kr/ko/library/tech/smart) (Access Floor Grating entries). | Form does not identify metal, opening ratio or load rating. |
+| M09 | Samsung C&T: Named site test | Structural-steel TS-bolt fastening. P4. [Source](https://www.secc.co.kr/ko/library/tech/smart) (2022/2023 structural bolting tests). | Tests do not establish campus-wide adoption, bolt grade, diameter or quantity. |
+| M10 | Samsung C&T: General technology | High-modulus precast concrete lattice beams. High-tech construction; site unspecified. [Source](https://www.secc.co.kr/ko/library/tech/concrete) (Concrete material technology). | General material-development claims are not Pyeongtaek modulus or strength. |
+| M11 | Samsung E&A: General method; captions reviewed | Folded steel forms and composite columns/beams, FCC/FCG. Pyeongtaek application unspecified. [Source](https://www.youtube.com/watch?v=qZvZpcqNa28) (04:01–05:05, English captions). | Steel grade and plate thickness are unspecified; footage was not inspected. |
+| M12 | Samsung E&A: General method; captions reviewed | Steel/prestressed-concrete PLEG beams and CHB connections. Pyeongtaek application unspecified. [Source](https://www.youtube.com/watch?v=qZvZpcqNa28) (05:11–06:18, English captions). | CHB is a connection technology; ordinary PC is not necessarily prestressed. |
+| M13 | Samsung E&A: Development topic | Segment-free hollow precast columns, SFPC. Pyeongtaek application unspecified. [Source](https://www.youtube.com/watch?v=qZvZpcqNa28&t=442s) (07:22 onward, English captions). | Expected benefits are not verified installed properties. |
+| M14 | K-ENSOL: General product/system | Hanging bolts, square-pipe supports, mould bars, brackets and ceiling panels. Individual Pyeongtaek components unspecified. [Source](https://k-ensol.com/wp-content/uploads/2024/11/KE_ICR_k-web.pdf) (PDF page 10). | Product-table stresses are not site design values; casting method does not identify alloy. |
+| M15 | K-ENSOL: General product/system | FFU/EFU filters; OAC particle and chemical filters. Individual site filters unspecified. [Source](https://k-ensol.com/wp-content/uploads/2024/11/KE_ICR_k-web.pdf) (PDF pages 11–13). | Catalog efficiency does not establish an installed filter model or media composition. |
+| M16 | ANSEN: Named site work | Concrete-integrated polypropylene sheets; PCPL. P3 WWT/UPW and water-tank complex. [Source](https://www.ansenpp.com/pc-%EA%B3%B5%EB%B2%95/) (Project list: 2021 and 2023; P3 PCPL completion entry). | Site sheet thickness, resin grade and joint specifications are unconfirmed; ST2 is retained as a project label. |
+| M17 | ANSEN: General product | PP sheet lining systems. Pyeongtaek product configuration unspecified. [Source](https://www.ansenpp.com/%EC%A0%95%EB%B0%B0%EC%88%98%EC%A7%80-%ED%99%94%ED%95%99-%EC%A0%80%EC%9E%A5-%EC%8B%9C%EC%84%A4/) (General lining product comparison). | The general comparison-table thickness is not a P3 installation specification. |
+| M18 | Armacell: Named delivery references; general product data separate | Elastomeric foam insulation; ArmaFlex Class 1 catalog. Pyeongtaek Samsung P2 and Samsung Electronics P3. [Source](https://www.armacell.com/sites/default/files/2025/01/24/ArmaFlex%20Class%201%20-%20Product%20Brochure%20-%20ko-KR.pdf) (PDF page 31 references; pages 5–8 general material information). | NBR is a catalog material description, not proof of each site's installed variant, color, thickness or pipe assignment. |
+| M19 | Samsung E&A: General method discussion | Fireproofing work mentioned in the CHB comparison. Pyeongtaek product unspecified. [Source](https://www.youtube.com/watch?v=qZvZpcqNa28) (05:48–06:04, English captions). | No site coating, spray, board, thickness or fire-resistance duration is identified. |
+
+## Water-treatment lining and insulation
+
+ANSEN lists P3 wastewater/ultrapure-water PCPL work as completed, a concrete-integrated PP-sheet project in 2021 and a P3 UPW water-tank PP-sheet project labelled ST2 in 2023. These are the supplier's published references. ST2 is not interpreted as a material grade or fab phase. Its general production explanation connects sheet placement with reinforcement and concrete casting, transport, installation and sheet-joint welding; it does not provide a P3 work plan. [ANSEN method and references](https://www.ansenpp.com/pc-%EA%B3%B5%EB%B2%95/).
+
+Armacell's delivery list names Pyeongtaek P2 and P3. The same document describes NBR-based Class 1 products, but does not map an installed variant, color, thickness or performance rating to those sites. Thermal insulation is distinct from structural fire protection. [Official material document](https://www.armacell.com/sites/default/files/2025/01/24/ArmaFlex%20Class%201%20-%20Product%20Brochure%20-%20ko-KR.pdf), PDF pages 5–8 and 31.
+
+## Use in the model
+
+The evidence supports explanatory material cards and general assembly relationships. PC means precast concrete and does not by itself identify prestressing or PHC foundation piles. Piping and ducts have different functions; a UHP service label or STS abbreviation is insufficient to select a particular stainless-steel grade. Ceiling supports are distinct from structural floors.
+
+Concrete mixes and strengths, steel/rebar grades, pipe and duct specifications, panel cores, sealants, grouts, filter media, installed insulation thicknesses and structural fire-protection products still require project-specific evidence. Missing details remain unknown. General catalog values must not be entered as Pyeongtaek design inputs.
+
+The [English material evidence catalog](construction_materials_sources.json) contains the 19 records. Source illustrations and footage are not reproduced. The video records rely on reviewed captions, with no inspection of video frames.

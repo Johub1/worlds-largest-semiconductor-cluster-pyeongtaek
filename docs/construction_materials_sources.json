@@ -1,0 +1,196 @@
+{
+  "checked_on": "2026-11-15",
+  "status": "Evidence guide; no as-built properties assigned",
+  "records": [
+    {
+      "id": "M01",
+      "company": "GPC",
+      "evidence": "Named site work",
+      "site": "P3/P4 Green-dong buildings",
+      "material": "Precast concrete members",
+      "limits": "Strength, mix, prestressing and individual building matches are unconfirmed.",
+      "url": "https://www.gpc.co.kr/33",
+      "locator": "Semiconductor references"
+    },
+    {
+      "id": "M02",
+      "company": "Samsung E&A",
+      "evidence": "Named site method",
+      "site": "P1 wastewater structures",
+      "material": "Precast truss-wall blocks with concrete cast inside",
+      "limits": "Not a wall-thickness, reinforcement or waterproofing specification.",
+      "url": "https://www.samsungena.com/filesview/2019%20Samsung%20Engineering%20Sustainability%20Report_Korean.pdf?folder=%2Fupload%2Fpublishing%2F&storedfile=757dec1ef0bb4e85b7c1a8500ff45292.pdf",
+      "locator": "PDF page 39"
+    },
+    {
+      "id": "M03",
+      "company": "Youjin Steel",
+      "evidence": "Named site supply",
+      "site": "FAB3; FAB2 support/EUV scopes",
+      "material": "Fabricated structural steel",
+      "limits": "Steel grade, section, coating and fire protection are not identified.",
+      "url": "https://www.youjin.net/반도체/",
+      "locator": "2018/2021 project entries"
+    },
+    {
+      "id": "M04",
+      "company": "Hanyang ENG",
+      "evidence": "General method; site participation separately documented",
+      "site": "P2/P3 module participation",
+      "material": "H-beam module base",
+      "limits": "Project history does not specify an individual installed beam or its grade.",
+      "url": "https://www.hanyangeng.co.kr/upload/bbs/brochure/kor/63eaf3df6a173.pdf",
+      "locator": "PDF pages 6 and 8"
+    },
+    {
+      "id": "M05",
+      "company": "Hanyang ENG",
+      "evidence": "General service; site participation separately documented",
+      "site": "P1–P3 participation",
+      "material": "Ultra-high-purity piping",
+      "limits": "UHP describes service; it does not establish an alloy, diameter or finish.",
+      "url": "https://www.hanyangeng.co.kr/upload/bbs/brochure/kor/63eaf3df6a173.pdf",
+      "locator": "PDF pages 3–5 and 8"
+    },
+    {
+      "id": "M06",
+      "company": "Hanyang ENG",
+      "evidence": "General method",
+      "site": "Semiconductor utility modules",
+      "material": "Piping and duct modules",
+      "limits": "Duct sheet, lining, thickness and individual Pyeongtaek installation are unconfirmed.",
+      "url": "https://www.hanyangeng.co.kr/upload/bbs/brochure/kor/63eaf3df6a173.pdf",
+      "locator": "PDF page 5"
+    },
+    {
+      "id": "M07",
+      "company": "KC E&C",
+      "evidence": "Research/test service",
+      "site": "Samsung C&T; Pyeongtaek deployment unspecified",
+      "material": "STS piping for automated-welding research",
+      "limits": "STS is retained as written; SUS316L and Pyeongtaek deployment are not established.",
+      "url": "https://www.kcenc.co.kr/business/hightech.php",
+      "locator": "2019/2020 research/test entries"
+    },
+    {
+      "id": "M08",
+      "company": "Samsung C&T",
+      "evidence": "Named applications and separate test",
+      "site": "P3 PH2/PH3 application; P4 PH1 test",
+      "material": "Access-floor grating",
+      "limits": "Form does not identify metal, opening ratio or load rating.",
+      "url": "https://www.secc.co.kr/ko/library/tech/smart",
+      "locator": "Access Floor Grating entries"
+    },
+    {
+      "id": "M09",
+      "company": "Samsung C&T",
+      "evidence": "Named site test",
+      "site": "P4",
+      "material": "Structural-steel TS-bolt fastening",
+      "limits": "Tests do not establish campus-wide adoption, bolt grade, diameter or quantity.",
+      "url": "https://www.secc.co.kr/ko/library/tech/smart",
+      "locator": "2022/2023 structural bolting tests"
+    },
+    {
+      "id": "M10",
+      "company": "Samsung C&T",
+      "evidence": "General technology",
+      "site": "High-tech construction; site unspecified",
+      "material": "High-modulus precast concrete lattice beams",
+      "limits": "General material-development claims are not Pyeongtaek modulus or strength.",
+      "url": "https://www.secc.co.kr/ko/library/tech/concrete",
+      "locator": "Concrete material technology"
+    },
+    {
+      "id": "M11",
+      "company": "Samsung E&A",
+      "evidence": "General method; captions reviewed",
+      "site": "Pyeongtaek application unspecified",
+      "material": "Folded steel forms and composite columns/beams, FCC/FCG",
+      "limits": "Steel grade and plate thickness are unspecified; footage was not inspected.",
+      "url": "https://www.youtube.com/watch?v=qZvZpcqNa28",
+      "locator": "04:01–05:05, English captions"
+    },
+    {
+      "id": "M12",
+      "company": "Samsung E&A",
+      "evidence": "General method; captions reviewed",
+      "site": "Pyeongtaek application unspecified",
+      "material": "Steel/prestressed-concrete PLEG beams and CHB connections",
+      "limits": "CHB is a connection technology; ordinary PC is not necessarily prestressed.",
+      "url": "https://www.youtube.com/watch?v=qZvZpcqNa28",
+      "locator": "05:11–06:18, English captions"
+    },
+    {
+      "id": "M13",
+      "company": "Samsung E&A",
+      "evidence": "Development topic",
+      "site": "Pyeongtaek application unspecified",
+      "material": "Segment-free hollow precast columns, SFPC",
+      "limits": "Expected benefits are not verified installed properties.",
+      "url": "https://www.youtube.com/watch?v=qZvZpcqNa28&t=442s",
+      "locator": "07:22 onward, English captions"
+    },
+    {
+      "id": "M14",
+      "company": "K-ENSOL",
+      "evidence": "General product/system",
+      "site": "Individual Pyeongtaek components unspecified",
+      "material": "Hanging bolts, square-pipe supports, mould bars, brackets and ceiling panels",
+      "limits": "Product-table stresses are not site design values; casting method does not identify alloy.",
+      "url": "https://k-ensol.com/wp-content/uploads/2024/11/KE_ICR_k-web.pdf",
+      "locator": "PDF page 10"
+    },
+    {
+      "id": "M15",
+      "company": "K-ENSOL",
+      "evidence": "General product/system",
+      "site": "Individual site filters unspecified",
+      "material": "FFU/EFU filters; OAC particle and chemical filters",
+      "limits": "Catalog efficiency does not establish an installed filter model or media composition.",
+      "url": "https://k-ensol.com/wp-content/uploads/2024/11/KE_ICR_k-web.pdf",
+      "locator": "PDF pages 11–13"
+    },
+    {
+      "id": "M16",
+      "company": "ANSEN",
+      "evidence": "Named site work",
+      "site": "P3 WWT/UPW and water-tank complex",
+      "material": "Concrete-integrated polypropylene sheets; PCPL",
+      "limits": "Site sheet thickness, resin grade and joint specifications are unconfirmed; ST2 is retained as a project label.",
+      "url": "https://www.ansenpp.com/pc-%EA%B3%B5%EB%B2%95/",
+      "locator": "Project list: 2021 and 2023; P3 PCPL completion entry"
+    },
+    {
+      "id": "M17",
+      "company": "ANSEN",
+      "evidence": "General product",
+      "site": "Pyeongtaek product configuration unspecified",
+      "material": "PP sheet lining systems",
+      "limits": "The general comparison-table thickness is not a P3 installation specification.",
+      "url": "https://www.ansenpp.com/%EC%A0%95%EB%B0%B0%EC%88%98%EC%A7%80-%ED%99%94%ED%95%99-%EC%A0%80%EC%9E%A5-%EC%8B%9C%EC%84%A4/",
+      "locator": "General lining product comparison"
+    },
+    {
+      "id": "M18",
+      "company": "Armacell",
+      "evidence": "Named delivery references; general product data separate",
+      "site": "Pyeongtaek Samsung P2 and Samsung Electronics P3",
+      "material": "Elastomeric foam insulation; ArmaFlex Class 1 catalog",
+      "limits": "NBR is a catalog material description, not proof of each site's installed variant, color, thickness or pipe assignment.",
+      "url": "https://www.armacell.com/sites/default/files/2025/01/24/ArmaFlex%20Class%201%20-%20Product%20Brochure%20-%20ko-KR.pdf",
+      "locator": "PDF page 31 references; pages 5–8 general material information"
+    },
+    {
+      "id": "M19",
+      "company": "Samsung E&A",
+      "evidence": "General method discussion",
+      "site": "Pyeongtaek product unspecified",
+      "material": "Fireproofing work mentioned in the CHB comparison",
+      "limits": "No site coating, spray, board, thickness or fire-resistance duration is identified.",
+      "url": "https://www.youtube.com/watch?v=qZvZpcqNa28",
+      "locator": "05:48–06:04, English captions"
+    }
+  ]
+}

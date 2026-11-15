@@ -41,6 +41,10 @@ Its [equipment page](https://www.secc.co.kr/ko/library/tech/equipment) gives Pye
 
 Samsung E&A’s [EP07 frame-method video](https://www.youtube.com/watch?v=qZvZpcqNa28), also [listed on its official site](https://www.samsungena.com/kr/newsroom/video/view?idx=15835), explains FCC/FCG, PLEG/CHB and high-elasticity lattice beams at 04:01–06:55. The reviewed English captions do not identify Pyeongtaek application. At 07:12 onward, SFPC and Giga Block are development topics. Expected benefits are not built-site results. This review used video metadata and captions; video frames and construction footage were not inspected.
 
+## Construction materials
+
+The [material guide](construction_materials.md) adds 19 material evidence records, including named P3 PP-sheet work and P2/P3 insulation delivery references. General catalog properties are separated from installed site specifications.
+
 ## Evidence catalog and remaining coverage
 
 The accompanying [source catalog](construction_methods_sources.json) contains 20 method/reference records, including GPC Green-dong building PC work (그린동, the project building name), PC design-service references, steel supply, general double-wall and foundation-pile descriptions. The evidence level of each record is explicit. A general method or design service must not be promoted to an installed system.
