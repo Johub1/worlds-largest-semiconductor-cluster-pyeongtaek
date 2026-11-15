@@ -1,5 +1,11 @@
 # Changelog
 
+## v7.40 — 2026-11-15
+- New `meta.wwtp_operations_2024` (sources `MCEE_WWTP_2024`, `SUVIOL_REF`): 2024 reported operations of the Godeok public wastewater facility (capacity 187,500 m³/day; facility-level only; water-quality values not used). `PUB-WWTP` note points to it.
+- `meta.construction_material_records` corrected to 20 method and 26 material/equipment records (main 09b9395), including the four P5 records.
+- Packages include `docs/` from `main` 09b9395 (material table rendering fix from PR #5).
+- No box changed. 1,474 elements; 201 sources (59 official, 42 international, 100 Korean).
+
 ## v7.39 — 2026-11-15
 - `meta.imagery_geometry`: comparison with NGII national base map building features (new source `NGII_BASEMAP_BLDG`); east strips 91–96% covered by the features; differences mainly at the west ends; no box changed; original features not redistributed.
 - `meta.construction_material_records`: updated for the 22-record material guide (deck-plate contracts) and the aligned "high-modulus" wording.
