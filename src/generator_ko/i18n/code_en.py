@@ -274,9 +274,10 @@ A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,
 "Sources:",
 ]
 VX=[('B 위성영상 평면 판독(높이는 가정)','B plan read from imagery (heights assumed)'),('복합동·UT동 후보','Complex or UT building candidate'),('삼성전자 물류창고(이전 예정)','Samsung logistics warehouse (relocation planned)'),('삼성전자 물류창고','Samsung logistics warehouse'),('에어프로덕츠 평택공장','Air Products plant'),('에어퍼스트 평택공장','Air First plant'),('린데코리아 평택공장','Linde Korea plant'),('고덕 공공폐수처리시설','Godeok public WWTP'),('2단지 주차동','Complex 2 parking building'),('임직원 주차장','Employee parking lot'),('오버브리지(도로 횡단)','Overbridge (road crossing)'),('오버브리지','Overbridge'),('라인별 생산 제품','Products by line'),('구역','Zone'),('제품','Product')]
+VX += [('그린동 공식 설명과 확인 범위', 'Green-dong: company account and evidence limits'), ('기사에 보고된 가동 동수: ', 'Operating buildings reported in the article: '), ('방문지 표기: ', 'Visit label: '), ('수온 저감 시설 완공 목표: ', 'Effluent-temperature reduction completion target: ')]
 K=re.compile('[가-힣]')
 def conv(fn,T,out):
-    src=json.load(open(W+'i18n/%s_src.json'%fn.split('.')[0])); assert len(src)==len(T),(fn,len(src),len(T))
+    src=json.load(open(W+'i18n/%s_src.json'%fn.split('.')[0], encoding='utf-8')); assert len(src)==len(T),(fn,len(src),len(T))
     s=open(W+fn,encoding='utf-8').read()
     pairs=[]
     for a,b in zip(src,T):
@@ -288,7 +289,9 @@ def conv(fn,T,out):
     for a,b in sorted(pairs,key=lambda p:-len(p[0])): s=s.replace(a,b)
     left=sorted(set(K.findall(s)))
     lines=[l[:200] for l in s.split('\n') if K.search(l)]
-    open(W+out,'w',encoding='utf-8').write(s)
+    if out == 'viewer_template_en.html':
+        s = s.replace('<html lang="ko"', '<html lang="en"')
+    open(W+out,'w',encoding='utf-8', newline='\n').write(s)
     print(fn,'->',out,'hangul lines left',len(lines)); [print('  ',l) for l in lines[:25]]
 if __name__=='__main__':
     conv('viewer_template.html',V,'viewer_template_en.html')

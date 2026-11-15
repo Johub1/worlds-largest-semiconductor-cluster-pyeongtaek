@@ -890,6 +890,10 @@ META["products"] = dict(
     ],
 )
 
+# Dated company account; no model-building assignment or geometry change.
+SOURCES['OFF_SS_PT_GREEN_2026'] = ('삼성전자 평택 소통협의회 2026년 6월 16일 회의 소개: 그린동 4개 동 가동, 유기 처리 단계의 생물학적 질소 제거, 방류수 수온 저감 시설 연말 완공 목표(회사 기사 설명, 운영 동수의 정확한 기준일 미명시)', 'https://semiconductor.samsung.com/kr/sustainability/people/community-communication/pyeongtaek-story/20260707/')
+META["green_building_official_context"] = {'source_keys': ['OFF_SS_PT_GREEN_2026'], 'meeting_date': '2026-06-16', 'reported_operating_green_buildings': 4, 'visit_label': '그린1동', 'treatment_description': '유기 처리 단계에서 미생물을 활용한 생물학적 처리로 질소 오염물질을 제거한다는 회사 설명', 'temperature_reduction_completion_target': '2026-12', 'limits': '6월 회의를 소개하는 회사 기사에 네 동이 가동 중이라고 적혀 있으나 이 운영 동수의 정확한 기준일은 명시되지 않았다. 2026년 11월 현재 운영현황이나 처리용량을 확정하지 않는다. 네 동의 개별 명칭·위치·팹 대응은 제시되지 않았다. 그린1동 방문이라는 원문 표기는 유지하되 나머지를 그린2~4동이라고 새로 명명하지 않는다. S1/S2 상자 및 개념 처리단계와의 개별 대응은 미확인이다. 수온 저감 시설의 2026년 12월은 당시 완공 목표이며 준공·가동 확인이 아니다. URL 경로의 숫자를 게시일로 확정하지 않는다. 상자·장비·배관·수량·물성·등급은 바꾸지 않는다.', 'operating_count_reference_date': 'not specified in the article'}
+
 if __name__ == "__main__":
     r = lambda e: [round(v, 2) if isinstance(v, float) else v for v in e]
     # v7.21: storage tanks are exported as cylinders (diameter = shorter plan side of the box)
@@ -941,7 +945,7 @@ if __name__ == "__main__":
                 elems=ELEMS, equip=[r(e) for e in EQUIP], rails=[r(e) for e in RAILS], struct=STRUCT, safety=SAFETY, pipes=[r(e) for e in PIPES], dets=[r(e) for e in DETS], egress=EGRESS,
                 usys=USYS, ugroups=UGROUPS, util=UTIL,
                 cr_report={"P1": 135300, "P2": 148500, "P3": 181500, "P4": 181500}, sources=SOURCES)
-    json.dump(data, open("campus.json", "w"), ensure_ascii=False, separators=(",", ":"))
+    json.dump(data, open("campus.json", "w", encoding='utf-8', newline='\n'), ensure_ascii=False, separators=(",", ":"))
     from collections import Counter
     print("elems", len(ELEMS), "equip boxes", len(EQUIP), "rails", len(RAILS))
     c = Counter((e[7], e[8], TYPES[e[6]]["key"]) for e in EQUIP)

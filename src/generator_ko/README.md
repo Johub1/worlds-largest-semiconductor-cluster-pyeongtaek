@@ -2,9 +2,26 @@
 
 Living project, updated continuously.
 
-## Status (v7.42, 15 November 2026)
+## Current source-context update (16 November 2026)
 
-The files in this folder are the generator, utility source, translation tables and build scripts actually used to produce the published dataset. They were synchronized from the maintainer's working copy for v7.42; the earlier snapshot in this folder (which produced 1,459 elements and 178 source keys) has been replaced.
+The current data/viewer pipeline produces 1,474 elements and 203 source keys. One Green-dong source and one metadata object were added; existing geometry, equipment arrays and grades are unchanged. Text reads explicitly use UTF-8 and generated text uses LF. Translation warnings escape console characters that cannot be represented.
+
+Fresh package checks on Windows and Linux ran build, translation, both viewers, same-language verification and root viewer paths with UTF-8 mode disabled and an ASCII console. Generated data and viewers matched their package references byte-for-byte. CAD export was not rerun for this update; the historical export checks below concern the earlier dataset and are not a fresh export claim.
+
+To regenerate the current English data and viewer without rerunning CAD export:
+
+```sh
+cd src/generator_ko
+python3 build.py
+python3 i18n/apply.py
+python3 i18n/code_en.py
+python3 mkview_en.py
+python3 ../tools/verify_generated_data.py --generated campus_en.json --reference ../../data/campus.json
+```
+
+## Historical v7.42 check (15 November 2026)
+
+The historical v7.42 source snapshot contained the generator, utility source, translation tables and build scripts used to produce that release. It was synchronized from the maintainer's working copy for v7.42; the earlier snapshot in this folder (which produced 1,459 elements and 178 source keys) has been replaced.
 
 Isolated check on 15 November 2026 (a fresh copy of `src/generator_ko`, `src/tools`, `src/vendor` and `data/` in a new directory, no other files):
 
@@ -13,7 +30,7 @@ Isolated check on 15 November 2026 (a fresh copy of `src/generator_ko`, `src/too
 - The Korean `campus.json` compared with the Korean package's `data/campus.json` → exit 0 (equal content; serialization differs).
 - `sh build_en.sh` → the English viewer and the CSV tables in `data/` are byte-identical to the published files. The DXF files differ only in their creation-time header fields; the STEP file differs only in its timestamp and entity numbering (the multiset of 425,972 entities is identical after renumbering).
 
-This shows that the published data can be regenerated from these sources. It does not verify site accuracy, which is described by the confidence grades in the data.
+That check demonstrated regeneration of the v7.42 dataset from that historical snapshot. It does not verify site accuracy, which is described by the confidence grades in the data.
 
 ## Procedure
 
@@ -35,3 +52,4 @@ How the translation works: `build.py` writes all text in Korean. `i18n/apply.py`
 ## Not included
 
 Third-party imagery, the permit-register exports used for `data/register_vs_model.csv`, and the internal review files of the collaborating workstreams.
+

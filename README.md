@@ -35,7 +35,7 @@ New material notes distinguish a named [warehouse glazing-sealant reference](doc
 | Concept interior | 86,620 equipment boxes of 26 types on 8 floors per fab, 608 OHT rail segments, 10,440 structural members |
 | Concept utilities | 29 systems in 8 groups, 1,521 route segments (thermal, PCW, gas, exhaust, wastewater, chemicals, UPW, power) |
 | Concept EHS | 960 gas/exhaust flow lines, 1,152 gas detector points, 1,552 emergency equipment points, 15,320 egress travel-distance samples |
-| Sources | 202 keyed sources in three tiers: 60 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 100 Korean press and local |
+| Sources | 203 keyed sources in three tiers: 61 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 100 Korean press and local |
 | Units, origin | metres; local tangent plane at WGS84 37.02 N, 127.06 E; X east, Y north, Z up |
 | Imagery date | 2025-12-22 (source resolution 0.5 m, per Esri's metadata layer) for dimensions; the zoom-18 mosaic used for re-checks was downloaded on 2026-11-12 and 13 |
 
@@ -57,7 +57,7 @@ New material notes distinguish a named [warehouse glazing-sealant reference](doc
 | `data/*.csv` | Elements, equipment, floors, phases, vendors, structure, EHS and utility tables |
 | `preview/` | 27 screenshots of the viewer |
 | `src/` | Export, viewer and check scripts that run on `data/campus.json`; `src/generator_ko/` holds the original generator and the translation tables (see "Rebuilding") |
-| `SOURCES.md` | The model's 202 source keys with URLs, grouped by tier; supplementary supplier references are indexed separately in `docs/` |
+| `SOURCES.md` | The model's 203 source keys with URLs, grouped by tier; supplementary supplier references are indexed separately in `docs/` |
 | `CONSULTATION.md` | Record of what other AI models proposed and what was adopted, verified, held or rejected |
 
 ## Coordinates
@@ -186,7 +186,7 @@ Only what appears in Samsung Electronics official announcements and press is lis
 
 - **P4 consists of four facilities**: FAB building, complex building, substation, green building (wastewater treatment). Filings name "green building, substation and complex building, air pollution control, UPW finishing work".
 - **Ultrapure water plant in the complex building** (press on a subcontractor filing). Its position inside the building is not public, so only a concept box is placed.
-- **Green buildings**: two on campus; underground water treatment of about 34,000㎡, about 70,000 t a day, six wastewater streams, screen doors on chemical piping, central control room, 97% automation (official disclosure, 2021).
+- **Green buildings**: the 2021 account describes two buildings and associated treatment-system figures. A separate Samsung company article reports four operating Green-dong buildings without specifying the reference date of that count, and a December 2026 completion target for temperature reduction. These accounts are not mapped to four confirmed model boxes or combined into a campus treatment-capacity total. The viewer explains the source dates and limits.
 - **Wastewater path**: campus green building (primary treatment) → Godeok public wastewater treatment plant → Seojeongni stream → Jinwi stream → Anseong stream → Pyeongtaek lake (press on a provincial inspection, 2026-10). PFAS results published in 2026-10 were sampled at the public plant's final outlet, which also receives water from other facilities; the model does not attribute them to one source.
 - **Power**: 345 kV Godeok–Seoanseong line (23.5 km, completed 2023-09, 2 GW for P1–P4, cost borne by Samsung Electronics); 500 kV Bukdangjin–Godeok HVDC with a converter station at Godeok.
 - **KEPCO Godeok lot (building register, Godeok-dong 1730)**: site 102,076㎡; converter station 7,745.67㎡ building area, 23.80 m high; substation 4,861.36㎡, 32.85 m; substation-2 4,671.44㎡, 33.45 m; plus STATCOM, spare-parts warehouse and office buildings. The OSM boundary area differs from the registered site area by 0.4%.
@@ -666,10 +666,14 @@ python mkview.py        # writes index.html from viewer_template.html
 python check_connect.py # utility connectivity table
 ```
 
-The Korean generator, translation tables and build scripts actually used for this release are in `src/generator_ko/` (synchronized in v7.42). In an isolated check they regenerate this dataset exactly: 1,474 elements and 202 source keys, and `src/tools/verify_generated_data.py` reports no difference between the regenerated English `campus_en.json` and `data/campus.json`. See [generator procedure and check](src/generator_ko/README.md).
+The current Korean generator and translation tables are in `src/generator_ko/`. They build on the v7.42 source synchronization and include the 16 November 2026 source-context and text-I/O updates. In an isolated check they regenerate this dataset exactly: 1,474 elements and 203 source keys, and `src/tools/verify_generated_data.py` reports no difference between the regenerated English `campus_en.json` and `data/campus.json`. See [generator procedure and check](src/generator_ko/README.md).
 
 ## Corrections
 
 If any element is factually wrong or is believed not to derive from public information, open an issue naming the element id and it will be reviewed.
 
 Additional [construction quality-management notes](docs/construction_quality_management.md) distinguish reported inspection activities from acceptance results. The [PC supply references](docs/precast_member_supply_references.md) now also preserve Korea Ocean Platform's named Pyeongtaek caption without applying generic product properties to the site.
+
+## Source-context and reproducibility update — 16 November 2026
+
+The Green-dong company account adds one source and one metadata object, with a collapsible viewer explanation. Existing geometry, equipment arrays and grades are unchanged. Data and viewer generation use explicit UTF-8/LF text I/O, and translation warnings safely escape characters unsupported by a console. Fresh Windows and Linux package checks reproduced the data and viewers, including root paths, with UTF-8 mode disabled and an ASCII console. These checks did not rerun CAD export or verify site accuracy. The 24 documentation files and the reviewed 19-item evidence scope are retained.

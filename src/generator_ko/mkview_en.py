@@ -8,9 +8,9 @@ def _inline(h):
         js=open(os.path.join(_V,fn),encoding='utf-8').read().replace('</script','<\\/script')
         h=re.sub(pat,lambda m:'<script>'+js+'</script>',h,count=1)
     return h
-D=json.load(open('campus_en.json'))
+D=json.load(open('campus_en.json', encoding='utf-8'))
 slim=dict(meta=D['meta'],fabs=D['fabs'],levels=D['levels'],types=D['types'],sources=D['sources'],phase=D['phase'],pipes=D['pipes'],dets=D['dets'],egress=D['egress'],cr_report=D['cr_report'],struct=D['struct'],safety=D['safety'],usys=D['usys'],ugroups=D['ugroups'],util=D['util'],
   elems=[{k:v for k,v in e.items() if not (k=='rot' and not v) and not (k=='opacity' and v==1.0) and not (k=='note' and not v) and not (k in ('fab','fl') and not v)} for e in D['elems']],
   equip=D['equip'],rails=D['rails'])
 h=_inline(open('viewer_template_en.html',encoding='utf-8').read()).replace('/*__DATA__*/',json.dumps(slim,ensure_ascii=False,separators=(',',':')))
-open('index_en.html','w',encoding='utf-8').write(h); print(len(h)//1024,'KB')
+open('index_en.html','w',encoding='utf-8', newline='\n').write(h); print(len(h)//1024,'KB')
