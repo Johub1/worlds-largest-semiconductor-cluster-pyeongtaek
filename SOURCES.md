@@ -6,7 +6,7 @@ Source priority: (1) official material and filings of Samsung Electronics and it
 
 Third-party imagery, video frames and vendor CAD were consulted but are not redistributed in this package.
 
-## Tier 1 — official material, filings, public registers, public maps and imagery (59)
+## Tier 1 — official material, filings, public registers, public maps and imagery (60)
 
 | Key | Source | URL |
 |---|---|---|
@@ -53,6 +53,7 @@ Third-party imagery, video frames and vendor CAD were consulted but are not redi
 | `GG_2023_181` | Gyeonggi Province Notice No. 2023-181 (2023-06-30), approval of a change to the Pyeongtaek Godeok international-city district general industrial complex plan — PDF page 10 sewage and wastewater plan, page 11 item 8 support plan (wastewater treatment plant 345 → 450 thousand m³/day) | https://www.eum.go.kr/web/gs/gv/gvGosiDet.jsp?seq=570591 |
 | `MCEE_WWTP_2024` | Ministry of Climate, Energy and Environment, 'Public wastewater treatment facility operations as of end-2024' (policy data 8527, XLSX) — Pyeongtaek Godeok Internationalization row 33: capacity, methods, 2024 inflow, discharge and reuse | https://mcee.go.kr/home/web/policy_data/read.do?menuId=10260&seq=8527 |
 | `SUVIOL_REF` | Suviol official project references — 'Pyeongtaek Godeok general industrial complex public wastewater management service', capacity 187,500, hybrid MSBR/CSBR | https://suviol.com/m221.php?pg=4 |
+| `MCEE_WWTP_2023` | Ministry of Climate, Energy and Environment, '2023 public wastewater treatment facility operations' (policy data 8332, XLSX) — Pyeongtaek Godeok Internationalization row 28: start and completion dates, capacity and method by stage | https://mcee.go.kr/home/web/policy_data/read.do?menuId=10260&seq=8332 |
 | `NGII_BASEMAP_BLDG` | NGII national base map buildings (Gyeonggi, edition 2026-07, official VWorld download — original features not redistributed because the licence is not specified; only comparison figures used) | https://www.vworld.kr/dtmk/dtmk_ntads_s002.do?svcCde=MK&dsId=20250121DS00011 |
 | `SAMOO_P2` | Samoo Architects & Engineers, official portfolio 'P2-Project': Pyeongtaek-si, Industrial, gross floor area 828,992 m², 8 floors above ground and 1 basement, project completion 2021 — the buildings covered are not stated (page opened separately by this workstream and by Codex on 2026-11-15) | https://samoo.com/home/works/view.do?cntntsSn=41603 |
 | `POSCOANC_P5` | POSCO A&C official portfolio No. 959 'Pyeongtaek P5 Ph1 Semi-Production Facility CM/CS': service CM, client Samsung Electronics, year 2028 (a future year) — original checked by Codex | https://poscoanc.com/en/project/portfolio_view.do?num=959 |

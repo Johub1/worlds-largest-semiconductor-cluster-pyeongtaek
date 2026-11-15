@@ -1,5 +1,14 @@
 # Changelog
 
+## v7.41 — 2026-11-15
+- `meta.construction_material_records` aligned with the merged guides (main f8aceb2): 22 method and 31 material/equipment records; README links the historical communications note.
+- `meta.wwtp_operations_2024`: stage table of the Godeok public wastewater facility from the 2023 workbook (new source `MCEE_WWTP_2023`): 120,000 + 67,500 = 187,500 m³/day.
+- Packages include `docs/` from main f8aceb2.
+- No element changed. 202 sources (60 official, 42 international, 100 Korean).
+
+## Documentation update — 2026-11-15 (PR #6, f8aceb2)
+- Material guide 31 records (M27–M31), method catalog 22 records (CM-S16, CM-S17), historical communications note, spacing and URL encoding fixes.
+
 ## v7.40 — 2026-11-15
 - New `meta.wwtp_operations_2024` (sources `MCEE_WWTP_2024`, `SUVIOL_REF`): 2024 reported operations of the Godeok public wastewater facility (capacity 187,500 m³/day; facility-level only; water-quality values not used). `PUB-WWTP` note points to it.
 - `meta.construction_material_records` corrected to 20 method and 26 material/equipment records (main 09b9395), including the four P5 records.
