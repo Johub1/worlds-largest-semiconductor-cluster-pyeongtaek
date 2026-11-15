@@ -268,6 +268,46 @@
       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261104800306",
       "locator": "Correction table and sections 1, 3, 5 and 9; 2026-10-01 to 2027-10-31",
       "receipt": "20261104800306"
+    },
+    {
+      "id": "M27",
+      "company": "Samilbend",
+      "evidence": "Named supplier delivery references; general fabrication kept separate",
+      "site": "Named P3/P4 work and campus support buildings",
+      "material": "Piping materials; individual fitting products unspecified",
+      "limits": "Reference rows do not identify installed grades, dimensions, quantities or acceptance. General carbon-steel fitting products are not assigned to site piping. Printed customer/recipient roles are not reconstructed.",
+      "url": "https://samilbend.com/default/img/brochure2024.pdf",
+      "locator": "PDF pages80,83,87–88 selected references; pages8–10 general fabrication/products"
+    },
+    {
+      "id": "M28",
+      "company": "IS Dongseo",
+      "evidence": "Named supplier fabrication/delivery references",
+      "site": "Pyeongtaek P3/P4 154 kV project labels",
+      "material": "Precast-concrete fabrication and delivery",
+      "limits": "Entries across 2021–2022 are not independent contracts or building counts. No member schedule, concrete strength, dimensions, exact substation match or completion evidence.",
+      "url": "https://www.isdongseo.co.kr/html/109",
+      "locator": "Architectural PC delivery references, 2021 and2022"
+    },
+    {
+      "id": "M29",
+      "company": "Daeyang E&A",
+      "evidence": "Named company project portfolio",
+      "site": "Samsung Electronics Pyeongtaek P1, P3 and P4",
+      "material": "Fireproofing and thermal-insulation work, products unspecified",
+      "limits": "The portfolio gives no work dates, product, thickness, fire-resistance duration, member location or assignment of each work type to each fab. A general product on the same website is not an installed-site specification.",
+      "url": "https://www.dy-ena.com/business/hitech",
+      "locator": "Hi-Tech portfolio, Pyeongtaek P1/P3/P4 caption"
+    },
+    {
+      "id": "M30",
+      "company": "Samsung C&T / SY",
+      "evidence": "General collaborative research disclosure",
+      "site": "High-tech buildings; Pyeongtaek installation unspecified",
+      "material": "Exterior-panel material and connection improvements",
+      "limits": "The research-results/expected-benefits table describes a one-hour fire-resistance improvement. No site, assembly test report, panel core, thickness or installed rating is established.",
+      "url": "https://kind.krx.co.kr/external/2026/03/12/001342/20260312003276/11011.htm",
+      "locator": "2025 annual report, collaborative research table; March2022–April2024"
     }
   ]
 }
