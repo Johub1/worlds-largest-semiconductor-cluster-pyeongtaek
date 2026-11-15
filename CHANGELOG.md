@@ -1,8 +1,14 @@
 # Changelog
 
+## v7.38 — 2026-11-15
+- The `docs/` construction-method and material guides (merged on `main` in b92248a and b60f962) are now included in the release packages and linked from the README.
+- New `meta.construction_material_records`; sources `ANSEN_PC`, `ARMACELL_CL1`. `UT-34-UPW` note: ANSEN P3 UPW water-tank PP-sheet work (supply fact only; box unchanged, grade D).
+- No box changed. 1,474 elements; 198 sources (56 official, 42 international, 100 Korean).
+
 ## Documentation follow-up — 2026-11-15
 - Added an English construction-method guide and 20 scoped official-source records, linked from the README. Named project applications, work references, design services, tests, general methods and development topics are distinguished.
 - Corrected Green-dong building-name translation and stated the exact metadata/caption-only video review scope. Model data, geometry and exports are unchanged.
+- Added an English construction-material guide with 19 records (b60f962).
 
 ## v7.37 — 2026-11-15
 - `meta.infra_plan`: history of the 450,000 m³/day in the industrial-complex support plan (345 → 450 thousand in Notice 2023-181 of 2023-06-30; unchanged in 2024-1 and 2025-121). New source `GG_2023_181`. Relation to the 340,000 basic plan still not established.

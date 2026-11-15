@@ -6,7 +6,7 @@ Source priority: (1) official material and filings of Samsung Electronics and it
 
 Third-party imagery, video frames and vendor CAD were consulted but are not redistributed in this package.
 
-## Tier 1 — official material, filings, public registers, public maps and imagery (54)
+## Tier 1 — official material, filings, public registers, public maps and imagery (56)
 
 | Key | Source | URL |
 |---|---|---|
@@ -61,6 +61,8 @@ Third-party imagery, video frames and vendor CAD were consulted but are not redi
 | `KENSOL_H1_2026` | K-ENSOL 38th-term half-year report (2026-08-14, as of 2026-06-30) — major order-contract table (only contracts of 5% or more of the previous year's revenue), revenue notes (consolidated 17, separate 16), business description (OAC = outdoor air conditioner; modular system-ceiling method applied at Pyeongtaek) | https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003241 |
 | `KENSOL_Q1_2026` | K-ENSOL first-quarter 2026 report (KIND filing) — major order-contract table and revenue notes (Pyeongtaek P3 and P4 module S/C and OAC contracts) | https://kind.krx.co.kr/external/2026/05/15/002134/20260515004740/11013.htm |
 | `KENSOL_ICR` | K-ENSOL official ICR (industrial cleanroom) brochure PDF — suspended-ceiling connection hierarchy, modular installation method, OAC make-up (general product description, not Pyeongtaek specifications) | https://k-ensol.com/wp-content/uploads/2024/11/KE_ICR_k-web.pdf |
+| `ANSEN_PC` | ANSEN official 'PC method and PP sheet' page — reference table including Pyeongtaek site P3 WWT and UPW (acid water, DI water) PCPL method applied and completed, and 2023 Samsung Electronics Pyeongtaek Godeok P3 UPW combined water-tank building PP waterproofing sheet ST2 new construction (Samsung C&T) | https://www.ansenpp.com/pc-%EA%B3%B5%EB%B2%95/ |
+| `ARMACELL_CL1` | Armacell ArmaFlex Class 1 product brochure (Korean PDF) — delivery references on page 31 naming Pyeongtaek Samsung P2 and Pyeongtaek Samsung Electronics P3; general material information on pages 5–8 (NBR-based elastomeric foam insulation) | https://www.armacell.com/sites/default/files/2025/01/24/ArmaFlex%20Class%201%20-%20Product%20Brochure%20-%20ko-KR.pdf |
 | `OFF_SS_FAB101` | Samsung Semiconductor official glossary article 'All about the fab': air circulates from top to bottom through high-performance ceiling filters and perforated floor grating; OHT on ceiling rails carries FOUPs to the tools automatically (no specific fab named) | https://semiconductor.samsung.com/kr/support/tools-resources/dictionary/semiconductors-101-part-7-all-about-the-fab-the-birthplace-of-semiconductor-chips/ |
 | `OFF_SS_OHT` | Samsung Semiconductor global newsroom 2025-09-04: OHT on ceiling rails carries FOUPs; one vehicle travels about 100 km a day (no specific fab named) | https://news.samsungsemiconductor.com/global/the-invisible-highways-tracing-the-journey-inside-a-semiconductor-fab/ |
 | `OFF_SS_LEGO` | Samsung Semiconductor official page: Pyeongtaek Campus Line 1 reproduced as a 1:520 block model of about 15,000 pieces showing air showers, dry cooling coils and ULPA filters (a promotional model, not a drawing of the real building) | https://semiconductor.samsung.com/support/tools-resources/fabrication-process/a-lego-model-of-the-worlds-largest-semiconductor-production-line-fab-on-the-block/ |
