@@ -12,13 +12,13 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 
 Supplementary supplier notes cover [utility hook-up and fire-system fabrication](docs/utility_hookup.md), [pile-foundation quality control](docs/foundation_quality_control.md), and [raised floors and vibration assessment](docs/raised_floors_and_vibration.md). Named references and general product data remain distinct; no installed specifications or quantities are inferred.
 
-Further reference notes cover [reinforcement supports and infrastructure reinforcement](docs/reinforcement_reference_scopes.md) and [stainless tube standards and contract quantities](docs/stainless_tube_reference_scopes.md). The [seventeen-record supplemental index](docs/supplemental_supplier_sources.json) is separate from the 33-material and 22-method catalogs; manufacturer reference labels do not assign installed properties to the model.
+Further reference notes cover [reinforcement supports and infrastructure reinforcement](docs/reinforcement_reference_scopes.md) and [stainless tube standards and contract quantities](docs/stainless_tube_reference_scopes.md). The [nineteen-record supplemental index](docs/supplemental_supplier_sources.json) is separate from the 33-material and 23-method catalogs; manufacturer reference labels do not assign installed properties to the model.
 
 Additional references distinguish [system-ceiling components and modular installation](docs/ceiling_components_and_modular_installation.md), [supplier history and lining processes](docs/lining_supplier_reference_scopes.md), and separate [electrical](docs/electrical_reference_scopes.md) and [fire-mechanical work scopes](docs/fire_mechanical_reference_scopes.md). A [lifting and steelwork note](docs/lifting_and_steelwork_reference_scopes.md) preserves project-specific supplier labels while keeping jack ratings, steelwork scale and building-floor labels separate from installed model properties.
 
 [Construction logistics](docs/construction_logistics.md) explains the shop-to-FAB material flow as a conceptual workflow. [Reading the model's estimates](docs/model_assumptions.md) distinguishes approximate building heights, functional levels and equipment displays from surveyed or installed assets.
 
-[Evidence reconciliation and corrections](docs/evidence_reconciliation.md) records 19 reviewed differences, unresolved interpretations and corrections to our own analysis. A [building-record comparison method](docs/building_record_comparison_method.md) provides the query settings and data month. These notes do not establish issuer error or misconduct.
+[Evidence reconciliation and corrections](docs/evidence_reconciliation.md) records 19 reviewed differences, unresolved interpretations and corrections to our own analysis, including a later [environmental-review clarification](docs/godeok_environmental_review_context.md) of the wastewater planning figures. A [building-record comparison method](docs/building_record_comparison_method.md) provides the query settings and data month. These notes do not establish issuer error or misconduct.
 
 > **Unofficial.** This project is not affiliated with, endorsed by, or reviewed by Samsung Electronics or any other company named here. No non-public drawings, internal documents or information obtained through site access were used. Building outlines are measured from public satellite imagery. Heights and floor arrangement are partly estimated. **The interior equipment layout, utility routes and EHS layers are a generic reference design (concept), not the actual facility layout.** Positions of security equipment (cameras, access control, guard routes) are deliberately not modelled. No company logos are used.
 
@@ -671,3 +671,5 @@ The Korean generator, translation tables and build scripts actually used for thi
 ## Corrections
 
 If any element is factually wrong or is believed not to derive from public information, open an issue naming the element id and it will be reviewed.
+
+Additional [construction quality-management notes](docs/construction_quality_management.md) distinguish reported inspection activities from acceptance results. The [PC supply references](docs/precast_member_supply_references.md) now also preserve Korea Ocean Platform's named Pyeongtaek caption without applying generic product properties to the site.

@@ -51,12 +51,16 @@ Daeyang E&A includes Pyeongtaek P1, P3 and P4 in its fireproofing/insulation por
 
 Samilbend separately illustrates general butt-weld fitting fabrication using pipe stock or plate stock. The plate route includes forming, welding and nondestructive examination. Its site references say piping materials without identifying each delivered fitting or fabrication route. [Official brochure](https://samilbend.com/default/img/brochure2024.pdf), PDF pages 8–10 and selected reference pages 80, 83, 87–88. No process diagram or product image is reproduced.
 
+## Construction quality management
+
+A named [HanmiGlobal case](construction_quality_management.md) describes factory, receipt, inspection and completion-stage quality management, with drawing review and schedule coordination. Welding/cable inspection and technical certification are listed as management challenges. The account supplies no individual test results or acceptance findings. CM-QA001 preserves the source limits.
+
 ## Construction materials
 
 The [material guide](construction_materials.md) adds 33 material and equipment evidence records, including named P3 PP-sheet work and P2/P3 insulation delivery references. General catalog properties are separated from installed site specifications.
 
 ## Evidence catalog and remaining coverage
 
-The accompanying [source catalog](construction_methods_sources.json) contains 22 method/reference records, including GPC Green-dong building PC work (그린동, the project building name), PC design-service references, steel supply, general double-wall and foundation-pile descriptions. The evidence level of each record is explicit. A general method or design service must not be promoted to an installed system.
+The accompanying [source catalog](construction_methods_sources.json) contains 23 method/reference records, including GPC Green-dong building PC work (그린동, the project building name), PC design-service references, steel supply, general double-wall and foundation-pile descriptions. The evidence level of each record is explicit. A general method or design service must not be promoted to an installed system.
 
 Foundations, local ground conditions, member dimensions, actual erection sequences, joints, enclosure, electrical installation, water-treatment commissioning and complete handover still need additional project-specific evidence. Their absence from this guide is not a finding that no public source exists. Construction illustrations do not change the model’s geometry or confidence grades.

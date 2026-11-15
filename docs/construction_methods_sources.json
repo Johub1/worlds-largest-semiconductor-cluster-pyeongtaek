@@ -1,5 +1,5 @@
 {
-  "review_date": "2026-11-15",
+  "review_date": "2026-11-16",
   "description": "Official-source construction-method records for the Pyeongtaek educational model. Site applications, supplier references, tests, design services and general technology are distinct.",
   "records": [
     {
@@ -265,6 +265,18 @@
       "source": "https://samilbend.com/default/img/brochure2024.pdf",
       "location": "PDF pages 8–10; selected references on 80, 83, 87–88",
       "limits": "No process temperatures, inspection class, fitting type, grade or dimensions are assigned to Pyeongtaek."
+    },
+    {
+      "id": "CM-QA001",
+      "company": "HanmiGlobal",
+      "method": "Construction quality-management stages",
+      "site_evidence": "Named Samsung Electronics Pyeongtaek campus CM + CS case; March 2020–July 2022",
+      "site_scope": "Company-described management activities; individual buildings unassigned",
+      "sequence": "Factory quality check → receipt check → inspection → construction-completion check → final-completion check",
+      "source": "https://www.hgprecon.com/project20.asp",
+      "location": "Pyeongtaek campus case: project fields and quality-management account",
+      "limits": "496,000 m² scale field has undefined area scope. Work period is not commissioning. CS is not expanded. No equipment acceptance result or installed criterion inferred.",
+      "evidence_level": "Named company service case; not an independent test or acceptance report"
     }
   ]
 }
