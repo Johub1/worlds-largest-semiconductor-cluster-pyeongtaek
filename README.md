@@ -12,6 +12,8 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 
 Supplementary supplier notes cover [utility hook-up and fire-system fabrication](docs/utility_hookup.md), [pile-foundation quality control](docs/foundation_quality_control.md), and [raised floors and vibration assessment](docs/raised_floors_and_vibration.md). Named references and general product data remain distinct; no installed specifications or quantities are inferred.
 
+Further reference notes cover [reinforcement supports and infrastructure reinforcement](docs/reinforcement_reference_scopes.md) and [stainless tube standards and contract quantities](docs/stainless_tube_reference_scopes.md). The [eight-record supplemental index](docs/supplemental_supplier_sources.json) is separate from the 31-material and 22-method catalogs; manufacturer reference labels do not assign installed properties to the model.
+
 > **Unofficial.** This project is not affiliated with, endorsed by, or reviewed by Samsung Electronics or any other company named here. No non-public drawings, internal documents or information obtained through site access were used. Building outlines are measured from public satellite imagery. Heights and floor arrangement are partly estimated. **The interior equipment layout, utility routes and EHS layers are a generic reference design (concept), not the actual facility layout.** Positions of security equipment (cameras, access control, guard routes) are deliberately not modelled. No company logos are used.
 
 ![exterior](preview/01_exterior.png)
