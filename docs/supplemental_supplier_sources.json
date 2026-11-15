@@ -1,6 +1,6 @@
 {
   "review_date": "2026-11-16",
-  "description": "Seventeen supplementary supplier references, separate from the 33 material and 22 construction-method catalog records. Named site references, general technology and unmapped project-history labels are distinguished.",
+  "description": "Nineteen supplementary supplier references, separate from the 33 material and 23 construction-method catalog records. Named site references, general technology and unmapped project-history labels are distinguished.",
   "records": [
     {
       "id": "SUP-HK01",
@@ -239,6 +239,34 @@
       "evidence_level": "Named company fabrication/delivery reference",
       "model_geometry_changed": false,
       "installed_properties_assigned": false
+    },
+    {
+      "model_geometry_changed": false,
+      "installed_properties_assigned": false,
+      "retrieved_on": "2026-11-16",
+      "id": "SUP-QA01",
+      "company": "HanmiGlobal",
+      "topic": "Construction quality-management stages",
+      "scope": "Named Pyeongtaek campus CM + CS service case",
+      "url": "https://www.hgprecon.com/project20.asp",
+      "document": "construction_quality_management.md",
+      "limit": "Company activity description does not prove equipment acceptance, operation, installed specifications or building-area allocation.",
+      "evidence_level": "Named company service case"
+    },
+    {
+      "model_geometry_changed": false,
+      "installed_properties_assigned": false,
+      "retrieved_on": "2026-11-16",
+      "id": "SUP-PC02",
+      "company": "Korea Ocean Platform (formerly Hanseong PC Construction)",
+      "topic": "PC-member fabrication and delivery",
+      "scope": "Samsung Electronics Pyeongtaek P-Project; fab and member schedule unassigned",
+      "url": "https://m.kop.co.kr/files/pdf/kop_brochure.pdf",
+      "document": "precast_member_supply_references.md",
+      "limit": "No fab number, quantities, period, installed position or acceptance result. Generic properties and product tables are not Pyeongtaek specifications.",
+      "evidence_level": "Named manufacturer fabrication/delivery caption",
+      "source_locator": "January 2026 brochure, PDF13 / printed25",
+      "source_sha256": "ccce2611509ead36becc8a1a30035f9411787400223783c7165817f82884b9cf"
     }
   ]
 }
