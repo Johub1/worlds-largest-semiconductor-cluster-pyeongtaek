@@ -1,0 +1,66 @@
+{
+  "review_date": "2026-11-15",
+  "description": "Five supplementary supplier references, separate from the 31 material and 22 construction-method catalog records.",
+  "records": [
+    {
+      "id": "SUP-HK01",
+      "company": "Wooshin Engineering (우신엔지니어링)",
+      "topic": "Factory spool fabrication and utility hook-up",
+      "scope": "Named P1L/P3L/P4L references; general fabrication sequence",
+      "url": "https://www.wooshineng.kr/business.html",
+      "document": "utility_hookup.md",
+      "limit": "Homepage P1L integrated-secondary-piping label distinguished from grouped FT label; installed grades, dimensions and positions unknown.",
+      "evidence_level": "Company-published reference; general product/method data kept separate",
+      "model_geometry_changed": false,
+      "installed_properties_assigned": false
+    },
+    {
+      "id": "SUP-FF01",
+      "company": "Hana B&T (하나비앤티)",
+      "topic": "Fire-system fabrication and separately labelled catwalk",
+      "scope": "Selected 2019–2024 supplier references",
+      "url": "https://hanabnt.com/sub/sub01_04.php",
+      "document": "utility_hookup.md",
+      "limit": "Preserve client/end-user columns; no contract-chain reconstruction; Green-dong and UT catwalk not assigned a P-number; steel/DI measures not added.",
+      "evidence_level": "Company-published reference; general product/method data kept separate",
+      "model_geometry_changed": false,
+      "installed_properties_assigned": false
+    },
+    {
+      "id": "SUP-FD01",
+      "company": "Piletech",
+      "topic": "Pile quality control and dynamic load testing",
+      "scope": "Named FAB2-gi through FAB5-gi service references",
+      "url": "https://piletech.co.kr/sub/trade.php",
+      "document": "foundation_quality_control.md",
+      "limit": "Service period not completion; source remark unresolved; no pile type, depth, count, load or acceptance result assigned.",
+      "evidence_level": "Company-published reference; general product/method data kept separate",
+      "model_geometry_changed": false,
+      "installed_properties_assigned": false
+    },
+    {
+      "id": "SUP-AF01",
+      "company": "SB TECH",
+      "topic": "Access floors and equipment bases",
+      "scope": "Named P-Project participation; general aluminum product families",
+      "url": "https://www.sb-tech.co.kr/kor/business/business.php?part=1",
+      "document": "raised_floors_and_vibration.md",
+      "limit": "K2/3 not mapped to P2/P3; catalogs not installed specifications; no confirmed legal-entity match to the MDS company-name row.",
+      "evidence_level": "Company-published reference; general product/method data kept separate",
+      "model_geometry_changed": false,
+      "installed_properties_assigned": false
+    },
+    {
+      "id": "SUP-VB01",
+      "company": "MDS Solution (엠디에스솔루션)",
+      "topic": "Vibration measurement and assessment",
+      "scope": "Named Pyeongtaek lattice-beam/equipment-base (제진대) vibration-impact assessment and P1Line FAB equipment-base (제진대) vibration measurement in 2019 table",
+      "url": "https://www.mds-s.co.kr/page/page73",
+      "document": "raised_floors_and_vibration.md",
+      "limit": "No measured results, acceptance, vibration grade, installed isolator or lithography-tool count.",
+      "evidence_level": "Company-published reference; general product/method data kept separate",
+      "model_geometry_changed": false,
+      "installed_properties_assigned": false
+    }
+  ]
+}
