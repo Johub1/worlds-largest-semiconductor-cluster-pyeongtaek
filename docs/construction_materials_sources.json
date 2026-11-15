@@ -1,5 +1,5 @@
 {
-  "checked_on": "2026-11-15",
+  "checked_on": "2026-11-16",
   "status": "Evidence guide; no as-built properties assigned",
   "records": [
     {
@@ -318,6 +318,26 @@
       "limits": "The case text names KSF 3211 class 2; its source caption says KSF3211 2FB. No thickness, coated area, installation date, precise location or certificate is supplied. The case is not evidence for roof waterproofing, all P2 floors or present product specifications.",
       "url": "https://spsamhwa.com/live/%EC%97%AC%EA%B8%B0%EB%8F%84-%EC%82%BC%ED%99%94-%EC%A0%80%EA%B8%B0%EB%8F%84-%EC%82%BC%ED%99%94-%EC%82%BC%ED%99%94%ED%8E%98%EC%9D%B8%ED%8A%B8-%EC%95%88%EC%8B%AC-%EC%8B%9C%EA%B3%B5-%ED%98%84%EC%9E%A5",
       "locator": "Pyeongtaek P2 UT interior-floor subsection; adjacent source caption"
+    },
+    {
+      "id": "M32",
+      "company": "KCC Silicone",
+      "evidence": "Named manufacturer delivery/reference row",
+      "site": "Samsung Electronics Pyeongtaek factory logistics warehouse new construction",
+      "material": "SL907 Premium glazing sealant",
+      "limits": "Warehouse address, work date, joint dimensions, quantity, project acceptance and match to LOG-WH are unconfirmed. Glass glazing is not promoted to structural glazing, a cleanroom specification or campus-wide use.",
+      "url": "https://www.kccsilicone.com/upload/KCCSILICONE_Approval_Sealant_kor_2024.pdf",
+      "locator": "PDF page 38, printed page 74; contractor column Samsung C&T"
+    },
+    {
+      "id": "M33",
+      "company": "HS Hwasung",
+      "evidence": "Named company fabrication/delivery reference",
+      "site": "Samsung Electronics Pyeongtaek semiconductor factory; fab unassigned",
+      "material": "Precast-concrete columns and beams (PC COLUMN, BEAM)",
+      "limits": "Company work period 2015-10-01 to 2016-03-01 is not commissioning. No member strength, dimensions, reinforcement, prestressing, quantity, erection detail, installation position or P-number is established.",
+      "url": "https://www.hwasung.com/index.php/p/business/pc/?act=view&category=19&depart=7&hcode=002.008&id=392",
+      "locator": "PC-business project entry 392; Yeoyeom-ri, Godeok-myeon, Pyeongtaek-si"
     }
   ]
 }
