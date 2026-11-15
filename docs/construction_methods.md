@@ -43,12 +43,20 @@ Its [equipment page](https://www.secc.co.kr/ko/library/tech/equipment) gives Pye
 
 Samsung E&A’s [EP07 frame-method video](https://www.youtube.com/watch?v=qZvZpcqNa28), also [listed on its official site](https://www.samsungena.com/kr/newsroom/video/view?idx=15835), explains FCC/FCG, PLEG/CHB and high-modulus lattice beams at 04:01–06:55. The reviewed English captions do not identify Pyeongtaek application. At 07:12 onward, SFPC and Giga Block are development topics. Expected benefits are not built-site results. This review used video metadata and captions; video frames and construction footage were not inspected.
 
+## Fireproofing and fitting-fabrication references
+
+MFR records an August2022 demonstration of steel fireproofing-spray and bolting robots at Samsung Electronics Pyeongtaek. The history does not name an individual fab or identify the coating. Later product releases do not establish the robot variant used in that demonstration. [Company history](https://mfr-c.com/history).
+
+Daeyang E&A includes Pyeongtaek P1, P3 and P4 in its fireproofing/insulation portfolio, without products, thicknesses or fire ratings. [Named project portfolio](https://www.dy-ena.com/business/hitech). These are distinct kinds of evidence; a demonstration and a contractor portfolio do not together establish an installed coating specification.
+
+Samilbend separately illustrates general butt-weld fitting fabrication using pipe stock or plate stock. The plate route includes forming, welding and nondestructive examination. Its site references say piping materials without identifying each delivered fitting or fabrication route. [Official brochure](https://samilbend.com/default/img/brochure2024.pdf), PDF pages8–10 and selected reference pages80,83,87–88. No process diagram or product image is reproduced.
+
 ## Construction materials
 
-The [material guide](construction_materials.md) adds 26 material and equipment evidence records, including named P3 PP-sheet work and P2/P3 insulation delivery references. General catalog properties are separated from installed site specifications.
+The [material guide](construction_materials.md) adds 30 material and equipment evidence records, including named P3 PP-sheet work and P2/P3 insulation delivery references. General catalog properties are separated from installed site specifications.
 
 ## Evidence catalog and remaining coverage
 
-The accompanying [source catalog](construction_methods_sources.json) contains 20 method/reference records, including GPC Green-dong building PC work (그린동, the project building name), PC design-service references, steel supply, general double-wall and foundation-pile descriptions. The evidence level of each record is explicit. A general method or design service must not be promoted to an installed system.
+The accompanying [source catalog](construction_methods_sources.json) contains 22 method/reference records, including GPC Green-dong building PC work (그린동, the project building name), PC design-service references, steel supply, general double-wall and foundation-pile descriptions. The evidence level of each record is explicit. A general method or design service must not be promoted to an installed system.
 
 Foundations, local ground conditions, member dimensions, actual erection sequences, joints, enclosure, electrical installation, water-treatment commissioning and complete handover still need additional project-specific evidence. Their absence from this guide is not a finding that no public source exists. Construction illustrations do not change the model’s geometry or confidence grades.
