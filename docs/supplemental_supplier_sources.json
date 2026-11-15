@@ -1,6 +1,6 @@
 {
   "review_date": "2026-11-15",
-  "description": "Five supplementary supplier references, separate from the 31 material and 22 construction-method catalog records.",
+  "description": "Eight supplementary supplier references, separate from the 31 material and 22 construction-method catalog records.",
   "records": [
     {
       "id": "SUP-HK01",
@@ -61,6 +61,51 @@
       "evidence_level": "Company-published reference; general product/method data kept separate",
       "model_geometry_changed": false,
       "installed_properties_assigned": false
+    },
+    {
+      "id": "SUP-RF01",
+      "company": "KCMT",
+      "topic": "GFRP-context reinforcement reference labels",
+      "scope": "Named Pyeongtaek–Godeok infrastructure and separate Pyeongtaek P3 tunnelling references",
+      "url": "https://kcmt.co.kr/img/03/2022KCMT_brochure_EN.pdf",
+      "document": "reinforcement_reference_scopes.md",
+      "limit": "RS/VRS Ø25mm are manufacturer-listed labels; no installed quantities, spacing, wall location or material performance assigned; P3 model-building match unconfirmed.",
+      "evidence_level": "Company-published reference; general product/method data kept separate",
+      "model_geometry_changed": false,
+      "installed_properties_assigned": false,
+      "retrieved_on": "2026-11-15",
+      "brochure_locator": "2022 English brochure, PDF21; delivery table rows101/95",
+      "brochure_sha256": "a3fad0c282d089d501a67a0b96dafbde75d68d8046873c96d8dbccab0f3055b6"
+    },
+    {
+      "id": "SUP-RF02",
+      "company": "Baro Construction Key-technology",
+      "topic": "Reinforcement supports and foundation reinforcement",
+      "scope": "Separate P3 bar-chair and P5 foundation-reinforcement reference lists",
+      "url": "https://www.baro-ck.com/upload/bbs/%EB%B0%94%EB%A1%9C%EA%B1%B4%EC%84%A4%EA%B8%B0%EC%88%A0_%EB%B8%8C%EB%A1%9C%EC%85%94_202411_%EC%B5%9C%EC%A2%85_%EA%B5%AD%EB%AC%B8.pdf",
+      "document": "reinforcement_reference_scopes.md",
+      "limit": "General heights and thickness-saving claims are not site values; no selected form, installed quantity, legal contract chain or removal-after-construction status established.",
+      "evidence_level": "Company-published reference; general product/method data kept separate",
+      "model_geometry_changed": false,
+      "installed_properties_assigned": false,
+      "retrieved_on": "2026-11-15",
+      "brochure_locator": "PDF8 / printed14–15",
+      "brochure_sha256": "309a9543a7d0bb5b01ea3a40f466d3e17788a5bedd70d0f5454d7e85c8f9462c"
+    },
+    {
+      "id": "SUP-ST01",
+      "company": "Sung Kwang Metal",
+      "topic": "Stainless tube standards and contract-quantity labels",
+      "scope": "P3/P4 reference row65 and separate Pyeongtaek cleanroom row69",
+      "url": "https://www.sksts.co.kr/",
+      "document": "stainless_tube_reference_scopes.md",
+      "limit": "55 TON and 400TON are contract-quantity labels, not added or allocated; no installed grade, dimension, service, acceptance or field welding specification established.",
+      "evidence_level": "Company-published reference; general product/method data kept separate",
+      "model_geometry_changed": false,
+      "installed_properties_assigned": false,
+      "retrieved_on": "2026-11-15",
+      "brochure_locator": "PDF34 / printed66–67, rows65/69; general process PDF6",
+      "brochure_sha256": "30912079c5fe2e28917ba2abfb6c9ca319206a69c8eb331b23b8361556b3ecb4"
     }
   ]
 }
