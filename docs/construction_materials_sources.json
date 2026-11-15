@@ -191,6 +191,39 @@
       "limits": "No site coating, spray, board, thickness or fire-resistance duration is identified.",
       "url": "https://www.youtube.com/watch?v=qZvZpcqNa28",
       "locator": "05:48–06:04, English captions"
+    },
+    {
+      "id": "M20",
+      "company": "Jeil Technos",
+      "evidence": "Named supplier contract",
+      "site": "Pyeongtaek FAB2-gi, work section 3 (contract label; P2 mapping unconfirmed)",
+      "material": "Deck-plate construction work",
+      "limits": "Contract scope and dates do not establish deck type, grade, thickness, installed area, quantity or completion.",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20180611900098",
+      "locator": "Sections 1, 3 and 5; 2018-06-08 to 2019-10-31",
+      "receipt": "20180611900098"
+    },
+    {
+      "id": "M21",
+      "company": "Duckshin Housing (now Duckshin EPC)",
+      "evidence": "Named supplier contract; amended period",
+      "site": "Pyeongtaek FAB 2gi (contract label; P2 mapping unconfirmed)",
+      "material": "Deck-plate construction work",
+      "limits": "Original issuer name retained. Contract period extension is not proof of completion or an installed material specification.",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20200131900956",
+      "locator": "Correction table and sections 1, 3, 5 and 9; 2018-06-08 to 2020-02-29",
+      "receipt": "20200131900956"
+    },
+    {
+      "id": "M22",
+      "company": "Duckshin Housing (now Duckshin EPC)",
+      "evidence": "Named supplier contract; amended amount and period",
+      "site": "Pyeongtaek P4 new construction, work section 1",
+      "material": "Deck-plate delivery",
+      "limits": "Work section 1 does not identify a floor or geometric subdivision. No disclosed deck type, grade, thickness, area or quantity.",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230411900452",
+      "locator": "Correction table and sections 1, 3 and 5; 2022-04-30 to 2024-09-30",
+      "receipt": "20230411900452"
     }
   ]
 }
