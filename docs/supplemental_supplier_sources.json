@@ -1,6 +1,6 @@
 {
   "review_date": "2026-11-15",
-  "description": "Fourteen supplementary supplier references, separate from the 31 material and 22 construction-method catalog records. Named site references, general technology and unmapped project-history labels are distinguished.",
+  "description": "Fifteen supplementary supplier references, separate from the 31 material and 22 construction-method catalog records. Named site references, general technology and unmapped project-history labels are distinguished.",
   "records": [
     {
       "id": "SUP-HK01",
@@ -199,6 +199,22 @@
       "limit": "Scale fields and ordering parties preserved; no summed steel total, accepted quantity, cleanroom floor count, height or model-building match inferred.",
       "source_locator": "Steelwork references rows20/19/13, matched by project title",
       "source_sha256": "afdfdce16e8d56f0e304917ff3806b00603c139e0fddfb46742c00d8df22f628"
+    },
+    {
+      "id": "SUP-LG01",
+      "company": "Samil Logistics (삼일로지스틱스)",
+      "topic": "Construction-material and module transport",
+      "scope": "Company-profile reference for P-PJT units 1–4 and EUV; Pyeongtaek fabrication shops to FAB buildings",
+      "url": "https://samil-lsp.sfo3.cdn.digitaloceanspaces.com/files/SAMIL%20LOGISTICS%20%E1%84%92%E1%85%AC%E1%84%89%E1%85%A1%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5_20250911%201.pdf",
+      "document": "construction_logistics.md",
+      "limit": "Conceptual workflow only; no actual road, gate, receiving point, installed equipment count or combined construction-cost allocation.",
+      "evidence_level": "Company-authored profile; current company service description kept separate",
+      "model_geometry_changed": false,
+      "installed_properties_assigned": false,
+      "retrieved_on": "2026-11-15",
+      "source_locator": "2025 profile PDF20–21; current services page describes general heavy-load operating steps",
+      "source_sha256": "eef755ec5e1e4ad76b9fa910733b70b6bf9090c49fff3a4d35fd50de185716f8",
+      "additional_url": "https://samillogistics.com/services"
     }
   ]
 }
