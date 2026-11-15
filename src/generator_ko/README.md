@@ -1,23 +1,37 @@
-# Generator reproduction status
+# Korean generator, translation tables and build procedure
 
 Living project, updated continuously.
 
-The committed Korean generator is not yet synchronized with the checked-in v7.41 dataset. On 15 November 2026, `build.py` and `utility.py` from commit `0a7cee066e50211be5221542bfe02f8297386751` were copied to an isolated working directory and `python build.py` completed successfully. Its `campus.json` contained **1,459 elements and 178 source keys**, compared with **1,474 elements and 202 source keys** in the checked-in dataset. Both contained 86,620 conceptual equipment entries; that number is not an installed equipment count.
+## Status (v7.42, 15 November 2026)
 
-The checked-in dataset has 16 element IDs absent from that generator output and omits one ID present there. For common IDs, boxes, rotation, fab/floor identifiers and confidence labels matched; 89 elements had different source-ID lists. The checked-in dataset also has 24 additional source keys and nine additional metadata keys. Names, descriptions and layer labels were excluded from invariant comparisons because the generator output is Korean and the checked-in dataset is English.
+The files in this folder are the generator, utility source, translation tables and build scripts actually used to produce the published dataset. They were synchronized from the maintainer's working copy for v7.42; the earlier snapshot in this folder (which produced 1,459 elements and 178 source keys) has been replaced.
 
-This test identifies a source-to-output reproduction gap. It does not invalidate the separately checked JSON, CSV or STEP files, establish site accuracy, or justify reverting the newer dataset. Use the checked-in `data/campus.json` as input to the export/viewer scripts described in the main README. Synchronizing the current generator, utility source and translation tables, then checking the bilingual packages, remains outstanding.
+Isolated check on 15 November 2026 (a fresh copy of `src/generator_ko`, `src/tools`, `src/vendor` and `data/` in a new directory, no other files):
 
-The isolated test covered model-data generation only. It did not execute the full translation, viewer, export or ZIP pipeline. The bundled `build_en.sh` and `i18n/apply.py` contain `/home/claude/work` paths and need environment adaptation before use elsewhere. The documentation update does not change the generator, model geometry, source links, release assets or external mirrors.
+- `python3 build.py` → `campus.json` (Korean master): 1,474 elements, 202 source keys.
+- `python3 i18n/apply.py` → `campus_en.json`; `python3 ../tools/verify_generated_data.py --generated campus_en.json --reference ../../data/campus.json` → exit 0, no differences (the two files are byte-identical).
+- The Korean `campus.json` compared with the Korean package's `data/campus.json` → exit 0 (equal content; serialization differs).
+- `sh build_en.sh` → the English viewer and the CSV tables in `data/` are byte-identical to the published files. The DXF files differ only in their creation-time header fields; the STEP file differs only in its timestamp and entity numbering (the multiset of 425,972 entities is identical after renumbering).
 
-### Check regenerated model data
+This shows that the published data can be regenerated from these sources. It does not verify site accuracy, which is described by the confidence grades in the data.
 
-After running the intended generator and its English translation, compare that output with the checked-in English dataset:
+## Procedure
+
+Requirements: Python 3 with `trimesh ezdxf cadquery numpy matplotlib` (exports) — the generator and translation steps use only the standard library.
 
 ```sh
-python src/tools/verify_generated_data.py --generated /path/to/campus_en.json --reference data/campus.json --report regeneration-check.json
+cd src/generator_ko
+python3 build.py                 # Korean master: campus.json
+python3 i18n/apply.py            # English data: campus_en.json (prints "missing 2": two URLs that stay in Korean)
+python3 ../tools/verify_generated_data.py --generated campus_en.json --reference ../../data/campus.json
+sh build_en.sh                   # English viewer and exports into ./release_en (models, drawings, data CSVs)
+python3 cadcheck.py              # optional: STEP read-back and DXF audit of ./release_en
 ```
 
-Exit status `0` means equal JSON content, `1` means differences, and `2` means an input or I/O error. The comparison covers all top-level sections and nested values, matches element records by ID, and also checks their order. Decimal values are compared without binary rounding; integer/decimal notation alone is ignored. Language differences are not ignored. Use the same language and intended revision. A detail limit only limits the report, not whether differences cause failure. Decimal differences in reports use a `json_decimal` string to retain their digits. Non-finite values and numbers above the supported finite binary64 range are rejected.
+`i18n/apply.py`, `i18n/code_en.py` and `build_en.sh` work in their own folder; set `GEN_WORK` to use another working directory. `mkview.py`/`mkview_en.py` look for `vendor/` next to them or one level up (`src/vendor`). The maintainer's workspace also builds a Korean package (`python3 mkview.py`, `python3 export.py` with `OUT = "release"`) and the permit comparison tables (`regcmp/`, inputs not redistributed); `build_en.sh` skips the latter when `regcmp/` is absent.
 
-This command neither runs the generator nor fixes the source/output gap described above. It does not verify site accuracy, CAD exports, bilingual meaning, documentation or ZIP contents. In the isolated test on15November2026, the published generator plus published translation tables still differed from the checked-in dataset; counts alone had missed updated notes, names, supplier descriptions and metadata. The current generated output must not replace the newer dataset until those differences are resolved.
+How the translation works: `build.py` writes all text in Korean. `i18n/apply.py` replaces each Korean string with its English entry from `names_en.json`, `notes_en.json`, `src_en.json`, `misc_en.json` and `extra.json` (exact-match tables; `extra.json` holds the entries added since v7.25). `i18n/code_en.py` produces `viewer_template_en.html` and `export_en.py` from the Korean viewer template and export script.
+
+## Not included
+
+Third-party imagery, the permit-register exports used for `data/register_vs_model.csv`, and the internal review files of the collaborating workstreams.

@@ -121,7 +121,7 @@ a{color:#8fb8ff} ol.src{margin:0;padding-left:18px} ol.src li{margin-bottom:5px;
   </div>
   <div>
     <h2>신뢰 등급</h2>
-    <div class="row"><span class="pill gA">A 공식·보도·공시</span><span class="pill gB">B 위성영상 기반 추정</span><span class="pill gM">M 공개 지도 표기</span><span class="pill gC">C 추정·가정</span><span class="pill gD">D 일반 개념</span></div>
+    <div class="row"><span class="pill gA">A 공식·보도·공시</span><span class="pill gB">B 위성영상 평면 판독(높이는 가정)</span><span class="pill gM">M 공개 지도 표기</span><span class="pill gC">C 추정·가정</span><span class="pill gD">D 일반 개념</span></div>
   </div>
   <div>
     <h2>층 구성(추정)</h2>
@@ -208,7 +208,7 @@ function makeLabel(text, x,y,z, size, color){
   s.scale.set(size*w/c.height, size, 1); s.position.copy(P(x,y,z)); return s;
 }
 for(const f of D.fabs) L('라벨').add(makeLabel(`${f.id}  ${f.Lmain}×${f.W} m`, (f.x0+f.x1)/2,(f.y0+f.y1)/2, f.H+34, 34));
-const LBL = {'V2':'EUV동(V2)','UT-12':'UT동 추정','UT-34':'UT동 추정','GATE-W':'사무1동','WA':'사무2동','W1':'사무복합동','WD':'사무3동','OFF-2':'기술동 주차타워','OFF-3':'자재1동','S1':'그린동 추정','CUB-N':'유틸리티·냉각탑','CT-1':'냉각탑','SS-A':'한전 고덕변전소(보도·OSM)','PAD-P5':'P5 건설 부지','PARK-2':'2단지 주차동','PARK-NW':'임직원 주차장','BR-W':'오버브리지(도로 횡단)','BR-12a':'오버브리지','BR-23a':'오버브리지','BR-34a':'오버브리지','LOG-WH':'삼성전자 물류창고(이전 예정)','AP-PROC':'에어프로덕츠 평택공장','AF-PROC':'에어퍼스트 평택공장','LINDE-BLD':'린데코리아 평택공장','PUB-WWTP':'고덕 공공폐수처리시설'};
+const LBL = {'V2':'EUV동(V2)','UT-12':'UT동 추정','UT-34':'복합동·UT동 후보','GATE-W':'사무1동','WA':'사무2동','W1':'사무복합동','WD':'사무3동','OFF-2':'기술동 주차타워','OFF-3':'자재1동','S1':'그린동 추정','CUB-N':'유틸리티·냉각탑','CT-1':'냉각탑','SS-A':'한전 고덕변전소(보도·OSM)','PAD-P5':'P5 건설 부지','PARK-2':'2단지 주차동','PARK-NW':'임직원 주차장','BR-W':'오버브리지(도로 횡단)','BR-12a':'오버브리지','BR-23a':'오버브리지','BR-34a':'오버브리지','LOG-WH':'삼성전자 물류창고(이전 예정)','AP-PROC':'에어프로덕츠 평택공장','AF-PROC':'에어퍼스트 평택공장','LINDE-BLD':'린데코리아 평택공장','PUB-WWTP':'고덕 공공폐수처리시설'};
 for(const e of D.elems){ if(e.layer==='지도 표기 지점'){ const b=e.box; L('라벨').add(makeLabel(e.name.replace(' (카카오맵 표기)',''), (b[0]+b[3])/2,(b[1]+b[4])/2, 16, 11, '#f2cc3a')); }
   if(LBL[e.id]){ const b=e.box; L('라벨').add(makeLabel(LBL[e.id], (b[0]+b[3])/2,(b[1]+b[4])/2, b[5]+22, 20, '#3c7be0')); } }
 { const g=new THREE.Group(); const lm=new THREE.LineBasicMaterial({color:0xf2cc3a});
@@ -349,7 +349,7 @@ D.levels.forEach(l=>{ const b=document.createElement('button'); b.textContent=l[
 $('ehsBtn').onclick=()=>{ ehsOn=!ehsOn; $('ehsBtn').classList.toggle('on',ehsOn); $('ehsBtn').textContent=ehsOn?'EHS(안전) 레이어 끄기':'EHS(안전) 레이어 켜기'; showFloor(curFab, curFloor||'3F'); };
 
 // ---------- tables
-$('dims').innerHTML='<tr><th>팹</th><th>본체 길이</th><th>단부 포함</th><th>폭</th><th>높이</th></tr>'+D.fabs.map(f=>`<tr><td>${f.id}</td><td class="n">${f.Lmain}</td><td class="n">${f.L}</td><td class="n">${f.W}</td><td class="n">${f.H}${f.id==='P1'?' <span class="pill gA">A</span>':' <span class="pill gC">C</span>'}</td></tr>`).join('');
+$('dims').innerHTML='<tr><th>팹</th><th>본체 길이</th><th>단부 포함</th><th>폭</th><th>높이</th></tr>'+D.fabs.map(f=>`<tr><td>${f.id}</td><td class="n">${f.Lmain}</td><td class="n">${f.L}</td><td class="n">${f.W}</td><td class="n">${f.H}${' <span class="pill gC">C</span>'}</td></tr>`).join('');
 $('phase').innerHTML='<tr><th>팹</th><th>하층 서</th><th>하층 동</th><th>상층 서</th><th>상층 동</th></tr>'+Object.keys(D.phase).map(k=>{const p=D.phase[k]; const c=key=>p[key]?p[key][0]+(p[key][1].includes('추정')?' <span class="pill gC">C</span>':''):'-'; return `<tr><td>${k}</td><td>${c('W|3F')}</td><td>${c('E|3F')}</td><td>${c('W|7F')}</td><td>${c('E|7F')}</td></tr>`;}).join('');
 if(D.meta.products){ $('prod').innerHTML='<tr><th>팹</th><th>구역</th><th>제품</th></tr>'+D.meta.products.rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td><b>${r[2]}</b><br><span class="sub">${r[3]}</span></td></tr>`).join(''); $('prodNote').textContent=D.meta.products.rule; }
 $('lv').innerHTML='<tr><th>층</th><th>높이(m, 가정)</th><th>용도</th></tr>'+D.levels.slice().reverse().map(l=>`<tr><td>${l[0]}</td><td class="n">${l[1]}–${l[0]==='RF'?'':l[2]}</td><td>${l[4]}</td></tr>`).join('');

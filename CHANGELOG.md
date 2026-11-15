@@ -1,5 +1,13 @@
 # Changelog
 
+## v7.42 — 2026-11-15
+- `src/generator_ko/` synchronized with the generator, translation tables and build scripts actually used; isolated regeneration reproduces `data/campus.json` exactly (1,474 elements, 202 sources; verify tool exit 0). `src/export.py`, `src/mkview.py`, `src/viewer_template.html` updated to current versions; machine-specific paths removed.
+- `meta.construction_material_records`: "two records are linked" corrected (ANSEN linked to one element, Armacell meta only).
+- PR #7–#10 documents and tools preserved. No element or geometry change.
+
+## Documentation and tooling — 2026-11-15 (PR #7–#10)
+- Supplier notes (utility hook-up, foundation quality control, raised floors and vibration, reinforcement, stainless tube), eight-record supplemental index, regeneration-check tool and its tests.
+
 ## v7.41 — 2026-11-15
 - `meta.construction_material_records` aligned with the merged guides (main f8aceb2): 22 method and 31 material/equipment records; README links the historical communications note.
 - `meta.wwtp_operations_2024`: stage table of the Godeok public wastewater facility from the 2023 workbook (new source `MCEE_WWTP_2023`): 120,000 + 67,500 = 187,500 m³/day.

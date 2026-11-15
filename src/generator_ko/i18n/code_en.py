@@ -1,6 +1,8 @@
+import os
 """English text for viewer_template.html and export.py. A = take the translation from the data tables."""
 import json,re,sys
-W='/home/claude/work/'
+import os
+W=os.environ.get('GEN_WORK', os.path.dirname(os.path.dirname(os.path.abspath(__file__))))+'/'
 sys.path.insert(0,W+'i18n'); import apply as AP
 A=None
 V=[
@@ -271,7 +273,7 @@ A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,
 "Limits:",
 "Sources:",
 ]
-VX=[('삼성전자 물류창고(이전 예정)','Samsung logistics warehouse (relocation planned)'),('삼성전자 물류창고','Samsung logistics warehouse'),('에어프로덕츠 평택공장','Air Products plant'),('에어퍼스트 평택공장','Air First plant'),('린데코리아 평택공장','Linde Korea plant'),('고덕 공공폐수처리시설','Godeok public WWTP'),('2단지 주차동','Complex 2 parking building'),('임직원 주차장','Employee parking lot'),('오버브리지(도로 횡단)','Overbridge (road crossing)'),('오버브리지','Overbridge'),('라인별 생산 제품','Products by line'),('구역','Zone'),('제품','Product')]
+VX=[('B 위성영상 평면 판독(높이는 가정)','B plan read from imagery (heights assumed)'),('복합동·UT동 후보','Complex or UT building candidate'),('삼성전자 물류창고(이전 예정)','Samsung logistics warehouse (relocation planned)'),('삼성전자 물류창고','Samsung logistics warehouse'),('에어프로덕츠 평택공장','Air Products plant'),('에어퍼스트 평택공장','Air First plant'),('린데코리아 평택공장','Linde Korea plant'),('고덕 공공폐수처리시설','Godeok public WWTP'),('2단지 주차동','Complex 2 parking building'),('임직원 주차장','Employee parking lot'),('오버브리지(도로 횡단)','Overbridge (road crossing)'),('오버브리지','Overbridge'),('라인별 생산 제품','Products by line'),('구역','Zone'),('제품','Product')]
 K=re.compile('[가-힣]')
 def conv(fn,T,out):
     src=json.load(open(W+'i18n/%s_src.json'%fn.split('.')[0])); assert len(src)==len(T),(fn,len(src),len(T))

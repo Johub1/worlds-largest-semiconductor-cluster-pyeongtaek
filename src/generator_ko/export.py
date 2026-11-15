@@ -10,9 +10,10 @@ TYPES = D["types"]; LEVELS = D["levels"]
 
 def hex2rgba(h, a=1.0):
     h = h.lstrip("#"); return [int(h[i:i + 2], 16) for i in (0, 2, 4)] + [int(255 * a)]
-def box_mesh(b, rot=0):
+def box_mesh(b, rot=0, shape=""):
     x0, y0, z0, x1, y1, z1 = b
-    m = trimesh.creation.box(extents=[x1 - x0, y1 - y0, z1 - z0])
+    if shape == "cyl": m = trimesh.creation.cylinder(radius=min(x1 - x0, y1 - y0) / 2, height=z1 - z0, sections=48)
+    else: m = trimesh.creation.box(extents=[x1 - x0, y1 - y0, z1 - z0])
     T = trimesh.transformations.rotation_matrix(math.radians(rot), [0, 0, 1]) if rot else np.eye(4)
     T2 = np.eye(4); T2[:3, 3] = [(x0 + x1) / 2, (y0 + y1) / 2, (z0 + z1) / 2]
     m.apply_transform(T2 @ T); return m
@@ -28,7 +29,7 @@ EXT_L = ("외피", "지붕", "부속동", "연결 브리지", "옥상 랙", "외
 # named nodes for buildings; interior zone/support elements merged per (fab, floor, layer) to keep node count sane
 merged = {}
 for e in D["elems"]:
-    m = recentre(box_mesh(e["box"], e.get("rot", 0)))
+    m = recentre(box_mesh(e["box"], e.get("rot", 0), e.get("shape", "")))
     if e["layer"] in EXT_L or e["layer"] == "지반" or not e.get("fab"):
         m.visual = pbr(e["color"], e.get("opacity", 1.0), e["layer"])
         scene.add_geometry(m, node_name=e["id"], geom_name=e["id"])
@@ -90,7 +91,7 @@ def add_mesh(m, layer):
         md.vertices = [tuple(v) for v in m.vertices]; md.faces = [tuple(f) for f in m.faces]
 for e in D["elems"]:
     lay = LAY[e["layer"]] + (("-" + e["fl"]) if e.get("fl") and e["layer"] not in EXT_L else "")
-    add_mesh(box_mesh(e["box"], e.get("rot", 0)), lay)
+    add_mesh(box_mesh(e["box"], e.get("rot", 0), e.get("shape", "")), lay)
 for (fab, fl, key), ms in groups.items():
     m = trimesh.util.concatenate(ms); m.apply_translation([CX, CY, 0]); add_mesh(m, f"EQ-{fl}-{key}")
 for k in range(3):
@@ -117,7 +118,7 @@ for f in D["fabs"]:
 for e in D["elems"]:
     b = e["box"]
     if e["layer"] in ("부속동", "연결 브리지") and not e.get("rot"):
-        rect(b[0], b[1], b[3], b[4], lay("AUX", 8)); text(e["name"], b[0] + 1, b[1] + 1, 3.5)
+        (msp.add_circle(((b[0] + b[3]) / 2, (b[1] + b[4]) / 2), min(b[3] - b[0], b[4] - b[1]) / 2, dxfattribs={"layer": lay("AUX", 8)}) if e.get("shape") == "cyl" else rect(b[0], b[1], b[3], b[4], lay("AUX", 8))); text(e["name"], b[0] + 1, b[1] + 1, 3.5)
     if e["layer"] in ("클린룸 구역", "서브팹 구역", "플레넘 구역") and not e["id"].endswith("ffu"):
         rect(b[0], b[1], b[3], b[4], lay(f"{e['fl']}_ZONE", 3)); text(e["name"], b[0] + 2, b[4] - 6, 3.0, f"{e['fl']}_TEXT")
     if e["layer"] == "공정 구역" and "spine" not in e["id"]:
@@ -291,7 +292,7 @@ def uplan(keys, fname, title, xlim=(-720, 780), ylim=(610, 2330), size=(15, 16.5
     fig, ax = plt.subplots(figsize=size, dpi=110); fig.patch.set_facecolor("#0e1620"); ax.set_facecolor("#152131")
     for e in D["elems"]:
         b = e["box"]
-        if e["layer"] in ("부속동", "연결 브리지") and not e.get("rot"): ax.add_patch(Rectangle((b[0], b[1]), b[3] - b[0], b[4] - b[1], fc="#22303f", ec="#3a4d63", lw=0.5))
+        if e["layer"] in ("부속동", "연결 브리지") and not e.get("rot"): ax.add_patch(plt.Circle(((b[0] + b[3]) / 2, (b[1] + b[4]) / 2), min(b[3] - b[0], b[4] - b[1]) / 2, fc="#22303f", ec="#3a4d63", lw=0.5) if e.get("shape") == "cyl" else Rectangle((b[0], b[1]), b[3] - b[0], b[4] - b[1], fc="#22303f", ec="#3a4d63", lw=0.5))
         if e["layer"] in ("유틸리티 설비", "충전·교체 지점"):
             ax.add_patch(Rectangle((b[0], b[1]), b[3] - b[0], b[4] - b[1], fc=e["color"], ec="#0e1620", lw=0.3, alpha=0.9, zorder=4))
     for f in D["fabs"]:
@@ -304,7 +305,7 @@ def uplan(keys, fname, title, xlim=(-720, 780), ylim=(610, 2330), size=(15, 16.5
         ax.add_patch(Rectangle((p[0], p[1]), max(p[3], 1.2), max(p[4], 1.2), fc=sy[2], ec="none", zorder=5))
         if p[6] not in used: used.append(p[6])
     for e in D["elems"]:
-        if e["layer"] == "충전·교체 지점" or e["id"] in ("GAS-YARD", "SS-GIS", "UT-34-CT", "UT-12-UPW", "UT-34-UPW", "UT-12-CH1", "UT-34-CH1", "S1-WW-AA", "S2-WW-AA"):
+        if e["layer"] == "충전·교체 지점" or e["id"] in ("GAS-YARD", "SS-GIS", "CT34-R4", "UT-12-UPW", "UT-34-UPW", "UT-12-CH1", "UT-34-CH1", "S1-WW-AA", "S2-WW-AA"):
             b = e["box"]; ax.text((b[0] + b[3]) / 2, b[4] + 4, e["name"].split(" — ")[0].replace("(개념)", "").replace("(개념, 위치 임의)", "")[:26], color="#f2cc3a", fontsize=6, ha="center", zorder=7)
     ax.set_xlim(*xlim); ax.set_ylim(*ylim); ax.set_aspect("equal"); ax.tick_params(colors="#93a4b8", labelsize=7); [s_.set_color("#2a3b50") for s_ in ax.spines.values()]
     ax.set_title(title + "\n[일반 참조 설계(등급 D) — 실제 평택캠퍼스의 배관·덕트·전력 경로 아님 · 공개 자료만 사용]", color="#e7edf4", fontsize=12, loc="left")
@@ -335,7 +336,7 @@ try:
     for e in D["elems"]:
         if e["layer"] in ("FFU 천장", "공정 구역", "공조", "옐로 룸"): continue
         x0, y0, z0, x1, y1, z1 = e["box"]
-        s = cq.Workplane("XY").box(x1 - x0, y1 - y0, z1 - z0)
+        s = cq.Workplane("XY").cylinder(z1 - z0, min(x1 - x0, y1 - y0) / 2) if e.get("shape") == "cyl" else cq.Workplane("XY").box(x1 - x0, y1 - y0, z1 - z0)
         loc = cq.Location(cq.Vector((x0 + x1) / 2 - CX, (y0 + y1) / 2 - CY, (z0 + z1) / 2), cq.Vector(0, 0, 1), e.get("rot", 0))
         c = hex2rgba(e["color"])
         asm.add(s, name=e["id"].replace(" ", "_"), loc=loc, color=cq.Color(c[0] / 255, c[1] / 255, c[2] / 255, e.get("opacity", 1.0))); n += 1

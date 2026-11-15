@@ -1,4 +1,4 @@
-# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.41 (English edition)
+# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.42 (English edition)
 
 > **Status: living project, updated continuously.** This model is revised whenever new public material is found or an error is reported; the current version and every change are listed in `CHANGELOG.md`. Corrections backed by a public source are welcome through GitHub Issues. Latest version: https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek
 
@@ -377,6 +377,12 @@ Eighth bundle and two data audits by Codex (meta wording only; no geometry chang
 
 Also corrected: the `OFF-2` note called the building a candidate for Office building 2, which contradicted `WA`; it now only compares its plan with the register area.
 
+## What v7.42 adds (generator sources synchronized; one wording correction; no geometry change)
+
+- **`src/generator_ko/` now holds the generator actually used** (build.py, utility.py, translation tables, build scripts), replacing an older snapshot that produced 1,459 elements and 178 sources. A fresh isolated copy regenerates the published data exactly (1,474 elements, 202 sources); `verify_generated_data.py` exits 0 for the English data, and the Korean master matches the Korean package. The English viewer and CSV tables rebuild byte-identically; DXF and STEP differ only in timestamps and STEP entity numbering. `src/export.py`, `src/mkview.py` and `src/viewer_template.html` were brought up to the current versions (cylinder shapes, current viewer). Paths in the scripts no longer assume the maintainer's machine.
+- **Wording correction** in `meta.construction_material_records`: the sentence saying "the two records … are linked" did not match the data. Only the ANSEN record is linked (to `UT-34-UPW`); Armacell appears in meta only.
+- The supplementary documents merged on `main` (PR #7–#10: utility hook-up, foundation quality control, raised floors and vibration, reinforcement and stainless-tube reference scopes, supplemental index, regeneration check tool) are preserved unchanged.
+
 ## What v7.41 adds (record counts aligned with the merged guides; wastewater stages; no geometry change)
 
 - **`meta.construction_material_records` aligned with `main` f8aceb2**: 22 construction-method and 31 material and equipment evidence records, naming the additions M27–M31 (Samilbend piping materials, IS Dongseo 154 kV precast, Daeyang E&A fireproofing and insulation, Samsung C&T/SY exterior-panel research, Samhwa P2 UT floor waterproofing) and CM-S16/CM-S17. None is linked to a model element. The README now also links the historical communications note (`docs/campus_systems.md`); no communications equipment is modelled.
@@ -572,6 +578,8 @@ Held: assignment of building-name suffixes to P numbers; any change of height, f
 
 ## Verification done for this release
 
+v7.42: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.41, no element changed; one meta entry corrected; sources unchanged (202). Regeneration from `src/generator_ko` in an isolated copy reproduces `data/campus.json` exactly.
+
 v7.41: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.40, no element changed; two meta entries updated and one source added (202: 60 official, 42 international, 100 Korean).
 
 v7.40: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.39, one element changed in note and source list only (`PUB-WWTP`), no box changed, one meta entry added and one corrected, two sources added (201: 59 official, 42 international, 100 Korean).
@@ -609,7 +617,7 @@ v7.25: Korean and English data files compared element by element (1,458 ids, sou
 | Check | Result |
 |---|---|
 | Fab bodies and all annexes overlaid on the zoom-18 satellite mosaic (about 0.48 m/px) | All four fab outlines and the east, west and north annexes fall on the imagery; three technology-cluster buildings were re-oriented in v7.13 after this check |
-| STEP read back with the OpenCascade kernel (v7.41 build, geometry identical to v7.30) | 1,250 solids, 7,167 faces; the first 400 solids pass the shape validity check |
+| STEP read back with the OpenCascade kernel (v7.42 build, geometry identical to v7.30) | 1,250 solids, 7,167 faces; the first 400 solids pass the shape validity check |
 | DXF read back and audited with ezdxf | 2D: 119,633 entities on 178 layers, 0 audit errors; 3D: 1,694 meshes on 166 layers, 0 audit errors; units metres |
 | Registered areas vs. plans read from imagery | Parking building 1%, Linde site 2.5%, wastewater plant 7%, KEPCO lot 0.4% |
 | Viewer | Loads without page errors, with no network requests; all 23 previews regenerated from this version |
@@ -650,7 +658,7 @@ python mkview.py        # writes index.html from viewer_template.html
 python check_connect.py # utility connectivity table
 ```
 
-The bundled Korean generator and translation tables are in `src/generator_ko/`. **Source synchronization is pending:** in an isolated check on 15 November 2026, the committed generator produced 1,459 elements and 178 sources, while the checked-in v7.41 dataset contains 1,474 elements and 202 sources. Use the checked-in `data/campus.json` for the export/viewer workflow above while the current generator and translation tables are being synchronized. See [generator reproduction status](src/generator_ko/README.md) for the comparison and its limits.
+The Korean generator, translation tables and build scripts actually used for this release are in `src/generator_ko/` (synchronized in v7.42). In an isolated check they regenerate this dataset exactly: 1,474 elements and 202 source keys, and `src/tools/verify_generated_data.py` reports no difference between the regenerated English `campus_en.json` and `data/campus.json`. See [generator procedure and check](src/generator_ko/README.md).
 
 ## Corrections
 

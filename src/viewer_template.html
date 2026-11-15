@@ -121,7 +121,7 @@ a{color:#8fb8ff} ol.src{margin:0;padding-left:18px} ol.src li{margin-bottom:5px;
   </div>
   <div>
     <h2>Confidence grades</h2>
-    <div class="row"><span class="pill gA">A official, press, filings</span><span class="pill gB">B estimated from satellite imagery</span><span class="pill gM">M public map label</span><span class="pill gC">C estimate or assumption</span><span class="pill gD">D generic concept</span></div>
+    <div class="row"><span class="pill gA">A official, press, filings</span><span class="pill gB">B plan read from imagery (heights assumed)</span><span class="pill gM">M public map label</span><span class="pill gC">C estimate or assumption</span><span class="pill gD">D generic concept</span></div>
   </div>
   <div>
     <h2>Floor arrangement (estimated)</h2>
@@ -166,20 +166,22 @@ function L(name){ if(!layers[name]){ layers[name]=new THREE.Group(); layers[name
 const pickables = [];
 const unit = new THREE.BoxGeometry(1,1,1);
 const edgeGeo = new THREE.EdgesGeometry(unit);
+const unitCyl = new THREE.CylinderGeometry(0.5,0.5,1,40); const edgeGeoCyl = new THREE.EdgesGeometry(unitCyl, 30);
 const edgeMat = new THREE.LineBasicMaterial({color:0x0e1620, transparent:true, opacity:.55});
 const matCache = {};
 function mat(color, op){ const k=color+'|'+op; if(!matCache[k]) matCache[k]=new THREE.MeshLambertMaterial({color, transparent:op<1, opacity:op, depthWrite:op>=1}); return matCache[k]; }
 
 for(const e of D.elems){
   const [x0,y0,z0,x1,y1,z1] = e.box;
-  const m = new THREE.Mesh(unit, mat(e.color, e.opacity||1));
-  m.scale.set(x1-x0, z1-z0, y1-y0);
+  const cyl = e.shape==='cyl', dd = Math.min(x1-x0, y1-y0);
+  const m = new THREE.Mesh(cyl?unitCyl:unit, mat(e.color, e.opacity||1));
+  if(cyl) m.scale.set(dd, z1-z0, dd); else m.scale.set(x1-x0, z1-z0, y1-y0);
   m.position.copy(P((x0+x1)/2,(y0+y1)/2,(z0+z1)/2));
   if(e.rot) m.rotation.y = e.rot*Math.PI/180;
   m.userData = {kind:'elem', e};
   L(e.layer).add(m);
   if(e.layer!=='Ground') pickables.push(m);
-  if(['Envelope','Annex buildings','Connecting bridges','Support rooms','Utility plant','Filling and exchange points'].includes(e.layer)) m.add(new THREE.LineSegments(edgeGeo, edgeMat));
+  if(['Envelope','Annex buildings','Connecting bridges','Support rooms','Utility plant','Filling and exchange points'].includes(e.layer)) m.add(new THREE.LineSegments(cyl?edgeGeoCyl:edgeGeo, edgeMat));
 }
 const ROLE_LAYER = {FAB:'Cleanroom tools', CSF:'CSF equipment', FSF:'FSF equipment', PLN:'Plenum equipment', ROOF:'Rooftop equipment'};
 const buckets = {};
@@ -206,7 +208,7 @@ function makeLabel(text, x,y,z, size, color){
   s.scale.set(size*w/c.height, size, 1); s.position.copy(P(x,y,z)); return s;
 }
 for(const f of D.fabs) L('Labels').add(makeLabel(`${f.id}  ${f.Lmain}×${f.W} m`, (f.x0+f.x1)/2,(f.y0+f.y1)/2, f.H+34, 34));
-const LBL = {'V2':'EUV building (V2)','UT-12':'UT building (est.)','UT-34':'UT building (est.)','GATE-W':'Office 1','WA':'Office 2','W1':'Office complex','WD':'Office 3','OFF-2':'Tech building parking tower','OFF-3':'Materials 1','S1':'Green building (est.)','CUB-N':'Utility and cooling towers','CT-1':'Cooling towers','SS-A':'KEPCO Godeok substation (press, OSM)','PAD-P5':'P5 construction site','PARK-2':'Complex 2 parking building','PARK-NW':'Employee parking lot','BR-W':'Overbridge (road crossing)','BR-12a':'Overbridge','BR-23a':'Overbridge','BR-34a':'Overbridge','LOG-WH':'Samsung logistics warehouse','AP-PROC':'Air Products plant','AF-PROC':'Air First plant','LINDE-BLD':'Linde Korea plant','PUB-WWTP':'Godeok public WWTP'};
+const LBL = {'V2':'EUV building (V2)','UT-12':'UT building (est.)','UT-34':'Complex or UT building candidate','GATE-W':'Office 1','WA':'Office 2','W1':'Office complex','WD':'Office 3','OFF-2':'Tech building parking tower','OFF-3':'Materials 1','S1':'Green building (est.)','CUB-N':'Utility and cooling towers','CT-1':'Cooling towers','SS-A':'KEPCO Godeok substation (press, OSM)','PAD-P5':'P5 construction site','PARK-2':'Complex 2 parking building','PARK-NW':'Employee parking lot','BR-W':'Overbridge (road crossing)','BR-12a':'Overbridge','BR-23a':'Overbridge','BR-34a':'Overbridge','LOG-WH':'Samsung logistics warehouse (relocation planned)','AP-PROC':'Air Products plant','AF-PROC':'Air First plant','LINDE-BLD':'Linde Korea plant','PUB-WWTP':'Godeok public WWTP'};
 for(const e of D.elems){ if(e.layer==='Map label points'){ const b=e.box; L('Labels').add(makeLabel(e.name.replace(' (Kakao Map label)',''), (b[0]+b[3])/2,(b[1]+b[4])/2, 16, 11, '#f2cc3a')); }
   if(LBL[e.id]){ const b=e.box; L('Labels').add(makeLabel(LBL[e.id], (b[0]+b[3])/2,(b[1]+b[4])/2, b[5]+22, 20, '#3c7be0')); } }
 { const g=new THREE.Group(); const lm=new THREE.LineBasicMaterial({color:0xf2cc3a});
@@ -347,7 +349,7 @@ D.levels.forEach(l=>{ const b=document.createElement('button'); b.textContent=l[
 $('ehsBtn').onclick=()=>{ ehsOn=!ehsOn; $('ehsBtn').classList.toggle('on',ehsOn); $('ehsBtn').textContent=ehsOn?'EHS(safety) layers off':'EHS(safety) layers on'; showFloor(curFab, curFloor||'3F'); };
 
 // ---------- tables
-$('dims').innerHTML='<tr><th>Fab</th><th>Main body length</th><th>incl. end block</th><th>Width</th><th>height</th></tr>'+D.fabs.map(f=>`<tr><td>${f.id}</td><td class="n">${f.Lmain}</td><td class="n">${f.L}</td><td class="n">${f.W}</td><td class="n">${f.H}${f.id==='P1'?' <span class="pill gA">A</span>':' <span class="pill gC">C</span>'}</td></tr>`).join('');
+$('dims').innerHTML='<tr><th>Fab</th><th>Main body length</th><th>incl. end block</th><th>Width</th><th>height</th></tr>'+D.fabs.map(f=>`<tr><td>${f.id}</td><td class="n">${f.Lmain}</td><td class="n">${f.L}</td><td class="n">${f.W}</td><td class="n">${f.H}${' <span class="pill gC">C</span>'}</td></tr>`).join('');
 $('phase').innerHTML='<tr><th>Fab</th><th>Lower W</th><th>Lower E</th><th>Upper W</th><th>Upper E</th></tr>'+Object.keys(D.phase).map(k=>{const p=D.phase[k]; const c=key=>p[key]?p[key][0]+(p[key][1].includes('estimate')?' <span class="pill gC">C</span>':''):'-'; return `<tr><td>${k}</td><td>${c('W|3F')}</td><td>${c('E|3F')}</td><td>${c('W|7F')}</td><td>${c('E|7F')}</td></tr>`;}).join('');
 if(D.meta.products){ $('prod').innerHTML='<tr><th>Fab</th><th>Zone</th><th>Product</th></tr>'+D.meta.products.rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td><b>${r[2]}</b><br><span class="sub">${r[3]}</span></td></tr>`).join(''); $('prodNote').textContent=D.meta.products.rule; }
 $('lv').innerHTML='<tr><th>Floor</th><th>Height (m, assumed)</th><th>Use</th></tr>'+D.levels.slice().reverse().map(l=>`<tr><td>${l[0]}</td><td class="n">${l[1]}–${l[0]==='RF'?'':l[2]}</td><td>${l[4]}</td></tr>`).join('');

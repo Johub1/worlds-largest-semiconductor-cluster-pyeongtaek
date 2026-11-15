@@ -1,6 +1,7 @@
 """Build campus_en.json from campus.json with the translation tables in i18n/."""
 import json,re
-W='/home/claude/work/'
+import os
+W=os.environ.get('GEN_WORK', os.path.dirname(os.path.dirname(os.path.abspath(__file__))))+'/'
 K=re.compile('[가-힣]')
 L=lambda n: json.load(open(W+'i18n/'+n))
 EX={}

@@ -1,3 +1,5 @@
+import os
+_D=os.path.dirname(os.path.abspath(__file__))
 import json
 S = [
 "Esri World Imagery (Vantor/WorldView-2, captured 2025-12-22, 0.5 m) — plan dimensions measured",
@@ -122,7 +124,7 @@ S = [
 "YouTube channel on semiconductor construction sites ('Dalpaengi') — P5 groundbreaking, green building, 154 building, P4 Ph2/Ph4: captioned drone photo from the south (KEPCO substation expansion, complex building, 154 building (substation), rooftop air pollution control facility), turnover schedule table (unofficial)",
 "Albamon community post (account by a Pyeongtaek P3 site worker: tools for the second floor and above are craned into move-in openings; exterior-wall hoist) — unofficial, low reliability",
 ]
-src=json.load(open('/home/claude/work/i18n/src_src.json'))
+src=json.load(open(os.path.join(_D,'src_src.json')))
 assert len(S)==len(src),(len(S),len(src))
-json.dump(S,open('/home/claude/work/i18n/src_en.json','w'),ensure_ascii=False,indent=0)
+json.dump(S,open(os.path.join(_D,'src_en.json'),'w'),ensure_ascii=False,indent=0)
 print('src ok',len(S))

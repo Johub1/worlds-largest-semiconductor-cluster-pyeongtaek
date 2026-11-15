@@ -1,3 +1,5 @@
+import os
+_D=os.path.dirname(os.path.abspath(__file__))
 import json
 M = [
 "Photo (track + scanner)",
@@ -301,7 +303,7 @@ M = [
 "Cleanroom zones",
 "Plenum zones",
 ]
-src=json.load(open('/home/claude/work/i18n/misc_src.json'))
+src=json.load(open(os.path.join(_D,'misc_src.json')))
 assert len(M)==len(src),(len(M),len(src))
-json.dump(M,open('/home/claude/work/i18n/misc_en.json','w'),ensure_ascii=False,indent=0)
+json.dump(M,open(os.path.join(_D,'misc_en.json'),'w'),ensure_ascii=False,indent=0)
 print('misc ok',len(M))

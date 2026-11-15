@@ -1,3 +1,5 @@
+import os
+_D=os.path.dirname(os.path.abspath(__file__))
 import json
 PL = "Plan measured from satellite imagery; height and use are estimates."
 GEN = "Generic reference design (concept). Not the actual location, count or capacity of equipment at the Pyeongtaek campus."
@@ -142,7 +144,7 @@ PL+" A captioned drone photo from the south by a site-observation YouTube channe
 "Egress stair and elevator cores assumed at about 70 m spacing. Used as exits in the EHS egress travel-distance calculation",
 "Press on a Hansung Cleantech filing: 'work on the complex building where the ultrapure water plant is built'. Samsung E&A contract names in filings also include 'complex building, …, UPW finishing work'. The actual location and size inside the complex building are not public, so a concept box is placed inside the fab's east end block (complex building, est.). The UPW concept equipment in the existing UT building and its pipe routes were left as they were; the actual supply route for P4 was not confirmed",
 ]
-src=json.load(open('/home/claude/work/i18n/notes_src.json'))
+src=json.load(open(os.path.join(_D,'notes_src.json')))
 assert len(N)==len(src),(len(N),len(src))
-json.dump(N,open('/home/claude/work/i18n/notes_en.json','w'),ensure_ascii=False,indent=0)
+json.dump(N,open(os.path.join(_D,'notes_en.json'),'w'),ensure_ascii=False,indent=0)
 print('notes ok',len(N))

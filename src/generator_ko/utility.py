@@ -189,8 +189,7 @@ def build_utilities(FABS, add, bays):
             D_NOTE + "현장 관련 보도: 에스티아이 CCSS(평택 3기 Ph3·Ph4, 4기 Ph1·Ph2). 위치는 임의", fab="UT")
         add(f"{uid}-CHEM-DOCK", "케미컬 탱크로리 하역 베이(품질 확인 후 이송) — 충전 지점(개념)", T, [u["x0"] - 14, ym - 12, 0.0, u["x0"] - 1, ym + 12, 0.6], "#39d98a", "D", ["STI", "CSF_FSF"],
             "탱크로리에서 저장 탱크로 케미컬을 옮기는 접속점. 방류턱·누액 감지·품질 확인을 두는 것이 일반적. 위치는 임의의 개념 표시", fab="UT")
-    add("UT-34-CT", "UT동 옥상 냉각탑 구역(추정)", U, [150, 1130, 45.0, 350, 1220, 53.0], "#c5ccd3", "C", ["ESRI", "P3_UT"],
-        "위성영상에서 P3·P4 사이 유틸리티동 위로 수증기를 확인. 셀 수·범위는 가정", fab="UT", opacity=0.85)
+    # v7.25: the earlier assumed zone UT-34-CT was removed — it overlapped the rows CT34-R4/R5 and the unidentified blue modules read from imagery in v7.24
     # cooling-water loops: chillers <-> towers
     pair("CW", [(-150, 1834, 6), (-150, 1834, 46), (-150, 1800, 46), (250, 1800, 46), (250, 1876, 46), (250, 1876, 19)], 1.2, "UT-12", d=(1.8, 1.8, 1.4))
     pair("CW", [(250, 1818, 46), (250, 1818, 19)], 1.2, "UT-12", d=(1.8, 0, 0))

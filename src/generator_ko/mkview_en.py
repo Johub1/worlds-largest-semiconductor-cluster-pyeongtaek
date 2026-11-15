@@ -1,6 +1,7 @@
 import json
 import re,os
-_V=os.path.join(os.path.dirname(os.path.abspath(__file__)),'vendor')
+_H=os.path.dirname(os.path.abspath(__file__))
+_V=next((d for d in (os.path.join(_H,'vendor'),os.path.join(_H,'..','vendor')) if os.path.isdir(d)),os.path.join(_H,'vendor'))
 def _inline(h):
     # three.js r128 and OrbitControls (MIT licence) are inlined so the viewer works offline
     for pat,fn in ((r'<script src="[^"]*three\.min\.js"></script>','three.min.js'),(r'<script src="[^"]*OrbitControls\.js"></script>','OrbitControls.js')):
