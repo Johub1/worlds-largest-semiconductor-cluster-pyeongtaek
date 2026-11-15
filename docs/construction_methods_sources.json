@@ -12,7 +12,7 @@
       "source": "https://www.hanyangeng.co.kr/upload/bbs/brochure/kor/63eaf3df6a173.pdf",
       "location": "PDF6/printed10–11: method; PDF8/printed14–15: site history",
       "limits": "General method sequence linked to supplier participation; no as-built size, count, crane model, lift plan or coordinates",
-      "evidence_level": "See site scope and limitations"
+      "evidence_level": "Named project method reference; general supplier sequence"
     },
     {
       "id": "CM-UT002",
@@ -24,7 +24,7 @@
       "source": "https://www.kcenc.co.kr/business/hightech.php",
       "location": "Samsung C&T, 2026",
       "limits": "Package3 is a work-package identifier, not three modules; no quantity, geometry or delivered-model inference",
-      "evidence_level": "See site scope and limitations"
+      "evidence_level": "Named project supplier work reference"
     },
     {
       "id": "CM-UT003",
@@ -36,7 +36,7 @@
       "source": "https://www.kcenc.co.kr/business/hightech.php",
       "location": "Samsung Heavy Industries section",
       "limits": "No rack count, exact contents, support spacing, joint detail or module identification",
-      "evidence_level": "See site scope and limitations"
+      "evidence_level": "Named project supplier work reference"
     },
     {
       "id": "CM-UT004",
@@ -48,7 +48,7 @@
       "source": "https://www.kcenc.co.kr/business/hightech.php",
       "location": "Samsung C&T, 2019/2020",
       "limits": "Not evidence that every Pyeongtaek weld was automated or that a specific process was used",
-      "evidence_level": "See site scope and limitations"
+      "evidence_level": "Customer research/test reference; site adoption not identified"
     },
     {
       "id": "CM-SC001",
@@ -60,7 +60,7 @@
       "source": "https://k-ensol.com/wp-content/uploads/2024/11/KE_ICR_k-web.pdf",
       "location": "PDF4–5 method; PDF10 suspension hierarchy; H1 DART20260814003241 for site statement",
       "limits": "Brochure lift range and company-reported savings are not Pyeongtaek floor heights or site-specific results; no raw-image redistribution",
-      "evidence_level": "See site scope and limitations"
+      "evidence_level": "Named Pyeongtaek application; general brochure method"
     },
     {
       "id": "CM-S01",
@@ -113,10 +113,10 @@
     {
       "id": "CM-S05",
       "company": "GPC",
-      "method": "P3/P4 green-building precast work",
+      "method": "P3/P4 Green-dong building precast work",
       "evidence_level": "Named project work reference",
       "site_evidence": "Named project work reference",
-      "site_scope": "P3 and P4 green buildings",
+      "site_scope": "P3 and P4 buildings named Green-dong (그린동) in the source; not an environmental-certification claim",
       "sequence": "PC work reference only; assembly sequence not given",
       "source": "https://www.gpc.co.kr/33",
       "location": "Official semiconductor references",
@@ -128,7 +128,7 @@
       "method": "Pyeongtaek PC design/development services",
       "evidence_level": "Design service, not installed-work confirmation",
       "site_evidence": "Design service, not installed-work confirmation",
-      "site_scope": "P2 green building, FAB2/EUV retaining-wall design and self-supporting stair development",
+      "site_scope": "P2 Green-dong building (그린동), FAB2/EUV retaining-wall design and self-supporting stair development",
       "sequence": "Design/development identified; final construction selection not established",
       "source": "https://www.sampyopnc.com/bbs/content.php?co_id=pc_result",
       "location": "Official PC structural-design references",
@@ -224,7 +224,7 @@
       "method": "FCC/FCG, PLEG/CHB and high-elasticity lattice beams",
       "evidence_level": "General company methods, transcript checked",
       "site_evidence": "General company methods, transcript checked",
-      "site_scope": "Video does not identify Pyeongtaek application",
+      "site_scope": "The reviewed captions do not identify Pyeongtaek application; video frames were not inspected.",
       "sequence": "Factory-formed composite components and connections explained; not a site erection plan",
       "source": "https://www.youtube.com/watch?v=qZvZpcqNa28",
       "location": "Official EP07 video, English captions04:01–06:55",
