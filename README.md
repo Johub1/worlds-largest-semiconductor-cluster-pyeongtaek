@@ -18,6 +18,8 @@ Additional references distinguish [system-ceiling components and modular install
 
 [Construction logistics](docs/construction_logistics.md) explains the shop-to-FAB material flow as a conceptual workflow. [Reading the model's estimates](docs/model_assumptions.md) distinguishes approximate building heights, functional levels and equipment displays from surveyed or installed assets.
 
+[Evidence reconciliation and corrections](docs/evidence_reconciliation.md) records 19 reviewed differences, unresolved interpretations and corrections to our own analysis. A [building-record comparison method](docs/building_record_comparison_method.md) provides the query settings and data month. These notes do not establish issuer error or misconduct.
+
 > **Unofficial.** This project is not affiliated with, endorsed by, or reviewed by Samsung Electronics or any other company named here. No non-public drawings, internal documents or information obtained through site access were used. Building outlines are measured from public satellite imagery. Heights and floor arrangement are partly estimated. **The interior equipment layout, utility routes and EHS layers are a generic reference design (concept), not the actual facility layout.** Positions of security equipment (cameras, access control, guard routes) are deliberately not modelled. No company logos are used.
 
 ![exterior](preview/01_exterior.png)
