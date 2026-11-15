@@ -10,6 +10,8 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 
 [Construction methods and source catalog](docs/construction_methods.md) explain fabrication, modular assembly, precast walls, steel-connection trials and preassembly checks, distinguishing named Pyeongtaek work from general methods. [Construction materials](docs/construction_materials.md) list 31 material and equipment evidence records, separating named supplier work and deliveries from general catalogue data. [Historical communications infrastructure](docs/campus_systems.md) records a separate Samsung campus case without assigning present-day equipment or positions.
 
+Supplementary supplier notes cover [utility hook-up and fire-system fabrication](docs/utility_hookup.md), [pile-foundation quality control](docs/foundation_quality_control.md), and [raised floors and vibration assessment](docs/raised_floors_and_vibration.md). Named references and general product data remain distinct; no installed specifications or quantities are inferred.
+
 > **Unofficial.** This project is not affiliated with, endorsed by, or reviewed by Samsung Electronics or any other company named here. No non-public drawings, internal documents or information obtained through site access were used. Building outlines are measured from public satellite imagery. Heights and floor arrangement are partly estimated. **The interior equipment layout, utility routes and EHS layers are a generic reference design (concept), not the actual facility layout.** Positions of security equipment (cameras, access control, guard routes) are deliberately not modelled. No company logos are used.
 
 ![exterior](preview/01_exterior.png)
