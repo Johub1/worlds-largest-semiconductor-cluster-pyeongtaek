@@ -49,7 +49,7 @@ Further reference notes cover [reinforcement supports and infrastructure reinfor
 | `data/*.csv` | Elements, equipment, floors, phases, vendors, structure, EHS and utility tables |
 | `preview/` | 27 screenshots of the viewer |
 | `src/` | Export, viewer and check scripts that run on `data/campus.json`; `src/generator_ko/` holds the original generator and the translation tables (see "Rebuilding") |
-| `SOURCES.md` | All 202 sources with URLs, grouped by tier |
+| `SOURCES.md` | The model's 202 source keys with URLs, grouped by tier; supplementary supplier references are indexed separately in `docs/` |
 | `CONSULTATION.md` | Record of what other AI models proposed and what was adopted, verified, held or rejected |
 
 ## Coordinates
