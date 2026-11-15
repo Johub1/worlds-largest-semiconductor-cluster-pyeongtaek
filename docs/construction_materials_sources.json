@@ -224,6 +224,50 @@
       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230411900452",
       "locator": "Correction table and sections 1, 3 and 5; 2022-04-30 to 2024-09-30",
       "receipt": "20230411900452"
+    },
+    {
+      "id": "M23",
+      "company": "Duckshin EPC",
+      "evidence": "Named supplier contract; amended amount",
+      "site": "Pyeongtaek campus Complex 2 preparation and P5 FAB construction",
+      "material": "Deck-plate package",
+      "limits": "Contract scope does not specify installed deck type, grade, thickness, area or quantity; amended amount is not an installed-material takeoff.",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261030900720",
+      "locator": "Correction table and sections 1, 3, 5 and 10; 2026-03-13 to 2028-07-31",
+      "receipt": "20261030900720"
+    },
+    {
+      "id": "M24",
+      "company": "Jeil Technos",
+      "evidence": "Named supplier contract; original and amendment history disclosed",
+      "site": "Pyeongtaek P5 FAB, deck installation work section 2",
+      "material": "Deck installation",
+      "limits": "Work section 2 is not a model location or floor. The filing describes a threshold-triggering amendment, not the original award date; actual installation and specifications remain unconfirmed.",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900551",
+      "locator": "Sections 1, 3, 5 and 10; 2026-03-13 to 2028-07-31",
+      "receipt": "20261106900551"
+    },
+    {
+      "id": "M25",
+      "company": "Samil C&S",
+      "evidence": "Named supplier contract",
+      "site": "Pyeongtaek P5 FAB2 new-construction site",
+      "material": "Precast-concrete member fabrication and delivery",
+      "limits": "The contract names PC members but does not identify member types, strengths, prestressing, quantities or installed positions. Delivery scope is not proof of completion.",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260923800642",
+      "locator": "Sections 1, 3, 4, 5 and 9; 2026-09-01 to 2028-10-31",
+      "receipt": "20260923800642"
+    },
+    {
+      "id": "M26",
+      "company": "Kwangmyung Electric",
+      "evidence": "Named electrical-equipment contract; comparator-data correction",
+      "site": "Pyeongtaek P5 new construction",
+      "material": "Motor control centre (MCC) package",
+      "limits": "This is an equipment supply scope, not a material grade or installed panel count/location. The November correction changes the supplier revenue comparator; it does not change the contract value.",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261104800306",
+      "locator": "Correction table and sections 1, 3, 5 and 9; 2026-10-01 to 2027-10-31",
+      "receipt": "20261104800306"
     }
   ]
 }
