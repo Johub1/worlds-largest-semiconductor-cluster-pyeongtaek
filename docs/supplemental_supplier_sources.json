@@ -1,6 +1,6 @@
 {
   "review_date": "2026-11-15",
-  "description": "Eight supplementary supplier references, separate from the 31 material and 22 construction-method catalog records.",
+  "description": "Fourteen supplementary supplier references, separate from the 31 material and 22 construction-method catalog records. Named site references, general technology and unmapped project-history labels are distinguished.",
   "records": [
     {
       "id": "SUP-HK01",
@@ -106,6 +106,99 @@
       "retrieved_on": "2026-11-15",
       "brochure_locator": "PDF34 / printed66–67, rows65/69; general process PDF6",
       "brochure_sha256": "30912079c5fe2e28917ba2abfb6c9ca319206a69c8eb331b23b8361556b3ecb4"
+    },
+    {
+      "evidence_level": "General manufacturer technology and researcher-authored conference paper",
+      "model_geometry_changed": false,
+      "installed_properties_assigned": false,
+      "retrieved_on": "2026-11-15",
+      "id": "SUP-SC01",
+      "company": "Shinsung E&G",
+      "topic": "System-ceiling components and modular lifting",
+      "scope": "General manufacturer technology; unnamed domestic semiconductor application in 2022",
+      "url": "https://www.shinsungeng.com/m15.php",
+      "document": "ceiling_components_and_modular_installation.md",
+      "limit": "Pyeongtaek use not established; working-area caption, vehicle dimensions and module size kept separate; no floor height, installed material or lift count assigned.",
+      "brochure_locator": "Current brochure file 260623, PDF 11–13 / printed 20–25; KSME 2023 PDF 199–200, paper 23PT-Fr01B099",
+      "brochure_sha256": "7a3da1b541f0a1731797a28a3a62805a3d6c5a3146c7fc894bed6b6a9496bbcf",
+      "additional_url": "https://ksme.or.kr/UploadData/Editor/Conference/202308/BA7C49B85D8D4E298AE6DC2B0FE7E22D.pdf",
+      "additional_source_sha256": "95a239623f3554522d8fcd47caed5113dfbabbd0164c6118de45621b3e394181"
+    },
+    {
+      "evidence_level": "Company-published reference; general product/method data kept separate",
+      "model_geometry_changed": false,
+      "installed_properties_assigned": false,
+      "retrieved_on": "2026-11-15",
+      "id": "SUP-LN01",
+      "company": "Samil Flontech",
+      "topic": "Duct/project supply history and general lining processes",
+      "scope": "P2 duct-segment and P3/P4 project labels in supplier history; Pyeongtaek identity unconfirmed",
+      "url": "https://superflon.com/default/img/hblock/content/style98/pdf/SamIlFlonTech-ENG.pdf",
+      "document": "lining_supplier_reference_scopes.md",
+      "limit": "Phase entries do not name products or site; separate UPW-tank entry has no site; history years not contract periods; no installed grade, thickness, route or manufacturing acceptance assigned.",
+      "brochure_locator": "PDF4 / printed6–7; general lining/coating descriptions PDF10–11",
+      "brochure_sha256": "2590bbf3bec84fb0c417c8f181c0337810f02a1839cb9e1629605522bd76ed9c"
+    },
+    {
+      "evidence_level": "Company-published reference; general product/method data kept separate",
+      "model_geometry_changed": false,
+      "installed_properties_assigned": false,
+      "retrieved_on": "2026-11-15",
+      "id": "SUP-EL01",
+      "company": "Samyoung (삼영기업)",
+      "topic": "Electrical, control and fire-electrical work references",
+      "scope": "Selected named P3/P4 electrical and wastewater fire-electrical scopes",
+      "url": "https://www.samyoungco.com/file/(주)삼영기업%20지명원%20국문.pdf",
+      "document": "electrical_reference_scopes.md",
+      "limit": "Ordering-party labels retained; 5F/FSF/SUP labels not mapped to coordinates; stage3 does not establish extra wastewater capacity; no installed cable or fire-system specification assigned.",
+      "brochure_locator": "PDF14 / printed25–26; PDF20 / printed37–38",
+      "brochure_sha256": "42b06c7789bac08a733f2284259e97966875dda721794a8961db490deb4a976d"
+    },
+    {
+      "evidence_level": "Official annual filing; named business-section work scopes",
+      "model_geometry_changed": false,
+      "installed_properties_assigned": false,
+      "retrieved_on": "2026-11-15",
+      "id": "SUP-FM01",
+      "company": "Paratech",
+      "topic": "P4 Ph1 fire-mechanical work packages",
+      "scope": "Separate 154kV and Green-dong rows in the business-section contract table",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320001022",
+      "document": "fire_mechanical_reference_scopes.md",
+      "limit": "Work categories and ordering-party fields only; no sprinkler type, count, design flow, material, position or combined cost inferred.",
+      "source_locator": "2025 annual report, section4 / eleId13; receipt20260320001022",
+      "viewer_url": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260320001022&dcmNo=11158152&eleId=13&offset=256642&length=28405&dtd=dart4.xsd",
+      "source_sha256": "5066b7f26650e12b2e4edd79e96e7d657ab42c28ba3338e8845df71a0edc8672"
+    },
+    {
+      "evidence_level": "Company-published reference; general product/method data kept separate",
+      "model_geometry_changed": false,
+      "installed_properties_assigned": false,
+      "retrieved_on": "2026-11-15",
+      "id": "SUP-HL01",
+      "company": "Freyssinet Korea",
+      "topic": "Pipe-module strand-jack lifting",
+      "scope": "Supplier reference named Samsung-Pyungtak P4_Ph1",
+      "url": "https://www.freyssinet.co.kr/en/",
+      "document": "lifting_and_steelwork_reference_scopes.md",
+      "limit": "Six 40-ton jack labels do not establish module weight, permitted combined load or permanent campus equipment; position, lifting height and date unknown.",
+      "source_locator": "References, Samsung-Pyungtak P4_Ph1 card; Korean/English versions cross-read",
+      "source_sha256": "0ccab5f1cc92593dd6124e2e4d30124859a338ac31cbf44b0aaed13c74e2358a"
+    },
+    {
+      "evidence_level": "Company-published reference; general product/method data kept separate",
+      "model_geometry_changed": false,
+      "installed_properties_assigned": false,
+      "retrieved_on": "2026-11-15",
+      "id": "SUP-ST02",
+      "company": "Shinhan SNG (신한에스엔지)",
+      "topic": "P5 steelwork and separately labelled UPW pipe rack",
+      "scope": "Named Pyeongtaek FAB1 lot6 and FAB2 lot3; separate P5 Ph1 rack row without a direct site label",
+      "url": "https://www.shsng.com/ko/performance_steel?no=1103&sCate=3",
+      "document": "lifting_and_steelwork_reference_scopes.md",
+      "limit": "Scale fields and ordering parties preserved; no summed steel total, accepted quantity, cleanroom floor count, height or model-building match inferred.",
+      "source_locator": "Steelwork references rows20/19/13, matched by project title",
+      "source_sha256": "afdfdce16e8d56f0e304917ff3806b00603c139e0fddfb46742c00d8df22f628"
     }
   ]
 }
