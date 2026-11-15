@@ -1,5 +1,13 @@
 # Changelog
 
+## v7.39 — 2026-11-15
+- `meta.imagery_geometry`: comparison with NGII national base map building features (new source `NGII_BASEMAP_BLDG`); east strips 91–96% covered by the features; differences mainly at the west ends; no box changed; original features not redistributed.
+- `meta.construction_material_records`: updated for the 22-record material guide (deck-plate contracts) and the aligned "high-modulus" wording.
+- Packages include the latest `docs/` from `main` (77b5c67).
+
+## Documentation update — 2026-11-15 (77b5c67)
+- Material guide: three verified deck-plate contract filings (M20–M22); method guide wording "high-modulus".
+
 ## v7.38 — 2026-11-15
 - The `docs/` construction-method and material guides (merged on `main` in b92248a and b60f962) are now included in the release packages and linked from the README.
 - New `meta.construction_material_records`; sources `ANSEN_PC`, `ARMACELL_CL1`. `UT-34-UPW` note: ANSEN P3 UPW water-tank PP-sheet work (supply fact only; box unchanged, grade D).
