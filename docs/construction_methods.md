@@ -29,13 +29,13 @@ K-ENSOL’s general brochure shows low-level assembly followed by lifting and in
 
 Samsung E&A names PTW (Precast Truss Wall) at P1 wastewater structures. The stated construction principle is to place precast truss-wall blocks and then cast concrete inside. This is a process illustration, not a reinforcement, waterproofing or wall-thickness specification. [2019 sustainability report](https://www.samsungena.com/filesview/2019%20Samsung%20Engineering%20Sustainability%20Report_Korean.pdf?folder=%2Fupload%2Fpublishing%2F&storedfile=757dec1ef0bb4e85b7c1a8500ff45292.pdf), PDF page 39.
 
-Its [P2 UT project page](https://samsungena.com/kr/business/project-template?idx=73) identifies PTW walls, wider pipe-rack modularization and equipment skids. Its [2020 sustainability report](https://www.samsungena.com/filesview/2020%2BSamsung%2BEngineering%2BSustainability%2BReport_K.pdf?folder=%2Fupload%2Fpublishing%2F&storedfile=89562f37080b428783253eb7c67e2f59.pdf), PDF pages12 and27, discusses frame-stage prefabrication and module handling at P2 UT. SPMTs move heavy modules; strand-jack systems provide lifting. These are roles, not site transport routes or lift instructions. The neighboring 94%/70% reduction example concerns Xian and is not a Pyeongtaek result.
+Its [P2 UT project page](https://samsungena.com/kr/business/project-template?idx=73) identifies PTW walls, wider pipe-rack modularization and equipment skids. Its [2020 sustainability report](https://www.samsungena.com/filesview/2020%2BSamsung%2BEngineering%2BSustainability%2BReport_K.pdf?folder=%2Fupload%2Fpublishing%2F&storedfile=89562f37080b428783253eb7c67e2f59.pdf), PDF pages 12 and27, discusses frame-stage prefabrication and module handling at P2 UT. SPMTs move heavy modules; strand-jack systems provide lifting. These are roles, not site transport routes or lift instructions. The neighboring 94%/70% reduction example concerns Xian and is not a Pyeongtaek result.
 
-The [2022 company profile](https://www.samsungena.com/filesview/2022_Samsungengineering%20Profile_Kor_s.pdf?folder=%2Fupload%2Fpublishing%2F&storedfile=8faf6cf859e244bb861c94128bec4e5b.pdf), PDF page27, reports 35% modularization and 91% PC in its P3 infrastructure context. The denominator is not defined; neither is a physical share of the whole P3 fab or a completion rate.
+The [2022 company profile](https://www.samsungena.com/filesview/2022_Samsungengineering%20Profile_Kor_s.pdf?folder=%2Fupload%2Fpublishing%2F&storedfile=8faf6cf859e244bb861c94128bec4e5b.pdf), PDF page 27, reports 35% modularization and 91% PC in its P3 infrastructure context. The denominator is not defined; neither is a physical share of the whole P3 fab or a completion rate.
 
 ## Steel connections, floor work and preassembly checks
 
-Samsung C&T describes P4 structural-bolting robot tests in 2022 and2023. The method covers bolt recognition, positioning and two-stage fastening; a test is not confirmation of deployment throughout P4. Its page separately identifies P3 access-floor grating/anchor applications and other drilling/grating tests. [Official smart technology](https://www.secc.co.kr/ko/library/tech/smart).
+Samsung C&T describes P4 structural-bolting robot tests in 2022 and 2023. The method covers bolt recognition, positioning and two-stage fastening; a test is not confirmation of deployment throughout P4. Its page separately identifies P3 access-floor grating/anchor applications and other drilling/grating tests. [Official smart technology](https://www.secc.co.kr/ko/library/tech/smart).
 
 Its [equipment page](https://www.secc.co.kr/ko/library/tech/equipment) gives Pyeongtaek overbridges as examples of laser-tracker dimensional checks before assembly. A conceptual sequence is part/site measurement → fit comparison → incompatibility review. Actual coordinates and connection levels are not supplied here.
 
@@ -43,12 +43,20 @@ Its [equipment page](https://www.secc.co.kr/ko/library/tech/equipment) gives Pye
 
 Samsung E&A’s [EP07 frame-method video](https://www.youtube.com/watch?v=qZvZpcqNa28), also [listed on its official site](https://www.samsungena.com/kr/newsroom/video/view?idx=15835), explains FCC/FCG, PLEG/CHB and high-modulus lattice beams at 04:01–06:55. The reviewed English captions do not identify Pyeongtaek application. At 07:12 onward, SFPC and Giga Block are development topics. Expected benefits are not built-site results. This review used video metadata and captions; video frames and construction footage were not inspected.
 
+## Fireproofing and fitting-fabrication references
+
+MFR records an August 2022 demonstration of steel fireproofing-spray and bolting robots at Samsung Electronics Pyeongtaek. The history does not name an individual fab or identify the coating. Later product releases do not establish the robot variant used in that demonstration. [Company history](https://mfr-c.com/history).
+
+Daeyang E&A includes Pyeongtaek P1, P3 and P4 in its fireproofing/insulation portfolio, without products, thicknesses or fire ratings. [Named project portfolio](https://www.dy-ena.com/business/hitech). These are distinct kinds of evidence; a demonstration and a contractor portfolio do not together establish an installed coating specification.
+
+Samilbend separately illustrates general butt-weld fitting fabrication using pipe stock or plate stock. The plate route includes forming, welding and nondestructive examination. Its site references say piping materials without identifying each delivered fitting or fabrication route. [Official brochure](https://samilbend.com/default/img/brochure2024.pdf), PDF pages 8–10 and selected reference pages 80, 83, 87–88. No process diagram or product image is reproduced.
+
 ## Construction materials
 
-The [material guide](construction_materials.md) adds 26 material and equipment evidence records, including named P3 PP-sheet work and P2/P3 insulation delivery references. General catalog properties are separated from installed site specifications.
+The [material guide](construction_materials.md) adds 31 material and equipment evidence records, including named P3 PP-sheet work and P2/P3 insulation delivery references. General catalog properties are separated from installed site specifications.
 
 ## Evidence catalog and remaining coverage
 
-The accompanying [source catalog](construction_methods_sources.json) contains 20 method/reference records, including GPC Green-dong building PC work (그린동, the project building name), PC design-service references, steel supply, general double-wall and foundation-pile descriptions. The evidence level of each record is explicit. A general method or design service must not be promoted to an installed system.
+The accompanying [source catalog](construction_methods_sources.json) contains 22 method/reference records, including GPC Green-dong building PC work (그린동, the project building name), PC design-service references, steel supply, general double-wall and foundation-pile descriptions. The evidence level of each record is explicit. A general method or design service must not be promoted to an installed system.
 
 Foundations, local ground conditions, member dimensions, actual erection sequences, joints, enclosure, electrical installation, water-treatment commissioning and complete handover still need additional project-specific evidence. Their absence from this guide is not a finding that no public source exists. Construction illustrations do not change the model’s geometry or confidence grades.

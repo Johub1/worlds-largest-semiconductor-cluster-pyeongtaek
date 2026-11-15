@@ -152,7 +152,7 @@
       "method": "Automated structural-bolt fastening",
       "evidence_level": "Named site test/demonstration",
       "site_evidence": "Named site test/demonstration",
-      "site_scope": "P4 tests in2022 and2023",
+      "site_scope": "P4 tests in2022 and 2023",
       "sequence": "Recognize bolt → align/correct position → first fastening → second fastening",
       "source": "https://www.secc.co.kr/ko/library/tech/smart",
       "location": "Official smart-technology page, steel bolting robot",
@@ -221,7 +221,7 @@
     {
       "id": "CM-S14",
       "company": "Samsung E&A",
-      "method": "FCC/FCG, PLEG/CHB and high-elasticity lattice beams",
+      "method": "FCC/FCG, PLEG/CHB and high-modulus lattice beams",
       "evidence_level": "General company methods, transcript checked",
       "site_evidence": "General company methods, transcript checked",
       "site_scope": "The reviewed captions do not identify Pyeongtaek application; video frames were not inspected.",
@@ -241,6 +241,30 @@
       "source": "https://www.youtube.com/watch?v=qZvZpcqNa28&t=432s",
       "location": "Official EP07 video,07:12 onward",
       "limits": "Expected weight reduction is a development claim, not measured Pyeongtaek performance or a built campus component."
+    },
+    {
+      "id": "CM-S16",
+      "company": "MFR",
+      "method": "Steel fireproofing-spray and bolting robot demonstration",
+      "evidence_level": "Named site demonstration",
+      "site_evidence": "Company history places the demonstration at Samsung Electronics Pyeongtaek in August 2022",
+      "site_scope": "No individual fab, installed product or campus-wide deployment identified",
+      "sequence": "Demonstration only; no site work instruction inferred",
+      "source": "https://mfr-c.com/history",
+      "location": "Company history, August 2022",
+      "limits": "Later robot products are not assigned to the 2022 demonstration. No coating specification, quantity or fire rating."
+    },
+    {
+      "id": "CM-S17",
+      "company": "Samilbend",
+      "method": "General butt-weld fitting fabrication",
+      "evidence_level": "General manufacturer process; named deliveries listed separately",
+      "site_evidence": "Selected Pyeongtaek references list piping materials without product specifications",
+      "site_scope": "Manufacturing route is not identified for each site delivery",
+      "sequence": "Separate pipe-stock and plate-stock routes; the plate route includes forming, welding and nondestructive examination",
+      "source": "https://samilbend.com/default/img/brochure2024.pdf",
+      "location": "PDF pages 8–10; selected references on 80, 83, 87–88",
+      "limits": "No process temperatures, inspection class, fitting type, grade or dimensions are assigned to Pyeongtaek."
     }
   ]
 }
