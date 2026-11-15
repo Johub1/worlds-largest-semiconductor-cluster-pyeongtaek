@@ -53,7 +53,7 @@ Samilbend separately illustrates general butt-weld fitting fabrication using pip
 
 ## Construction materials
 
-The [material guide](construction_materials.md) adds 31 material and equipment evidence records, including named P3 PP-sheet work and P2/P3 insulation delivery references. General catalog properties are separated from installed site specifications.
+The [material guide](construction_materials.md) adds 33 material and equipment evidence records, including named P3 PP-sheet work and P2/P3 insulation delivery references. General catalog properties are separated from installed site specifications.
 
 ## Evidence catalog and remaining coverage
 

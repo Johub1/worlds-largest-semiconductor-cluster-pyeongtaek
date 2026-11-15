@@ -1,6 +1,6 @@
 {
-  "review_date": "2026-11-15",
-  "description": "Fifteen supplementary supplier references, separate from the 31 material and 22 construction-method catalog records. Named site references, general technology and unmapped project-history labels are distinguished.",
+  "review_date": "2026-11-16",
+  "description": "Seventeen supplementary supplier references, separate from the 33 material and 22 construction-method catalog records. Named site references, general technology and unmapped project-history labels are distinguished.",
   "records": [
     {
       "id": "SUP-HK01",
@@ -215,6 +215,30 @@
       "source_locator": "2025 profile PDF20–21; current services page describes general heavy-load operating steps",
       "source_sha256": "eef755ec5e1e4ad76b9fa910733b70b6bf9090c49fff3a4d35fd50de185716f8",
       "additional_url": "https://samillogistics.com/services"
+    },
+    {
+      "id": "SUP-SE01",
+      "company": "KCC Silicone",
+      "topic": "Warehouse glazing sealant; other project names kept separate",
+      "scope": "Samsung Electronics Pyeongtaek factory logistics warehouse new construction",
+      "url": "https://www.kccsilicone.com/upload/KCCSILICONE_Approval_Sealant_kor_2024.pdf",
+      "document": "sealant_reference_scopes.md",
+      "limit": "Warehouse address, work date, joint dimensions, quantity, project acceptance and match to LOG-WH are unconfirmed. Glass glazing is not promoted to structural glazing, a cleanroom specification or campus-wide use.",
+      "evidence_level": "Named manufacturer delivery/reference row",
+      "model_geometry_changed": false,
+      "installed_properties_assigned": false
+    },
+    {
+      "id": "SUP-PC01",
+      "company": "HS Hwasung",
+      "topic": "PC column and beam fabrication and delivery",
+      "scope": "Samsung Electronics Pyeongtaek semiconductor factory; fab unassigned",
+      "url": "https://www.hwasung.com/index.php/p/business/pc/?act=view&category=19&depart=7&hcode=002.008&id=392",
+      "document": "precast_member_supply_references.md",
+      "limit": "Company work period 2015-10-01 to 2016-03-01 is not commissioning. No member strength, dimensions, reinforcement, prestressing, quantity, erection detail, installation position or P-number is established.",
+      "evidence_level": "Named company fabrication/delivery reference",
+      "model_geometry_changed": false,
+      "installed_properties_assigned": false
     }
   ]
 }

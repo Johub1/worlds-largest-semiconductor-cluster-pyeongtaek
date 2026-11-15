@@ -1,6 +1,6 @@
 # Pyeongtaek construction materials
 
-Working evidence guide, 15 November 2026. Living project, updated continuously.
+Working evidence guide, 16 November 2026. Living project, updated continuously.
 
 This guide links material families to the [construction-method guide](construction_methods.md). Named supplier work and deliveries are distinguished from general catalogs, trials and development. It is not an as-built bill of materials. No material properties, quantities or geometry have been assigned to model elements.
 
@@ -39,6 +39,8 @@ This guide links material families to the [construction-method guide](constructi
 | M29 | Daeyang E&A: Named company project portfolio | Fireproofing and thermal-insulation work, products unspecified. Samsung Electronics Pyeongtaek P1, P3 and P4. [Source](https://www.dy-ena.com/business/hitech) (Hi-Tech portfolio, Pyeongtaek P1/P3/P4 caption). | The portfolio gives no work dates, product, thickness, fire-resistance duration, member location or assignment of each work type to each fab. A general product on the same website is not an installed-site specification. |
 | M30 | Samsung C&T / SY: General collaborative research disclosure | Exterior-panel material and connection improvements. High-tech buildings; Pyeongtaek installation unspecified. [Source](https://kind.krx.co.kr/external/2026/03/12/001342/20260312003276/11011.htm) (2025 annual report, collaborative research table; March 2022–April 2024). | The research-results/expected-benefits table describes a one-hour fire-resistance improvement. No site, assembly test report, panel core, thickness or installed rating is established. |
 | M31 | Samhwa / SP SAMHWA: Named manufacturer application case | Non-exposed polyurethane waterproofing. Pyeongtaek P2 UT interior floor. [Source](https://spsamhwa.com/live/%EC%97%AC%EA%B8%B0%EB%8F%84-%EC%82%BC%ED%99%94-%EC%A0%80%EA%B8%B0%EB%8F%84-%EC%82%BC%ED%99%94-%EC%82%BC%ED%99%94%ED%8E%98%EC%9D%B8%ED%8A%B8-%EC%95%88%EC%8B%AC-%EC%8B%9C%EA%B3%B5-%ED%98%84%EC%9E%A5) (P2 UT subsection; KSF3211 2FB source caption). | The text names KSF 3211 class 2; the caption adds 2FB. Thickness, area, installation date, certificate and exact floor location are absent. Roofs, all P2 floors and current product specifications are not established. |
+| M32 | KCC Silicone: Named manufacturer reference | SL907 Premium glazing sealant. Samsung Electronics Pyeongtaek factory logistics warehouse new construction. [Source](https://www.kccsilicone.com/upload/KCCSILICONE_Approval_Sealant_kor_2024.pdf) (PDF page 38, printed page 74; Samsung C&T in the contractor column). | Warehouse identity match to LOG-WH, joint dimensions, quantity, work date and project acceptance remain unconfirmed. This row does not establish structural glazing, a cleanroom product specification or campus-wide use. |
+| M33 | HS Hwasung: Named fabrication/delivery reference | Precast-concrete columns and beams. Samsung Electronics Pyeongtaek semiconductor factory, fab unassigned. [Source](https://www.hwasung.com/index.php/p/business/pc/?act=view&category=19&depart=7&hcode=002.008&id=392) (project entry 392; company work period 2015-10-01 to 2016-03-01). | No dimensions, strength, prestressing, quantity, connection/erection detail or installed position. Work period is not commissioning; date alone does not identify P1. |
 
 ## P5 member and electrical-equipment scopes
 
@@ -56,10 +58,16 @@ ANSEN lists P3 wastewater/ultrapure-water PCPL work as completed, a concrete-int
 
 Armacell's delivery list names Pyeongtaek P2 and P3. The same document describes NBR-based Class 1 products, but does not map an installed variant, color, thickness or performance rating to those sites. Thermal insulation is distinct from structural fire protection. [Official material document](https://www.armacell.com/sites/default/files/2025/01/24/ArmaFlex%20Class%201%20-%20Product%20Brochure%20-%20ko-KR.pdf), PDF pages 5–8 and 31.
 
+## Glazing sealant and additional PC supply references
+
+The [sealant note](sealant_reference_scopes.md) preserves the exact warehouse product row while separating the dormitory and similarly named Techno Valley references. The [HS Hwasung note](precast_member_supply_references.md) adds named column/beam fabrication and delivery without assigning a fab or member design.
+
+M32–M33 extend this documentation catalog. The current model metadata retains its earlier 31-record snapshot until the next coordinated model update; these additions do not change model source keys or assign products to elements.
+
 ## Use in the model
 
 The evidence supports explanatory material cards and general assembly relationships. PC means precast concrete and does not by itself identify prestressing or PHC foundation piles. Piping and ducts have different functions; a UHP service label or STS abbreviation is insufficient to select a particular stainless-steel grade. Ceiling supports are distinct from structural floors.
 
 Concrete mixes and strengths, steel/rebar grades, pipe and duct specifications, panel cores, sealants, grouts, filter media, installed insulation thicknesses and structural fire-protection products still require project-specific evidence. Missing details remain unknown. General catalog values must not be entered as Pyeongtaek design inputs.
 
-The [English material evidence catalog](construction_materials_sources.json) contains the 31 records. Source illustrations and footage are not reproduced. The video records rely on reviewed captions, with no inspection of video frames.
+The [English material evidence catalog](construction_materials_sources.json) contains the 33 records. Source illustrations and footage are not reproduced. The video records rely on reviewed captions, with no inspection of video frames.
