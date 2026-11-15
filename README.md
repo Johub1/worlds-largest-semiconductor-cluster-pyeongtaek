@@ -8,7 +8,7 @@
 
 An educational, open-source 3D model of the world's largest semiconductor manufacturing cluster, built **only from public material**.
 
-[Construction methods and source catalog](docs/construction_methods.md) explain fabrication, modular assembly, precast walls, steel-connection trials and preassembly checks, distinguishing named Pyeongtaek work from general methods. [Construction materials](docs/construction_materials.md) list 22 material evidence records, separating named supplier work and deliveries from general catalogue data.
+[Construction methods and source catalog](docs/construction_methods.md) explain fabrication, modular assembly, precast walls, steel-connection trials and preassembly checks, distinguishing named Pyeongtaek work from general methods. [Construction materials](docs/construction_materials.md) list 26 material and equipment evidence records, separating named supplier work and deliveries from general catalogue data.
 
 > **Unofficial.** This project is not affiliated with, endorsed by, or reviewed by Samsung Electronics or any other company named here. No non-public drawings, internal documents or information obtained through site access were used. Building outlines are measured from public satellite imagery. Heights and floor arrangement are partly estimated. **The interior equipment layout, utility routes and EHS layers are a generic reference design (concept), not the actual facility layout.** Positions of security equipment (cameras, access control, guard routes) are deliberately not modelled. No company logos are used.
 
@@ -376,7 +376,7 @@ Also corrected: the `OFF-2` note called the building a candidate for Office buil
 ## What v7.39 adds (national base map comparison; updated construction docs; no geometry change)
 
 - **NGII national base map buildings** (new source `NGII_BASEMAP_BLDG`; `meta.imagery_geometry` extended). Codex downloaded the official Gyeonggi building file (edition 2026-07) through the normal VWorld download; the best-matching features at the four fab positions were chosen by IoU among 718 candidates and independently reproduced by Astra. Oriented sizes 521.92 × 204.68, 530.65 × 204.58, 640.92 × 204.38 and 647.71 × 203.40 m (IoU 0.86–0.90). The differences from the model lie mainly at the west ends (16–31 m) with a shared northward offset (6–11 m); the model's east strips are 91–96% covered by the map features, so this comparison does not support removing them. The features are photogrammetric with no stated wall-or-roof basis, dated 2022–2024 (the P4 feature is classed as under construction), and carry no P number, name or height. No box was moved or shortened. Original features and comparison images are not redistributed (licence not specified).
-- **Construction docs updated from `main`** (77b5c67): 22 material records including three deck-plate contract filings; "high-modulus" wording aligned. Deck-plate contracts are not used for model floor geometry, and "FAB 2-gi" is not fixed as P2.
+- **Construction docs updated from `main`** (77b5c67, 99d82b6): 26 material and equipment records including three deck-plate contract filings and the P5 PC-member and MCC scopes; "high-modulus" wording aligned. Deck-plate contracts are not used for model floor geometry, and "FAB 2-gi" is not fixed as P2.
 
 ## What v7.38 adds (construction documents in the package; two supplier records; no geometry change)
 
