@@ -1,4 +1,4 @@
-# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.39 (English edition)
+# Samsung Electronics Pyeongtaek Campus P1–P4 — open 3D model (unofficial), v7.40 (English edition)
 
 > **Status: living project, updated continuously.** This model is revised whenever new public material is found or an error is reported; the current version and every change are listed in `CHANGELOG.md`. Corrections backed by a public source are welcome through GitHub Issues. Latest version: https://github.com/Johub1/worlds-largest-semiconductor-cluster-pyeongtaek
 
@@ -23,7 +23,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | Concept interior | 86,620 equipment boxes of 26 types on 8 floors per fab, 608 OHT rail segments, 10,440 structural members |
 | Concept utilities | 29 systems in 8 groups, 1,521 route segments (thermal, PCW, gas, exhaust, wastewater, chemicals, UPW, power) |
 | Concept EHS | 960 gas/exhaust flow lines, 1,152 gas detector points, 1,552 emergency equipment points, 15,320 egress travel-distance samples |
-| Sources | 199 keyed sources in three tiers: 57 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 100 Korean press and local |
+| Sources | 201 keyed sources in three tiers: 59 official/register/map, 42 international (Reuters, TrendForce, DIGITIMES, Linde, Air Products, GE Vernova, journals, patents, standards), 100 Korean press and local |
 | Units, origin | metres; local tangent plane at WGS84 37.02 N, 127.06 E; X east, Y north, Z up |
 | Imagery date | 2025-12-22 (source resolution 0.5 m, per Esri's metadata layer) for dimensions; the zoom-18 mosaic used for re-checks was downloaded on 2026-11-12 and 13 |
 
@@ -45,7 +45,7 @@ An educational, open-source 3D model of the world's largest semiconductor manufa
 | `data/*.csv` | Elements, equipment, floors, phases, vendors, structure, EHS and utility tables |
 | `preview/` | 27 screenshots of the viewer |
 | `src/` | Export, viewer and check scripts that run on `data/campus.json`; `src/generator_ko/` holds the original generator and the translation tables (see "Rebuilding") |
-| `SOURCES.md` | All 199 sources with URLs, grouped by tier |
+| `SOURCES.md` | All 201 sources with URLs, grouped by tier |
 | `CONSULTATION.md` | Record of what other AI models proposed and what was adopted, verified, held or rejected |
 
 ## Coordinates
@@ -373,6 +373,11 @@ Eighth bundle and two data audits by Codex (meta wording only; no geometry chang
 
 Also corrected: the `OFF-2` note called the building a candidate for Office building 2, which contradicted `WA`; it now only compares its plan with the register area.
 
+## What v7.40 adds (2024 operating statistics of the public wastewater facility; material-record wording corrected; no geometry change)
+
+- **New `meta.wwtp_operations_2024`** (sources `MCEE_WWTP_2024`, `SUVIOL_REF`): the ministry's end-2024 operations workbook, row 33, read cell by cell — facility capacity 187,500 m³/day, hybrid MSBR, Actiflo, 2024 inflow 56,362,100 m³ (153,994.81 m³/day over 366 days), discharge 53,711,408 m³, reuse 1,308,848 m³, average and maximum utilisation 82.1% and 99.9%. These are facility-level reported values for an external public plant, linked only from the note of building A (`PUB-WWTP`); they are not divided among the buildings, not assigned to Samsung's internal treatment or to fabs, and not compared with the 340,000 or 450,000 m³/day plans as missing capacity. The water-quality columns are not used, because their heading names 2023 while the workbook period is 2024.
+- **Wording correction** in `meta.construction_material_records`: it still said "v7.38" and "22 materials". It now reads 20 construction-method and 26 material and equipment evidence records (as of `main` 09b9395) and names the four P5 records (deck plates, deck installation, precast-member fabrication and delivery, MCC), which are not linked to model elements.
+
 ## What v7.39 adds (national base map comparison; updated construction docs; no geometry change)
 
 - **NGII national base map buildings** (new source `NGII_BASEMAP_BLDG`; `meta.imagery_geometry` extended). Codex downloaded the official Gyeonggi building file (edition 2026-07) through the normal VWorld download; the best-matching features at the four fab positions were chosen by IoU among 718 candidates and independently reproduced by Astra. Oriented sizes 521.92 × 204.68, 530.65 × 204.58, 640.92 × 204.38 and 647.71 × 203.40 m (IoU 0.86–0.90). The differences from the model lie mainly at the west ends (16–31 m) with a shared northward offset (6–11 m); the model's east strips are 91–96% covered by the map features, so this comparison does not support removing them. The features are photogrammetric with no stated wall-or-roof basis, dated 2022–2024 (the P4 feature is classed as under construction), and carry no P number, name or height. No box was moved or shortened. Original features and comparison images are not redistributed (licence not specified).
@@ -558,6 +563,8 @@ Held: assignment of building-name suffixes to P numbers; any change of height, f
 
 ## Verification done for this release
 
+v7.40: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.39, one element changed in note and source list only (`PUB-WWTP`), no box changed, one meta entry added and one corrected, two sources added (201: 59 official, 42 international, 100 Korean).
+
 v7.39: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.38, no element changed; two meta entries extended and one source added (199: 57 official, 42 international, 100 Korean).
 
 v7.38: Korean and English data files compared element by element (1,474 ids, source keys, grades, boxes and rotations identical; no duplicate id; no untranslated text). Against v7.37, one element changed in note and source list only (`UT-34-UPW`), no box changed, one meta entry and two sources added (198: 56 official, 42 international, 100 Korean).
@@ -591,7 +598,7 @@ v7.25: Korean and English data files compared element by element (1,458 ids, sou
 | Check | Result |
 |---|---|
 | Fab bodies and all annexes overlaid on the zoom-18 satellite mosaic (about 0.48 m/px) | All four fab outlines and the east, west and north annexes fall on the imagery; three technology-cluster buildings were re-oriented in v7.13 after this check |
-| STEP read back with the OpenCascade kernel (v7.39 build, geometry identical to v7.30) | 1,250 solids, 7,167 faces; the first 400 solids pass the shape validity check |
+| STEP read back with the OpenCascade kernel (v7.40 build, geometry identical to v7.30) | 1,250 solids, 7,167 faces; the first 400 solids pass the shape validity check |
 | DXF read back and audited with ezdxf | 2D: 119,633 entities on 178 layers, 0 audit errors; 3D: 1,694 meshes on 166 layers, 0 audit errors; units metres |
 | Registered areas vs. plans read from imagery | Parking building 1%, Linde site 2.5%, wastewater plant 7%, KEPCO lot 0.4% |
 | Viewer | Loads without page errors, with no network requests; all 23 previews regenerated from this version |
