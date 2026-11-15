@@ -119,6 +119,10 @@ a{color:#8fb8ff} ol.src{margin:0;padding-left:18px} ol.src li{margin-bottom:5px;
     <table id="prod"></table>
     <p class="sub" id="prodNote"></p>
   </div>
+  <details id="greenContext" hidden>
+    <summary>Green-dong: company account and evidence limits</summary>
+    <div id="greenContextBody" class="sub"></div>
+  </details>
   <div>
     <h2>Confidence grades</h2>
     <div class="row"><span class="pill gA">A official, press, filings</span><span class="pill gB">B plan read from imagery (heights assumed)</span><span class="pill gM">M public map label</span><span class="pill gC">C estimate or assumption</span><span class="pill gD">D generic concept</span></div>
@@ -356,6 +360,20 @@ $('lv').innerHTML='<tr><th>Floor</th><th>Height (m, assumed)</th><th>Use</th></t
 const roleName={FAB:'Cleanroom (3F, 7F)',CSF:'CSF(2F·6F)',FSF:'FSF(1F·5F)',PLN:'Plenum (4F, 8F)',ROOF:'Roof'};
 $('legend').innerHTML=Object.keys(roleName).map(r=>`<div class="role">${roleName[r]}</div>`+D.types.filter(t=>t.role===r).map(t=>`<div class="eq"><b><span class="chip" style="background:${t.color}"></span>${t.ko}</b> <span class="sub">${t.size[0]}×${t.size[1]}×${t.size[2]} m representative outline</span>${t.vendors_site?`<small class="site">Site-related press and filings: ${t.vendors_site}</small>`:''}<small>Representative industry suppliers: ${t.vendors}</small></div>`).join('')
  +(r==='FAB'?`<div class="eq"><b><span class="chip" style="background:#f4f6f8"></span>OHT(overhead transport)</b><small class="site">Site-related press and official video: SEMES · about 1,850 in P1 (press)</small><small>Representative industry suppliers: SEMES, Daifuku, Murata Machinery</small></div>`:'')).join('');
+// Dated company context is not a mapping to the estimated model buildings.
+if(D.meta.green_building_official_context){
+  const g=D.meta.green_building_official_context, body=$('greenContextBody');
+  $('greenContext').hidden=false;
+  const lines=[
+    'Operating buildings reported in the article: '+g.reported_operating_green_buildings,
+    'Visit label: '+g.visit_label,
+    g.treatment_description,
+    'Effluent-temperature reduction completion target: '+g.temperature_reduction_completion_target,
+    g.limits
+  ];
+  lines.forEach(t=>{ const p=document.createElement('p'); p.textContent=t; body.appendChild(p); });
+  const links=document.createElement('p'); links.innerHTML=srcLinks(g.source_keys); body.appendChild(links);
+}
 $('src').innerHTML=srcKeys.map(k=>`<li id="s_${k}">${D.sources[k][0]}<br><a href="${D.sources[k][1]}" target="_blank" rel="noopener">${new URL(D.sources[k][1]).hostname}</a></li>`).join('');
 
 // ---------- picking

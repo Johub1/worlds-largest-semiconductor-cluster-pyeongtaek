@@ -3,12 +3,12 @@ import json,re
 import os
 W=os.environ.get('GEN_WORK', os.path.dirname(os.path.dirname(os.path.abspath(__file__))))+'/'
 K=re.compile('[가-힣]')
-L=lambda n: json.load(open(W+'i18n/'+n))
+L=lambda n: json.load(open(W+'i18n/'+n, encoding='utf-8'))
 EX={}
 for a,b in (('notes_src.json','notes_en.json'),('misc_src.json','misc_en.json'),('src_src.json','src_en.json')):
     EX.update(dict(zip(L(a),L(b))))
 import os
-if os.path.exists(W+'i18n/extra.json'): EX.update(json.load(open(W+'i18n/extra.json')))
+if os.path.exists(W+'i18n/extra.json'): EX.update(json.load(open(W+'i18n/extra.json', encoding='utf-8')))
 NP=dict(zip(L('names_src.json'),L('names_en.json')))
 NUM=re.compile(r'\d+(?:\.\d+)?'); PF=re.compile(r'P[1-5](?![0-9])')
 def name(n):
@@ -30,7 +30,10 @@ def walk(v):
     if isinstance(v,dict): return {tr(k) if isinstance(k,str) else k: walk(x) for k,x in v.items()}
     return v
 if __name__=='__main__':
-    D=json.load(open(W+'campus.json')); E=walk(D)
-    json.dump(E,open(W+'campus_en.json','w'),ensure_ascii=False)
+    import sys
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(errors='backslashreplace')
+    D=json.load(open(W+'campus.json', encoding='utf-8')); E=walk(D)
+    json.dump(E,open(W+'campus_en.json','w', encoding='utf-8', newline='\n'),ensure_ascii=False)
     print('missing',len(miss))
     for m in sorted(miss)[:60]: print(' ',m)

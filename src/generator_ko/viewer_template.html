@@ -119,6 +119,10 @@ a{color:#8fb8ff} ol.src{margin:0;padding-left:18px} ol.src li{margin-bottom:5px;
     <table id="prod"></table>
     <p class="sub" id="prodNote"></p>
   </div>
+  <details id="greenContext" hidden>
+    <summary>그린동 공식 설명과 확인 범위</summary>
+    <div id="greenContextBody" class="sub"></div>
+  </details>
   <div>
     <h2>신뢰 등급</h2>
     <div class="row"><span class="pill gA">A 공식·보도·공시</span><span class="pill gB">B 위성영상 평면 판독(높이는 가정)</span><span class="pill gM">M 공개 지도 표기</span><span class="pill gC">C 추정·가정</span><span class="pill gD">D 일반 개념</span></div>
@@ -356,6 +360,20 @@ $('lv').innerHTML='<tr><th>층</th><th>높이(m, 가정)</th><th>용도</th></tr
 const roleName={FAB:'클린룸(3F·7F)',CSF:'CSF(2F·6F)',FSF:'FSF(1F·5F)',PLN:'플레넘(4F·8F)',ROOF:'옥상'};
 $('legend').innerHTML=Object.keys(roleName).map(r=>`<div class="role">${roleName[r]}</div>`+D.types.filter(t=>t.role===r).map(t=>`<div class="eq"><b><span class="chip" style="background:${t.color}"></span>${t.ko}</b> <span class="sub">${t.size[0]}×${t.size[1]}×${t.size[2]} m 대표 외형</span>${t.vendors_site?`<small class="site">현장 관련 보도·공시: ${t.vendors_site}</small>`:''}<small>업계 대표 공급사: ${t.vendors}</small></div>`).join('')
  +(r==='FAB'?`<div class="eq"><b><span class="chip" style="background:#f4f6f8"></span>OHT(천장 이송)</b><small class="site">현장 관련 보도·공식 영상: SEMES · P1에 약 1,850대(보도)</small><small>업계 대표 공급사: SEMES, Daifuku, Murata Machinery</small></div>`:'')).join('');
+// Dated company context is not a mapping to the estimated model buildings.
+if(D.meta.green_building_official_context){
+  const g=D.meta.green_building_official_context, body=$('greenContextBody');
+  $('greenContext').hidden=false;
+  const lines=[
+    '기사에 보고된 가동 동수: '+g.reported_operating_green_buildings,
+    '방문지 표기: '+g.visit_label,
+    g.treatment_description,
+    '수온 저감 시설 완공 목표: '+g.temperature_reduction_completion_target,
+    g.limits
+  ];
+  lines.forEach(t=>{ const p=document.createElement('p'); p.textContent=t; body.appendChild(p); });
+  const links=document.createElement('p'); links.innerHTML=srcLinks(g.source_keys); body.appendChild(links);
+}
 $('src').innerHTML=srcKeys.map(k=>`<li id="s_${k}">${D.sources[k][0]}<br><a href="${D.sources[k][1]}" target="_blank" rel="noopener">${new URL(D.sources[k][1]).hostname}</a></li>`).join('');
 
 // ---------- picking
