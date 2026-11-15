@@ -308,6 +308,16 @@
       "limits": "The research-results/expected-benefits table describes a one-hour fire-resistance improvement. No site, assembly test report, panel core, thickness or installed rating is established.",
       "url": "https://kind.krx.co.kr/external/2026/03/12/001342/20260312003276/11011.htm",
       "locator": "2025 annual report, collaborative research table; March2022–April2024"
+    },
+    {
+      "id": "M31",
+      "company": "Samhwa / SP SAMHWA",
+      "evidence": "Named manufacturer application case",
+      "site": "Samsung Electronics Pyeongtaek P2 UT building, interior floor",
+      "material": "Non-exposed polyurethane waterproofing, source label KSF 3211 class 2",
+      "limits": "The case text names KSF 3211 class 2; its product caption says KSF3211 2FB. No thickness, coated area, installation date, precise location or certificate is supplied. The case is not evidence for roof waterproofing, all P2 floors or present product specifications.",
+      "url": "https://spsamhwa.com/live/여기도-삼화-저기도-삼화-삼화페인트-안심-시공-현장",
+      "locator": "Pyeongtaek P2 UT interior-floor subsection; adjacent product caption"
     }
   ]
 }
