@@ -648,7 +648,7 @@ python mkview.py        # writes index.html from viewer_template.html
 python check_connect.py # utility connectivity table
 ```
 
-The model data is authored by a generator whose strings are in Korean (`src/generator_ko/build.py`, `utility.py`). `src/generator_ko/i18n/` holds the translation tables that produce the English `campus.json`, viewer and export script; `build_en.sh` shows the order.
+The bundled Korean generator and translation tables are in `src/generator_ko/`. **Source synchronization is pending:** in an isolated check on 15 November 2026, the committed generator produced 1,459 elements and 178 sources, while the checked-in v7.41 dataset contains 1,474 elements and 202 sources. Use the checked-in `data/campus.json` for the export/viewer workflow above while the current generator and translation tables are being synchronized. See [generator reproduction status](src/generator_ko/README.md) for the comparison and its limits.
 
 ## Corrections
 
