@@ -275,7 +275,7 @@
       "evidence": "Named supplier delivery references; general fabrication kept separate",
       "site": "Named P3/P4 work and campus support buildings",
       "material": "Piping materials; individual fitting products unspecified",
-      "limits": "Reference rows do not identify installed grades, dimensions, quantities or acceptance. General carbon-steel fitting products are not assigned to site piping. Printed customer/recipient roles are not reconstructed.",
+      "limits": "Reference rows do not identify installed grades, dimensions, quantities or acceptance. General carbon-steel fitting products are not assigned to site piping. The columns printed as 발주처 (ordering party) and 납품처 (delivery recipient) are retained without reconstructing their roles.",
       "url": "https://samilbend.com/default/img/brochure2024.pdf",
       "locator": "PDF pages80,83,87–88 selected references; pages8–10 general fabrication/products"
     },
@@ -315,9 +315,9 @@
       "evidence": "Named manufacturer application case",
       "site": "Samsung Electronics Pyeongtaek P2 UT building, interior floor",
       "material": "Non-exposed polyurethane waterproofing, source label KSF 3211 class 2",
-      "limits": "The case text names KSF 3211 class 2; its product caption says KSF3211 2FB. No thickness, coated area, installation date, precise location or certificate is supplied. The case is not evidence for roof waterproofing, all P2 floors or present product specifications.",
+      "limits": "The case text names KSF 3211 class 2; its source caption says KSF3211 2FB. No thickness, coated area, installation date, precise location or certificate is supplied. The case is not evidence for roof waterproofing, all P2 floors or present product specifications.",
       "url": "https://spsamhwa.com/live/여기도-삼화-저기도-삼화-삼화페인트-안심-시공-현장",
-      "locator": "Pyeongtaek P2 UT interior-floor subsection; adjacent product caption"
+      "locator": "Pyeongtaek P2 UT interior-floor subsection; adjacent source caption"
     }
   ]
 }
