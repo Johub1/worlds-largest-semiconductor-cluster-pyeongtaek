@@ -61,6 +61,8 @@ The [material guide](construction_materials.md) adds 33 material and equipment e
 
 ## Evidence catalog and remaining coverage
 
-The accompanying [source catalog](construction_methods_sources.json) contains 23 method/reference records, including GPC Green-dong building PC work (그린동, the project building name), PC design-service references, steel supply, general double-wall and foundation-pile descriptions. The evidence level of each record is explicit. A general method or design service must not be promoted to an installed system.
+The accompanying [source catalog](construction_methods_sources.json) contains 24 method/reference records, including GPC Green-dong building PC work (그린동, the project building name), PC design-service references, steel supply, general double-wall and foundation-pile descriptions. The evidence level of each record is explicit. A general method or design service must not be promoted to an installed system.
 
 Foundations, local ground conditions, member dimensions, actual erection sequences, joints, enclosure, electrical installation, water-treatment commissioning and complete handover still need additional project-specific evidence. Their absence from this guide is not a finding that no public source exists. Construction illustrations do not change the model’s geometry or confidence grades.
+
+The [quality-management note](construction_quality_management.md) distinguishes Samsung C&T's general lifecycle from HanmiGlobal's quality checkpoints. These remain separate company accounts.

@@ -277,6 +277,18 @@
       "location": "Pyeongtaek campus case: project fields and quality-management account",
       "limits": "496,000 m² scale field has undefined area scope. Work period is not commissioning. CS is not expanded. No equipment acceptance result or installed criterion inferred.",
       "evidence_level": "Named company service case; not an independent test or acceptance report"
+    },
+    {
+      "id": "CM-LC001",
+      "company": "Samsung C&T",
+      "method": "General fab project lifecycle",
+      "site_evidence": "General lifecycle account; a separate P4 foundation-work sentence says September without a year",
+      "site_scope": "General company explanation; P4-specific statement limited to foundation-work month",
+      "sequence": "Planning/programming/design → production → inspection → equipment installation → start-up; total productive maintenance afterwards",
+      "source": "https://news.samsungcnt.com/en/features/engineering-construction/2022-12-making-the-fabs-that-make-semiconductors/",
+      "location": "9 December 2022 article, What is a fab? and Fabs around the world",
+      "limits": "Year inferred from publication date; no individual building allocation, completion, structural-member specification, lifting method or quantity",
+      "evidence_level": "Official general method explanation and a limited named-site statement"
     }
   ]
 }
