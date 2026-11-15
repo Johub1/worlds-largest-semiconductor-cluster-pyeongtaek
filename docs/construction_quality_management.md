@@ -20,3 +20,9 @@ flowchart LR
   D --> E[Final completion check]
 ```
 
+
+## General fab lifecycle, separate from the quality checkpoints
+
+Samsung C&T's [9 December 2022 article](https://news.samsungcnt.com/en/features/engineering-construction/2022-12-making-the-fabs-that-make-semiconductors/) outlines planning, programming and design, then production, inspection, equipment installation and start-up, followed by total productive maintenance. This is a general company explanation. It can sit alongside HanmiGlobal's quality checkpoints; the two accounts are not combined into one verified Pyeongtaek procedure.
+
+The article separately says P4 foundation work began in September. The sentence supplies no year. Reading this as September 2022 is an inference from publication, not an explicit start date. It gives no individual building allocation, completion, structural-member specification, lifting method or quantity. No model phase boundary is changed.
