@@ -152,7 +152,7 @@
       "method": "Automated structural-bolt fastening",
       "evidence_level": "Named site test/demonstration",
       "site_evidence": "Named site test/demonstration",
-      "site_scope": "P4 tests in2022 and2023",
+      "site_scope": "P4 tests in2022 and 2023",
       "sequence": "Recognize bolt → align/correct position → first fastening → second fastening",
       "source": "https://www.secc.co.kr/ko/library/tech/smart",
       "location": "Official smart-technology page, steel bolting robot",
@@ -247,12 +247,12 @@
       "company": "MFR",
       "method": "Steel fireproofing-spray and bolting robot demonstration",
       "evidence_level": "Named site demonstration",
-      "site_evidence": "Company history places the demonstration at Samsung Electronics Pyeongtaek in August2022",
+      "site_evidence": "Company history places the demonstration at Samsung Electronics Pyeongtaek in August 2022",
       "site_scope": "No individual fab, installed product or campus-wide deployment identified",
       "sequence": "Demonstration only; no site work instruction inferred",
       "source": "https://mfr-c.com/history",
-      "location": "Company history, August2022",
-      "limits": "Later robot products are not assigned to the2022 demonstration. No coating specification, quantity or fire rating."
+      "location": "Company history, August 2022",
+      "limits": "Later robot products are not assigned to the 2022 demonstration. No coating specification, quantity or fire rating."
     },
     {
       "id": "CM-S17",
@@ -263,7 +263,7 @@
       "site_scope": "Manufacturing route is not identified for each site delivery",
       "sequence": "Separate pipe-stock and plate-stock routes; the plate route includes forming, welding and nondestructive examination",
       "source": "https://samilbend.com/default/img/brochure2024.pdf",
-      "location": "PDF pages8–10; selected references on80,83,87–88",
+      "location": "PDF pages 8–10; selected references on 80, 83, 87–88",
       "limits": "No process temperatures, inspection class, fitting type, grade or dimensions are assigned to Pyeongtaek."
     }
   ]
